@@ -1,5 +1,1 @@
-## Audio Switcher
-
-# todo: docs
-
-...
+# Alfred
