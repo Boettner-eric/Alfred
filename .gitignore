@@ -1,0 +1,39 @@
+# Folder view configuration files
+.DS_Store
+Desktop.ini
+
+# Thumbnail cache files
+._*
+Thumbs.db
+
+# Enviornment variables
+.env*
+
+
+# Secrets
+token.json
+credentials.json
+
+
+# Configuration
+__pycache__
+.vscode
+node_modules/
+package.json
+package-lock.json
+prefs.plist
+
+# Cache files (specific to user)
+users/
+!users/.gitkeep
+repos/
+!repos/.gitkeep
+emotes/
+!emotes/.gitkeep
+meetings.json
+debug_cal.json
+scratch.json
+merge.json
+
+# migrating old workflows into new format
+user.workflow.hmb-workflow

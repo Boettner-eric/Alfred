@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string></string>
+	<string>boettner.eric.audio-source</string>
 	<key>category</key>
 	<string>Productivity</string>
 	<key>connections</key>
@@ -55,7 +55,7 @@
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Audio Sorce</string>
+	<string>Audio Source</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -118,7 +118,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>ou</string>
+				<string>{var:trigger}</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -133,7 +133,7 @@
 				<string>input=$(SwitchAudioSource -c -t input)
 output=$(SwitchAudioSource -c -t output)
 
-SwitchAudioSource -a -f json | jq -s --arg input "$input" --arg output "$output" '{items: [.[] | select(.name != "ZoomAudioDevice" and .name != "ASUS VP28U") | {title: (if .name | contains("AirPods") then "Airpods" else .name end), icon: (if .name | contains("AirPods") then {path: "icons/airpods.png"} else (if (.type == "output") then {path: "icons/speaker.png"} else {path: "icons/mic.png"} end) end),  subtitle: (if (.name == $input and .type == "input") or (.name == $output and .type == "output") then .type + "- current" else .type end), arg: (.type + "," + .name)}]}'</string>
+SwitchAudioSource -a -f json | jq -s --arg input "$input" --arg output "$output" '{items: [.[] | select(.name != "ZoomAudioDevice" and .name != "ASUS VP28U") | {uid: (.name + .type), title: (if .name | contains("AirPods") then "Airpods" else .name end), icon: (if .name | contains("AirPods") then {path: "icons/airpods.png"} else (if (.type == "output") then {path: "icons/speaker.png"} else {path: "icons/mic.png"} end) end),  subtitle: (if (.name == $input and .type == "input") or (.name == $output and .type == "output") then .type + "- current" else .type end), arg: (.type + "," + .name)}]}'</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -177,7 +177,8 @@ SwitchAudioSource -a -f json | jq -s --arg input "$input" --arg output "$output"
 		</dict>
 	</array>
 	<key>readme</key>
-	<string></string>
+	<string>A simple workflow for changing audio sources from Alfred. 
+See https://github.com/Boettner-eric/Alfred/ for more info</string>
 	<key>uidata</key>
 	<dict>
 		<key>4FE0BDA8-6B8A-4D66-9A02-86CAAF16CCBE</key>
@@ -210,8 +211,34 @@ SwitchAudioSource -a -f json | jq -s --arg input "$input" --arg output "$output"
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>ou</string>
+				<key>placeholder</key>
+				<string>defaults to "ou"</string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Pick a term you want to invoke this command with</string>
+			<key>label</key>
+			<string>Trigger term</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>trigger</string>
+		</dict>
+	</array>
+	<key>variablesdontexport</key>
 	<array/>
+	<key>version</key>
+	<string>1.0.0</string>
 	<key>webaddress</key>
-	<string></string>
+	<string>https://github.com/Boettner-eric/Alfred</string>
 </dict>
 </plist>
