@@ -14,6 +14,7 @@ Thumbs.db
 token.json
 credentials.json
 
+releases/
 
 # Configuration
 __pycache__
@@ -37,3 +38,4 @@ merge.json
 
 # migrating old workflows into new format
 user.workflow.hmb-workflow
+user.workflow.calendar
