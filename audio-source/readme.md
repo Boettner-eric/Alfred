@@ -11,15 +11,23 @@ It has support for both input and output devices and can be easily configured wi
 
 ### Installation
 
-#### a) Git Managed
-
-Like my other workflows you can run
+Install `switchaudio-osx` via Brew
 
 ```zsh
-ln -s $(PWD) ~/Library/Application\ Support/Alfred/Alfred.alfredpreferences/workflows/user.workflow.audio-source
+brew install switchaudio-osx
 ```
 
-(or `make install` if you're lazy) from this directory to add this workflow to Alfred. This installation method allows you to use git to keep this workflow up to date without having to package and re-import it into Alfred.
+#### a) Git Managed
+
+Create a symlink to sync this directory with Alfred with the following command:
+
+```zsh
+ln -snf $(PWD) ~/Library/Application\ Support/Alfred/Alfred.alfredpreferences/workflows/user.workflow.audio-source
+```
+
+(or you can `make install` if you're lazy)
+
+This installation method allows you to use git to keep this workflow up to date without having to package and re-import it into Alfred.
 
 _note: if you have a different Alfred application directory you will need to change the path in the command above._
 
