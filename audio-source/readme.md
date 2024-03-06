@@ -22,7 +22,7 @@ brew install switchaudio-osx
 Create a symlink to sync this directory with Alfred with the following command:
 
 ```zsh
-ln -snf $(PWD) ~/Library/Application\ Support/Alfred/Alfred.alfredpreferences/workflows/user.workflow.audio-source
+ln -sn $(PWD) ~/Library/Application\ Support/Alfred/Alfred.alfredpreferences/workflows/user.workflow.audio-source
 ```
 
 (or you can `make install` if you're lazy)
