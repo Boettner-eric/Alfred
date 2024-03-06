@@ -3,7 +3,9 @@
 This workflow utilizes the `SwitchAudioSource` command line utility to switch between audio sources on your Mac.
 It has support for both input and output devices and can be easily configured with minor JQ knowledge.
 
-![usage image](./icons/usage.png)
+<p align="center">
+  <img src="./icons/usage.png" width="400">
+</p>
 
 ## Getting Started
 
@@ -14,7 +16,7 @@ It has support for both input and output devices and can be easily configured wi
 Like my other workflows you can run
 
 ```zsh
-ln -s -T $(PWD) ~/Library/Application\ Support/Alfred/Alfred.alfredpreferences/workflows/user.workflow.audio-source
+	ln -s $(PWD) ~/Library/Application\ Support/Alfred/Alfred.alfredpreferences/workflows/user.workflow.audio-source
 ```
 
 (or `make install` if you're lazy) from this directory to add this workflow to Alfred. This installation method allows you to use git to keep this workflow up to date without having to package and re-import it into Alfred.

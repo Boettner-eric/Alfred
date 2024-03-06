@@ -143,7 +143,7 @@ SwitchAudioSource -a -f json | jq -s --arg input "$input" --arg output "$output"
 				<key>title</key>
 				<string></string>
 				<key>type</key>
-				<integer>11</integer>
+				<integer>5</integer>
 				<key>withspace</key>
 				<false/>
 			</dict>
