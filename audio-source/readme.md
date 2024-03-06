@@ -16,7 +16,7 @@ It has support for both input and output devices and can be easily configured wi
 Like my other workflows you can run
 
 ```zsh
-	ln -s $(PWD) ~/Library/Application\ Support/Alfred/Alfred.alfredpreferences/workflows/user.workflow.audio-source
+ln -s $(PWD) ~/Library/Application\ Support/Alfred/Alfred.alfredpreferences/workflows/user.workflow.audio-source
 ```
 
 (or `make install` if you're lazy) from this directory to add this workflow to Alfred. This installation method allows you to use git to keep this workflow up to date without having to package and re-import it into Alfred.

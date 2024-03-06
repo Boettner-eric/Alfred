@@ -4,7 +4,7 @@ I have used Alfred quite a bit in the last few years and this repo contains most
 
 ## Workflows
 
-- [Audio Source Switcher](./audio-source/README.md) - switch between audio IO devices
+- [Audio Source Switcher](./audio-source/readme.md) - switch between audio IO devices
 - Calendar (coming soon) - view upcoming events and join meetings from Alfred
 - Slack Status (coming soon) - change your slack status from Alfred
 
