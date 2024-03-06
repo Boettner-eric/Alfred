@@ -4,7 +4,7 @@ This workflow utilizes the `SwitchAudioSource` command line utility to switch be
 It has support for both input and output devices and can be easily configured with minor JQ knowledge.
 
 <p align="center">
-  <img src="./icons/usage.png" width="400">
+  <img src="./icons/usage.png" width="600">
 </p>
 
 ## Getting Started
