@@ -13,3 +13,8 @@ I have been an Alfred power user for the last few years and I use these workflow
 - [Alfred](https://www.alfredapp.com/) by Running with Crayons
 - Icons by [Icons8](https://icons8.com/)
 - [AudioSourceSwitcher](https://github.com/deweller/switchaudio-osx)
+
+### TODO
+
+- add better support for multiple google users
+- add support for multiple calendars
