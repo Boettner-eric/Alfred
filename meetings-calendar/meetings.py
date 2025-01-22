@@ -71,20 +71,16 @@ def login(token_path):
             creds.refresh(Request())
         else:
             creds = register_user()
-        # Save the credentials for the next run
+
+        service = build("oauth2", "v2", credentials=creds)
+        user_info = service.userinfo().get().execute()
+        email = user_info.get("email")
+
+        # Update the token file with the account email
+        token_data = loads(creds.to_json())
+        token_data["account"] = email
         with open(token_path, "w") as token:
-            token.write(creds.to_json())
-
-    # Get user info to identify which account this is
-    service = build("oauth2", "v2", credentials=creds)
-    user_info = service.userinfo().get().execute()
-    email = user_info.get("email")
-
-    # Update the token file with the account email
-    token_data = loads(creds.to_json())
-    token_data["account"] = email
-    with open(token_path, "w") as token:
-        dump(token_data, token, indent=2)
+            dump(token_data, token, indent=2)
     return creds
 
 
