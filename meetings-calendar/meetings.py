@@ -106,7 +106,13 @@ def get_events():
                 )
                 .execute()
             )
-            events.extend(events_result.get("items", []))
+
+            events.extend(
+                map(
+                    lambda x: {**x, "credential_name": credentials.account},
+                    events_result.get("items", []),
+                )
+            )
 
         if not events:
             return
@@ -140,7 +146,7 @@ def parseMeetingUrl(url):
         if matches:
             return (matches[0], icon)
 
-    return ("not a meeting", "./icons/cal.png")
+    return (False, "./icons/cal.png")
 
 
 def generate(events):
@@ -164,6 +170,7 @@ def generate(events):
                 + " "
                 + event.get("description", "")
             )
+            url = url or event["htmlLink"]
         except KeyError:
             (url, urlImg) = ("error with link", "")
 
@@ -181,7 +188,7 @@ def generate(events):
                             "valid": True,
                             "icon": {"path": "./icons/cal.png"},
                             "arg": event["htmlLink"],
-                            "subtitle": "go to calendar",
+                            "subtitle": f"go to calendar {event['credential_name']}",
                         },
                         "cmd": {"valid": True, "arg": url, "subtitle": url},
                         "ctrl": {
