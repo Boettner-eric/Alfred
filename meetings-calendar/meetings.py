@@ -109,7 +109,7 @@ def get_events():
 
             events.extend(
                 map(
-                    lambda x: {**x, "credential_name": credentials.account},
+                    lambda x: {**x, "email": credentials._account},
                     events_result.get("items", []),
                 )
             )
@@ -188,7 +188,7 @@ def generate(events):
                             "valid": True,
                             "icon": {"path": "./icons/cal.png"},
                             "arg": event["htmlLink"],
-                            "subtitle": f"go to calendar {event['credential_name']}",
+                            "subtitle": f"go to calendar {event['email']}",
                         },
                         "cmd": {"valid": True, "arg": url, "subtitle": url},
                         "ctrl": {

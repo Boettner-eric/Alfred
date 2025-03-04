@@ -149,9 +149,9 @@
 				<key>script</key>
 				<string>if test -f "meetings.json"; then
     cat meetings.json
-	/usr/bin/python3 meetings.py &gt; /dev/null &amp;
+	~/.asdf/shims/python3 meetings.py &gt; /dev/null &amp;
 else
-	/usr/bin/python3 meetings.py -a
+	~/.asdf/shims/python3 meetings.py -a
 fi
 
 </string>
@@ -164,7 +164,7 @@ fi
 				<key>title</key>
 				<string>Meetings</string>
 				<key>type</key>
-				<integer>0</integer>
+				<integer>5</integer>
 				<key>withspace</key>
 				<false/>
 			</dict>
