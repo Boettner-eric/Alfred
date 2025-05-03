@@ -68,7 +68,11 @@ def login(token_path):
     # If there are no (valid) credentials available, let the user log in.
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
-            creds.refresh(Request())
+            try:
+                creds.refresh(Request())
+            except Exception as e:
+                creds = register_user()
+
         else:
             creds = register_user()
 
@@ -205,7 +209,7 @@ def generate(events):
 
 
 def alfred(meetings):
-    print(dumps({"rerun": 0, "items": meetings}, indent=4))
+    print(dumps({"rerun": 1, "items": meetings}, indent=4))
 
 
 if __name__ == "__main__":
