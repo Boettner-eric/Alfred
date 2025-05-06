@@ -1,6 +1,6 @@
 from __future__ import print_function
 import argparse
-from datetime import datetime as dt
+from datetime import datetime as dt, timezone as tz
 from re import findall
 from dateutil.parser import parse
 from time_format import time_till
@@ -38,8 +38,18 @@ TIME_FORMAT = "%a %B %-d %-I:%M"
 
 
 def register_user():
+    """
+    Register a new user and ensure refresh token is saved
+    """
     flow = InstalledAppFlow.from_client_secrets_file("credentials.json", SCOPES)
-    return flow.run_local_server(port=0)
+    creds = flow.run_local_server(port=0)
+    
+    # Verify refresh token is present
+    token_data = loads(creds.to_json())
+    if not token_data.get('refresh_token'):
+        print("Warning: No refresh token received during registration")
+    
+    return creds
 
 
 def login_users():
@@ -64,27 +74,41 @@ def login(token_path):
     """
     creds = None
     if os.path.exists(token_path):
-        creds = Credentials.from_authorized_user_file(token_path, SCOPES)
+        try:
+            creds = Credentials.from_authorized_user_file(token_path, SCOPES)
+        except Exception as e:
+            print(f"Error loading credentials from {token_path}: {e}")
+            creds = None
+
     # If there are no (valid) credentials available, let the user log in.
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
             try:
                 creds.refresh(Request())
             except Exception as e:
+                print(f"Error refreshing credentials: {e}")
                 creds = register_user()
-
         else:
+            print("No valid credentials found, registering new user")
             creds = register_user()
 
-        service = build("oauth2", "v2", credentials=creds)
-        user_info = service.userinfo().get().execute()
-        email = user_info.get("email")
+        try:
+            service = build("oauth2", "v2", credentials=creds)
+            user_info = service.userinfo().get().execute()
+            email = user_info.get("email")
 
-        # Update the token file with the account email
-        token_data = loads(creds.to_json())
-        token_data["account"] = email
-        with open(token_path, "w") as token:
-            dump(token_data, token, indent=2)
+            # Update the token file with the account email and ensure refresh token is saved
+            token_data = loads(creds.to_json())
+            if not token_data.get('refresh_token'):
+                print("Warning: No refresh token in new credentials")
+            token_data["account"] = email
+            with open(token_path, "w") as token:
+                dump(token_data, token, indent=2)
+            print(f"Successfully saved new token for {email}")
+        except Exception as e:
+            print(f"Error saving credentials: {e}")
+            raise
+
     return creds
 
 
@@ -98,7 +122,7 @@ def get_events():
         for credentials in logins:
             service = build("calendar", "v3", credentials=credentials)
             # Call the Calendar API
-            now = dt.utcnow().isoformat() + "Z"  # 'Z' indicates UTC time
+            now = dt.now(tz.utc).isoformat()
             events_result = (
                 service.events()
                 .list(
