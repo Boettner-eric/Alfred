@@ -1,0 +1,74 @@
+{
+  "items": [
+    {
+      "arg": "https://github.com/boettner-eric?tab=repositories",
+      "subtitle": "Repositories",
+      "icon": {
+        "path": "./icons/github.png"
+      },
+      "uid": "cm github",
+      "title": "GitHub",
+      "mods": {
+        "alt": {
+          "valid": true,
+          "icon": {
+            "path": "./icons/github.png"
+          },
+          "arg": "https://github.com/boettner-eric",
+          "subtitle": "Profile"
+        },
+        "cmd": {
+          "valid": true,
+          "arg": "https://github.com/pulls",
+          "subtitle": "Pull Requests",
+          "icon": {
+            "path": "./icons/github.png"
+          }
+        },
+        "ctrl": {
+          "valid": true,
+          "arg": "https://github.com/boettner-eric",
+          "subtitle": "GitHub",
+          "icon": {
+            "path": "./icons/github.png"
+          }
+        }
+      }
+    },
+    {
+      "arg": "https://www.youtube.com/",
+      "subtitle": "Videos",
+      "icon": {
+        "path": "./icons/youtube.png"
+      },
+      "uid": "cm youtube",
+      "title": "YouTube",
+      "mods": {
+        "alt": {
+          "valid": true,
+          "icon": {
+            "path": "./icons/youtube.png"
+          },
+          "arg": "https://www.youtube.com/",
+          "subtitle": "Home"
+        },
+        "cmd": {
+          "valid": true,
+          "arg": "https://www.youtube.com/feed/subscriptions",
+          "subtitle": "Subscriptions",
+          "icon": {
+            "path": "./icons/youtube.png"
+          }
+        },
+        "ctrl": {
+          "valid": true,
+          "arg": "https://www.youtube.com/feed/history",
+          "subtitle": "History",
+          "icon": {
+            "path": "./icons/youtube.png"
+          }
+        }
+      }
+    }
+  ]
+}
