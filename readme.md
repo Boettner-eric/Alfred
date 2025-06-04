@@ -6,6 +6,7 @@ I have been an Alfred power user for the last few years and I use these workflow
 
 - [Audio Source Switcher](./audio-source/readme.md) - switch between audio IO devices
 - [Calendar](./meetings-calendar/readme.md) (in progress) - view upcoming events and join meetings from Alfred
+- [Gitlab](./gitlab/readme.md) - view MRs, user profiles and repos in your org's gitlab instance
 - Bookmarks - jump to webpages quickly
 - Slack Status (coming soon) - change your slack status from Alfred
 
