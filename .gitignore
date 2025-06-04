@@ -39,3 +39,5 @@ merge.json
 # migrating old workflows into new format
 user.workflow.hmb-workflow
 user.workflow.calendar
+
+gitlab/*.json
