@@ -10,6 +10,14 @@ I have been an Alfred power user for the last few years and I use these workflow
 - Bookmarks - jump to webpages quickly
 - Slack Status (coming soon) - change your slack status from Alfred
 
+## External Repos
+I also use a few other alfred workflows that I have modified or downloaded from alfred's workflow gallery
+
+- [Alfred Theme Switcher Fork](https://github.com/Boettner-eric/alfred-theme-switcher)
+- [Airpods connector](https://github.com/mariuskiessling/alfred-airpods-connector)
+- [Bluetooth battery](https://alfred.app/workflows/zeitlings/bluetooth-device-battery/)
+
+
 ### Credits
 
 - [Alfred](https://www.alfredapp.com/) by Running with Crayons
