@@ -1,6 +1,7 @@
 # Audio Source Switcher
 
-Switch between audio input and output devices on your Mac using Alfred.
+This workflow utilizes the `SwitchAudioSource` command line utility to switch between audio sources on your Mac.
+It has support for both input and output devices and can be easily configured with minor JQ knowledge.
 
 <p align="center">
   <img src="./icons/usage.png" width="600">
