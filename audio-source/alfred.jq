@@ -1,5 +1,9 @@
+# Required variables:
+# $input: Name of current input device
+# $output: Name of current output device
+# $denylist: Array of device names to exclude
 {
-  items: [.[] | select(.name != "ZoomAudioDevice" and .name != "ASUS VP28U") 
+  items: [.[] | select(.name as $name | $denylist | index($name) | not) 
   | {
       uid: (.name + .type), 
       title: (if .name | contains("AirPods") then "Airpods" else .name end), 
@@ -15,7 +19,24 @@
           then .type + "- current" 
           else .type 
         end),
-      arg: (.type + "," + .name)
+      arg: (.type + "," + .name),
+      mods: {
+        ctrl: {
+          valid: true,
+          arg: .name,
+          subtitle: ("copy \"" + .name + "\" to clipboard"),
+        },
+         alt: {
+          valid: true,
+          arg: .name,
+          subtitle: ("set as input"),
+        },
+         cmd: {
+          valid: true,
+          arg: .name,
+          subtitle: ("set as output"),
+        },
+      },
     }
   ]
 }

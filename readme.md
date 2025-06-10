@@ -22,7 +22,7 @@ I also use a few other alfred workflows that I have modified or downloaded from 
 
 - [Alfred](https://www.alfredapp.com/) by Running with Crayons
 - Icons by [Icons8](https://icons8.com/)
-- [AudioSourceSwitcher](https://github.com/deweller/switchaudio-osx)
+- [switchaudio-osx](https://github.com/deweller/switchaudio-osx)
 
 ### TODO
 

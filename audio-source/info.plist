@@ -21,6 +21,32 @@
 				<false/>
 			</dict>
 		</array>
+		<key>5B9DA17C-155C-4C6F-B415-EAC9C41E827C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>B9918191-D9EB-49B5-80E2-498E8A27E0DE</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>746E462D-5FF5-4663-B1F3-0F61532A1922</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>B9918191-D9EB-49B5-80E2-498E8A27E0DE</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>89059872-057D-4E1B-8A48-FB676BAA9972</key>
 		<array>
 			<dict>
@@ -41,6 +67,36 @@
 				<string>89059872-057D-4E1B-8A48-FB676BAA9972</string>
 				<key>modifiers</key>
 				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>A5D04EAC-7977-48AE-97DA-5F070E9E8B4F</string>
+				<key>modifiers</key>
+				<integer>262144</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>5B9DA17C-155C-4C6F-B415-EAC9C41E827C</string>
+				<key>modifiers</key>
+				<integer>524288</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>746E462D-5FF5-4663-B1F3-0F61532A1922</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
 				<key>modifiersubtext</key>
 				<string></string>
 				<key>vitoclose</key>
@@ -133,7 +189,7 @@
 				<string>input=$(SwitchAudioSource -c -t input)
 output=$(SwitchAudioSource -c -t output)
 
-SwitchAudioSource -a -f json | jq -s --arg input "$input" --arg output "$output" --from-file alfred.jq</string>
+SwitchAudioSource -a -f json | jq -s --arg input "$input" --arg output "$output" --arg denylist $denylist --from-file alfred.jq</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -175,6 +231,71 @@ SwitchAudioSource -a -f json | jq -s --arg input "$input" --arg output "$output"
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>A5D04EAC-7977-48AE-97DA-5F070E9E8B4F</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>/opt/homebrew/bin/SwitchAudioSource -t input -s $1</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>5B9DA17C-155C-4C6F-B415-EAC9C41E827C</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>/opt/homebrew/bin/SwitchAudioSource -t output -s $1</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>746E462D-5FF5-4663-B1F3-0F61532A1922</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>A simple workflow for changing audio sources from Alfred. 
@@ -184,28 +305,49 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 		<key>4FE0BDA8-6B8A-4D66-9A02-86CAAF16CCBE</key>
 		<dict>
 			<key>xpos</key>
-			<real>475</real>
+			<real>590</real>
 			<key>ypos</key>
 			<real>215</real>
+		</dict>
+		<key>5B9DA17C-155C-4C6F-B415-EAC9C41E827C</key>
+		<dict>
+			<key>xpos</key>
+			<real>595</real>
+			<key>ypos</key>
+			<real>495</real>
+		</dict>
+		<key>746E462D-5FF5-4663-B1F3-0F61532A1922</key>
+		<dict>
+			<key>xpos</key>
+			<real>590</real>
+			<key>ypos</key>
+			<real>650</real>
 		</dict>
 		<key>89059872-057D-4E1B-8A48-FB676BAA9972</key>
 		<dict>
 			<key>xpos</key>
-			<real>380</real>
+			<real>510</real>
 			<key>ypos</key>
 			<real>245</real>
+		</dict>
+		<key>A5D04EAC-7977-48AE-97DA-5F070E9E8B4F</key>
+		<dict>
+			<key>xpos</key>
+			<real>595</real>
+			<key>ypos</key>
+			<real>345</real>
 		</dict>
 		<key>B9918191-D9EB-49B5-80E2-498E8A27E0DE</key>
 		<dict>
 			<key>xpos</key>
-			<real>650</real>
+			<real>820</real>
 			<key>ypos</key>
 			<real>215</real>
 		</dict>
 		<key>CA385C16-F4A7-4390-8569-64EB93117047</key>
 		<dict>
 			<key>xpos</key>
-			<real>210</real>
+			<real>175</real>
 			<key>ypos</key>
 			<real>215</real>
 		</dict>
@@ -233,9 +375,28 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<key>variable</key>
 			<string>trigger</string>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>'["ZoomAudioDevice"]'</string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Ignore specific devices via a json list. Format like '["Device Name","Other Device Name"]'</string>
+			<key>label</key>
+			<string>Denylist</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>denylist</string>
+		</dict>
 	</array>
-	<key>variablesdontexport</key>
-	<array/>
 	<key>version</key>
 	<string>1.0.0</string>
 	<key>webaddress</key>
