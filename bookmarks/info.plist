@@ -6,6 +6,19 @@
 	<string></string>
 	<key>connections</key>
 	<dict>
+		<key>36594007-BF9B-47F7-9847-5C4640A5AFFA</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>20DA9DB2-538C-4605-8B9E-FFF9D382B829</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>BF1454E1-8782-4669-A3CA-2E77BA6E8DCC</key>
 		<array>
 			<dict>
@@ -30,6 +43,27 @@
 	<string>Bookmarks</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>skipqueryencode</key>
+				<false/>
+				<key>skipvarencode</key>
+				<false/>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>D3D5928B-2640-4935-9B24-69C9D9AF5F50</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -82,21 +116,44 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>skipqueryencode</key>
+				<key>concurrently</key>
 				<false/>
-				<key>skipvarencode</key>
-				<false/>
-				<key>spaces</key>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>/usr/bin/python3 add_bookmark.py {query}</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
 				<string></string>
-				<key>url</key>
-				<string></string>
+				<key>type</key>
+				<integer>11</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>D3D5928B-2640-4935-9B24-69C9D9AF5F50</string>
+			<string>20DA9DB2-538C-4605-8B9E-FFF9D382B829</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>bma</string>
+				<key>subtext</key>
+				<string>add website to bookmarks list</string>
+				<key>text</key>
+				<string>Add Bookmark</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>36594007-BF9B-47F7-9847-5C4640A5AFFA</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -105,21 +162,37 @@
 	<string></string>
 	<key>uidata</key>
 	<dict>
+		<key>20DA9DB2-538C-4605-8B9E-FFF9D382B829</key>
+		<dict>
+			<key>xpos</key>
+			<real>285</real>
+			<key>ypos</key>
+			<real>220</real>
+		</dict>
+		<key>36594007-BF9B-47F7-9847-5C4640A5AFFA</key>
+		<dict>
+			<key>note</key>
+			<string>Add Bookmark</string>
+			<key>xpos</key>
+			<real>85</real>
+			<key>ypos</key>
+			<real>220</real>
+		</dict>
 		<key>BF1454E1-8782-4669-A3CA-2E77BA6E8DCC</key>
 		<dict>
 			<key>note</key>
 			<string>Bookmarks for helpful sites</string>
 			<key>xpos</key>
-			<real>135</real>
+			<real>90</real>
 			<key>ypos</key>
-			<real>280</real>
+			<real>40</real>
 		</dict>
 		<key>D3D5928B-2640-4935-9B24-69C9D9AF5F50</key>
 		<dict>
 			<key>xpos</key>
-			<real>330</real>
+			<real>285</real>
 			<key>ypos</key>
-			<real>280</real>
+			<real>40</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
