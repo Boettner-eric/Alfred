@@ -10,6 +10,19 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
+				<string>84FABB63-77DD-4C83-8E4C-CA1CD0DCD618</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>84FABB63-77DD-4C83-8E4C-CA1CD0DCD618</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
 				<string>20DA9DB2-538C-4605-8B9E-FFF9D382B829</string>
 				<key>modifiers</key>
 				<integer>0</integer>
@@ -43,27 +56,6 @@
 	<string>Bookmarks</string>
 	<key>objects</key>
 	<array>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>skipqueryencode</key>
-				<false/>
-				<key>skipvarencode</key>
-				<false/>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string></string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>D3D5928B-2640-4935-9B24-69C9D9AF5F50</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -116,14 +108,35 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>skipqueryencode</key>
+				<false/>
+				<key>skipvarencode</key>
+				<false/>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>D3D5928B-2640-4935-9B24-69C9D9AF5F50</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>/usr/bin/python3 add_bookmark.py {query}</string>
+				<string>/usr/bin/python3 add_bookmark.py $1 $2</string>
 				<key>scriptargtype</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>type</key>
@@ -157,6 +170,27 @@
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>delimiter</key>
+				<string> </string>
+				<key>discardemptyarguments</key>
+				<false/>
+				<key>outputas</key>
+				<integer>1</integer>
+				<key>trimarguments</key>
+				<true/>
+				<key>variableprefix</key>
+				<string>split</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.split</string>
+			<key>uid</key>
+			<string>84FABB63-77DD-4C83-8E4C-CA1CD0DCD618</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
@@ -165,7 +199,7 @@
 		<key>20DA9DB2-538C-4605-8B9E-FFF9D382B829</key>
 		<dict>
 			<key>xpos</key>
-			<real>285</real>
+			<real>330</real>
 			<key>ypos</key>
 			<real>220</real>
 		</dict>
@@ -177,6 +211,13 @@
 			<real>85</real>
 			<key>ypos</key>
 			<real>220</real>
+		</dict>
+		<key>84FABB63-77DD-4C83-8E4C-CA1CD0DCD618</key>
+		<dict>
+			<key>xpos</key>
+			<real>255</real>
+			<key>ypos</key>
+			<real>250</real>
 		</dict>
 		<key>BF1454E1-8782-4669-A3CA-2E77BA6E8DCC</key>
 		<dict>
