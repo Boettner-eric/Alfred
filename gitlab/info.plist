@@ -8,6 +8,19 @@
 	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
+		<key>12EB13FE-69A5-47C3-918F-43895F6F9B42</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>81FD560E-31F9-4CB7-9867-A3432B857B10</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>68C3E500-0A83-4454-864C-77DB9C0EE6C9</key>
 		<array>
 			<dict>
@@ -394,9 +407,9 @@
 				<key>script</key>
 				<string>if test -f "merge.json"; then
 	cat merge.json
-	/usr/local/bin/python3 gitlab.py -m &gt; /dev/null &amp;
+	/usr/bin/python3 gitlab.py -m &gt; /dev/null &amp;
 else
-	/usr/local/bin/python3 gitlab.py -a
+	/usr/bin/python3 gitlab.py -a
 fi
 
 </string>
@@ -409,7 +422,7 @@ fi
 				<key>title</key>
 				<string>Merge Requests</string>
 				<key>type</key>
-				<integer>0</integer>
+				<integer>11</integer>
 				<key>withspace</key>
 				<true/>
 			</dict>
@@ -481,6 +494,50 @@ fi
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>gitlab</string>
+				<key>subtext</key>
+				<string>Refresh gitlab data</string>
+				<key>text</key>
+				<string>Gitlab</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>12EB13FE-69A5-47C3-918F-43895F6F9B42</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>/usr/bin/python3 gitlab.py -a</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>81FD560E-31F9-4CB7-9867-A3432B857B10</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>Gitlab Workflow
@@ -504,6 +561,15 @@ follow the instructions in https://github.com/Boettner-eric/Alfred/tree/master/g
 			<real>305</real>
 			<key>ypos</key>
 			<real>15</real>
+		</dict>
+		<key>12EB13FE-69A5-47C3-918F-43895F6F9B42</key>
+		<dict>
+			<key>note</key>
+			<string>Refresh repo/pr data</string>
+			<key>xpos</key>
+			<real>80</real>
+			<key>ypos</key>
+			<real>895</real>
 		</dict>
 		<key>1CC012E3-27DF-4D2E-ADBF-0EBBA6FBC727</key>
 		<dict>
@@ -543,6 +609,13 @@ follow the instructions in https://github.com/Boettner-eric/Alfred/tree/master/g
 			<real>75</real>
 			<key>ypos</key>
 			<real>575</real>
+		</dict>
+		<key>81FD560E-31F9-4CB7-9867-A3432B857B10</key>
+		<dict>
+			<key>xpos</key>
+			<real>255</real>
+			<key>ypos</key>
+			<real>895</real>
 		</dict>
 		<key>859F2C3A-C031-4CED-8A61-A123BC96B825</key>
 		<dict>

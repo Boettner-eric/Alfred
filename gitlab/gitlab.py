@@ -106,7 +106,7 @@ def get_repos():
                     "arg": repo["web_url"],
                     "subtitle": (
                         repo["description"]
-                        if repo["description"] != ""
+                        if repo["description"] != "" and repo["description"] != None
                         else "No description"
                     ),
                     "icon": {
