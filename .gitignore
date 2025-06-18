@@ -41,3 +41,5 @@ user.workflow.hmb-workflow
 user.workflow.calendar
 
 gitlab/*.json
+bookmarks/icons/
+bookmarks/common.json
