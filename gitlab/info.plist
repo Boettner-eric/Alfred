@@ -67,6 +67,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>81FD560E-31F9-4CB7-9867-A3432B857B10</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>946E7F56-6F60-4DD3-A228-67AFB044EAC2</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>96FFBEDA-ECF6-41DC-AE2A-CEED31AA5FD3</key>
 		<array>
 			<dict>
@@ -409,7 +422,7 @@
 	cat merge.json
 	/usr/bin/python3 gitlab.py -m &gt; /dev/null &amp;
 else
-	/usr/bin/python3 gitlab.py -a
+	/usr/bin/python3 gitlab.py -m
 fi
 
 </string>
@@ -493,6 +506,27 @@ fi
 			<string>0770F4CF-A15B-4B11-9846-A19F2FB0D223</string>
 			<key>version</key>
 			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Gitlab Workflow</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>946E7F56-6F60-4DD3-A228-67AFB044EAC2</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -623,6 +657,13 @@ follow the instructions in https://github.com/Boettner-eric/Alfred/tree/master/g
 			<real>380</real>
 			<key>ypos</key>
 			<real>155</real>
+		</dict>
+		<key>946E7F56-6F60-4DD3-A228-67AFB044EAC2</key>
+		<dict>
+			<key>xpos</key>
+			<real>465</real>
+			<key>ypos</key>
+			<real>895</real>
 		</dict>
 		<key>96FFBEDA-ECF6-41DC-AE2A-CEED31AA5FD3</key>
 		<dict>

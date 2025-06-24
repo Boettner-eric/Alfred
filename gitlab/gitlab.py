@@ -15,7 +15,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("-r", "--repos", help="cache repos", action="store_true")
 parser.add_argument("-m", "--merge", help="cache merge requests", action="store_true")
 parser.add_argument("-u", "--users", help="cache current users", action="store_true")
-parser.add_argument("-a", "--all", help="cache all requests", action="store_true")
+parser.add_argument("-a", "--all", help="cache users and repos", action="store_true")
 args = parser.parse_args()
 
 
@@ -45,7 +45,7 @@ def get_users():
                     "subtitle": f"Get {first_name}'s active pull requests",
                     "icon": {"path": f'users/{user["username"]}.png'},
                     "uid": f'pr {user["username"]}',
-                    "title": f"{first_name}",
+                    "title": user["name"],
                     "mods": {
                         "ctrl": {
                             "valid": True,
@@ -205,5 +205,5 @@ if __name__ == "__main__":
         get_mrs()
     if args.all:
         get_repos()
-        get_mrs()
         get_users()
+        print("Repos and Users updated")
