@@ -8,6 +8,7 @@ I have been an Alfred power user for the last few years and I use these workflow
 - [Calendar](./meetings-calendar/) - view upcoming events and join meetings from Alfred
 - [Gitlab](./gitlab/) - view MRs, user profiles and repos in your org's gitlab instance
 - [Bookmarks](./bookmarks/) - jump to webpages quickly
+- [Spelling](./spelling/) - correct a misspelling via alfred hotkey
 - Slack Status (coming soon) - change your slack status from Alfred
 
 ## External Repos
