@@ -147,9 +147,9 @@
 				<key>removeextension</key>
 				<false/>
 				<key>text</key>
-				<string></string>
+				<string>{query}</string>
 				<key>title</key>
-				<string></string>
+				<string>Audio Source</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.notification</string>
