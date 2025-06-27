@@ -1,9 +1,9 @@
 # Meetings Calendar
 
-🚧 Under Construction 🚧
+Jump to slack huddles, zoom rooms and google meets directly from alfred. 
 
-# Install
-
-`make install`
-
-`pip3 install -r requirements.txt`
+# Setup
+- setup your google calendar api access via this [guide](https://developers.google.com/workspace/calendar/api/quickstart/python#set-up-environment)
+- `make install` to create alfred symlink
+- `pip3 install -r requirements.txt` to install python requirements
+- `mcr NAME` in alfred to register each google account
