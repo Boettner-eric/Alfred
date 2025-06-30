@@ -9,7 +9,7 @@ I have been an Alfred power user for the last few years and I use these workflow
 - [Gitlab](./gitlab/) - view MRs, user profiles and repos in your org's gitlab instance
 - [Bookmarks](./bookmarks/) - jump to webpages quickly
 - [Spelling](./spelling/) - correct a misspelling via alfred hotkey
-- Slack Status (coming soon) - change your slack status from Alfred
+- [Slack Status](./slack/) - change your slack status from Alfred
 
 ## External Repos
 I also use a few other alfred workflows that I have modified or downloaded from alfred's workflow gallery
