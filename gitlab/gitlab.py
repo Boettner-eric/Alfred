@@ -122,17 +122,17 @@ def get_repos():
                         "cmd": {
                             "valid": True,
                             "arg": f"{repo['web_url']}/-/merge_requests",
-                            "subtitle": f"{repo['web_url']}/-/merge_requests",
+                            "subtitle": f"Merge Requests: {repo['web_url']}/-/merge_requests",
                         },
                         "alt": {
                             "valid": True,
                             "arg": f"{repo['readme_url']}",
-                            "subtitle": f"{repo['readme_url']}",
+                            "subtitle": f"Readme: {repo['readme_url']}",
                         },
                         "ctrl": {
                             "valid": True,
                             "arg": f"{repo['http_url_to_repo']}",
-                            "subtitle": f"{repo['http_url_to_repo']}",
+                            "subtitle": f"Clone: {repo['http_url_to_repo']}",
                         },
                     },
                 },

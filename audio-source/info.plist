@@ -105,7 +105,7 @@
 		</array>
 	</dict>
 	<key>createdby</key>
-	<string>Eric</string>
+	<string>Eric Boettner</string>
 	<key>description</key>
 	<string>Change the audio IO from Alfred!</string>
 	<key>disabled</key>
