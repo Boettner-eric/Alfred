@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "emoji-datasource": "^15.1.2",
+    "emoji-datasource-apple": "^15.1.2"
+  }
+}
