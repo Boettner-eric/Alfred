@@ -6,6 +6,32 @@
 	<string></string>
 	<key>connections</key>
 	<dict>
+		<key>20DA9DB2-538C-4605-8B9E-FFF9D382B829</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>642BCED2-539C-4F7D-BA24-55C89ECE573D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>2C30B3B4-F6B1-41C2-B2FB-225835872BB3</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>20DA9DB2-538C-4605-8B9E-FFF9D382B829</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>36594007-BF9B-47F7-9847-5C4640A5AFFA</key>
 		<array>
 			<dict>
@@ -15,6 +41,16 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>2C30B3B4-F6B1-41C2-B2FB-225835872BB3</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>Usage: [name] [url]</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -56,6 +92,27 @@
 	<string>Bookmarks</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>skipqueryencode</key>
+				<false/>
+				<key>skipvarencode</key>
+				<false/>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>D3D5928B-2640-4935-9B24-69C9D9AF5F50</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -108,21 +165,21 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>skipqueryencode</key>
+				<key>lastpathcomponent</key>
 				<false/>
-				<key>skipvarencode</key>
+				<key>onlyshowifquerypopulated</key>
 				<false/>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string></string>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>Bookmark added</string>
+				<key>title</key>
+				<string>Bookmark Workflow</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
+			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
-			<string>D3D5928B-2640-4935-9B24-69C9D9AF5F50</string>
+			<string>642BCED2-539C-4F7D-BA24-55C89ECE573D</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -191,6 +248,27 @@
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>delimiter</key>
+				<string> </string>
+				<key>discardemptyarguments</key>
+				<false/>
+				<key>outputas</key>
+				<integer>1</integer>
+				<key>trimarguments</key>
+				<true/>
+				<key>variableprefix</key>
+				<string>split</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.split</string>
+			<key>uid</key>
+			<string>2C30B3B4-F6B1-41C2-B2FB-225835872BB3</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
@@ -203,12 +281,26 @@
 			<key>ypos</key>
 			<real>220</real>
 		</dict>
+		<key>2C30B3B4-F6B1-41C2-B2FB-225835872BB3</key>
+		<dict>
+			<key>xpos</key>
+			<real>255</real>
+			<key>ypos</key>
+			<real>315</real>
+		</dict>
 		<key>36594007-BF9B-47F7-9847-5C4640A5AFFA</key>
 		<dict>
 			<key>note</key>
 			<string>Add Bookmark</string>
 			<key>xpos</key>
 			<real>85</real>
+			<key>ypos</key>
+			<real>220</real>
+		</dict>
+		<key>642BCED2-539C-4F7D-BA24-55C89ECE573D</key>
+		<dict>
+			<key>xpos</key>
+			<real>510</real>
 			<key>ypos</key>
 			<real>220</real>
 		</dict>
