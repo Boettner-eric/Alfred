@@ -135,21 +135,15 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>browser</key>
-				<string>company.thebrowser.Browser</string>
-				<key>skipqueryencode</key>
-				<false/>
-				<key>skipvarencode</key>
-				<false/>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>{query}</string>
+				<key>availableviaurlhandler</key>
+				<true/>
+				<key>triggerid</key>
+				<string>calendar</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
+			<string>alfred.workflow.trigger.external</string>
 			<key>uid</key>
-			<string>EBE007D2-D341-452B-9CA0-8DCA0716F5B1</string>
+			<string>8948D437-B19B-4080-ABDA-2E0FE02B9D8F</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -165,7 +159,7 @@
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
-				<integer>2</integer>
+				<integer>1</integer>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
@@ -198,7 +192,7 @@ fi</string>
 				<key>type</key>
 				<integer>5</integer>
 				<key>withspace</key>
-				<false/>
+				<true/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
@@ -210,15 +204,21 @@ fi</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>availableviaurlhandler</key>
-				<true/>
-				<key>triggerid</key>
-				<string>calendar</string>
+				<key>browser</key>
+				<string>company.thebrowser.Browser</string>
+				<key>skipqueryencode</key>
+				<false/>
+				<key>skipvarencode</key>
+				<false/>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>{query}</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.trigger.external</string>
+			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
-			<string>8948D437-B19B-4080-ABDA-2E0FE02B9D8F</string>
+			<string>EBE007D2-D341-452B-9CA0-8DCA0716F5B1</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -240,27 +240,6 @@ fi</string>
 			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
 			<string>80396059-8294-4051-93AD-964527A5A135</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>delimiter</key>
-				<string>/j/</string>
-				<key>discardemptyarguments</key>
-				<false/>
-				<key>outputas</key>
-				<integer>0</integer>
-				<key>trimarguments</key>
-				<true/>
-				<key>variableprefix</key>
-				<string>split</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.split</string>
-			<key>uid</key>
-			<string>E8929B93-02A2-4FAA-802B-A417F0D3A7B5</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -297,6 +276,27 @@ fi</string>
 			<string>EC39D245-984E-460D-8CD2-F4C627504455</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>delimiter</key>
+				<string>/j/</string>
+				<key>discardemptyarguments</key>
+				<false/>
+				<key>outputas</key>
+				<integer>0</integer>
+				<key>trimarguments</key>
+				<true/>
+				<key>variableprefix</key>
+				<string>split</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.split</string>
+			<key>uid</key>
+			<string>E8929B93-02A2-4FAA-802B-A417F0D3A7B5</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -354,6 +354,27 @@ fi</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>mcr</string>
+				<key>subtext</key>
+				<string>add a new google user</string>
+				<key>text</key>
+				<string>Register Calendar User</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>895C0F8A-29CE-4518-9C6A-8FD325D9E3AD</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -373,27 +394,6 @@ fi</string>
 			<string>20C83762-CE2F-4E8A-893D-1DA81A485CD0</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>keyword</key>
-				<string>mcr</string>
-				<key>subtext</key>
-				<string>add a new google user</string>
-				<key>text</key>
-				<string>Register Calendar User</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>895C0F8A-29CE-4518-9C6A-8FD325D9E3AD</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 	</array>
 	<key>readme</key>

@@ -264,6 +264,8 @@ def write_to_json(meetings, rerun=False):
         
         if rerun:
             output_data["rerun"] = 1
+        else:    
+            output_data["rerun"] = 4
             
         dump(output_data, outfile, indent=4)
 
@@ -311,6 +313,7 @@ def recalculate_time_till(meetings):
     
     return meetings
 
+
 if __name__ == "__main__":
     if args.register:
         login(f"tokens/{args.register}.json")
@@ -325,3 +328,6 @@ if __name__ == "__main__":
         if args.debug and events != None:
             with open("debug_cal.json", "w") as outfile:
                 dump({"items": events}, outfile, indent=4)
+
+# if loading from json when stale then it will never rerun naturally
+# 
