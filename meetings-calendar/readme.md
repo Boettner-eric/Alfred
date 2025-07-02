@@ -8,3 +8,7 @@ Jump to slack huddles, zoom rooms and google meets directly from alfred.
 - `make install` to create alfred symlink
 - `pip3 install -r requirements.txt` to install python requirements
 - `mcr NAME` in alfred to register each google account
+
+
+# Run
+- `alfred://runtrigger/boettner.eric.meetings_calendar/calendar`

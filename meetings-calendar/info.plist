@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string></string>
+	<string>boettner.eric.meetings_calendar</string>
 	<key>category</key>
 	<string>Productivity</string>
 	<key>connections</key>
@@ -36,6 +36,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>EC39D245-984E-460D-8CD2-F4C627504455</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>8948D437-B19B-4080-ABDA-2E0FE02B9D8F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>3A01E07D-E417-4120-AD46-3EA06652BEF5</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -122,6 +135,27 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>browser</key>
+				<string>company.thebrowser.Browser</string>
+				<key>skipqueryencode</key>
+				<false/>
+				<key>skipvarencode</key>
+				<false/>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>{query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>EBE007D2-D341-452B-9CA0-8DCA0716F5B1</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -152,9 +186,7 @@
 	~/.asdf/shims/python3 meetings.py &gt; /dev/null &amp;
 else
 	~/.asdf/shims/python3 meetings.py -a
-fi
-
-</string>
+fi</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -178,21 +210,15 @@ fi
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>browser</key>
-				<string>company.thebrowser.Browser</string>
-				<key>skipqueryencode</key>
-				<false/>
-				<key>skipvarencode</key>
-				<false/>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>{query}</string>
+				<key>availableviaurlhandler</key>
+				<true/>
+				<key>triggerid</key>
+				<string>calendar</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
+			<string>alfred.workflow.trigger.external</string>
 			<key>uid</key>
-			<string>EBE007D2-D341-452B-9CA0-8DCA0716F5B1</string>
+			<string>8948D437-B19B-4080-ABDA-2E0FE02B9D8F</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -214,6 +240,27 @@ fi
 			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
 			<string>80396059-8294-4051-93AD-964527A5A135</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>delimiter</key>
+				<string>/j/</string>
+				<key>discardemptyarguments</key>
+				<false/>
+				<key>outputas</key>
+				<integer>0</integer>
+				<key>trimarguments</key>
+				<true/>
+				<key>variableprefix</key>
+				<string>split</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.split</string>
+			<key>uid</key>
+			<string>E8929B93-02A2-4FAA-802B-A417F0D3A7B5</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -250,27 +297,6 @@ fi
 			<string>EC39D245-984E-460D-8CD2-F4C627504455</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>delimiter</key>
-				<string>/j/</string>
-				<key>discardemptyarguments</key>
-				<false/>
-				<key>outputas</key>
-				<integer>0</integer>
-				<key>trimarguments</key>
-				<true/>
-				<key>variableprefix</key>
-				<string>split</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.split</string>
-			<key>uid</key>
-			<string>E8929B93-02A2-4FAA-802B-A417F0D3A7B5</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -328,27 +354,6 @@ fi
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>keyword</key>
-				<string>mcr</string>
-				<key>subtext</key>
-				<string>add a new google user</string>
-				<key>text</key>
-				<string>Register Calendar User</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>895C0F8A-29CE-4518-9C6A-8FD325D9E3AD</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -369,6 +374,27 @@ fi
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>mcr</string>
+				<key>subtext</key>
+				<string>add a new google user</string>
+				<key>text</key>
+				<string>Register Calendar User</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>895C0F8A-29CE-4518-9C6A-8FD325D9E3AD</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
@@ -379,80 +405,89 @@ fi
 			<key>note</key>
 			<string>open meeting in browser</string>
 			<key>xpos</key>
-			<real>345</real>
+			<real>560</real>
 			<key>ypos</key>
-			<real>280</real>
+			<real>350</real>
 		</dict>
 		<key>20C83762-CE2F-4E8A-893D-1DA81A485CD0</key>
 		<dict>
 			<key>xpos</key>
-			<real>265</real>
+			<real>250</real>
 			<key>ypos</key>
-			<real>445</real>
+			<real>370</real>
 		</dict>
 		<key>3A01E07D-E417-4120-AD46-3EA06652BEF5</key>
 		<dict>
 			<key>note</key>
 			<string>get meetings from calendar</string>
 			<key>xpos</key>
-			<real>40</real>
+			<real>255</real>
 			<key>ypos</key>
-			<real>25</real>
+			<real>95</real>
 		</dict>
 		<key>479DCC36-D107-4C49-8013-DEAB2509817B</key>
 		<dict>
 			<key>xpos</key>
-			<real>430</real>
+			<real>645</real>
 			<key>ypos</key>
-			<real>185</real>
+			<real>255</real>
 		</dict>
 		<key>80396059-8294-4051-93AD-964527A5A135</key>
 		<dict>
 			<key>note</key>
 			<string>open meeting in zoom</string>
 			<key>xpos</key>
-			<real>580</real>
+			<real>795</real>
 			<key>ypos</key>
-			<real>155</real>
+			<real>225</real>
+		</dict>
+		<key>8948D437-B19B-4080-ABDA-2E0FE02B9D8F</key>
+		<dict>
+			<key>note</key>
+			<string>open via uri</string>
+			<key>xpos</key>
+			<real>90</real>
+			<key>ypos</key>
+			<real>95</real>
 		</dict>
 		<key>895C0F8A-29CE-4518-9C6A-8FD325D9E3AD</key>
 		<dict>
 			<key>note</key>
 			<string>register new google user</string>
 			<key>xpos</key>
-			<real>40</real>
+			<real>90</real>
 			<key>ypos</key>
-			<real>445</real>
+			<real>370</real>
 		</dict>
 		<key>B7DA5A70-6A30-4A1C-928B-29D2435F800A</key>
 		<dict>
 			<key>xpos</key>
-			<real>250</real>
+			<real>465</real>
 			<key>ypos</key>
-			<real>190</real>
+			<real>260</real>
 		</dict>
 		<key>E8929B93-02A2-4FAA-802B-A417F0D3A7B5</key>
 		<dict>
 			<key>xpos</key>
-			<real>370</real>
+			<real>585</real>
 			<key>ypos</key>
-			<real>185</real>
+			<real>255</real>
 		</dict>
 		<key>EBE007D2-D341-452B-9CA0-8DCA0716F5B1</key>
 		<dict>
 			<key>note</key>
 			<string>open meeting event in google calendar</string>
 			<key>xpos</key>
-			<real>255</real>
+			<real>470</real>
 			<key>ypos</key>
-			<real>25</real>
+			<real>95</real>
 		</dict>
 		<key>EC39D245-984E-460D-8CD2-F4C627504455</key>
 		<dict>
 			<key>xpos</key>
-			<real>490</real>
+			<real>705</real>
 			<key>ypos</key>
-			<real>185</real>
+			<real>255</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
