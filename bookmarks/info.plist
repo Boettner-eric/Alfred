@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string></string>
+	<string>boettner.eric.bookmarks</string>
 	<key>connections</key>
 	<dict>
 		<key>20DA9DB2-538C-4605-8B9E-FFF9D382B829</key>
@@ -331,6 +331,6 @@
 	<key>userconfigurationconfig</key>
 	<array/>
 	<key>webaddress</key>
-	<string></string>
+	<string>https://github.com/Boettner-eric/Alfred</string>
 </dict>
 </plist>
