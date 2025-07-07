@@ -47,17 +47,17 @@ def get_users():
                     "uid": f'pr {user["username"]}',
                     "title": user["name"],
                     "mods": {
-                        "ctrl": {
+                        "cmd": {
                             "valid": True,
                             "arg": f'{user["username"]}',
                             "subtitle": f"View {first_name}'s profile",
                         },
-                        "alt": {
+                        "ctrl": {
                             "valid": True,
                             "arg": f'assignee_username={user["username"]}',
                             "subtitle": f"Get pull requests that {first_name} is assigned to",
                         },
-                        "cmd": {
+                        "alt": {
                             "valid": True,
                             "arg": f'reviewer_username={user["username"]}',
                             "subtitle": f"Get pull requests that {first_name} is reviewing",
