@@ -16,7 +16,6 @@ from googleapiclient.errors import HttpError
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-d", "--debug", help="print api result to a file", action="store_true")
-parser.add_argument("-a", "--alfred", help="for alfred command parsing", action="store_true")
 parser.add_argument("-r", "--register", help="add a new user", type=str, metavar="USERNAME")
 parser.add_argument("-l", "--load", help="load fresh data", action="store_true")
 args = parser.parse_args()
@@ -260,14 +259,9 @@ def write_to_json(meetings, rerun=False):
             "variables": {
                 "cache_time": dt.now().strftime('%d/%m/%Y, %H:%M:%S')
             }, 
+            "rerun": 4,
             "items": meetings
         }
-        
-        if rerun:
-            output_data["rerun"] = 1
-        else:    
-            output_data["rerun"] = 4
-            
         dump(output_data, outfile, indent=4)
 
 
@@ -321,14 +315,8 @@ if __name__ == "__main__":
     else:
         (events, meetings) = get_meetings(args.load)
 
-        if args.alfred:
-            print(dumps({"rerun": 4, "items": meetings}, indent=4))
-        
         write_to_json(meetings, events != None)
 
         if args.debug and events != None:
             with open("debug_cal.json", "w") as outfile:
                 dump({"items": events}, outfile, indent=4)
-
-# if loading from json when stale then it will never rerun naturally
-# 

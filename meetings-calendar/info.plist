@@ -159,7 +159,7 @@
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
-				<integer>1</integer>
+				<integer>2</integer>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
@@ -179,7 +179,8 @@
     cat meetings.json
 	~/.asdf/shims/python3 meetings.py &gt; /dev/null &amp;
 else
-	~/.asdf/shims/python3 meetings.py -a
+	~/.asdf/shims/python3 meetings.py
+	cat meetings.json
 fi</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
@@ -192,7 +193,7 @@ fi</string>
 				<key>type</key>
 				<integer>5</integer>
 				<key>withspace</key>
-				<true/>
+				<false/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
