@@ -18,6 +18,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("-d", "--debug", help="print api result to a file", action="store_true")
 parser.add_argument("-a", "--alfred", help="for alfred command parsing", action="store_true")
 parser.add_argument("-r", "--register", help="add a new user", type=str, metavar="USERNAME")
+parser.add_argument("-l", "--load", help="load fresh data", action="store_true")
 args = parser.parse_args()
 
 # If modifying these scopes, delete the file token.json.
@@ -284,13 +285,13 @@ def read_from_json():
         return None
 
 
-def get_meetings():
+def get_meetings(load=False):
     """
     Generate new meetings based on the cache
     """
     cache = read_from_json()
 
-    if cache is not None:
+    if cache is not None and not load:
         cache_time = dt.strptime(cache["variables"]["cache_time"], '%d/%m/%Y, %H:%M:%S')
         now = dt.now()
         if (now - cache_time).total_seconds() < CACHE_TIME:
@@ -318,7 +319,7 @@ if __name__ == "__main__":
     if args.register:
         login(f"tokens/{args.register}.json")
     else:
-        (events, meetings) = get_meetings()
+        (events, meetings) = get_meetings(args.load)
 
         if args.alfred:
             print(dumps({"rerun": 4, "items": meetings}, indent=4))
