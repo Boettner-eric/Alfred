@@ -162,7 +162,7 @@
 			<key>config</key>
 			<dict>
 				<key>alfredfiltersresults</key>
-				<true/>
+				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
 				<key>argumenttreatemptyqueryasnil</key>
@@ -189,7 +189,7 @@
 				<string>input=$(SwitchAudioSource -c -t input)
 output=$(SwitchAudioSource -c -t output)
 
-SwitchAudioSource -a -f json | jq -s --arg input "$input" --arg output "$output" --arg denylist $denylist --from-file alfred.jq</string>
+SwitchAudioSource -a -f json | jq -s --arg input "$input" --arg output "$output" --arg denylist "$denylist" -f alfred.jq</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>

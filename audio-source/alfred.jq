@@ -16,7 +16,7 @@
           else {path: "icons/mic.png"}
         end),
       subtitle: (if (.name == $input and .type == "input") or (.name == $output and .type == "output") 
-          then .type + "- current" 
+          then .type + " - current" 
           else .type 
         end),
       arg: (.type + "," + .name),
