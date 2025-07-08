@@ -176,11 +176,11 @@
 				<string>Loading data…</string>
 				<key>script</key>
 				<string>if test -f "meetings.json"; then
-    cat meetings.json
+    jq -f meetings.jq meetings.json
 	~/.asdf/shims/python3 meetings.py &gt; /dev/null &amp;
 else
 	~/.asdf/shims/python3 meetings.py
-	cat meetings.json
+	jq -f meetings.jq meetings.json
 fi</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>

@@ -6,7 +6,7 @@ from dateutil.parser import parse
 from time_format import time_till
 import time
 import os.path
-from json import load, loads, dump, dumps
+from json import loads, dump
 
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
@@ -17,7 +17,6 @@ from googleapiclient.errors import HttpError
 parser = argparse.ArgumentParser()
 parser.add_argument("-d", "--debug", help="print api result to a file", action="store_true")
 parser.add_argument("-r", "--register", help="add a new user", type=str, metavar="USERNAME")
-parser.add_argument("-l", "--load", help="load fresh data", action="store_true")
 args = parser.parse_args()
 
 # If modifying these scopes, delete the file token.json.
@@ -250,72 +249,27 @@ def format_meetings(events):
     return meetings
 
 
-def write_to_json(meetings, rerun=False):
+def write_to_json(meetings):
     """
     Write the meetings to a json file
     """
     with open("meetings.json", "w") as outfile:
         output_data = {
             "variables": {
-                "cache_time": dt.now().strftime('%d/%m/%Y, %H:%M:%S')
+                "cache_time": dt.now(tz.utc).strftime('%d/%m/%Y, %H:%M:%S')
             }, 
-            "rerun": 4,
             "items": meetings
         }
         dump(output_data, outfile, indent=4)
-
-
-def read_from_json():
-    """
-    Read the existing json
-    """
-    try:
-        with open("meetings.json", "r") as infile:
-            data = load(infile)
-            if not data:
-                return None
-            return data
-    except (FileNotFoundError, ValueError):
-        return None
-
-
-def get_meetings(load=False):
-    """
-    Generate new meetings based on the cache
-    """
-    cache = read_from_json()
-
-    if cache is not None and not load:
-        cache_time = dt.strptime(cache["variables"]["cache_time"], '%d/%m/%Y, %H:%M:%S')
-        now = dt.now()
-        if (now - cache_time).total_seconds() < CACHE_TIME:
-            return (None, recalculate_time_till(cache["items"]))
-
-    events = fetch_events()
-    meetings = format_meetings(events)
-    return (events, meetings)
-
-
-def recalculate_time_till(meetings):
-    """
-    Recalculate the time till for each meeting
-    """
-    for meeting in meetings:
-        (start, end) = meeting["time"].split(" - ")
-        stime = dt.strptime(start, ENCODE_FORMAT)
-        endTime = dt.strptime(end, ENCODE_FORMAT)
-        meeting["subtitle"] = f"{time_till(stime, endTime)}"
-    
-    return meetings
 
 
 if __name__ == "__main__":
     if args.register:
         login(f"tokens/{args.register}.json")
     else:
-        (events, meetings) = get_meetings(args.load)
-
-        write_to_json(meetings, events != None)
+        events = fetch_events()
+        meetings = format_meetings(events)
+        write_to_json(meetings)
 
         if args.debug and events != None:
             with open("debug_cal.json", "w") as outfile:

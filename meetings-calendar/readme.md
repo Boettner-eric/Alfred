@@ -12,3 +12,11 @@ Jump to slack huddles, zoom rooms and google meets directly from alfred.
 
 # Run
 - `alfred://runtrigger/boettner.eric.meetings_calendar/calendar`
+
+
+# How it runs
+- `meetings.jq` reads the last cached `meetings.json` file and instantly updates the script filter
+- `meetings.py` runs in the background and updates `meetings.json`
+- if the cache is stale then `meetings.jq` reruns the workflow at the lowest possible timing
+
+I chose to use jq here to quickly parse the json data and give the user meetings as fast as possible
