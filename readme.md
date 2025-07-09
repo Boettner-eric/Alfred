@@ -17,6 +17,7 @@ I also use a few other alfred workflows that I have modified or downloaded from 
 - [Alfred Theme Switcher (Fork)](https://github.com/Boettner-eric/alfred-theme-switcher)
 - [Airpods connector](https://github.com/mariuskiessling/alfred-airpods-connector)
 - [Bluetooth battery](https://alfred.app/workflows/zeitlings/bluetooth-device-battery/)
+- [Keyboard brightness](https://alfred.app/workflows/zeitlings/keyboard-brightness/)
 - [Window switcher](https://alfred.app/workflows/alfredapp/window-switcherx/)
 
 ### Credits
