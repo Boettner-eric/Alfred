@@ -1,6 +1,8 @@
 # Slack Status
 Change your slack status via alfred
 
+<img src="../screenshots/slack-status.png" width="600">
+
 # Warning
 Fetching all emotes from your slack server will take a long time and might run into issues.
 

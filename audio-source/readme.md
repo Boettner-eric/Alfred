@@ -3,9 +3,7 @@
 This workflow utilizes the `SwitchAudioSource` command line utility to switch between audio sources on your Mac.
 It has support for both input and output devices and can be easily configured with minor JQ knowledge.
 
-<p align="center">
-  <img src="./icons/usage.png" width="600">
-</p>
+<img src="../screenshots/audio-source.png" width="600">
 
 # Setup
 
@@ -20,3 +18,8 @@ brew install switchaudio-osx
 # Configuration
 - Set your trigger keyword in the `Configure Workflow` menu
 - Add devices to the denylist to hide them from alfred's options
+
+# Mods
+- `cmd` -> set as output
+- `ctrl` -> set as input
+- `alt` -> copy device name (useful for denylist)

@@ -10,6 +10,12 @@ Jump to slack huddles, zoom rooms and google meets directly from alfred.
 - `mcr NAME` in alfred to register each google account
 
 
+# Mods
+- `cmd` -> show meeting url
+- `ctrl` -> show start and end times
+- `alt` -> open event in calendar
+
+
 # Run
 - `alfred://runtrigger/boettner.eric.meetings_calendar/calendar`
 

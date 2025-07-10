@@ -128,7 +128,7 @@ def format_time(minutes):
         remaining_minutes = minutes % 60
 
         if remaining_minutes == 0:
-            return pluralize(hours, 'hour')
+            return f"for {pluralize(hours, 'hour')}"
         else:
             return f"for {pluralize(hours, 'hour')} {pluralize(remaining_minutes, 'minute')}"
     else:
@@ -157,7 +157,7 @@ def alfred(argp):
             (emote, minutes, ' '.join(status)),
             ('dog2', '10', 'walking the dog'),
             ('pizza', '30', 'eating lunch'),
-            ('no_entry', '1000', 'out of office')
+            ('no_entry', '480', 'out of office')
         ]]
     }))
 
