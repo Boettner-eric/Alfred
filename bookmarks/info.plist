@@ -80,6 +80,16 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>44F227E8-6C8E-4AC7-BB67-82276CA5D673</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>Copy url</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
 		</array>
 	</dict>
 	<key>createdby</key>
@@ -159,6 +169,25 @@
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>BF1454E1-8782-4669-A3CA-2E77BA6E8DCC</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>44F227E8-6C8E-4AC7-BB67-82276CA5D673</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
@@ -279,14 +308,14 @@
 			<key>xpos</key>
 			<real>330</real>
 			<key>ypos</key>
-			<real>220</real>
+			<real>295</real>
 		</dict>
 		<key>2C30B3B4-F6B1-41C2-B2FB-225835872BB3</key>
 		<dict>
 			<key>xpos</key>
 			<real>255</real>
 			<key>ypos</key>
-			<real>315</real>
+			<real>390</real>
 		</dict>
 		<key>36594007-BF9B-47F7-9847-5C4640A5AFFA</key>
 		<dict>
@@ -295,21 +324,28 @@
 			<key>xpos</key>
 			<real>85</real>
 			<key>ypos</key>
-			<real>220</real>
+			<real>295</real>
+		</dict>
+		<key>44F227E8-6C8E-4AC7-BB67-82276CA5D673</key>
+		<dict>
+			<key>xpos</key>
+			<real>415</real>
+			<key>ypos</key>
+			<real>160</real>
 		</dict>
 		<key>642BCED2-539C-4F7D-BA24-55C89ECE573D</key>
 		<dict>
 			<key>xpos</key>
 			<real>510</real>
 			<key>ypos</key>
-			<real>220</real>
+			<real>295</real>
 		</dict>
 		<key>84FABB63-77DD-4C83-8E4C-CA1CD0DCD618</key>
 		<dict>
 			<key>xpos</key>
 			<real>255</real>
 			<key>ypos</key>
-			<real>250</real>
+			<real>325</real>
 		</dict>
 		<key>BF1454E1-8782-4669-A3CA-2E77BA6E8DCC</key>
 		<dict>
@@ -323,7 +359,7 @@
 		<key>D3D5928B-2640-4935-9B24-69C9D9AF5F50</key>
 		<dict>
 			<key>xpos</key>
-			<real>285</real>
+			<real>415</real>
 			<key>ypos</key>
 			<real>40</real>
 		</dict>

@@ -7,8 +7,16 @@ import re
 from pathlib import Path
 from urllib.parse import urlparse
 
+parser = argparse.ArgumentParser(description='Add a new bookmark to Alfred workflow')
+parser.add_argument('title', help='Title for the bookmark', type=str)
+parser.add_argument('url', help='URL of the website to bookmark', type=str)
+args = parser.parse_args()
+
+
 def download_favicon(url):
-    """Download favicon for a website"""
+    """
+    Download favicon for a website
+    """
     try:
         domain = urlparse(url).netloc
         favicon_url = f"https://www.google.com/s2/favicons?sz=128&domain={domain}"
@@ -55,18 +63,16 @@ def download_favicon(url):
 # }
 
 def add_bookmark(title, url):
-    """Add a new bookmark to common.json."""
-    uid = f"cm {title.lower()}"
-    
-    icon_path = download_favicon(url)
-    
+    """
+    Add a new bookmark to common.json.
+    """    
     new_bookmark = {
         "arg": url,
         "subtitle": url,
         "icon": {
-            "path": icon_path
+            "path": download_favicon(url)
         },
-        "uid": uid,
+        "uid": f"cm {title.lower()}",
         "title": title
     }
     
@@ -79,17 +85,11 @@ def add_bookmark(title, url):
     
     print(f"Successfully added {title} to bookmarks!")
 
-def main():
-    parser = argparse.ArgumentParser(description='Add a new bookmark to Alfred workflow')
-    parser.add_argument('title', help='Title for the bookmark')
-    parser.add_argument('url', help='URL of the website to bookmark')
-    args = parser.parse_args()
-    
-    # Validate URL
+def alfred():    
     if not re.match(r'https?://', args.url):
         args.url = 'https://' + args.url
     
     add_bookmark(args.title, args.url)
 
 if __name__ == '__main__':
-    main() 
+    alfred()
