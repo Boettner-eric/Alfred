@@ -26,6 +26,8 @@ parser.add_argument(
 parser.add_argument('argv', nargs='*')
 args = parser.parse_args()
 
+APPLE_EMOJI_PATH = 'node_modules/emoji-datasource-apple/img/apple/64'
+GENERIC_EMOJI_PATH = 'node_modules/emoji-datasource/emoji.json'
 
 def change_status(emoji, status, minutes):
     status = status.replace('/|/', ' ')
@@ -69,16 +71,14 @@ def get_custom_emoji():
 
 
 def emoji_data_exists():
-    emoji_file_path = 'node_modules/emoji-datasource/emoji.json'
-    emoji_apple_file_path = 'node_modules/emoji-datasource-apple/img/apple/64/'
-    return (exists(emoji_file_path) and 
-            os.access(emoji_file_path, os.R_OK) and 
-            exists(emoji_apple_file_path) and 
-            os.access(emoji_apple_file_path, os.R_OK))
+    return (exists(GENERIC_EMOJI_PATH) and 
+            os.access(GENERIC_EMOJI_PATH, os.R_OK) and 
+            exists(APPLE_EMOJI_PATH) and 
+            os.access(APPLE_EMOJI_PATH, os.R_OK))
 
 
 def find_default_emoji(emote):
-    with open('node_modules/emoji-datasource/emoji.json', 'r') as emotes:
+    with open(GENERIC_EMOJI_PATH, 'r') as emotes:
         data = json.load(emotes)
         for i in data:
             if i['short_name'] == emote:
@@ -92,9 +92,9 @@ def format_status(status):
     else:
         default_emote = find_default_emoji(emote)
         if (default_emote):
-            icon = f'node_modules/emoji-datasource-apple/img/apple/64/{default_emote}'
+            icon = f'{APPLE_EMOJI_PATH}/{default_emote}'
         else:
-            icon = f'emotes/card-teal.png'
+            icon = f'{APPLE_EMOJI_PATH}/1F604.png'
     return {
         "arg": f'{emote} {minutes} {"/|/".join(status.split(" "))}',
         "subtitle": format_time(minutes),
