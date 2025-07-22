@@ -20,7 +20,7 @@ def format_subtitle($time_str):
 def update_meeting_subtitle($meeting):
   $meeting.time as $time_str
   | parse_meeting_time($time_str) as $meeting_start_minutes
-  | ($meeting_start_minutes - (now | . / 60) + 420) as $minutes_until
+  | (($meeting_start_minutes - (now | . / 60) + 420) | floor) as $minutes_until
   | if $minutes_until < 60 then
       if $minutes_until <= 0 then
         $meeting + {"subtitle": "right now"}
