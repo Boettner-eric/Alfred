@@ -161,6 +161,7 @@ def find_meeting_url(*args):
         r"https://app.slack.com/huddle/[a-zA-Z0-9]*/[a-zA-Z0-9]*": "./icons/slack.png",
         r"(?i).*Microsoft Teams.*": "./icons/teams.png", # TODO: make this better
         r"(?i).*Flight.*": "./icons/flight.png",
+        r"https://[a-zA-Z0-9]*": "./icons/website.png",
     }
 
     for pattern, icon in MEETING_PATTERNS.items():
