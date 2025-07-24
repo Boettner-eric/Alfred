@@ -27,16 +27,26 @@ SCOPES = [
     "openid",
 ]
 
+# google calendar puts urls all over calendar events so this function hopefully checks for all of them
+MEETING_PATTERNS = {
+        r"http[s]?://(?:[a-zA-Z0-9-]+\.)?zoom\.us/j(?:[a-zA-Z0-9$-_@.&+!*(),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+": "./icons/zoom.png",
+        r"https://meet\.google\.com\/(?:[a-z]|[0-9]|[-])+": "./icons/meet.png",
+        r"https://app.slack.com/huddle/[a-zA-Z0-9]*/[a-zA-Z0-9]*": "./icons/slack.png",
+        r"(?i).*Microsoft Teams.*": "./icons/teams.png", # TODO: make this better
+        r"(?i).*Flight.*": "./icons/flight.png",
+        r"https://[a-zA-Z0-9\-\._~:/?#\[\]@!$&'()*+,;=%]+": "./icons/website.png",
+    }
+
 TIME_FORMAT = "%a %B %-d %-I:%M"
 ENCODE_FORMAT = "%Y-%m-%dT%H:%M:%S"
-
-# how long do to wait between api calls
-CACHE_TIME = 60
 
 def register_user():
     """
     Register a new user and ensure refresh token is saved
     """
+    if not os.path.exists("credentials.json"):
+        exit("credentials.json not found, please follow the instructions in the README to create it")
+
     flow = InstalledAppFlow.from_client_secrets_file("credentials.json", SCOPES)
     creds = flow.run_local_server(port=0)
     
@@ -149,23 +159,12 @@ def by_datetime(event):
     return time.mktime(stime.timetuple())
 
 
-# google calendar puts urls all over calendar events so this function hopefully checks for all of them
 def find_meeting_url(*args):
     """
     Find the meeting url in multiple event fields
     """
-    url = " ".join(args)
-    MEETING_PATTERNS = {
-        r"http[s]?://(?:[a-zA-Z0-9-]+\.)?zoom\.us/j(?:[a-zA-Z0-9$-_@.&+!*(),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+": "./icons/zoom.png",
-        r"https://meet\.google\.com\/(?:[a-z]|[0-9]|[-])+": "./icons/meet.png",
-        r"https://app.slack.com/huddle/[a-zA-Z0-9]*/[a-zA-Z0-9]*": "./icons/slack.png",
-        r"(?i).*Microsoft Teams.*": "./icons/teams.png", # TODO: make this better
-        r"(?i).*Flight.*": "./icons/flight.png",
-        r"https://[a-zA-Z0-9\-\._~:/?#\[\]@!$&'()*+,;=%]+": "./icons/website.png",
-    }
-
     for pattern, icon in MEETING_PATTERNS.items():
-        matches = findall(pattern, url)
+        matches = findall(pattern, " ".join(args))
         if matches:
             return (matches[0], icon)
 
