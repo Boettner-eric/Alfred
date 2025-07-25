@@ -2,6 +2,9 @@
 
 Jump to slack huddles, zoom rooms and google meets directly from alfred. 
 
+<img src="../screenshots/meetings-calendar.png" width="600">
+
+
 # Setup
 - setup your google calendar api access via this [guide](https://developers.google.com/workspace/calendar/api/quickstart/python#set-up-environment)
 - save your generated `credentials.json` to this folder
