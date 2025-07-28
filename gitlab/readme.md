@@ -14,9 +14,9 @@ List all the active pull requests for a user
 
 #### Mods
 - default -> view pull requests where the user is the author
-- `cmd` -> view user's profile
-- `ctrl` -> view pull requests where the user is a  reviewer
-- `alt` -> view pull requests where the user is an assignee
+- `⌘` -> view user's profile
+- `⌃` -> view pull requests where the user is a  reviewer
+- `⌥` -> view pull requests where the user is an assignee
 
 
 ## Repos
@@ -24,15 +24,15 @@ List all repos in your org
 
 #### Mods
 - default -> open the repos homepage
-- `cmd` -> open pull requests for this repo
-- `ctrl` -> open the repo's readme
-- `alt` -> copy the git clone url
+- `⌘` -> open pull requests for this repo
+- `⌃` -> open the repo's readme
+- `⌥` -> copy the git clone url
 
 ## Pull requests
 Show all active pull requests by recency
 
 #### Mods
 - default -> open the pull request
-- `cmd` -> copy the git branch name
-- `ctrl` -> open the linked linear ticket
-- `alt` -> show the assignees and reviewers
+- `⌘` -> copy the git branch name
+- `⌃` -> open the linked linear ticket
+- `⌥` -> show the assignees and reviewers

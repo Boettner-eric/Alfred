@@ -20,6 +20,7 @@ brew install switchaudio-osx
 - Add devices to the denylist to hide them from alfred's options
 
 # Mods
-- `cmd` -> set as output
-- `ctrl` -> set as input
-- `alt` -> copy device name (useful for denylist)
+- `⌘` -> set as output
+- `⌃` -> set as input
+- `⌥` -> copy device name (useful for denylist)
+
