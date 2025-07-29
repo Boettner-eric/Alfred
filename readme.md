@@ -11,6 +11,7 @@ Feel free to create an issue or open a pull request.
 - [Bookmarks](./bookmarks/) - jump to webpages quickly
 - [Spelling](./spelling/) - correct a misspelling via alfred hotkey
 - [Slack Status](./slack/) - change your slack status from Alfred
+- [Warp](./warp/) - jump to any warp directory 
 
 ## External Repos
 I also use a few other alfred workflows that I have modified or downloaded from alfred's workflow gallery
