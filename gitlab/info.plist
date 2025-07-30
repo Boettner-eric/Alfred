@@ -440,13 +440,12 @@
 				<string>Loading data…</string>
 				<key>script</key>
 				<string>if test -f "merge.json"; then
-	cat merge.json
+	jq -f alfred.jq merge.json
 	/usr/bin/python3 gitlab.py -m &gt; /dev/null &amp;
 else
 	/usr/bin/python3 gitlab.py -m
-fi
-
-</string>
+	jq -f alfred.jq merge.json
+fi</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>

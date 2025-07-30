@@ -6,6 +6,7 @@ import requests as rq
 from os.path import exists
 from time_format import time_ago
 from dotenv import load_dotenv
+from datetime import datetime as dt, timezone as tz
 
 dotenv_path = os.path.abspath(os.path.join(os.path.dirname(__file__), ".env.local"))
 
@@ -186,14 +187,11 @@ def get_mrs():
                 },
             )
     with open("merge.json", "w") as outfile:
-        json.dump({"rerun": 4, "items": merge_requests}, outfile, indent=4)
-
+        json.dump({"variables": {"cache_time": dt.now(tz.utc).strftime('%d/%m/%Y, %H:%M:%S')}, "items": merge_requests}, outfile, indent=2)
 
 def linear_url(url):
     sections = url.split("-")
-    return (
-        f"//workspace/issue/{'-'.join(sections[:2]).upper()}/{'-'.join(sections[2:])}"
-    )
+    return (f"//workspace/issue/{'-'.join(sections[:2]).upper()}/{'-'.join(sections[2:])}")
 
 
 if __name__ == "__main__":
