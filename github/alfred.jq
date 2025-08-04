@@ -7,7 +7,6 @@ def calculate_rerun($cache_time_minutes):
     cache_time: now
   },
   items: [.items | sort_by(.pushed_at) | reverse | .[] | {
-      uid: (.name + (.id | tostring)),
       title: .name, 
       icon: (if .fork
           then {path: "icons/fork.png"}
