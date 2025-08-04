@@ -8,6 +8,7 @@ Feel free to create an issue or open a pull request.
 - [Audio Source Switcher](./audio-source/) - switch between audio IO devices
 - [Calendar](./meetings-calendar/) - view upcoming events and join meetings from Alfred
 - [Gitlab](./gitlab/) - view MRs, user profiles and repos in your org's gitlab instance
+- [Github](./github/) - (draft) view repos and prs for a github user
 - [Bookmarks](./bookmarks/) - jump to webpages quickly
 - [Spelling](./spelling/) - correct a misspelling via alfred hotkey
 - [Slack Status](./slack/) - change your slack status from Alfred

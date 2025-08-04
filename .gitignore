@@ -44,3 +44,5 @@ user.workflow.calendar
 gitlab/*.json
 bookmarks/icons/*
 bookmarks/common.json
+
+github/repos.json
