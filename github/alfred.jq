@@ -1,6 +1,6 @@
-def calculate_rerun($cache_time_minutes):
-  ((now | . / 60) - $cache_time_minutes) as $diff_minutes
-  | if $diff_minutes < 5 then {} else {"rerun": 1} end;
+def calculate_rerun($cache_time_seconds):
+  (now - $cache_time_seconds) as $diff_seconds
+  | if $diff_seconds < 300 then {} else {"rerun": 1} end;
 
 {
   variables: {
@@ -35,4 +35,4 @@ def calculate_rerun($cache_time_minutes):
       },
     }
   ]
-} + calculate_rerun(.cache_time / 60)
+} + calculate_rerun(.cache_time)
