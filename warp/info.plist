@@ -22,11 +22,11 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>C419C7F8-4101-4793-B813-A9E05083F292</string>
+				<string>87F1DDA7-C6A2-448A-B604-4E8135B0DE52</string>
 				<key>modifiers</key>
 				<integer>1048576</integer>
 				<key>modifiersubtext</key>
-				<string>Open in Terminal</string>
+				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -42,11 +42,11 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>26583E9D-C57D-42FB-B1F2-52C0C522558A</string>
+				<string>B416EE37-B8AE-40A5-9D25-5385F41B9782</string>
 				<key>modifiers</key>
 				<integer>524288</integer>
 				<key>modifiersubtext</key>
-				<string>Open in Editor</string>
+				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -105,7 +105,7 @@
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>jq -R -f alfred.jq ~/.warprc</string>
+				<string>jq --arg editor $editor --arg terminal $terminal -R -f alfred.jq ~/.warprc </string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -129,17 +129,25 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>openwith</key>
-				<string>/Applications/Warp.app</string>
-				<key>sourcefile</key>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>open -a ${editor} {query}</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
 				<string></string>
+				<key>type</key>
+				<integer>11</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.openfile</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>C419C7F8-4101-4793-B813-A9E05083F292</string>
+			<string>87F1DDA7-C6A2-448A-B604-4E8135B0DE52</string>
 			<key>version</key>
-			<integer>3</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -157,17 +165,25 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>openwith</key>
-				<string>/Applications/Cursor.app</string>
-				<key>sourcefile</key>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>open -a ${terminal} {query}</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
 				<string></string>
+				<key>type</key>
+				<integer>11</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.openfile</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>26583E9D-C57D-42FB-B1F2-52C0C522558A</string>
+			<string>B416EE37-B8AE-40A5-9D25-5385F41B9782</string>
 			<key>version</key>
-			<integer>3</integer>
+			<integer>2</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -181,19 +197,19 @@
 			<key>ypos</key>
 			<real>215</real>
 		</dict>
-		<key>26583E9D-C57D-42FB-B1F2-52C0C522558A</key>
-		<dict>
-			<key>xpos</key>
-			<real>355</real>
-			<key>ypos</key>
-			<real>545</real>
-		</dict>
 		<key>3E0B5AFE-003E-4404-B731-E23B2BE64961</key>
 		<dict>
 			<key>xpos</key>
 			<real>95</real>
 			<key>ypos</key>
 			<real>215</real>
+		</dict>
+		<key>87F1DDA7-C6A2-448A-B604-4E8135B0DE52</key>
+		<dict>
+			<key>xpos</key>
+			<real>355</real>
+			<key>ypos</key>
+			<real>325</real>
 		</dict>
 		<key>896046BA-D5FD-40F8-89D3-8879EE74BF46</key>
 		<dict>
@@ -202,16 +218,59 @@
 			<key>ypos</key>
 			<real>435</real>
 		</dict>
-		<key>C419C7F8-4101-4793-B813-A9E05083F292</key>
+		<key>B416EE37-B8AE-40A5-9D25-5385F41B9782</key>
 		<dict>
 			<key>xpos</key>
 			<real>355</real>
 			<key>ypos</key>
-			<real>325</real>
+			<real>545</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
-	<array/>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>/Applications/Visual Studio Code.app</string>
+				<key>filtermode</key>
+				<integer>0</integer>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<false/>
+			</dict>
+			<key>description</key>
+			<string>An IDE or editor to edit the file</string>
+			<key>label</key>
+			<string>Editor</string>
+			<key>type</key>
+			<string>filepicker</string>
+			<key>variable</key>
+			<string>editor</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>/System/Applications/Utilities/Terminal.app</string>
+				<key>filtermode</key>
+				<integer>0</integer>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<false/>
+			</dict>
+			<key>description</key>
+			<string></string>
+			<key>label</key>
+			<string>Terminal</string>
+			<key>type</key>
+			<string>filepicker</string>
+			<key>variable</key>
+			<string>terminal</string>
+		</dict>
+	</array>
 	<key>version</key>
 	<string></string>
 	<key>webaddress</key>
