@@ -5,8 +5,5 @@ def calculate_rerun($cache_time_minutes):
 def parse_cache_time($cache_time_str):
   ($cache_time_str | strptime("%d/%m/%Y, %H:%M:%S") | mktime) / 60;
 
-def alfred:
-  parse_cache_time(.variables.cache_time) as $cache_minutes
-  | . + calculate_rerun($cache_minutes);
-
-alfred
+parse_cache_time(.variables.cache_time) as $cache_time_minutes
+| . + calculate_rerun($cache_time_minutes)
