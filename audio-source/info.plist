@@ -179,9 +179,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>input=$(SwitchAudioSource -c -t input)
-
-SwitchAudioSource -t input -s $input -m toggle</string>
+				<string>SwitchAudioSource -t input -m toggle</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
