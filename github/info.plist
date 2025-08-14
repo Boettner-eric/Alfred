@@ -133,7 +133,9 @@
 		</dict>
 	</array>
 	<key>readme</key>
-	<string></string>
+	<string>A simple workflow for viewing Github Repos.
+
+See https://github.com/Boettner-eric/Alfred/ for more info</string>
 	<key>uidata</key>
 	<dict>
 		<key>31FA8A38-71E8-4121-AD4E-04E2AF759EDB</key>

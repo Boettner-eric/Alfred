@@ -26,6 +26,11 @@
           arg: .name,
           subtitle: ("copy \"" + .name + "\" to clipboard"),
         },
+         shift: {
+          valid: true,
+          arg: .type,
+          subtitle: ("mute/unmute " + .type),
+        },
          alt: {
           valid: true,
           arg: .name,

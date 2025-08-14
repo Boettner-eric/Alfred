@@ -60,6 +60,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>8EAD115F-03A6-421A-8BBD-C245F172C069</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>18ECFC4A-3B19-4535-AC3B-F13914440E4F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>CA385C16-F4A7-4390-8569-64EB93117047</key>
 		<array>
 			<dict>
@@ -102,6 +115,29 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>8F7A52EA-2365-414A-BCB2-A23AE9F39F8A</string>
+				<key>modifiers</key>
+				<integer>131072</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>D94D7B78-68C9-47EF-92C3-B4D268DE06D9</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>8EAD115F-03A6-421A-8BBD-C245F172C069</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
 		</array>
 	</dict>
 	<key>createdby</key>
@@ -114,6 +150,83 @@
 	<string>Audio Source</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Audio Source</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>18ECFC4A-3B19-4535-AC3B-F13914440E4F</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>input=$(SwitchAudioSource -c -t input)
+
+SwitchAudioSource -t input -s $input -m toggle</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>8EAD115F-03A6-421A-8BBD-C245F172C069</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>46</integer>
+				<key>hotmod</key>
+				<integer>1179648</integer>
+				<key>hotstring</key>
+				<string>M</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>D94D7B78-68C9-47EF-92C3-B4D268DE06D9</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -296,12 +409,43 @@ SwitchAudioSource -a -f json | jq -s --arg input "$input" --arg output "$output"
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>/opt/homebrew/bin/SwitchAudioSource -t $1 -m toggle</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>8F7A52EA-2365-414A-BCB2-A23AE9F39F8A</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>A simple workflow for changing audio sources from Alfred. 
+
 See https://github.com/Boettner-eric/Alfred/ for more info</string>
 	<key>uidata</key>
 	<dict>
+		<key>18ECFC4A-3B19-4535-AC3B-F13914440E4F</key>
+		<dict>
+			<key>xpos</key>
+			<real>595</real>
+			<key>ypos</key>
+			<real>65</real>
+		</dict>
 		<key>4FE0BDA8-6B8A-4D66-9A02-86CAAF16CCBE</key>
 		<dict>
 			<key>xpos</key>
@@ -330,6 +474,20 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<key>ypos</key>
 			<real>245</real>
 		</dict>
+		<key>8EAD115F-03A6-421A-8BBD-C245F172C069</key>
+		<dict>
+			<key>xpos</key>
+			<real>380</real>
+			<key>ypos</key>
+			<real>65</real>
+		</dict>
+		<key>8F7A52EA-2365-414A-BCB2-A23AE9F39F8A</key>
+		<dict>
+			<key>xpos</key>
+			<real>590</real>
+			<key>ypos</key>
+			<real>775</real>
+		</dict>
 		<key>A5D04EAC-7977-48AE-97DA-5F070E9E8B4F</key>
 		<dict>
 			<key>xpos</key>
@@ -350,6 +508,13 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<real>175</real>
 			<key>ypos</key>
 			<real>215</real>
+		</dict>
+		<key>D94D7B78-68C9-47EF-92C3-B4D268DE06D9</key>
+		<dict>
+			<key>xpos</key>
+			<real>180</real>
+			<key>ypos</key>
+			<real>65</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>

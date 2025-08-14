@@ -17,6 +17,7 @@ brew install switchaudio-osx
 
 # Configuration
 - Set your trigger keyword in the `Configure Workflow` menu
+- Set a hotkey for the input mute
 - Add devices to the denylist to hide them from alfred's options
 
 # Mods
