@@ -398,7 +398,16 @@ fi</string>
 		</dict>
 	</array>
 	<key>readme</key>
-	<string></string>
+	<string>An alfred workflow for jumping into google calendar meetings
+
+Supports the following types:
+- Zoom
+- Google Meets
+- Slack Huddles
+- Microsoft Teams
+- Google flights
+
+See more at: https://github.com/Boettner-eric/Alfred/</string>
 	<key>uidata</key>
 	<dict>
 		<key>058FAA93-04A6-4225-B03F-EC9E04C207D5</key>
@@ -492,8 +501,6 @@ fi</string>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
-	<array/>
-	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
 	<string>0.0.1</string>
