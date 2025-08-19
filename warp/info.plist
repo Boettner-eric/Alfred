@@ -187,7 +187,9 @@
 		</dict>
 	</array>
 	<key>readme</key>
-	<string></string>
+	<string>A simple workflow for jumping to warp directories with your favorite applications.
+
+See https://github.com/Boettner-eric/Alfred/ for more info</string>
 	<key>uidata</key>
 	<dict>
 		<key>0D78AECF-8479-4A68-8286-E568E6338FBD</key>

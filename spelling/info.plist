@@ -118,7 +118,9 @@
 		</dict>
 	</array>
 	<key>readme</key>
-	<string></string>
+	<string>A simple workflow for fixing spelling mistakes.
+
+See https://github.com/Boettner-eric/Alfred/ for more info</string>
 	<key>uidata</key>
 	<dict>
 		<key>04E73298-63A3-4B89-9979-9679E733A4F9</key>
@@ -145,6 +147,8 @@
 	</dict>
 	<key>userconfigurationconfig</key>
 	<array/>
+	<key>version</key>
+	<string></string>
 	<key>webaddress</key>
 	<string>https://github.com/Boettner-eric/Alfred</string>
 </dict>
