@@ -5,14 +5,14 @@ Feel free to create an issue or open a pull request.
 
 ## Workflows
 
-- [Audio Source Switcher](./audio-source/) - switch between audio IO devices
+- [Audio Source Switcher](./audio-source/) - switch between audio IO devices and mute input via hotkey
 - [Calendar](./meetings-calendar/) - view upcoming events and join meetings from Alfred
 - [Gitlab](./gitlab/) - view MRs, user profiles and repos in your org's gitlab instance
-- [Github](./github/) - (draft) view repos and prs for a github user
+- [Github](./github/) - view repos and prs for a github user
 - [Bookmarks](./bookmarks/) - jump to webpages quickly
-- [Spelling](./spelling/) - correct a misspelling via alfred hotkey
-- [Slack Status](./slack/) - change your slack status from Alfred
-- [Warp](./warp/) - jump to any warp directory 
+- [Spelling](./spelling/) - find the closest word to the selected text and replace it
+- [Slack Status](./slack/) - change your slack status
+- [Warp](./warp/) - open any warp directory in your chosen application
 
 ## External Repos
 I also use a few other alfred workflows that I have modified or downloaded from alfred's workflow gallery

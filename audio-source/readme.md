@@ -24,4 +24,4 @@ brew install switchaudio-osx
 - `⌘` -> set as output
 - `⌃` -> set as input
 - `⌥` -> copy device name (useful for denylist)
-
+- `⇧` -> toggle input/output mute state
