@@ -469,7 +469,9 @@
 		</dict>
 	</array>
 	<key>readme</key>
-	<string></string>
+	<string>A simple workflow for jumping to bookmarks
+
+See https://github.com/Boettner-eric/Alfred/ for more info</string>
 	<key>uidata</key>
 	<dict>
 		<key>20DA9DB2-538C-4605-8B9E-FFF9D382B829</key>
@@ -572,6 +574,8 @@
 	</dict>
 	<key>userconfigurationconfig</key>
 	<array/>
+	<key>version</key>
+	<string></string>
 	<key>webaddress</key>
 	<string>https://github.com/Boettner-eric/Alfred</string>
 </dict>
