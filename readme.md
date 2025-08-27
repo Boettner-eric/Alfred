@@ -10,6 +10,7 @@ Feel free to create an issue or open a pull request.
 - [Gitlab](./gitlab/) - view MRs, user profiles and repos in your org's gitlab instance
 - [Github](./github/) - view repos and prs for a github user
 - [Bookmarks](./bookmarks/) - jump to webpages quickly
+- [Arc Bookmarks](./arc-bookmarks/) (wip) - jump to arc webpages quickly
 - [Spelling](./spelling/) - find the closest word to the selected text and replace it
 - [Slack Status](./slack/) - change your slack status
 - [Warp](./warp/) - open any warp directory in your chosen application

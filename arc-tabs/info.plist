@@ -30,6 +30,26 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>1501056E-8C25-4B26-A432-2B4362552620</string>
+				<key>modifiers</key>
+				<integer>524288</integer>
+				<key>modifiersubtext</key>
+				<string>Open in new window (in space {var:arc_space1})</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>F8A98777-34B7-49F3-BDFA-52DF54CEC7F6</string>
+				<key>modifiers</key>
+				<integer>262144</integer>
+				<key>modifiersubtext</key>
+				<string>Open in new window (in space {var:arc_space2})</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
 		</array>
 	</dict>
 	<key>createdby</key>
@@ -131,6 +151,76 @@
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>on run argv
+  set theUrl to item 1 of argv
+  set theSpace to (system attribute "arc_space1")
+  tell application "Arc"
+    make new window
+    tell front window
+	  tell space theSpace
+	    make new tab with properties {URL:theUrl}
+	  end tell
+	end tell
+ 	activate
+  end tell
+end run</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>1501056E-8C25-4B26-A432-2B4362552620</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>on run argv
+  set theUrl to item 1 of argv
+  set theSpace to (system attribute "arc_space2")
+  tell application "Arc"
+    make new window
+    tell front window
+	  tell space theSpace
+	    make new tab with properties {URL:theUrl}
+	  end tell
+	end tell
+ 	activate
+  end tell
+end run</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>F8A98777-34B7-49F3-BDFA-52DF54CEC7F6</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>A simple workflow for jumping to arc tabs
@@ -138,6 +228,13 @@
 See https://github.com/Boettner-eric/Alfred/ for more info</string>
 	<key>uidata</key>
 	<dict>
+		<key>1501056E-8C25-4B26-A432-2B4362552620</key>
+		<dict>
+			<key>xpos</key>
+			<real>415</real>
+			<key>ypos</key>
+			<real>280</real>
+		</dict>
 		<key>44F227E8-6C8E-4AC7-BB67-82276CA5D673</key>
 		<dict>
 			<key>xpos</key>
@@ -161,9 +258,59 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<key>ypos</key>
 			<real>40</real>
 		</dict>
+		<key>F8A98777-34B7-49F3-BDFA-52DF54CEC7F6</key>
+		<dict>
+			<key>xpos</key>
+			<real>415</real>
+			<key>ypos</key>
+			<real>400</real>
+		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
-	<array/>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>primary</string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>What space do you want to open the new window in</string>
+			<key>label</key>
+			<string>Primary Arc Space</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>arc_space1</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>secondary</string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>What space do you want to open the new window in</string>
+			<key>label</key>
+			<string>Secondary Arc Space</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>arc_space2</string>
+		</dict>
+	</array>
 	<key>version</key>
 	<string></string>
 	<key>webaddress</key>
