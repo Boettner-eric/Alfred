@@ -168,6 +168,11 @@ def get_mrs():
                     },
                     "title": merge["title"],
                     "mods": {
+                        "shift": {
+                            "valid": True,
+                            "arg": f"{merge["web_url"]}/-/pipelines",
+                            "subtitle": f"Pipelines: {merge['web_url']}/-/pipelines",
+                        },
                         "cmd": {
                             "valid": True,
                             "arg": f"{merge['source_branch']}",

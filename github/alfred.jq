@@ -17,6 +17,11 @@ def calculate_rerun($cache_time_seconds):
       subtitle: (.description // "No description"),
       arg: .html_url,
       mods: {
+        shift: {
+          valid: true,
+          arg: (.html_url + "/actions"),
+          subtitle: "open github actions",
+        },
         cmd: {
           valid: true,
           arg: .clone_url,
