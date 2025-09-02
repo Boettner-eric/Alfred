@@ -70,7 +70,7 @@
 				<key>runningsubtext</key>
 				<string>Loading data…</string>
 				<key>script</key>
-				<string>./alfred.sh $Username $Token</string>
+				<string>./alfred.sh</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
