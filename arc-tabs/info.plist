@@ -78,7 +78,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>arc</string>
+				<string>{var:trigger}</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -268,6 +268,27 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 	</dict>
 	<key>userconfigurationconfig</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>arc</string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Pick a term you want to invoke this command with</string>
+			<key>label</key>
+			<string>Trigger Term</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>trigger</string>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
