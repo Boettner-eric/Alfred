@@ -7,18 +7,18 @@ It has support for both input and output devices and can be easily configured wi
 
 # Setup
 
-1. Install `switchaudio-osx` via Brew:
-```zsh
-brew install switchaudio-osx
-```
-
-2. Use `make install` to create a symlink to alfred's workflow folder or download the latest release from the [releases page](https://github.com/Boettner-eric/Alfred/releases) and import into Alfred.
-
-
-# Configuration
-- Set your trigger keyword in the `Configure Workflow` menu
+- Install `switchaudio-osx` via Brew: `brew install switchaudio-osx`
+- Use `make install` to create a symlink to alfred's workflow folder
+- Set your trigger keywords in the `Configure Workflow` menu
 - Set a hotkey for the input mute
 - Add devices to the denylist to hide them from alfred's options
+
+# Features
+- Globally mute input device
+- Change default audio devices
+- Create scenes for input/output settings
+- Use alfred url scheme to change devices
+
 
 # Mods
 - `⌘` -> set as output

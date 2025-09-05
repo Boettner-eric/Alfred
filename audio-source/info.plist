@@ -8,6 +8,158 @@
 	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
+		<key>11E3F9F8-93B7-4731-B1C6-08D3CC7AFA25</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>305AFFBF-3686-44E5-8C22-C83CDD4F9920</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>1E31F766-7B78-4ECE-BFCA-775FA8A59B93</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1F6150B2-B7B6-4882-B968-F3A536D5C3E3</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>1F6150B2-B7B6-4882-B968-F3A536D5C3E3</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>24F91450-55CD-43D1-9931-7FA922CB574C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>203BC0A5-8849-4BD4-95DE-A65333AFF19A</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>8EAD115F-03A6-421A-8BBD-C245F172C069</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>81FF4B96-3B24-4E14-9AA3-E59EEAAD5D64</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>CAEB5280-0FF0-4238-89AF-846F669EF57D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>5F9CC4B2-6A88-42D6-8D8A-76B4B73E2814</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>E1A072F8-2B3B-4E52-B06A-CA95A702AB38</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>4305845C-60FB-4E95-AFC9-41D3BB947AB1</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>D02D6603-EFD0-40B9-BE16-CD3B361FAD03</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>BD525832-0711-44E0-9E66-C6180515F379</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>BA3FF224-4022-41F6-ABC8-31D9581F8B8F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>24F91450-55CD-43D1-9931-7FA922CB574C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>11E3F9F8-93B7-4731-B1C6-08D3CC7AFA25</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<true/>
+			</dict>
+		</array>
+		<key>305AFFBF-3686-44E5-8C22-C83CDD4F9920</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>9807EC00-B284-401D-B8D1-BDC7296FEBE8</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>358C1DA1-EA1A-4660-8C5B-5052EDBEE32F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D83120BB-F7EC-431F-A3FC-8DDC3535CDB1</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>4327C6F1-41AD-494C-81B0-43880DA78F29</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>9D29B034-0B46-4B81-914A-B823E0A40780</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>4FE0BDA8-6B8A-4D66-9A02-86CAAF16CCBE</key>
 		<array>
 			<dict>
@@ -47,6 +199,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>878FA2B7-D3E2-44ED-8D50-75F367231255</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>9BF3A8BE-03C7-4850-9BF8-6694CDEEA969</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>89059872-057D-4E1B-8A48-FB676BAA9972</key>
 		<array>
 			<dict>
@@ -71,6 +236,45 @@
 				<string></string>
 				<key>vitoclose</key>
 				<false/>
+			</dict>
+		</array>
+		<key>9807EC00-B284-401D-B8D1-BDC7296FEBE8</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>358C1DA1-EA1A-4660-8C5B-5052EDBEE32F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>9BF3A8BE-03C7-4850-9BF8-6694CDEEA969</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>4327C6F1-41AD-494C-81B0-43880DA78F29</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<true/>
+			</dict>
+		</array>
+		<key>9D29B034-0B46-4B81-914A-B823E0A40780</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1E31F766-7B78-4ECE-BFCA-775FA8A59B93</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<true/>
 			</dict>
 		</array>
 		<key>CA385C16-F4A7-4390-8569-64EB93117047</key>
@@ -126,11 +330,102 @@
 				<false/>
 			</dict>
 		</array>
+		<key>CAEB5280-0FF0-4238-89AF-846F669EF57D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>9BF3A8BE-03C7-4850-9BF8-6694CDEEA969</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>CF7A7009-79E4-44B8-8C90-70D86C2D6E79</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>203BC0A5-8849-4BD4-95DE-A65333AFF19A</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>D02D6603-EFD0-40B9-BE16-CD3B361FAD03</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>CA385C16-F4A7-4390-8569-64EB93117047</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>D83120BB-F7EC-431F-A3FC-8DDC3535CDB1</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>0EA4B0FC-E696-4BBE-B9D0-C5BF2A1091ED</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>D94D7B78-68C9-47EF-92C3-B4D268DE06D9</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>8EAD115F-03A6-421A-8BBD-C245F172C069</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>DD117A8B-0E67-4EE2-8EEC-3BCD4395F8A9</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F5820FBD-7569-4301-9A89-8186A28DCAA6</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E1A072F8-2B3B-4E52-B06A-CA95A702AB38</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>DD117A8B-0E67-4EE2-8EEC-3BCD4395F8A9</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>F5820FBD-7569-4301-9A89-8186A28DCAA6</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>14FB179A-DAF1-4499-A0BE-93274A1853C4</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -153,33 +448,12 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>{query}</string>
-				<key>title</key>
-				<string>Audio Source</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>18ECFC4A-3B19-4535-AC3B-F13914440E4F</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>SwitchAudioSource -t input -m toggle</string>
+				<string>SwitchAudioSource -t input -m toggle | sed -E 's/.* to (muted|unmuted)/\1/'</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -193,6 +467,27 @@
 			<string>8EAD115F-03A6-421A-8BBD-C245F172C069</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>input {query}</string>
+				<key>title</key>
+				<string>Audio Source</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>18ECFC4A-3B19-4535-AC3B-F13914440E4F</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -224,6 +519,585 @@
 			<string>D94D7B78-68C9-47EF-92C3-B4D268DE06D9</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>ls icons/*.png | jq -R -s 'split("\n") | map(select(length &gt; 0)) | {
+  items: [
+    .[] | 
+    {
+      title: (split("/") | .[-1] | split(".") | .[0]),
+      arg: .,
+      icon: {path: .},
+      subtitle: .
+    }
+  ]
+}'</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>9807EC00-B284-401D-B8D1-BDC7296FEBE8</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>SwitchAudioSource -a -t input -f json | jq -s --arg input "" --arg output "" --arg denylist "$denylist" -f alfred.jq</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>9D29B034-0B46-4B81-914A-B823E0A40780</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>subtext</key>
+				<string>Enter scene title</string>
+				<key>text</key>
+				<string>Title</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>9BF3A8BE-03C7-4850-9BF8-6694CDEEA969</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>Scene "{var:title}" created</string>
+				<key>title</key>
+				<string>Audio Source</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>0EA4B0FC-E696-4BBE-B9D0-C5BF2A1091ED</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>jq --arg title "$title" --arg icon "$icon" --arg input "$input" --arg output "$output" -f scenes/add-scene.jq scenes/scenes.json &gt; scenes/scenes.json.tmp &amp;&amp; mv scenes/scenes.json.tmp scenes/scenes.json</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>D83120BB-F7EC-431F-A3FC-8DDC3535CDB1</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>{var:add_trigger}</string>
+				<key>subtext</key>
+				<string>scene audio settings</string>
+				<key>text</key>
+				<string>Add scene</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>878FA2B7-D3E2-44ED-8D50-75F367231255</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>SwitchAudioSource -a -t output -f json | jq -s --arg input "" --arg output "" --arg denylist "$denylist" -f alfred.jq</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>24F91450-55CD-43D1-9931-7FA922CB574C</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>output</key>
+					<string>{var:output2}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>305AFFBF-3686-44E5-8C22-C83CDD4F9920</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>CAEB5280-0FF0-4238-89AF-846F669EF57D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>title</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>4327C6F1-41AD-494C-81B0-43880DA78F29</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>delimiter</key>
+				<string>,</string>
+				<key>discardemptyarguments</key>
+				<false/>
+				<key>outputas</key>
+				<integer>0</integer>
+				<key>trimarguments</key>
+				<false/>
+				<key>variableprefix</key>
+				<string>output</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.split</string>
+			<key>uid</key>
+			<string>11E3F9F8-93B7-4731-B1C6-08D3CC7AFA25</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>delimiter</key>
+				<string>,</string>
+				<key>discardemptyarguments</key>
+				<false/>
+				<key>outputas</key>
+				<integer>0</integer>
+				<key>trimarguments</key>
+				<false/>
+				<key>variableprefix</key>
+				<string>input</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.split</string>
+			<key>uid</key>
+			<string>1E31F766-7B78-4ECE-BFCA-775FA8A59B93</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>input</key>
+					<string>{var:input2}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>1F6150B2-B7B6-4882-B968-F3A536D5C3E3</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>icon</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>358C1DA1-EA1A-4660-8C5B-5052EDBEE32F</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Audio Source - Scene</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>14FB179A-DAF1-4499-A0BE-93274A1853C4</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>input="${1% | output: *}"
+input="${input#input: }"
+
+output="${1#* | output: }"
+
+/opt/homebrew/bin/SwitchAudioSource -t input -s $input | sed 's/input audio device set to "\([^"]*\)"/input: \1/'
+/opt/homebrew/bin/SwitchAudioSource -t output -s $output | sed 's/output audio device set to "\([^"]*\)"/output: \1/'</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>F5820FBD-7569-4301-9A89-8186A28DCAA6</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>mute</string>
+						<key>outputlabel</key>
+						<string>Mute</string>
+						<key>uid</key>
+						<string>81FF4B96-3B24-4E14-9AA3-E59EEAAD5D64</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>add_scene</string>
+						<key>outputlabel</key>
+						<string>Add Scene</string>
+						<key>uid</key>
+						<string>5F9CC4B2-6A88-42D6-8D8A-76B4B73E2814</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>scenes</string>
+						<key>outputlabel</key>
+						<string>Scenes</string>
+						<key>uid</key>
+						<string>4305845C-60FB-4E95-AFC9-41D3BB947AB1</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>devices</string>
+						<key>outputlabel</key>
+						<string>Devices</string>
+						<key>uid</key>
+						<string>BD525832-0711-44E0-9E66-C6180515F379</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>Invalid Arg</string>
+				<key>hideelse</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>203BC0A5-8849-4BD4-95DE-A65333AFF19A</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>{var:scene_trigger}</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>jq -f scenes/alfred.jq "scenes/scenes.json"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>DD117A8B-0E67-4EE2-8EEC-3BCD4395F8A9</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>availableviaurlhandler</key>
+				<true/>
+				<key>triggerid</key>
+				<string>audio_source</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>CF7A7009-79E4-44B8-8C90-70D86C2D6E79</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>E1A072F8-2B3B-4E52-B06A-CA95A702AB38</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -273,7 +1147,7 @@
 			<key>config</key>
 			<dict>
 				<key>alfredfiltersresults</key>
-				<false/>
+				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
 				<key>argumenttreatemptyqueryasnil</key>
@@ -312,7 +1186,7 @@ SwitchAudioSource -a -f json | jq -s --arg input "$input" --arg output "$output"
 				<key>type</key>
 				<integer>5</integer>
 				<key>withspace</key>
-				<false/>
+				<true/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
@@ -345,6 +1219,23 @@ SwitchAudioSource -a -f json | jq -s --arg input "$input" --arg output "$output"
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>D02D6603-EFD0-40B9-BE16-CD3B361FAD03</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>autopaste</key>
 				<false/>
 				<key>clipboardtext</key>
@@ -360,6 +1251,27 @@ SwitchAudioSource -a -f json | jq -s --arg input "$input" --arg output "$output"
 			<string>A5D04EAC-7977-48AE-97DA-5F070E9E8B4F</string>
 			<key>version</key>
 			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>Invalid argument "{query}" sent to alfred url handler</string>
+				<key>title</key>
+				<string>Audio Source</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>BA3FF224-4022-41F6-ABC8-31D9581F8B8F</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -437,82 +1349,250 @@ SwitchAudioSource -a -f json | jq -s --arg input "$input" --arg output "$output"
 See https://github.com/Boettner-eric/Alfred/ for more info</string>
 	<key>uidata</key>
 	<dict>
+		<key>0EA4B0FC-E696-4BBE-B9D0-C5BF2A1091ED</key>
+		<dict>
+			<key>xpos</key>
+			<real>1530</real>
+			<key>ypos</key>
+			<real>175</real>
+		</dict>
+		<key>11E3F9F8-93B7-4731-B1C6-08D3CC7AFA25</key>
+		<dict>
+			<key>xpos</key>
+			<real>1055</real>
+			<key>ypos</key>
+			<real>205</real>
+		</dict>
+		<key>14FB179A-DAF1-4499-A0BE-93274A1853C4</key>
+		<dict>
+			<key>xpos</key>
+			<real>835</real>
+			<key>ypos</key>
+			<real>325</real>
+		</dict>
 		<key>18ECFC4A-3B19-4535-AC3B-F13914440E4F</key>
 		<dict>
 			<key>xpos</key>
-			<real>595</real>
+			<real>670</real>
 			<key>ypos</key>
-			<real>65</real>
+			<real>25</real>
+		</dict>
+		<key>1E31F766-7B78-4ECE-BFCA-775FA8A59B93</key>
+		<dict>
+			<key>xpos</key>
+			<real>815</real>
+			<key>ypos</key>
+			<real>205</real>
+		</dict>
+		<key>1F6150B2-B7B6-4882-B968-F3A536D5C3E3</key>
+		<dict>
+			<key>xpos</key>
+			<real>865</real>
+			<key>ypos</key>
+			<real>205</real>
+		</dict>
+		<key>203BC0A5-8849-4BD4-95DE-A65333AFF19A</key>
+		<dict>
+			<key>xpos</key>
+			<real>210</real>
+			<key>ypos</key>
+			<real>325</real>
+		</dict>
+		<key>24F91450-55CD-43D1-9931-7FA922CB574C</key>
+		<dict>
+			<key>note</key>
+			<string>output</string>
+			<key>xpos</key>
+			<real>920</real>
+			<key>ypos</key>
+			<real>175</real>
+		</dict>
+		<key>305AFFBF-3686-44E5-8C22-C83CDD4F9920</key>
+		<dict>
+			<key>xpos</key>
+			<real>1110</real>
+			<key>ypos</key>
+			<real>205</real>
+		</dict>
+		<key>358C1DA1-EA1A-4660-8C5B-5052EDBEE32F</key>
+		<dict>
+			<key>xpos</key>
+			<real>1310</real>
+			<key>ypos</key>
+			<real>205</real>
+		</dict>
+		<key>4327C6F1-41AD-494C-81B0-43880DA78F29</key>
+		<dict>
+			<key>xpos</key>
+			<real>615</real>
+			<key>ypos</key>
+			<real>205</real>
 		</dict>
 		<key>4FE0BDA8-6B8A-4D66-9A02-86CAAF16CCBE</key>
 		<dict>
 			<key>xpos</key>
-			<real>590</real>
+			<real>825</real>
 			<key>ypos</key>
-			<real>215</real>
+			<real>475</real>
 		</dict>
 		<key>5B9DA17C-155C-4C6F-B415-EAC9C41E827C</key>
 		<dict>
 			<key>xpos</key>
-			<real>595</real>
+			<real>830</real>
 			<key>ypos</key>
-			<real>495</real>
+			<real>735</real>
 		</dict>
 		<key>746E462D-5FF5-4663-B1F3-0F61532A1922</key>
 		<dict>
 			<key>xpos</key>
-			<real>590</real>
+			<real>830</real>
 			<key>ypos</key>
-			<real>650</real>
+			<real>865</real>
+		</dict>
+		<key>878FA2B7-D3E2-44ED-8D50-75F367231255</key>
+		<dict>
+			<key>xpos</key>
+			<real>165</real>
+			<key>ypos</key>
+			<real>175</real>
 		</dict>
 		<key>89059872-057D-4E1B-8A48-FB676BAA9972</key>
 		<dict>
 			<key>xpos</key>
-			<real>510</real>
+			<real>745</real>
 			<key>ypos</key>
-			<real>245</real>
+			<real>505</real>
 		</dict>
 		<key>8EAD115F-03A6-421A-8BBD-C245F172C069</key>
 		<dict>
+			<key>note</key>
+			<string>Mute Input</string>
 			<key>xpos</key>
-			<real>380</real>
+			<real>470</real>
 			<key>ypos</key>
-			<real>65</real>
+			<real>25</real>
 		</dict>
 		<key>8F7A52EA-2365-414A-BCB2-A23AE9F39F8A</key>
 		<dict>
 			<key>xpos</key>
-			<real>590</real>
+			<real>830</real>
 			<key>ypos</key>
-			<real>775</real>
+			<real>990</real>
+		</dict>
+		<key>9807EC00-B284-401D-B8D1-BDC7296FEBE8</key>
+		<dict>
+			<key>note</key>
+			<string>icon</string>
+			<key>xpos</key>
+			<real>1165</real>
+			<key>ypos</key>
+			<real>175</real>
+		</dict>
+		<key>9BF3A8BE-03C7-4850-9BF8-6694CDEEA969</key>
+		<dict>
+			<key>note</key>
+			<string>Add Scene</string>
+			<key>xpos</key>
+			<real>470</real>
+			<key>ypos</key>
+			<real>175</real>
+		</dict>
+		<key>9D29B034-0B46-4B81-914A-B823E0A40780</key>
+		<dict>
+			<key>note</key>
+			<string>Input</string>
+			<key>xpos</key>
+			<real>675</real>
+			<key>ypos</key>
+			<real>175</real>
 		</dict>
 		<key>A5D04EAC-7977-48AE-97DA-5F070E9E8B4F</key>
 		<dict>
 			<key>xpos</key>
-			<real>595</real>
+			<real>830</real>
 			<key>ypos</key>
-			<real>345</real>
+			<real>605</real>
 		</dict>
 		<key>B9918191-D9EB-49B5-80E2-498E8A27E0DE</key>
 		<dict>
 			<key>xpos</key>
-			<real>820</real>
+			<real>1050</real>
 			<key>ypos</key>
-			<real>215</real>
+			<real>475</real>
+		</dict>
+		<key>BA3FF224-4022-41F6-ABC8-31D9581F8B8F</key>
+		<dict>
+			<key>xpos</key>
+			<real>470</real>
+			<key>ypos</key>
+			<real>655</real>
 		</dict>
 		<key>CA385C16-F4A7-4390-8569-64EB93117047</key>
 		<dict>
+			<key>note</key>
+			<string>List Devices</string>
 			<key>xpos</key>
-			<real>175</real>
+			<real>470</real>
 			<key>ypos</key>
-			<real>215</real>
+			<real>475</real>
+		</dict>
+		<key>CAEB5280-0FF0-4238-89AF-846F669EF57D</key>
+		<dict>
+			<key>xpos</key>
+			<real>420</real>
+			<key>ypos</key>
+			<real>205</real>
+		</dict>
+		<key>CF7A7009-79E4-44B8-8C90-70D86C2D6E79</key>
+		<dict>
+			<key>xpos</key>
+			<real>45</real>
+			<key>ypos</key>
+			<real>350</real>
+		</dict>
+		<key>D02D6603-EFD0-40B9-BE16-CD3B361FAD03</key>
+		<dict>
+			<key>xpos</key>
+			<real>420</real>
+			<key>ypos</key>
+			<real>505</real>
+		</dict>
+		<key>D83120BB-F7EC-431F-A3FC-8DDC3535CDB1</key>
+		<dict>
+			<key>xpos</key>
+			<real>1370</real>
+			<key>ypos</key>
+			<real>175</real>
 		</dict>
 		<key>D94D7B78-68C9-47EF-92C3-B4D268DE06D9</key>
 		<dict>
 			<key>xpos</key>
-			<real>180</real>
+			<real>170</real>
 			<key>ypos</key>
-			<real>65</real>
+			<real>25</real>
+		</dict>
+		<key>DD117A8B-0E67-4EE2-8EEC-3BCD4395F8A9</key>
+		<dict>
+			<key>note</key>
+			<string>List Scenes</string>
+			<key>xpos</key>
+			<real>470</real>
+			<key>ypos</key>
+			<real>325</real>
+		</dict>
+		<key>E1A072F8-2B3B-4E52-B06A-CA95A702AB38</key>
+		<dict>
+			<key>xpos</key>
+			<real>420</real>
+			<key>ypos</key>
+			<real>360</real>
+		</dict>
+		<key>F5820FBD-7569-4301-9A89-8186A28DCAA6</key>
+		<dict>
+			<key>xpos</key>
+			<real>675</real>
+			<key>ypos</key>
+			<real>325</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
@@ -537,6 +1617,48 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<string>textfield</string>
 			<key>variable</key>
 			<string>trigger</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>oua</string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Pick a term you want to invoke this command with</string>
+			<key>label</key>
+			<string>Add scene trigger term</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>add_trigger</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>out</string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Pick a term you want to invoke this command with</string>
+			<key>label</key>
+			<string>scene trigger term</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>scene_trigger</string>
 		</dict>
 		<dict>
 			<key>config</key>
