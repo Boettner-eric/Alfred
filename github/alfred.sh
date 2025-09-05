@@ -1,7 +1,8 @@
 if test -f "repos.json"; then
     jq -f alfred.jq repos.json
     if [ $(jq -r 'now - (.cache_time | tonumber) > 300' repos.json) = "true" ]; then
-        curl -s --user "$Username:$Token" https://api.github.com/user/repos?per_page=100 | jq ". | {items: ., cache_time: now}" > repos.json &
+        (curl -s --user "$Username:$Token" https://api.github.com/user/repos?per_page=100 | jq ". | {items: ., cache_time: now}" > tmp.repos.json && mv tmp.repos.json repos.json) > /dev/null 2>&1 &
+        disown
     fi
 else
     curl -s --user "$Username:$Token" https://api.github.com/user/repos?per_page=100 | jq ". | {items: ., cache_time: now}" > repos.json
