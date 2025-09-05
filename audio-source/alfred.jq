@@ -21,6 +21,16 @@
         end),
       arg: (.type + "," + .name),
       mods: {
+          cmd: {
+          valid: true,
+          arg: ("output" + "," + .name),
+          subtitle: ("set as output"),
+        },
+        alt: {
+          valid: true,
+          arg: ("input" + "," + .name),
+          subtitle: ("set as input"),
+        },
         ctrl: {
           valid: true,
           arg: .name,
@@ -30,17 +40,7 @@
           valid: true,
           arg: .type,
           subtitle: ("mute/unmute " + .type),
-        },
-         alt: {
-          valid: true,
-          arg: .name,
-          subtitle: ("set as input"),
-        },
-         cmd: {
-          valid: true,
-          arg: .name,
-          subtitle: ("set as output"),
-        },
+        }
       },
     }
   ]
