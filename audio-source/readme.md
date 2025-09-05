@@ -5,6 +5,12 @@ It has support for both input and output devices and can be easily configured wi
 
 <img src="../screenshots/audio-source.png" width="600">
 
+*Change devices quickly via alfred*
+
+<img src="../screenshots/audio-source-scene.png" width="600">
+
+*Create scenes to group input and output devices*
+
 # Setup
 
 - Install `switchaudio-osx` via Brew: `brew install switchaudio-osx`
@@ -18,7 +24,6 @@ It has support for both input and output devices and can be easily configured wi
 - Change default audio devices
 - Create scenes for input/output settings
 - Use alfred url scheme to change devices
-
 
 # Mods
 - `⌘` -> set as output

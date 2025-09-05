@@ -5,7 +5,7 @@ Feel free to create an issue or open a pull request.
 
 ## Workflows
 
-- [Audio Source Switcher](./audio-source/) - switch between audio IO devices and mute input via hotkey
+- [Audio Source Switcher](./audio-source/) - switch between audio devices, globally mute input and set scenes
 - [Calendar](./meetings-calendar/) - view upcoming events and join meetings from Alfred
 - [Gitlab](./gitlab/) - view MRs, user profiles and repos in your org's gitlab instance
 - [Github](./github/) - view repos and prs for a github user
