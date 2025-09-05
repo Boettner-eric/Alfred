@@ -441,9 +441,9 @@
 				<key>script</key>
 				<string>if test -f "merge.json"; then
 	jq -f alfred.jq merge.json
-	/usr/bin/python3 gitlab.py -m &gt; /dev/null &amp;
+	~/.asdf/shims/python3 gitlab.py -m  &gt; /dev/null &amp;
 else
-	/usr/bin/python3 gitlab.py -m
+	~/.asdf/shims/python3 gitlab.py -m
 	jq -f alfred.jq merge.json
 fi</string>
 				<key>scriptargtype</key>
@@ -455,7 +455,7 @@ fi</string>
 				<key>title</key>
 				<string>Merge Requests</string>
 				<key>type</key>
-				<integer>11</integer>
+				<integer>5</integer>
 				<key>withspace</key>
 				<false/>
 			</dict>
