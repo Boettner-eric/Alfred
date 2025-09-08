@@ -18,8 +18,8 @@
         },
         ctrl: {
           valid: true,
-          arg: .title,
-          subtitle: ("edit \"" + .title + "\" (todo)"),
+          arg: .id,
+          subtitle: ("edit \"" + .title + "\""),
         },
         # shift: {
         #   valid: true,
