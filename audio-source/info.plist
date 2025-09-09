@@ -98,6 +98,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>20CA22E6-0A09-4232-8DBA-9B599164909A</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F5820FBD-7569-4301-9A89-8186A28DCAA6</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>24F91450-55CD-43D1-9931-7FA922CB574C</key>
 		<array>
 			<dict>
@@ -267,6 +280,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>B725D3D0-1910-46EC-8BE7-08FED760AFD8</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D3864199-5B41-4D13-84E2-93B31D783DF2</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>C225E091-496C-49D8-A495-A946C3FC544D</key>
 		<array>
 			<dict>
@@ -331,6 +357,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>CA385C16-F4A7-4390-8569-64EB93117047</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>D3864199-5B41-4D13-84E2-93B31D783DF2</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>20CA22E6-0A09-4232-8DBA-9B599164909A</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -860,7 +899,7 @@ output="${1#* | output: }"
 			<key>config</key>
 			<dict>
 				<key>alfredfiltersresults</key>
-				<false/>
+				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
 				<key>argumenttreatemptyqueryasnil</key>
@@ -919,6 +958,57 @@ output="${1#* | output: }"
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
 			<string>E1A072F8-2B3B-4E52-B06A-CA95A702AB38</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>availableviaurlhandler</key>
+				<true/>
+				<key>triggerid</key>
+				<string>audio_source_scene</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>B725D3D0-1910-46EC-8BE7-08FED760AFD8</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>jq -r --arg id "$1" '.[] | select(.id == $id) | ("input: " + .input + " | output: " + .output)' scenes/scenes.json</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>D3864199-5B41-4D13-84E2-93B31D783DF2</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.transform</string>
+			<key>uid</key>
+			<string>20CA22E6-0A09-4232-8DBA-9B599164909A</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -1332,16 +1422,16 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 		<key>0EA4B0FC-E696-4BBE-B9D0-C5BF2A1091ED</key>
 		<dict>
 			<key>xpos</key>
-			<real>1775</real>
+			<real>1805</real>
 			<key>ypos</key>
-			<real>515</real>
+			<real>630</real>
 		</dict>
 		<key>11E3F9F8-93B7-4731-B1C6-08D3CC7AFA25</key>
 		<dict>
 			<key>xpos</key>
-			<real>1310</real>
+			<real>1315</real>
 			<key>ypos</key>
-			<real>545</real>
+			<real>660</real>
 		</dict>
 		<key>14FB179A-DAF1-4499-A0BE-93274A1853C4</key>
 		<dict>
@@ -1360,16 +1450,16 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 		<key>1E31F766-7B78-4ECE-BFCA-775FA8A59B93</key>
 		<dict>
 			<key>xpos</key>
-			<real>1070</real>
+			<real>1075</real>
 			<key>ypos</key>
-			<real>545</real>
+			<real>660</real>
 		</dict>
 		<key>1F6150B2-B7B6-4882-B968-F3A536D5C3E3</key>
 		<dict>
 			<key>xpos</key>
-			<real>1120</real>
+			<real>1125</real>
 			<key>ypos</key>
-			<real>545</real>
+			<real>660</real>
 		</dict>
 		<key>203BC0A5-8849-4BD4-95DE-A65333AFF19A</key>
 		<dict>
@@ -1378,35 +1468,42 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<key>ypos</key>
 			<real>305</real>
 		</dict>
+		<key>20CA22E6-0A09-4232-8DBA-9B599164909A</key>
+		<dict>
+			<key>xpos</key>
+			<real>1015</real>
+			<key>ypos</key>
+			<real>520</real>
+		</dict>
 		<key>24F91450-55CD-43D1-9931-7FA922CB574C</key>
 		<dict>
 			<key>note</key>
 			<string>output</string>
 			<key>xpos</key>
-			<real>1175</real>
+			<real>1180</real>
 			<key>ypos</key>
-			<real>515</real>
+			<real>630</real>
 		</dict>
 		<key>305AFFBF-3686-44E5-8C22-C83CDD4F9920</key>
 		<dict>
 			<key>xpos</key>
-			<real>1365</real>
+			<real>1370</real>
 			<key>ypos</key>
-			<real>545</real>
+			<real>660</real>
 		</dict>
 		<key>358C1DA1-EA1A-4660-8C5B-5052EDBEE32F</key>
 		<dict>
 			<key>xpos</key>
-			<real>1565</real>
+			<real>1570</real>
 			<key>ypos</key>
-			<real>545</real>
+			<real>660</real>
 		</dict>
 		<key>4327C6F1-41AD-494C-81B0-43880DA78F29</key>
 		<dict>
 			<key>xpos</key>
-			<real>870</real>
+			<real>875</real>
 			<key>ypos</key>
-			<real>545</real>
+			<real>660</real>
 		</dict>
 		<key>4FE0BDA8-6B8A-4D66-9A02-86CAAF16CCBE</key>
 		<dict>
@@ -1418,16 +1515,16 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 		<key>5327A8BF-AEDA-4731-8914-45EA562FD0CD</key>
 		<dict>
 			<key>xpos</key>
-			<real>645</real>
+			<real>650</real>
 			<key>ypos</key>
-			<real>545</real>
+			<real>660</real>
 		</dict>
 		<key>878FA2B7-D3E2-44ED-8D50-75F367231255</key>
 		<dict>
 			<key>xpos</key>
-			<real>250</real>
+			<real>255</real>
 			<key>ypos</key>
-			<real>515</real>
+			<real>630</real>
 		</dict>
 		<key>89059872-057D-4E1B-8A48-FB676BAA9972</key>
 		<dict>
@@ -1457,27 +1554,27 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<key>note</key>
 			<string>icon</string>
 			<key>xpos</key>
-			<real>1420</real>
+			<real>1425</real>
 			<key>ypos</key>
-			<real>515</real>
+			<real>630</real>
 		</dict>
 		<key>9BF3A8BE-03C7-4850-9BF8-6694CDEEA969</key>
 		<dict>
 			<key>note</key>
 			<string>Add Scene</string>
 			<key>xpos</key>
-			<real>725</real>
+			<real>730</real>
 			<key>ypos</key>
-			<real>515</real>
+			<real>630</real>
 		</dict>
 		<key>9D29B034-0B46-4B81-914A-B823E0A40780</key>
 		<dict>
 			<key>note</key>
 			<string>Input</string>
 			<key>xpos</key>
-			<real>920</real>
+			<real>925</real>
 			<key>ypos</key>
-			<real>515</real>
+			<real>630</real>
 		</dict>
 		<key>A1E59AE9-BD03-4996-B7A3-06CBA0500778</key>
 		<dict>
@@ -1493,6 +1590,15 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<key>ypos</key>
 			<real>15</real>
 		</dict>
+		<key>B725D3D0-1910-46EC-8BE7-08FED760AFD8</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>4</integer>
+			<key>xpos</key>
+			<real>695</real>
+			<key>ypos</key>
+			<real>490</real>
+		</dict>
 		<key>B9918191-D9EB-49B5-80E2-498E8A27E0DE</key>
 		<dict>
 			<key>xpos</key>
@@ -1505,9 +1611,9 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<key>note</key>
 			<string>uuid id</string>
 			<key>xpos</key>
-			<real>470</real>
+			<real>475</real>
 			<key>ypos</key>
-			<real>515</real>
+			<real>630</real>
 		</dict>
 		<key>CA385C16-F4A7-4390-8569-64EB93117047</key>
 		<dict>
@@ -1520,6 +1626,8 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 		</dict>
 		<key>CF7A7009-79E4-44B8-8C90-70D86C2D6E79</key>
 		<dict>
+			<key>colorindex</key>
+			<integer>4</integer>
 			<key>xpos</key>
 			<real>45</real>
 			<key>ypos</key>
@@ -1532,12 +1640,19 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<key>ypos</key>
 			<real>215</real>
 		</dict>
+		<key>D3864199-5B41-4D13-84E2-93B31D783DF2</key>
+		<dict>
+			<key>xpos</key>
+			<real>865</real>
+			<key>ypos</key>
+			<real>490</real>
+		</dict>
 		<key>D83120BB-F7EC-431F-A3FC-8DDC3535CDB1</key>
 		<dict>
 			<key>xpos</key>
-			<real>1625</real>
+			<real>1630</real>
 			<key>ypos</key>
-			<real>515</real>
+			<real>630</real>
 		</dict>
 		<key>D94D7B78-68C9-47EF-92C3-B4D268DE06D9</key>
 		<dict>

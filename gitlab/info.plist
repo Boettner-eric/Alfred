@@ -439,13 +439,7 @@
 				<key>runningsubtext</key>
 				<string>Loading data…</string>
 				<key>script</key>
-				<string>if test -f "merge.json"; then
-	jq -f alfred.jq merge.json
-	~/.asdf/shims/python3 gitlab.py -m  &gt; /dev/null &amp;
-else
-	~/.asdf/shims/python3 gitlab.py -m
-	jq -f alfred.jq merge.json
-fi</string>
+				<string>./alfred.sh</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>

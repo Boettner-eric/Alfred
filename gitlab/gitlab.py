@@ -191,7 +191,7 @@ def get_mrs():
                 },
             )
     with open("merge.json", "w") as outfile:
-        json.dump({"variables": {"cache_time": dt.now(tz.utc).strftime('%d/%m/%Y, %H:%M:%S')}, "items": merge_requests}, outfile, indent=2)
+        json.dump({"variables": {"cache_time": dt.now(tz.utc).timestamp()}, "items": merge_requests}, outfile, indent=2)
 
 def linear_url(url):
     sections = url.split("-")
