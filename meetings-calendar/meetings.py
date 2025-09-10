@@ -226,10 +226,11 @@ def format_meetings(events):
             meetings.append(
                 {
                     "arg": url,
+                    "time": f"{start} - {end}",
                     "subtitle": subtitle,
+                    "match": f"{event['summary']} {event['email']}",
                     "icon": {"path": urlImg},
                     "title": event["summary"],
-                    "time": f"{start} - {end}",
                     "mods": {
                         "alt": {
                             "valid": True,

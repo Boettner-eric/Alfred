@@ -5,6 +5,7 @@
       icon: {path: .icon},
       subtitle: ("Input: " + .input + " | Output: " + .output),
       arg: ("input: " + .input + " | output: " + .output),
+      match: (.input + " " + .output + " " + .title),
       mods: {
          cmd: {
           valid: true,

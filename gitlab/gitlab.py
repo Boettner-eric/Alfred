@@ -152,10 +152,16 @@ def get_mrs():
     res = rq.get(url=gitlab_url, headers=headers)
     if res.json() == {"message": "401 Unauthorized"}:
         return
+    
+    
+
     for merge in res.json():
         if merge["state"] != "closed":
+            [org, rest] = merge["references"]["full"].split("/")
+            [repo_name, merge_id] = rest.split("!")
             merge_requests.append(
                 {
+                    "match": f"mr {org} {repo_name} {merge_id} {merge['title']} {merge['author']['name']}",
                     "arg": merge["web_url"],
                     "subtitle": f"{merge['references']['full']} · created {time_ago(merge['created_at'])} by {merge['author']['name']}",
                     "icon": {

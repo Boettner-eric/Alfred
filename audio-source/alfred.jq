@@ -6,7 +6,13 @@
   items: [.[] | select(.name as $name | $denylist | index($name) | not) 
   | {
       uid: (.name + .type), 
+      arg: (.type + "," + .name),
       title: (if .name | contains("AirPods") then "Airpods" else .name end), 
+      subtitle: (if (.name == $input and .type == "input") or (.name == $output and .type == "output") 
+          then .type + " - current" 
+          else .type 
+        end),
+      match: (.name + " " + .type),
       icon: (if .name | contains("AirPods")
           then {path: "icons/airpods.png"}
           elif .name | contains("MacBook")
@@ -15,11 +21,6 @@
             then {path: "icons/speaker.png"}
           else {path: "icons/mic.png"}
         end),
-      subtitle: (if (.name == $input and .type == "input") or (.name == $output and .type == "output") 
-          then .type + " - current" 
-          else .type 
-        end),
-      arg: (.type + "," + .name),
       mods: {
           cmd: {
           valid: true,

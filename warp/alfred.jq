@@ -2,10 +2,12 @@
 [inputs | select(length > 0 and test("^\\s*$") | not)] | 
 map(select(contains(":")) | split(":") 
 | {
-    arg: .[1:] | join(":"), 
+    uid: .[0],
+    arg: .[1:],
     title: .[0], 
-    subtitle:  (.[1:] | join(":")),
-    icon: {type: "fileicon", path: (.[1:] | join(":"))}, 
+    subtitle:  .[1],
+    match: ((.[1] | split("/") | join(" ")) + " " + .[0]),
+    icon: {type: "fileicon", path: .[1]}, 
     mods: {
         cmd: {
           valid: true,
