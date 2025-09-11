@@ -151,10 +151,8 @@ def get_mrs():
 
     res = rq.get(url=gitlab_url, headers=headers)
     if res.json() == {"message": "401 Unauthorized"}:
-        return
-    
-    
-
+        return     
+           
     for merge in res.json():
         if merge["state"] != "closed":
             [org, rest] = merge["references"]["full"].split("/")
