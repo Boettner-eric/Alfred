@@ -6,6 +6,32 @@
 	<string>boettner.eric.bookmarks</string>
 	<key>connections</key>
 	<dict>
+		<key>0A92CAFB-35F9-4C8E-BF07-BF37074EB832</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>5C448AD2-8058-4477-AC14-8D208B5DE54C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>12886B7B-C90C-40D7-9C81-3F801AF8D012</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>FBFB7006-E368-4E30-A38B-25E8C6753DAF</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>20DA9DB2-538C-4605-8B9E-FFF9D382B829</key>
 		<array>
 			<dict>
@@ -51,6 +77,19 @@
 				<integer>1048576</integer>
 				<key>modifiersubtext</key>
 				<string>Usage: [name] [url]</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>80FF8DD8-5CF5-409B-A799-79065F08EF99</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>0A92CAFB-35F9-4C8E-BF07-BF37074EB832</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -136,6 +175,19 @@
 				<integer>1048576</integer>
 				<key>modifiersubtext</key>
 				<string>Usage: [name] [url]</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>FBFB7006-E368-4E30-A38B-25E8C6753DAF</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>80FF8DD8-5CF5-409B-A799-79065F08EF99</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -467,6 +519,114 @@
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>/usr/bin/python3 bookmarks.py add $title $1</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>0A92CAFB-35F9-4C8E-BF07-BF37074EB832</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>Bookmark added</string>
+				<key>title</key>
+				<string>Bookmark Workflow</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>5C448AD2-8058-4477-AC14-8D208B5DE54C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>bms</string>
+				<key>subtext</key>
+				<string>Enter a title to save it as</string>
+				<key>text</key>
+				<string>Save page</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>12886B7B-C90C-40D7-9C81-3F801AF8D012</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>osascript -e 'tell application "Arc" to get URL of active tab of front window' | tr -d '\n'</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>80FF8DD8-5CF5-409B-A799-79065F08EF99</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>title</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>FBFB7006-E368-4E30-A38B-25E8C6753DAF</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>A simple workflow for jumping to bookmarks
@@ -474,6 +634,22 @@
 See https://github.com/Boettner-eric/Alfred/ for more info</string>
 	<key>uidata</key>
 	<dict>
+		<key>0A92CAFB-35F9-4C8E-BF07-BF37074EB832</key>
+		<dict>
+			<key>xpos</key>
+			<real>470</real>
+			<key>ypos</key>
+			<real>685</real>
+		</dict>
+		<key>12886B7B-C90C-40D7-9C81-3F801AF8D012</key>
+		<dict>
+			<key>note</key>
+			<string>Add current url</string>
+			<key>xpos</key>
+			<real>85</real>
+			<key>ypos</key>
+			<real>685</real>
+		</dict>
 		<key>20DA9DB2-538C-4605-8B9E-FFF9D382B829</key>
 		<dict>
 			<key>xpos</key>
@@ -511,12 +687,26 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<key>ypos</key>
 			<real>490</real>
 		</dict>
+		<key>5C448AD2-8058-4477-AC14-8D208B5DE54C</key>
+		<dict>
+			<key>xpos</key>
+			<real>650</real>
+			<key>ypos</key>
+			<real>685</real>
+		</dict>
 		<key>642BCED2-539C-4F7D-BA24-55C89ECE573D</key>
 		<dict>
 			<key>xpos</key>
 			<real>510</real>
 			<key>ypos</key>
 			<real>295</real>
+		</dict>
+		<key>80FF8DD8-5CF5-409B-A799-79065F08EF99</key>
+		<dict>
+			<key>xpos</key>
+			<real>310</real>
+			<key>ypos</key>
+			<real>685</real>
 		</dict>
 		<key>84FABB63-77DD-4C83-8E4C-CA1CD0DCD618</key>
 		<dict>
@@ -563,6 +753,13 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<real>85</real>
 			<key>ypos</key>
 			<real>490</real>
+		</dict>
+		<key>FBFB7006-E368-4E30-A38B-25E8C6753DAF</key>
+		<dict>
+			<key>xpos</key>
+			<real>235</real>
+			<key>ypos</key>
+			<real>715</real>
 		</dict>
 		<key>FECC1B18-217C-4647-895F-5B2242963474</key>
 		<dict>

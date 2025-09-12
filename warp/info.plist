@@ -51,6 +51,8 @@
 				<false/>
 			</dict>
 		</array>
+		<key>87F1DDA7-C6A2-448A-B604-4E8135B0DE52</key>
+		<array/>
 	</dict>
 	<key>createdby</key>
 	<string>Eric Boettner</string>
@@ -132,7 +134,7 @@
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
-				<integer>102</integer>
+				<integer>103</integer>
 				<key>script</key>
 				<string>open -a ${editor} {query}</string>
 				<key>scriptargtype</key>
