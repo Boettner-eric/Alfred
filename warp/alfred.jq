@@ -23,6 +23,11 @@ map(select(contains(":")) | split(":")
           valid: true,
           subtitle: "reveal in finder",
           icon: {type: "fileicon", path: "/System/Library/CoreServices/Finder.app"}
+        },
+        shift: {
+          valid: true,
+          subtitle: "open in terminal and editor",
+          icon: {type: "fileicon", path: $editor},
         }
       }
 }) | {items: .}

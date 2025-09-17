@@ -22,7 +22,7 @@
           else {path: "icons/mic.png"}
         end),
       mods: {
-          cmd: {
+        cmd: {
           valid: true,
           arg: ("output" + "," + .name),
           subtitle: ("set as output"),
@@ -37,7 +37,7 @@
           arg: .name,
           subtitle: ("copy \"" + .name + "\" to clipboard"),
         },
-         shift: {
+        shift: {
           valid: true,
           arg: .type,
           subtitle: ("mute/unmute " + .type),

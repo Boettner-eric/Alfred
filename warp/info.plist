@@ -50,6 +50,16 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>BD1E3DFE-E81B-4B7C-AB37-3FDD2B84F20F</string>
+				<key>modifiers</key>
+				<integer>131072</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
 		</array>
 		<key>87F1DDA7-C6A2-448A-B604-4E8135B0DE52</key>
 		<array/>
@@ -187,6 +197,30 @@
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>open -a ${terminal} {query}
+open -a ${editor} {query}</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>BD1E3DFE-E81B-4B7C-AB37-3FDD2B84F20F</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>A simple workflow for jumping to warp directories with your favorite applications.
@@ -228,6 +262,13 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<real>355</real>
 			<key>ypos</key>
 			<real>545</real>
+		</dict>
+		<key>BD1E3DFE-E81B-4B7C-AB37-3FDD2B84F20F</key>
+		<dict>
+			<key>xpos</key>
+			<real>355</real>
+			<key>ypos</key>
+			<real>660</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
