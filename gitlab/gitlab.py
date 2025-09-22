@@ -1,6 +1,7 @@
+#!/usr/bin/python3
+import os
 import argparse
 import json
-import os
 import requests as rq
 from os.path import exists
 from time_format import time_ago
