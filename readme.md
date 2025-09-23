@@ -5,12 +5,13 @@ Feel free to create an issue or open a pull request.
 
 ## Workflows
 
+- [Arc Bookmarks](./arc-bookmarks/) (wip) - jump to arc webpages quickly
 - [Audio Source Switcher](./audio-source/) - switch between audio devices, globally mute input and set scenes
+- [Bookmarks](./bookmarks/) - jump to webpages quickly
+- [Bluetooth Connector](./bluetooth-connector/) - connect/disconnect bluetooth devices and use a hotkey to connect airpods
 - [Calendar](./meetings-calendar/) - view upcoming events and join meetings from Alfred
 - [Gitlab](./gitlab/) - view MRs, user profiles and repos in your org's gitlab instance
 - [Github](./github/) - view repos and prs for a github user
-- [Bookmarks](./bookmarks/) - jump to webpages quickly
-- [Arc Bookmarks](./arc-bookmarks/) (wip) - jump to arc webpages quickly
 - [Spelling](./spelling/) - find the closest word to the selected text and replace it
 - [Slack Status](./slack/) - change your slack status
 - [Warp](./warp/) - open any warp directory in your chosen application
@@ -19,10 +20,10 @@ Feel free to create an issue or open a pull request.
 I also use a few other alfred workflows that I have modified or downloaded from alfred's workflow gallery
 
 - [Alfred Theme Switcher (Fork)](https://github.com/Boettner-eric/alfred-theme-switcher)
-- [Airpods connector](https://github.com/mariuskiessling/alfred-airpods-connector)
 - [Bluetooth battery](https://alfred.app/workflows/zeitlings/bluetooth-device-battery/)
 - [Keyboard brightness](https://alfred.app/workflows/zeitlings/keyboard-brightness/)
-- [Window switcher](https://alfred.app/workflows/alfredapp/window-switcherx/)
+- [Window switcher](https://alfred.app/workflows/alfredapp/window-switcher/)
+- ~~[Airpods connector](https://github.com/mariuskiessling/alfred-airpods-connector)~~
 
 ### Credits
 
