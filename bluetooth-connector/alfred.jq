@@ -1,7 +1,17 @@
-def describe_device($device):
-  if $device.device_minorType == "Headphones" then
-    "\($device.device_minorType) - Left: \($device.device_batteryLevelLeft // "N/A"), Right: \($device.device_batteryLevelRight // "N/A")"
-  else $device.device_minorType end;
+def describe_device($key; $device; $is_connected):
+  if $is_connected then
+    if $key | contains("AirPods Pro") then
+      "Airpods Pro - L: \($device.device_batteryLevelLeft // "N/A"), R: \($device.device_batteryLevelRight // "N/A")"
+    elif $key | contains("Airpods") then
+      "Airpods - L: \($device.device_batteryLevelLeft // "N/A"), R: \($device.device_batteryLevelRight // "N/A")"
+    else $device.device_minorType end
+  else 
+    if $key | contains("AirPods Pro") then
+      "Airpods Pro (not connected)"
+    elif $key | contains("Airpods") then
+      "Airpods (not connected)"
+    else $device.device_minorType + " (not connected)" end
+  end;
 
 def choose_icon($device):
   if $device.device_minorType == "Headphones" then
@@ -17,7 +27,7 @@ def format_device($device; $is_connected):
     {
       title: .key,
       icon: choose_icon(.value),
-      subtitle: describe_device(.value) + (if $is_connected then "" else " (not connected)" end),
+      subtitle: describe_device(.key; .value; $is_connected),
       arg: [(if $is_connected then "disconnect" else "connect" end), (.value.device_address | gsub(":"; "-"))],
       mods: {
         cmd: {

@@ -1,9 +1,9 @@
 # Bluetooth Connector
 - connect and disconnect bluetooth devices
+- favorite a bluetooth device for quick hotkey/url connect
 
-
-# TODO
-- [ ] airpod switch audio command
-- [ ] mods for finding airpod device
-- [ ] matching / sorting
-- [ ] pass env var to show what is currently airpods
+# Setup
+- install blueutil `brew install blueutil`
+- set your trigger commands
+- select a bluetooth device and use `⌘` + `⏎` to mark it as your airpods
+- bind the hotkey to quick connect
