@@ -5,7 +5,7 @@ Feel free to create an issue or open a pull request.
 
 ## Workflows
 
-- [Arc Bookmarks](./arc-bookmarks/) (wip) - jump to arc webpages quickly
+- [Arc Bookmarks](./arc-bookmarks/) - jump to arc webpages quickly
 - [Audio Source Switcher](./audio-source/) - switch between audio devices, globally mute input and set scenes
 - [Bookmarks](./bookmarks/) - jump to webpages quickly
 - [Bluetooth Connector](./bluetooth-connector/) - connect/disconnect bluetooth devices and use a hotkey to connect airpods

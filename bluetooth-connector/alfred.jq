@@ -1,11 +1,27 @@
+def set_battery_level($battery_level):
+  if $battery_level == null then
+    "N/A"
+  else
+    ($battery_level | gsub("%"; "") | tonumber) as $battery_int |
+    if $battery_int > 90 then
+      $battery_level + " 􀛨"
+    elif $battery_int > 75 then
+      $battery_level + " 􀺸"
+    elif $battery_int > 50 then
+      $battery_level + " 􀺶"
+    elif $battery_int > 20 then
+      $battery_level + " 􀛩"
+    else $battery_level + " 􀛪" end
+  end;
+
 def describe_device($key; $device; $is_connected):
   if $is_connected then
     if $key | contains("AirPods Pro") then
-      "Airpods Pro - L: \($device.device_batteryLevelLeft // "N/A"), R: \($device.device_batteryLevelRight // "N/A")"
+      "Airpods Pro - L: " + set_battery_level($device.device_batteryLevelLeft) + ", R: " + set_battery_level($device.device_batteryLevelRight)
     elif $key | contains("Airpods") then
-      "Airpods - L: \($device.device_batteryLevelLeft // "N/A"), R: \($device.device_batteryLevelRight // "N/A")"
+      "Airpods - L: " + set_battery_level($device.device_batteryLevelLeft) + ", R: " + set_battery_level($device.device_batteryLevelRight)
     else $device.device_minorType end
-  else 
+  else
     if $key | contains("AirPods Pro") then
       "Airpods Pro (not connected)"
     elif $key | contains("Airpods") then
@@ -24,19 +40,19 @@ def choose_icon($device):
   end;
 
 def format_device($device; $is_connected):
-    {
-      title: .key,
-      icon: choose_icon(.value),
-      subtitle: describe_device(.key; .value; $is_connected),
-      arg: [(if $is_connected then "disconnect" else "connect" end), (.value.device_address | gsub(":"; "-"))],
-      mods: {
-        cmd: {
-          valid: true,
-          arg: (.value.device_address | gsub(":"; "-")),
-          subtitle: "mark as airpods"
-        }
+  {
+    title: .key,
+    icon: choose_icon(.value),
+    subtitle: describe_device(.key; .value; $is_connected),
+    arg: [(if $is_connected then "disconnect" else "connect" end), (.value.device_address | gsub(":"; "-"))],
+    mods: {
+      cmd: {
+        valid: true,
+        arg: (.value.device_address | gsub(":"; "-")),
+        subtitle: "mark as airpods"
       }
-    };
+    }
+  };
 
 {
   items: [
