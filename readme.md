@@ -23,7 +23,7 @@ I also use a few other alfred workflows that I have modified or downloaded from 
 - [Bluetooth battery](https://alfred.app/workflows/zeitlings/bluetooth-device-battery/)
 - [Keyboard brightness](https://alfred.app/workflows/zeitlings/keyboard-brightness/)
 - [Window switcher](https://alfred.app/workflows/alfredapp/window-switcher/)
-- ~~[Airpods connector](https://github.com/mariuskiessling/alfred-airpods-connector)~~
+- ~~[Airpods connector](https://github.com/mariuskiessling/alfred-airpods-connector)~~ (deprecated)
 
 ### Credits
 
