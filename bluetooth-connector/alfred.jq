@@ -36,6 +36,8 @@ def choose_icon($device):
     {path: "icons/keyboard.png"}
   elif $device.device_minorType == "Magic Trackpad" then
     {path: "icons/trackpad.png"}
+  elif $device.device_minorType == "Speaker" then
+    {path: "icons/speaker.png"}
   else {path: "icons/blue.png"}
   end;
 
@@ -55,7 +57,7 @@ def format_device($device; $is_connected):
   };
 
 {
-  items: [
+  items: ([
     ((.SPBluetoothDataType[0].device_connected[]? // []) | 
     to_entries[] | 
     select(.value | type == "object" and .device_address != null) |
@@ -65,5 +67,5 @@ def format_device($device; $is_connected):
     to_entries[] | 
     select(.value | type == "object" and .device_address != null) |
     format_device(.value; false))
-  ]
+  ])
 }

@@ -10,22 +10,18 @@ map(select(contains(":")) | split(":")
     icon: {type: "fileicon", path: .[1]}, 
     mods: {
         cmd: {
-          valid: true,
-          subtitle: "open in " + ($editor | split("/") | last | rtrimstr(".app")),
+          subtitle: ("open in " + ($editor | split("/") | last | rtrimstr(".app"))),
           icon: {type: "fileicon", path: $editor},
         },
          alt: {
-          valid: true,
-          subtitle: "open in " + ($terminal | split("/") | last | rtrimstr(".app")),
+          subtitle: ("open in " + ($terminal | split("/") | last | rtrimstr(".app"))),
           icon: {type: "fileicon", path: $terminal},
         },
         ctrl: {
-          valid: true,
           subtitle: "reveal in finder",
           icon: {type: "fileicon", path: "/System/Library/CoreServices/Finder.app"}
         },
         shift: {
-          valid: true,
           subtitle: "open in terminal and editor",
           icon: {type: "fileicon", path: $editor},
         }

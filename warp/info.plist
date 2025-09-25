@@ -117,7 +117,7 @@
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>jq --arg editor $editor --arg terminal $terminal -R -f alfred.jq ~/.warprc </string>
+				<string>jq --arg editor $editor --arg terminal $terminal -R -n -f alfred.jq ~/.warprc </string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
