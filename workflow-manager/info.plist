@@ -3,16 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>boettner.eric.warp</string>
-	<key>category</key>
-	<string>Productivity</string>
+	<string>gitlab</string>
 	<key>connections</key>
 	<dict>
-		<key>3E0B5AFE-003E-4404-B731-E23B2BE64961</key>
+		<key>D7D3F59F-AA10-4618-BEA1-D26C42D830F1</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>0D78AECF-8479-4A68-8286-E568E6338FBD</string>
+				<string>1274CF24-8050-4B48-AC39-9B8D72042CF6</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -22,9 +20,19 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>87F1DDA7-C6A2-448A-B604-4E8135B0DE52</string>
+				<string>BA832BD8-FE2A-4E1B-AC49-71F96597635D</string>
 				<key>modifiers</key>
 				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>Open in {var:editor}</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>D60E6E2C-DC6B-44A7-80ED-AFE334802AA8</string>
+				<key>modifiers</key>
+				<integer>262144</integer>
 				<key>modifiersubtext</key>
 				<string></string>
 				<key>vitoclose</key>
@@ -32,17 +40,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>896046BA-D5FD-40F8-89D3-8879EE74BF46</string>
-				<key>modifiers</key>
-				<integer>262144</integer>
-				<key>modifiersubtext</key>
-				<string>Reveal in Finder</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>B416EE37-B8AE-40A5-9D25-5385F41B9782</string>
+				<string>A2DBED96-BF9F-444B-85E0-57646331B042</string>
 				<key>modifiers</key>
 				<integer>524288</integer>
 				<key>modifiersubtext</key>
@@ -52,7 +50,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>BD1E3DFE-E81B-4B7C-AB37-3FDD2B84F20F</string>
+				<string>790DBD52-4BA6-4C5E-9ED3-B024EBE82A65</string>
 				<key>modifiers</key>
 				<integer>131072</integer>
 				<key>modifiersubtext</key>
@@ -61,34 +59,17 @@
 				<false/>
 			</dict>
 		</array>
-		<key>87F1DDA7-C6A2-448A-B604-4E8135B0DE52</key>
-		<array/>
 	</dict>
 	<key>createdby</key>
 	<string>Eric Boettner</string>
 	<key>description</key>
-	<string>Jump to a directory</string>
+	<string></string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Warp</string>
+	<string>Workflow Manager</string>
 	<key>objects</key>
 	<array>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>openwith</key>
-				<string></string>
-				<key>sourcefile</key>
-				<string></string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openfile</string>
-			<key>uid</key>
-			<string>0D78AECF-8479-4A68-8286-E568E6338FBD</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -117,15 +98,22 @@
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>jq --arg editor $editor --arg terminal $terminal -R -n -f alfred.jq ~/.warprc </string>
+				<string>if test -f "workflows.json"; then
+    jq --arg editor $editor --arg terminal $terminal -f alfred.jq workflows.json
+    ./alfred.sh &gt; /dev/null &amp;
+else
+    ./alfred.sh
+    jq --arg editor $editor --arg terminal $terminal -f alfred.jq workflows.json
+fi
+</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string>Quickly open directories</string>
+				<string></string>
 				<key>title</key>
-				<string>Warp</string>
+				<string></string>
 				<key>type</key>
 				<integer>11</integer>
 				<key>withspace</key>
@@ -134,7 +122,22 @@
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>3E0B5AFE-003E-4404-B731-E23B2BE64961</string>
+			<string>D7D3F59F-AA10-4618-BEA1-D26C42D830F1</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>openwith</key>
+				<string></string>
+				<key>sourcefile</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openfile</string>
+			<key>uid</key>
+			<string>1274CF24-8050-4B48-AC39-9B8D72042CF6</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
@@ -146,9 +149,9 @@
 				<key>escaping</key>
 				<integer>103</integer>
 				<key>script</key>
-				<string>open -a ${editor} {query}</string>
+				<string>open -a ${editor} "${1}"</string>
 				<key>scriptargtype</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>type</key>
@@ -157,7 +160,7 @@
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>87F1DDA7-C6A2-448A-B604-4E8135B0DE52</string>
+			<string>BA832BD8-FE2A-4E1B-AC49-71F96597635D</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -170,7 +173,7 @@
 			<key>type</key>
 			<string>alfred.workflow.action.revealfile</string>
 			<key>uid</key>
-			<string>896046BA-D5FD-40F8-89D3-8879EE74BF46</string>
+			<string>D60E6E2C-DC6B-44A7-80ED-AFE334802AA8</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -182,9 +185,9 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>open -a ${terminal} {query}</string>
+				<string>open -a ${terminal} "${1}"</string>
 				<key>scriptargtype</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>type</key>
@@ -193,7 +196,7 @@
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>B416EE37-B8AE-40A5-9D25-5385F41B9782</string>
+			<string>A2DBED96-BF9F-444B-85E0-57646331B042</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -205,10 +208,10 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>open -a ${terminal} {query}
-open -a ${editor} {query}</string>
+				<string>open -a ${terminal} $1
+open -a ${editor} $1</string>
 				<key>scriptargtype</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>type</key>
@@ -217,58 +220,58 @@ open -a ${editor} {query}</string>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>BD1E3DFE-E81B-4B7C-AB37-3FDD2B84F20F</string>
+			<string>790DBD52-4BA6-4C5E-9ED3-B024EBE82A65</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>A simple workflow for jumping to warp directories with your favorite applications.
+	<string>A workflow for editing other workflows
 
 See https://github.com/Boettner-eric/Alfred/ for more info</string>
 	<key>uidata</key>
 	<dict>
-		<key>0D78AECF-8479-4A68-8286-E568E6338FBD</key>
+		<key>1274CF24-8050-4B48-AC39-9B8D72042CF6</key>
 		<dict>
 			<key>xpos</key>
-			<real>355</real>
+			<real>305</real>
 			<key>ypos</key>
-			<real>215</real>
+			<real>55</real>
 		</dict>
-		<key>3E0B5AFE-003E-4404-B731-E23B2BE64961</key>
+		<key>790DBD52-4BA6-4C5E-9ED3-B024EBE82A65</key>
 		<dict>
 			<key>xpos</key>
-			<real>95</real>
+			<real>305</real>
 			<key>ypos</key>
-			<real>215</real>
+			<real>500</real>
 		</dict>
-		<key>87F1DDA7-C6A2-448A-B604-4E8135B0DE52</key>
+		<key>A2DBED96-BF9F-444B-85E0-57646331B042</key>
 		<dict>
 			<key>xpos</key>
-			<real>355</real>
+			<real>305</real>
 			<key>ypos</key>
-			<real>325</real>
+			<real>385</real>
 		</dict>
-		<key>896046BA-D5FD-40F8-89D3-8879EE74BF46</key>
+		<key>BA832BD8-FE2A-4E1B-AC49-71F96597635D</key>
 		<dict>
 			<key>xpos</key>
-			<real>355</real>
+			<real>305</real>
 			<key>ypos</key>
-			<real>435</real>
+			<real>165</real>
 		</dict>
-		<key>B416EE37-B8AE-40A5-9D25-5385F41B9782</key>
+		<key>D60E6E2C-DC6B-44A7-80ED-AFE334802AA8</key>
 		<dict>
 			<key>xpos</key>
-			<real>355</real>
+			<real>305</real>
 			<key>ypos</key>
-			<real>545</real>
+			<real>275</real>
 		</dict>
-		<key>BD1E3DFE-E81B-4B7C-AB37-3FDD2B84F20F</key>
+		<key>D7D3F59F-AA10-4618-BEA1-D26C42D830F1</key>
 		<dict>
 			<key>xpos</key>
-			<real>355</real>
+			<real>30</real>
 			<key>ypos</key>
-			<real>660</real>
+			<real>55</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
@@ -277,7 +280,7 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<key>config</key>
 			<dict>
 				<key>default</key>
-				<string>wd</string>
+				<string>wk</string>
 				<key>placeholder</key>
 				<string></string>
 				<key>required</key>
@@ -286,9 +289,9 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 				<true/>
 			</dict>
 			<key>description</key>
-			<string>Pick a term you want to invoke this command with</string>
+			<string>List all workflows</string>
 			<key>label</key>
-			<string>Trigger term</string>
+			<string>Trigger Workflow</string>
 			<key>type</key>
 			<string>textfield</string>
 			<key>variable</key>

@@ -413,7 +413,9 @@ fi</string>
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>A simple workflow for connecting bluetooth devices</string>
+	<string>A simple workflow for connecting bluetooth devices
+
+See https://github.com/Boettner-eric/Alfred/ for more info</string>
 	<key>uidata</key>
 	<dict>
 		<key>2BE9F66A-4473-46BE-83C9-E7310F7AAD10</key>
@@ -554,7 +556,7 @@ fi</string>
 		<string>AIRPODS_MAC</string>
 	</array>
 	<key>version</key>
-	<string>0.0.1</string>
+	<string>1.0.0</string>
 	<key>webaddress</key>
 	<string>https://github.com/Boettner-eric/Alfred</string>
 </dict>
