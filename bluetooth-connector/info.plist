@@ -272,7 +272,7 @@ fi</string>
 				<key>keyword</key>
 				<string>{var:airpods_trigger}</string>
 				<key>subtext</key>
-				<string></string>
+				<string>connect to {var:AIRPODS_NAME}</string>
 				<key>text</key>
 				<string>Connect Airpods</string>
 				<key>withspace</key>
@@ -396,6 +396,7 @@ fi</string>
 				<integer>102</integer>
 				<key>script</key>
 				<string>/usr/libexec/PlistBuddy -c "Set :variables:AIRPODS_MAC \"$1\"" info.plist
+/usr/libexec/PlistBuddy -c "Set :variables:AIRPODS_NAME \"$2\"" info.plist
 /usr/libexec/PlistBuddy -c "Set :variables:WORKFLOW_CONFIGURED \"true\"" info.plist</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
@@ -547,13 +548,16 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 	<key>variables</key>
 	<dict>
 		<key>AIRPODS_MAC</key>
-		<string>14-28-76-CB-BA-EF</string>
+		<string></string>
+		<key>AIRPODS_NAME</key>
+		<string></string>
 		<key>WORKFLOW_CONFIGURED</key>
 		<string>true</string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array>
 		<string>AIRPODS_MAC</string>
+		<string>AIRPODS_NAME</string>
 	</array>
 	<key>version</key>
 	<string>1.0.0</string>

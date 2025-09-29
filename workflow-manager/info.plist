@@ -3,14 +3,16 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>gitlab</string>
+	<string>workflow-manager</string>
+	<key>category</key>
+	<string>Tools</string>
 	<key>connections</key>
 	<dict>
 		<key>D7D3F59F-AA10-4618-BEA1-D26C42D830F1</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>1274CF24-8050-4B48-AC39-9B8D72042CF6</string>
+				<string>57981CF7-EDA2-4459-BAE0-3AF413CDB212</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -50,7 +52,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>790DBD52-4BA6-4C5E-9ED3-B024EBE82A65</string>
+				<string>12CDA2BF-A227-41C0-8E69-9D55AF0A9A42</string>
 				<key>modifiers</key>
 				<integer>131072</integer>
 				<key>modifiersubtext</key>
@@ -63,7 +65,7 @@
 	<key>createdby</key>
 	<string>Eric Boettner</string>
 	<key>description</key>
-	<string></string>
+	<string>Jump to your alfred workflows</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
@@ -129,17 +131,27 @@ fi
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>openwith</key>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>on run
+  tell application id "com.runningwithcrayons.Alfred" to reveal workflow "{query}"
+end run</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
 				<string></string>
-				<key>sourcefile</key>
-				<string></string>
+				<key>type</key>
+				<integer>6</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.openfile</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>1274CF24-8050-4B48-AC39-9B8D72042CF6</string>
+			<string>57981CF7-EDA2-4459-BAE0-3AF413CDB212</string>
 			<key>version</key>
-			<integer>3</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -203,26 +215,23 @@ fi
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>open -a ${terminal} $1
-open -a ${editor} $1</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
+				<key>browser</key>
 				<string></string>
-				<key>type</key>
-				<integer>11</integer>
+				<key>skipqueryencode</key>
+				<false/>
+				<key>skipvarencode</key>
+				<false/>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string></string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.script</string>
+			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
-			<string>790DBD52-4BA6-4C5E-9ED3-B024EBE82A65</string>
+			<string>12CDA2BF-A227-41C0-8E69-9D55AF0A9A42</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -231,19 +240,19 @@ open -a ${editor} $1</string>
 See https://github.com/Boettner-eric/Alfred/ for more info</string>
 	<key>uidata</key>
 	<dict>
-		<key>1274CF24-8050-4B48-AC39-9B8D72042CF6</key>
-		<dict>
-			<key>xpos</key>
-			<real>305</real>
-			<key>ypos</key>
-			<real>55</real>
-		</dict>
-		<key>790DBD52-4BA6-4C5E-9ED3-B024EBE82A65</key>
+		<key>12CDA2BF-A227-41C0-8E69-9D55AF0A9A42</key>
 		<dict>
 			<key>xpos</key>
 			<real>305</real>
 			<key>ypos</key>
 			<real>500</real>
+		</dict>
+		<key>57981CF7-EDA2-4459-BAE0-3AF413CDB212</key>
+		<dict>
+			<key>xpos</key>
+			<real>305</real>
+			<key>ypos</key>
+			<real>55</real>
 		</dict>
 		<key>A2DBED96-BF9F-444B-85E0-57646331B042</key>
 		<dict>

@@ -34,6 +34,17 @@ extract_description() {
     fi
 }
 
+extract_website_url() {
+    local plist_file="$1"
+    
+    local website_url=$(plutil -extract webaddress raw "$plist_file" 2>/dev/null)
+    if [[ $? -eq 0 && -n "$website_url" && ! "$website_url" =~ "Could not extract value" ]]; then
+        echo "$website_url"
+    else
+        echo "No website URL"
+    fi
+}
+
 list_workflows() {
     local workflows_dir="${1:-$ALFRED_WORKFLOWS_DIR}"
         
@@ -51,12 +62,14 @@ list_workflows() {
         
         local info_plist="$workflow_dir/info.plist"
         
+        local id="${workflow_dir##*/}"
+
         if [[ -f "$info_plist" ]]; then            
             local name=$(extract_workflow_name "$info_plist" "$workflow_dir" 2>/dev/null)
             local description=$(extract_description "$info_plist" 2>/dev/null)
-            local icon_path="${workflow_dir}/icon.png"
+            local website_url=$(extract_website_url "$info_plist" 2>/dev/null)
         
-            local item="{\"arg\": \"$workflow_dir\", \"icon\": {\"path\": \"$icon_path\"}, \"title\": \"$name\", \"subtitle\": \"$description\"}"
+            local item="{\"id\": \"$id\", \"title\": \"$name\", \"subtitle\": \"$description\", \"path\": \"$workflow_dir\", \"website_url\": \"$website_url\"}"
             
             if [[ -n "$json_items" ]]; then
                 json_items="$json_items,$item"

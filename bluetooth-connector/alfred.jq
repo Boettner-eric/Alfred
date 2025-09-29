@@ -50,7 +50,7 @@ def format_device($device; $is_connected):
     mods: {
       cmd: {
         valid: true,
-        arg: (.value.device_address | gsub(":"; "-")),
+        arg: [(.value.device_address | gsub(":"; "-")), .key],
         subtitle: "mark as airpods"
       }
     }
