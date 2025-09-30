@@ -23,8 +23,9 @@
             icon: {type: "fileicon", path: "/System/Library/CoreServices/Finder.app"}
         },
         shift: {
-            subtitle: ("open " + .website_url),
+            subtitle: .website_url,
             arg: .website_url,
+            icon: {type: "path", path: "icons/internet.png"}
         }
     }
 }) | {items: .}
