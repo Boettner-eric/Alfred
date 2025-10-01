@@ -8,19 +8,6 @@
 	<string>Tools</string>
 	<key>connections</key>
 	<dict>
-		<key>2BE9F66A-4473-46BE-83C9-E7310F7AAD10</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>4298D3F1-0820-459E-9B61-B396A0057862</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>387831F6-E764-4230-B8D9-BE5CCA311178</key>
 		<array>
 			<dict>
@@ -63,21 +50,11 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>92447D65-AC73-42A4-8B0B-F431E4C1E0A1</string>
+				<string>BD6DF48E-3996-43BD-A902-34DEB58846C8</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>B27FB0F3-01B9-495A-888F-9255975636D1</string>
-				<key>modifiers</key>
-				<integer>1048576</integer>
-				<key>modifiersubtext</key>
-				<string></string>
+				<string>mark as airpods</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -97,7 +74,7 @@
 				<false/>
 			</dict>
 		</array>
-		<key>B27FB0F3-01B9-495A-888F-9255975636D1</key>
+		<key>BD6DF48E-3996-43BD-A902-34DEB58846C8</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
@@ -106,6 +83,29 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>BDE15D79-5B43-422D-9FCA-892F4B3F1F98</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>4298D3F1-0820-459E-9B61-B396A0057862</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>42FBD721-757A-4964-8A6D-CF67686EB137</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>select new Airpods device</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -132,6 +132,29 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E46BC154-C2E7-4371-8C7B-35919FA4784A</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>92447D65-AC73-42A4-8B0B-F431E4C1E0A1</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>BD6DF48E-3996-43BD-A902-34DEB58846C8</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>mark as airpods</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -267,23 +290,51 @@ fi</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
 				<key>argumenttype</key>
-				<integer>2</integer>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
 				<key>keyword</key>
-				<string>{var:airpods_trigger}</string>
+				<string>{var:bluetooth_trigger}</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>./alfred.sh</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
 				<key>subtext</key>
-				<string>connect to {var:AIRPODS_NAME}</string>
-				<key>text</key>
-				<string>Connect Airpods</string>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
 				<key>withspace</key>
 				<false/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
+			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>2BE9F66A-4473-46BE-83C9-E7310F7AAD10</string>
+			<string>E46BC154-C2E7-4371-8C7B-35919FA4784A</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -321,7 +372,7 @@ fi</string>
 			<key>config</key>
 			<dict>
 				<key>alfredfiltersresults</key>
-				<true/>
+				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
 				<key>argumenttreatemptyqueryasnil</key>
@@ -329,11 +380,11 @@ fi</string>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
-				<integer>1</integer>
+				<integer>2</integer>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>{var:bluetooth_trigger}</string>
+				<string>{var:airpods_trigger}</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -345,7 +396,11 @@ fi</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>system_profiler SPBluetoothDataType -json | jq -f alfred.jq</string>
+				<string>if [[ -z "$AIRPODS_MAC" ]]; then
+	echo "{\"items\": [{\"uid\": \"airpods_connect\", \"icon\": {\"path\": \"icons/airpods.png\", \"type\":\"filepath\"}, \"title\": \"Find Airpods\", \"subtitle\": \"list bluetooth devices\"}]}"
+else
+	echo "{\"items\": [{\"uid\": \"airpods_connect\", \"icon\": {\"path\": \"icons/airpods.png\", \"type\": \"filepath\"}, \"title\": \"Connect Airpods\", \"subtitle\": \"connect to $AIRPODS_NAME\"}]}"
+fi</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -357,12 +412,12 @@ fi</string>
 				<key>type</key>
 				<integer>11</integer>
 				<key>withspace</key>
-				<true/>
+				<false/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>42FBD721-757A-4964-8A6D-CF67686EB137</string>
+			<string>BDE15D79-5B43-422D-9FCA-892F4B3F1F98</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
@@ -376,7 +431,7 @@ fi</string>
 				<key>removeextension</key>
 				<false/>
 				<key>text</key>
-				<string>Airpods added</string>
+				<string>{var:AIRPODS_NAME} marked as Airpods</string>
 				<key>title</key>
 				<string>Bluetooth Connector</string>
 			</dict>
@@ -393,24 +448,78 @@ fi</string>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
-				<integer>102</integer>
+				<integer>68</integer>
 				<key>script</key>
-				<string>/usr/libexec/PlistBuddy -c "Set :variables:AIRPODS_MAC \"$1\"" info.plist
-/usr/libexec/PlistBuddy -c "Set :variables:AIRPODS_NAME \"$2\"" info.plist
-/usr/libexec/PlistBuddy -c "Set :variables:WORKFLOW_CONFIGURED \"true\"" info.plist</string>
+				<string>on run argv
+  	set bundleID to (system attribute "alfred_workflow_bundleid")
+	set airpodsMac to item 2 of argv
+	set airpodsName to item 3 of argv
+
+	tell application id "com.runningwithcrayons.Alfred"
+    		set configuration "AIRPODS_MAC" to value airpodsMac in workflow bundleID
+		set configuration "AIRPODS_NAME" to value airpodsName in workflow bundleID
+	end tell
+end run</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>type</key>
-				<integer>0</integer>
+				<integer>6</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>B27FB0F3-01B9-495A-888F-9255975636D1</string>
+			<string>BD6DF48E-3996-43BD-A902-34DEB58846C8</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>./alfred.sh</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>42FBD721-757A-4964-8A6D-CF67686EB137</string>
+			<key>version</key>
+			<integer>3</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -419,44 +528,35 @@ fi</string>
 See https://github.com/Boettner-eric/Alfred/ for more info</string>
 	<key>uidata</key>
 	<dict>
-		<key>2BE9F66A-4473-46BE-83C9-E7310F7AAD10</key>
-		<dict>
-			<key>note</key>
-			<string>conect airpods</string>
-			<key>xpos</key>
-			<real>35</real>
-			<key>ypos</key>
-			<real>290</real>
-		</dict>
 		<key>387831F6-E764-4230-B8D9-BE5CCA311178</key>
 		<dict>
 			<key>xpos</key>
-			<real>385</real>
+			<real>380</real>
 			<key>ypos</key>
 			<real>175</real>
 		</dict>
 		<key>4298D3F1-0820-459E-9B61-B396A0057862</key>
 		<dict>
 			<key>xpos</key>
-			<real>185</real>
+			<real>190</real>
 			<key>ypos</key>
-			<real>310</real>
+			<real>265</real>
 		</dict>
 		<key>42FBD721-757A-4964-8A6D-CF67686EB137</key>
 		<dict>
 			<key>note</key>
-			<string>list bluetooth devices</string>
+			<string>select airpods from list</string>
 			<key>xpos</key>
-			<real>170</real>
+			<real>300</real>
 			<key>ypos</key>
-			<real>440</real>
+			<real>410</real>
 		</dict>
 		<key>92447D65-AC73-42A4-8B0B-F431E4C1E0A1</key>
 		<dict>
 			<key>note</key>
 			<string>connect to provided bluetooth MAC</string>
 			<key>xpos</key>
-			<real>510</real>
+			<real>525</real>
 			<key>ypos</key>
 			<real>145</real>
 		</dict>
@@ -465,39 +565,57 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<key>note</key>
 			<string>open via uri</string>
 			<key>xpos</key>
-			<real>35</real>
+			<real>30</real>
 			<key>ypos</key>
 			<real>145</real>
 		</dict>
 		<key>A2750A6C-29C0-4BB4-BF8B-DE0B2D9128EB</key>
 		<dict>
 			<key>xpos</key>
-			<real>550</real>
+			<real>610</real>
 			<key>ypos</key>
-			<real>565</real>
+			<real>405</real>
 		</dict>
-		<key>B27FB0F3-01B9-495A-888F-9255975636D1</key>
+		<key>BD6DF48E-3996-43BD-A902-34DEB58846C8</key>
 		<dict>
 			<key>note</key>
-			<string>save airpods MAC</string>
+			<string>save airpods mac and name</string>
 			<key>xpos</key>
-			<real>390</real>
+			<real>460</real>
 			<key>ypos</key>
-			<real>565</real>
+			<real>405</real>
+		</dict>
+		<key>BDE15D79-5B43-422D-9FCA-892F4B3F1F98</key>
+		<dict>
+			<key>note</key>
+			<string>select airpods from list</string>
+			<key>xpos</key>
+			<real>30</real>
+			<key>ypos</key>
+			<real>290</real>
 		</dict>
 		<key>CFC98C8D-F6E7-4B27-8115-28A52C703229</key>
 		<dict>
 			<key>xpos</key>
-			<real>330</real>
+			<real>320</real>
 			<key>ypos</key>
 			<real>175</real>
 		</dict>
 		<key>D67FDF62-C2FE-4CB4-87FE-C726B42E2C76</key>
 		<dict>
 			<key>xpos</key>
-			<real>35</real>
+			<real>30</real>
 			<key>ypos</key>
 			<real>20</real>
+		</dict>
+		<key>E46BC154-C2E7-4371-8C7B-35919FA4784A</key>
+		<dict>
+			<key>note</key>
+			<string>select bluetooth device</string>
+			<key>xpos</key>
+			<real>300</real>
+			<key>ypos</key>
+			<real>250</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
@@ -506,7 +624,7 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<key>config</key>
 			<dict>
 				<key>default</key>
-				<string>bl</string>
+				<string>ble</string>
 				<key>placeholder</key>
 				<string></string>
 				<key>required</key>
@@ -548,11 +666,9 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 	<key>variables</key>
 	<dict>
 		<key>AIRPODS_MAC</key>
-		<string></string>
+		<string>14-28-76-CB-BA-EF</string>
 		<key>AIRPODS_NAME</key>
-		<string></string>
-		<key>WORKFLOW_CONFIGURED</key>
-		<string>true</string>
+		<string>Eric's AirPods Pro</string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array>

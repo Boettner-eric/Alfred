@@ -20,7 +20,7 @@ def describe_device($key; $device; $is_connected):
       "Airpods Pro - L: " + set_battery_level($device.device_batteryLevelLeft) + ", R: " + set_battery_level($device.device_batteryLevelRight)
     elif $key | contains("Airpods") then
       "Airpods - L: " + set_battery_level($device.device_batteryLevelLeft) + ", R: " + set_battery_level($device.device_batteryLevelRight)
-    else $device.device_minorType end
+    else $device.device_minorType + " - " + set_battery_level($battery_data[$key]) end
   else
     if $key | contains("AirPods Pro") then
       "Airpods Pro (not connected)"
@@ -44,16 +44,10 @@ def choose_icon($device):
 def format_device($device; $is_connected):
   {
     title: .key,
+    uid: ("bluetooth_connector_" + .value.device_address),
     icon: choose_icon(.value),
     subtitle: describe_device(.key; .value; $is_connected),
-    arg: [(if $is_connected then "disconnect" else "connect" end), (.value.device_address | gsub(":"; "-"))],
-    mods: {
-      cmd: {
-        valid: true,
-        arg: [(.value.device_address | gsub(":"; "-")), .key],
-        subtitle: "mark as airpods"
-      }
-    }
+    arg: [(if $is_connected then "disconnect" else "connect" end), (.value.device_address | gsub(":"; "-")), .key]   
   };
 
 {
