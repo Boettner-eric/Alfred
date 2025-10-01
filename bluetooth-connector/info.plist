@@ -666,9 +666,9 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 	<key>variables</key>
 	<dict>
 		<key>AIRPODS_MAC</key>
-		<string>14-28-76-CB-BA-EF</string>
+		<string></string>
 		<key>AIRPODS_NAME</key>
-		<string>Eric's AirPods Pro</string>
+		<string></string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array>
