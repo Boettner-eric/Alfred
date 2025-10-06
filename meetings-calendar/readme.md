@@ -15,8 +15,8 @@ Jump to slack huddles, zoom rooms and google meets directly from alfred.
 
 # Mods
 - `⌘` -> show meeting url
-- `⌃` -> show start and end times
 - `⌥` -> open event in calendar
+- `⌃` -> show start and end times
 
 
 # Run

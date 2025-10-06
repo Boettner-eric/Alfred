@@ -2,6 +2,8 @@
 - connect and disconnect bluetooth devices
 - favorite a bluetooth device for quick hotkey/url connect
 
+<img src="../screenshots/bluetooth-connector.png" width="600">
+
 # Setup
 - download [SF Pro](https://developer.apple.com/fonts/) font for battery icons
 - install blueutil `brew install blueutil`
