@@ -4,6 +4,8 @@
 <dict>
 	<key>bundleid</key>
 	<string>boettner.eric.bookmarks</string>
+	<key>category</key>
+	<string>Internet</string>
 	<key>connections</key>
 	<dict>
 		<key>0A92CAFB-35F9-4C8E-BF07-BF37074EB832</key>

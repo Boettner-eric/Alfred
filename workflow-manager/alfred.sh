@@ -23,15 +23,18 @@ extract_workflow_name() {
 extract_description() {
     local plist_file="$1"
     
-    local category=$(plutil -extract category raw "$plist_file" 2>/dev/null)
     local description=$(plutil -extract description raw "$plist_file" 2>/dev/null)
     if [[ $? -eq 0 && -n "$description" && ! "$description" =~ "Could not extract value" ]]; then
         echo "$description"
-    elif [[ $? -eq 0 && -n "$category" && ! "$category" =~ "Could not extract value" ]]; then
-        echo "$category"
-    else
-        echo "No description or category"
+        return 0
     fi
+    
+    local category=$(plutil -extract category raw "$plist_file" 2>/dev/null)
+    if [[ $? -eq 0 && -n "$category" && ! "$category" =~ "Could not extract value" ]]; then
+        echo "$category"
+        return 0
+    fi
+    echo "No description or category"
 }
 
 extract_website_url() {
