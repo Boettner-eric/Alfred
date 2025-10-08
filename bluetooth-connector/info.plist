@@ -182,11 +182,11 @@
 				<key>focusedappvariablename</key>
 				<string></string>
 				<key>hotkey</key>
-				<integer>105</integer>
+				<integer>106</integer>
 				<key>hotmod</key>
 				<integer>8388608</integer>
 				<key>hotstring</key>
-				<string>F13</string>
+				<string>F16</string>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -247,27 +247,6 @@ fi</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>delimiter</key>
-				<string>,</string>
-				<key>discardemptyarguments</key>
-				<false/>
-				<key>outputas</key>
-				<integer>1</integer>
-				<key>trimarguments</key>
-				<true/>
-				<key>variableprefix</key>
-				<string>split</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.split</string>
-			<key>uid</key>
-			<string>387831F6-E764-4230-B8D9-BE5CCA311178</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argument</key>
 				<string>connect, {var:AIRPODS_MAC}</string>
 				<key>passthroughargument</key>
@@ -284,6 +263,27 @@ fi</string>
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
 			<string>CFC98C8D-F6E7-4B27-8115-28A52C703229</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>delimiter</key>
+				<string>,</string>
+				<key>discardemptyarguments</key>
+				<false/>
+				<key>outputas</key>
+				<integer>1</integer>
+				<key>trimarguments</key>
+				<true/>
+				<key>variableprefix</key>
+				<string>split</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.split</string>
+			<key>uid</key>
+			<string>387831F6-E764-4230-B8D9-BE5CCA311178</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -424,27 +424,6 @@ fi</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>{var:AIRPODS_NAME} marked as Airpods</string>
-				<key>title</key>
-				<string>Bluetooth Connector</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>A2750A6C-29C0-4BB4-BF8B-DE0B2D9128EB</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -473,6 +452,27 @@ end run</string>
 			<string>BD6DF48E-3996-43BD-A902-34DEB58846C8</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{var:AIRPODS_NAME} marked as Airpods</string>
+				<key>title</key>
+				<string>Bluetooth Connector</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>A2750A6C-29C0-4BB4-BF8B-DE0B2D9128EB</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -662,18 +662,48 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<key>variable</key>
 			<string>airpods_trigger</string>
 		</dict>
-	</array>
-	<key>variables</key>
-	<dict>
-		<key>AIRPODS_MAC</key>
-		<string></string>
-		<key>AIRPODS_NAME</key>
-		<string></string>
-	</dict>
-	<key>variablesdontexport</key>
-	<array>
-		<string>AIRPODS_MAC</string>
-		<string>AIRPODS_NAME</string>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string></string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>This will be set automatically by the workflow</string>
+			<key>label</key>
+			<string>Airpods Name</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>AIRPODS_NAME</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string></string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>This will be set automatically by the workflow</string>
+			<key>label</key>
+			<string>Airpods Mac Address</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>AIRPODS_MAC</string>
+		</dict>
 	</array>
 	<key>version</key>
 	<string>1.0.0</string>
