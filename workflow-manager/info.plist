@@ -65,7 +65,7 @@
 	<key>createdby</key>
 	<string>Eric Boettner</string>
 	<key>description</key>
-	<string>Jump to your alfred workflows</string>
+	<string>View and edit your alfred workflows</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>

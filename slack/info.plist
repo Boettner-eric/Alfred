@@ -51,7 +51,7 @@
 	<key>createdby</key>
 	<string>Eric Boettner</string>
 	<key>description</key>
-	<string>Change slack Status</string>
+	<string>Change your slack status</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>

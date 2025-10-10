@@ -477,7 +477,7 @@
 	<key>createdby</key>
 	<string>Eric Boettner</string>
 	<key>description</key>
-	<string>Change the audio IO from Alfred!</string>
+	<string>Change the default audio input and output</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>

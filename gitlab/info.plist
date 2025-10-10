@@ -148,7 +148,7 @@
 	<key>createdby</key>
 	<string>Eric Boettner</string>
 	<key>description</key>
-	<string>Shortcuts for Gitlab Repos and Users</string>
+	<string>Go to gitlab repos and user merge requests</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>

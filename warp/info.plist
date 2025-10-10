@@ -67,7 +67,7 @@
 	<key>createdby</key>
 	<string>Eric Boettner</string>
 	<key>description</key>
-	<string>Jump to a directory</string>
+	<string>Jump to a warp directory</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
