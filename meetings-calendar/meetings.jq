@@ -8,6 +8,9 @@ def parse_cache_time($cache_time_str):
 def parse_meeting_time($time_str):
   ($time_str | split(" - ")[0] | strptime("%Y-%m-%dT%H:%M:%S") | mktime) / 60;
 
+def parse_meeting_time_end($time_str):
+  ($time_str | split(" - ")[1] | strptime("%Y-%m-%dT%H:%M:%S") | mktime) / 60;
+
 def pad_zero($num):
   if $num < 10 then "0\($num)" else "\($num)" end;
 
@@ -20,10 +23,12 @@ def format_subtitle($time_str):
 def update_meeting_subtitle($meeting):
   $meeting.time as $time_str
   | parse_meeting_time($time_str) as $meeting_start_minutes
+  | parse_meeting_time_end($time_str) as $meeting_end_minutes
   | (($meeting_start_minutes - (now | . / 60) + 420) | floor) as $minutes_until
+  | (($meeting_end_minutes - (now | . / 60) + 420) | floor) as $minutes_left
   | if $minutes_until < 60 then
       if $minutes_until <= 0 then
-        $meeting + {"subtitle": "right now"}
+        $meeting + {"subtitle": "right now | \($minutes_left) minutes left"}
       elif $minutes_until == 1 then
         $meeting + {"subtitle": "in a minute"}
       else
