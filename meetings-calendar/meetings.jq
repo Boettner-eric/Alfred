@@ -24,11 +24,17 @@ def update_meeting_subtitle($meeting):
   $meeting.time as $time_str
   | parse_meeting_time($time_str) as $meeting_start_minutes
   | parse_meeting_time_end($time_str) as $meeting_end_minutes
-  | (($meeting_start_minutes - (now | . / 60) + 420) | floor) as $minutes_until
-  | (($meeting_end_minutes - (now | . / 60) + 420) | floor) as $minutes_left
+  | (($meeting_start_minutes - (now | . / 60) + 421) | floor) as $minutes_until
+  | (($meeting_end_minutes - (now | . / 60) + 421) | floor) as $minutes_left
   | if $minutes_until < 60 then
       if $minutes_until <= 0 then
-        $meeting + {"subtitle": "right now | \($minutes_left) minutes left"}
+        if $minutes_left <= 0 then
+          $meeting + {"subtitle": "right now"}
+        elif $minutes_left == 1 then
+          $meeting + {"subtitle": "about to end"}
+        else
+          $meeting + {"subtitle": "right now | \($minutes_left) minutes left"}
+        end
       elif $minutes_until == 1 then
         $meeting + {"subtitle": "in a minute"}
       else
