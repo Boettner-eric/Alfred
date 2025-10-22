@@ -33,7 +33,7 @@ def update_meeting_subtitle($meeting):
         elif $minutes_left == 1 then
           $meeting + {"subtitle": "about to end"}
         else
-          $meeting + {"subtitle": "right now | \($minutes_left) minutes left"}
+          $meeting + {"subtitle": "right now (\($minutes_left) minutes left)"}
         end
       elif $minutes_until == 1 then
         $meeting + {"subtitle": "in a minute"}
