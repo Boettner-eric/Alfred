@@ -212,6 +212,7 @@
 				<string>if [ $1 = "connect" ]
 then
   /opt/homebrew/bin/blueutil --connect $2
+  /opt/homebrew/bin/SwitchAudioSource -t output -s "$3"
 else
   /opt/homebrew/bin/blueutil --disconnect $2
 fi</string>
@@ -248,7 +249,7 @@ fi</string>
 			<key>config</key>
 			<dict>
 				<key>argument</key>
-				<string>connect, {var:AIRPODS_MAC}</string>
+				<string>connect, {var:AIRPODS_MAC}, {var:AIRPODS_NAME}</string>
 				<key>passthroughargument</key>
 				<false/>
 				<key>variables</key>
@@ -424,6 +425,27 @@ fi</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{var:AIRPODS_NAME} marked as Airpods</string>
+				<key>title</key>
+				<string>Bluetooth Connector</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>A2750A6C-29C0-4BB4-BF8B-DE0B2D9128EB</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -452,27 +474,6 @@ end run</string>
 			<string>BD6DF48E-3996-43BD-A902-34DEB58846C8</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>{var:AIRPODS_NAME} marked as Airpods</string>
-				<key>title</key>
-				<string>Bluetooth Connector</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>A2750A6C-29C0-4BB4-BF8B-DE0B2D9128EB</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
