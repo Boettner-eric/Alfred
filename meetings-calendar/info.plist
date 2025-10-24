@@ -86,6 +86,18 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
+				<string>D41536C4-FC3F-44D5-A7D0-AE7A6BA03EFA</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>976384B2-2B7F-4FA9-9BB9-9E16F6AC53B5</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
 				<string>058FAA93-04A6-4225-B03F-EC9E04C207D5</string>
 				<key>modifiers</key>
 				<integer>0</integer>
@@ -135,15 +147,21 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>availableviaurlhandler</key>
-				<true/>
-				<key>triggerid</key>
-				<string>calendar</string>
+				<key>browser</key>
+				<string>company.thebrowser.Browser</string>
+				<key>skipqueryencode</key>
+				<false/>
+				<key>skipvarencode</key>
+				<false/>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>{query}</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.trigger.external</string>
+			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
-			<string>8948D437-B19B-4080-ABDA-2E0FE02B9D8F</string>
+			<string>EBE007D2-D341-452B-9CA0-8DCA0716F5B1</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -199,21 +217,15 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>browser</key>
-				<string>company.thebrowser.Browser</string>
-				<key>skipqueryencode</key>
-				<false/>
-				<key>skipvarencode</key>
-				<false/>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>{query}</string>
+				<key>availableviaurlhandler</key>
+				<true/>
+				<key>triggerid</key>
+				<string>calendar</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
+			<string>alfred.workflow.trigger.external</string>
 			<key>uid</key>
-			<string>EBE007D2-D341-452B-9CA0-8DCA0716F5B1</string>
+			<string>8948D437-B19B-4080-ABDA-2E0FE02B9D8F</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -235,6 +247,27 @@
 			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
 			<string>80396059-8294-4051-93AD-964527A5A135</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>delimiter</key>
+				<string>/j/</string>
+				<key>discardemptyarguments</key>
+				<false/>
+				<key>outputas</key>
+				<integer>0</integer>
+				<key>trimarguments</key>
+				<true/>
+				<key>variableprefix</key>
+				<string>split</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.split</string>
+			<key>uid</key>
+			<string>E8929B93-02A2-4FAA-802B-A417F0D3A7B5</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -275,27 +308,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>delimiter</key>
-				<string>/j/</string>
-				<key>discardemptyarguments</key>
-				<false/>
-				<key>outputas</key>
-				<integer>0</integer>
-				<key>trimarguments</key>
-				<true/>
-				<key>variableprefix</key>
-				<string>split</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.split</string>
-			<key>uid</key>
-			<string>E8929B93-02A2-4FAA-802B-A417F0D3A7B5</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>conditions</key>
 				<array>
 					<dict>
@@ -311,6 +323,20 @@
 						<string>zoom</string>
 						<key>uid</key>
 						<string>43A9500F-33E5-4449-BD07-B660C37F2E17</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>4</integer>
+						<key>matchstring</key>
+						<string>https://teams.microsoft.com/*</string>
+						<key>outputlabel</key>
+						<string>teams</string>
+						<key>uid</key>
+						<string>976384B2-2B7F-4FA9-9BB9-9E16F6AC53B5</string>
 					</dict>
 				</array>
 				<key>elselabel</key>
@@ -329,41 +355,20 @@
 			<key>config</key>
 			<dict>
 				<key>browser</key>
-				<string></string>
+				<string>org.microsoft.teams</string>
 				<key>skipqueryencode</key>
-				<false/>
+				<true/>
 				<key>skipvarencode</key>
-				<false/>
+				<true/>
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string></string>
+				<string>{query}</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
-			<string>058FAA93-04A6-4225-B03F-EC9E04C207D5</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>keyword</key>
-				<string>mcr</string>
-				<key>subtext</key>
-				<string>add a new google user</string>
-				<key>text</key>
-				<string>Register Calendar User</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>895C0F8A-29CE-4518-9C6A-8FD325D9E3AD</string>
+			<string>D41536C4-FC3F-44D5-A7D0-AE7A6BA03EFA</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -390,6 +395,48 @@
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>mcr</string>
+				<key>subtext</key>
+				<string>add a new google user</string>
+				<key>text</key>
+				<string>Register Calendar User</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>895C0F8A-29CE-4518-9C6A-8FD325D9E3AD</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>skipqueryencode</key>
+				<false/>
+				<key>skipvarencode</key>
+				<false/>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>058FAA93-04A6-4225-B03F-EC9E04C207D5</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>An alfred workflow for jumping into google calendar meetings
@@ -409,9 +456,9 @@ See more at: https://github.com/Boettner-eric/Alfred/</string>
 			<key>note</key>
 			<string>open meeting in browser</string>
 			<key>xpos</key>
-			<real>560</real>
+			<real>610</real>
 			<key>ypos</key>
-			<real>350</real>
+			<real>435</real>
 		</dict>
 		<key>20C83762-CE2F-4E8A-893D-1DA81A485CD0</key>
 		<dict>
@@ -469,6 +516,15 @@ See more at: https://github.com/Boettner-eric/Alfred/</string>
 			<real>465</real>
 			<key>ypos</key>
 			<real>260</real>
+		</dict>
+		<key>D41536C4-FC3F-44D5-A7D0-AE7A6BA03EFA</key>
+		<dict>
+			<key>note</key>
+			<string>open meeting in teams</string>
+			<key>xpos</key>
+			<real>760</real>
+			<key>ypos</key>
+			<real>365</real>
 		</dict>
 		<key>E8929B93-02A2-4FAA-802B-A417F0D3A7B5</key>
 		<dict>

@@ -33,6 +33,7 @@ MEETING_PATTERNS = {
         r"https://meet\.google\.com\/(?:[a-z]|[0-9]|[-])+": "./icons/meet.png",
         r"https://app.slack.com/huddle/[a-zA-Z0-9]*/[a-zA-Z0-9]*": "./icons/slack.png",
         r"(?i).*Microsoft Teams.*": "./icons/teams.png", # TODO: make this better
+        r"https://teams.microsoft.com/*": "./icons/teams.png", # TODO: make this better
         r"(?i).*Flight.*": "./icons/flight.png",
         r"https://[a-zA-Z0-9\-\._~:/?#\[\]@!$&'()*+,;=%]+": "./icons/website.png",
     }
