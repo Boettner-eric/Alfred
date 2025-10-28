@@ -31,36 +31,36 @@ def get_users():
     res = rq.get(url=gitlab_url, headers=headers)
     for user in res.json():
         if user["state"] == "active" and "bot" not in user["username"]:
-            if not exists(f'users/{user["username"]}.png'):
+            if not exists(f"users/{user['username']}.png"):
                 headers = {
                     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) ...",
                     "cookie": os.environ["GITLAB_COOKIE"],
                 }
                 img_data = rq.get(url=user["avatar_url"], headers=headers).content
-                with open(f'users/{user["username"]}.png', "wb") as handler:
+                with open(f"users/{user['username']}.png", "wb") as handler:
                     handler.write(img_data)
             first_name = user["name"].split(" ")[0]
             users.append(
                 {
-                    "arg": f'author_username={user["username"]}',
+                    "arg": f"author_username={user['username']}",
                     "subtitle": f"Get {first_name}'s active pull requests",
-                    "icon": {"path": f'users/{user["username"]}.png'},
-                    "uid": f'pr {user["username"]}',
+                    "icon": {"path": f"users/{user['username']}.png"},
+                    "uid": f"pr {user['username']}",
                     "title": user["name"],
                     "mods": {
                         "cmd": {
                             "valid": True,
-                            "arg": f'{user["username"]}',
+                            "arg": f"{user['username']}",
                             "subtitle": f"View {first_name}'s profile",
                         },
                         "ctrl": {
                             "valid": True,
-                            "arg": f'assignee_username={user["username"]}',
+                            "arg": f"assignee_username={user['username']}",
                             "subtitle": f"Get pull requests that {first_name} is assigned to",
                         },
                         "alt": {
                             "valid": True,
-                            "arg": f'reviewer_username={user["username"]}',
+                            "arg": f"reviewer_username={user['username']}",
                             "subtitle": f"Get pull requests that {first_name} is reviewing",
                         },
                     },
@@ -92,7 +92,7 @@ def get_repos():
             and not "archive" in repo["http_url_to_repo"]
         ):
             if (
-                not exists(f'repos/{repo["path"]}.png')
+                not exists(f"repos/{repo['path']}.png")
                 and repo["avatar_url"] != None
             ):
                 headers = {
@@ -100,7 +100,7 @@ def get_repos():
                     "cookie": os.environ["GITLAB_COOKIE"],
                 }
                 img_data = rq.get(url=repo["avatar_url"], headers=headers)
-                with open(f'repos/{repo["path"]}.png', "wb") as handler:
+                with open(f"repos/{repo['path']}.png", "wb") as handler:
                     handler.write(img_data.content)
             users.append(
                 {
@@ -112,12 +112,12 @@ def get_repos():
                     ),
                     "icon": {
                         "path": (
-                            f'repos/{repo["path"]}.png'
-                            if exists(f'repos/{repo["path"]}.png')
+                            f"repos/{repo['path']}.png"
+                            if exists(f"repos/{repo['path']}.png")
                             else "repos/default.png"
                         )
                     },
-                    "uid": f'repo {repo["name"]}',
+                    "uid": f"repo {repo['name']}",
                     "title": repo["name"],
                     "mods": {
                         "cmd": {
@@ -165,8 +165,8 @@ def get_mrs():
                     "subtitle": f"{merge['references']['full']} · created {time_ago(merge['created_at'])} by {merge['author']['name']}",
                     "icon": {
                         "path": (
-                            f'users/{merge["author"]["username"]}.png'
-                            if exists(f'users/{merge["author"]["username"]}.png')
+                            f"users/{merge['author']['username']}.png"
+                            if exists(f"users/{merge['author']['username']}.png")
                             else "repos/default.png"
                         )
                     },
@@ -174,7 +174,7 @@ def get_mrs():
                     "mods": {
                         "shift": {
                             "valid": True,
-                            "arg": f"{merge["web_url"]}/-/pipelines",
+                            "arg": f"{merge['web_url']}/-/pipelines",
                             "subtitle": f"Pipelines: {merge['web_url']}/-/pipelines",
                         },
                         "cmd": {
@@ -190,7 +190,7 @@ def get_mrs():
                         "ctrl": {
                             "valid": True,
                             "arg": f"{merge['web_url']}",
-                            "subtitle": f'assignees: {", ".join(name["name"] for name in merge["assignees"])} | reviewers: {", ".join(name["name"] for name in merge["reviewers"])}',
+                            "subtitle": f"assignees: {', '.join(name['name'] for name in merge['assignees'])} | reviewers: {', '.join(name['name'] for name in merge['reviewers'])}",
                         },
                     },
                 },
