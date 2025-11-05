@@ -20,16 +20,25 @@ def format_subtitle($time_str):
   | ($times[1] | strptime("%Y-%m-%dT%H:%M:%S")) as $end_time
   | "Today from \($start_time[3] | pad_zero(.)):\($start_time[4] | pad_zero(.)) to \($end_time[3] | pad_zero(.)):\($end_time[4] | pad_zero(.))";
 
+def calc_minute_diff($minutes):
+  now
+  | strflocaltime("%Y-%m-%dT%H:%M:%S%z")
+  | strptime("%Y-%m-%dT%H:%M:%S%z")
+  | mktime
+  | . / 60 - 1
+  | ($minutes - .)
+  | floor;
+
 def update_meeting_subtitle($meeting):
   $meeting.time as $time_str
   | parse_meeting_time($time_str) as $meeting_start_minutes
   | parse_meeting_time_end($time_str) as $meeting_end_minutes
-  | (($meeting_start_minutes - (now | . / 60) + 421) | floor) as $minutes_until
-  | (($meeting_end_minutes - (now | . / 60) + 421) | floor) as $minutes_left
+  | calc_minute_diff($meeting_start_minutes) as $minutes_until
+  | calc_minute_diff($meeting_end_minutes) as $minutes_left
   | if $minutes_until < 60 then
       if $minutes_until <= 0 then
         if $minutes_left <= 0 then
-          $meeting + {"subtitle": "right now"}
+          empty
         elif $minutes_left == 1 then
           $meeting + {"subtitle": "about to end"}
         else
@@ -44,11 +53,7 @@ def update_meeting_subtitle($meeting):
       $meeting
     end;
 
-def process_meetings:
-  .variables.cache_time as $cache_time_str
-  | parse_cache_time($cache_time_str) as $cache_minutes
-  | . + calculate_rerun($cache_minutes) 
-  | .items |= map(update_meeting_subtitle(.));
-
-# dynamically set the rerun time and update time_till subtitles
-process_meetings
+.variables.cache_time as $cache_time_str
+| parse_cache_time($cache_time_str) as $cache_minutes
+| . + calculate_rerun($cache_minutes) 
+| .items |= map(update_meeting_subtitle(.))
