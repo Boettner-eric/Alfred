@@ -30,6 +30,8 @@ gitlab/users/*
 gitlab/repos/*
 !gitlab/repos/.gitkeep
 
+github/tmp.repos.json
+
 audio-source/scenes/scenes.json
 
 slack/emotes/*
