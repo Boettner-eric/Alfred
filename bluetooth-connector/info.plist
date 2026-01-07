@@ -182,11 +182,11 @@
 				<key>focusedappvariablename</key>
 				<string></string>
 				<key>hotkey</key>
-				<integer>106</integer>
+				<integer>5</integer>
 				<key>hotmod</key>
-				<integer>8388608</integer>
+				<integer>1835008</integer>
 				<key>hotstring</key>
-				<string>F16</string>
+				<string>G</string>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -211,10 +211,13 @@
 				<key>script</key>
 				<string>if [ $1 = "connect" ]
 then
-  /opt/homebrew/bin/blueutil --connect $2
+  /opt/homebrew/bin/BluetoothConnector --connect $2
+  sleep 5
+  /opt/homebrew/bin/SwitchAudioSource -t input -s "$input"  
   /opt/homebrew/bin/SwitchAudioSource -t output -s "$3"
+  
 else
-  /opt/homebrew/bin/blueutil --disconnect $2
+  /opt/homebrew/bin/BluetoothConnector --disconnect $2
 fi</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
@@ -248,6 +251,27 @@ fi</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>delimiter</key>
+				<string>,</string>
+				<key>discardemptyarguments</key>
+				<false/>
+				<key>outputas</key>
+				<integer>1</integer>
+				<key>trimarguments</key>
+				<true/>
+				<key>variableprefix</key>
+				<string>split</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.split</string>
+			<key>uid</key>
+			<string>387831F6-E764-4230-B8D9-BE5CCA311178</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argument</key>
 				<string>connect, {var:AIRPODS_MAC}, {var:AIRPODS_NAME}</string>
 				<key>passthroughargument</key>
@@ -264,27 +288,6 @@ fi</string>
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
 			<string>CFC98C8D-F6E7-4B27-8115-28A52C703229</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>delimiter</key>
-				<string>,</string>
-				<key>discardemptyarguments</key>
-				<false/>
-				<key>outputas</key>
-				<integer>1</integer>
-				<key>trimarguments</key>
-				<true/>
-				<key>variableprefix</key>
-				<string>split</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.split</string>
-			<key>uid</key>
-			<string>387831F6-E764-4230-B8D9-BE5CCA311178</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -704,6 +707,27 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<string>textfield</string>
 			<key>variable</key>
 			<string>AIRPODS_MAC</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>MacBook Pro Microphone</string>
+				<key>placeholder</key>
+				<string>Enter your input device name</string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Input device to switch to when you connect airpods</string>
+			<key>label</key>
+			<string>Input Device</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>input</string>
 		</dict>
 	</array>
 	<key>version</key>
