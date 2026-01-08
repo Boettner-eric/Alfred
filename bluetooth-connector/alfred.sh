@@ -10,7 +10,11 @@ BEGIN {
     gsub(/^ -/, "", device)
     gsub(/ \(.*$/, "", device)
     
-    devices[device] = match($0, /[0-9]+%/)
+    if (match($0, /[0-9]+%/)) {
+        battery = substr($0, RSTART, RLENGTH)
+        gsub(/%/, "", battery)
+        devices[device] = battery
+    }
 }
 END {
     for (device in devices) {
