@@ -32,10 +32,11 @@ MEETING_PATTERNS = {
         r"http[s]?://(?:[a-zA-Z0-9-]+\.)?zoom\.us/j(?:[a-zA-Z0-9$-_@.&+!*(),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+": "./icons/zoom.png",
         r"https://meet\.google\.com\/(?:[a-z]|[0-9]|[-])+": "./icons/meet.png",
         r"https://app.slack.com/huddle/[a-zA-Z0-9]*/[a-zA-Z0-9]*": "./icons/slack.png",
-        r"(?i).*Microsoft Teams.*": "./icons/teams.png", # TODO: make this better
-        r"https://teams.microsoft.com/*": "./icons/teams.png", # TODO: make this better
+        r"<?https://teams\.microsoft\.com/l/meetup-join/[a-zA-Z0-9\-\._~:/?#\[\]@!$&'()*+,;=%]+>?": "./icons/teams.png",
+        r"<?https://teams\.microsoft\.com/[a-zA-Z0-9\-\._~:/?#\[\]@!$&'()*+,;=%]+>?": "./icons/teams.png",
+        r"(?i).*Microsoft Teams.*": "./icons/teams.png",
         r"(?i).*Flight.*": "./icons/flight.png",
-        r"https://[a-zA-Z0-9\-\._~:/?#\[\]@!$&'()*+,;=%]+": "./icons/website.png",
+        r"<?https://[a-zA-Z0-9\-\._~:/?#\[\]@!$&'()*+,;=%]+>?": "./icons/website.png",
     }
 
 TIME_FORMAT = "%a %B %-d %-I:%M"
@@ -167,7 +168,7 @@ def find_meeting_url(*args):
     for pattern, icon in MEETING_PATTERNS.items():
         matches = findall(pattern, " ".join(args))
         if matches:
-            return (matches[0], icon)
+            return (matches[0].strip('<>').strip(), icon)
 
     return (False, "./icons/cal.png")
 
