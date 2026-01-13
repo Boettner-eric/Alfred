@@ -42,12 +42,23 @@ def choose_icon($device):
   end;
 
 def format_device($device; $is_connected):
+  (.value.device_address | gsub(":"; "-")) as $device_address | 
   {
     title: .key,
     uid: ("bluetooth_connector_" + .value.device_address),
     icon: choose_icon(.value),
     subtitle: describe_device(.key; .value; $is_connected),
-    arg: [(if $is_connected then "disconnect" else "connect" end), (.value.device_address | gsub(":"; "-")), .key]   
+    arg: [(if $is_connected then "disconnect" else "connect" end), $device_address, .key],
+    mods: {
+      alt: {
+        subtitle: "copy address " + $device_address,
+        arg: $device_address
+      },
+      ctrl: {
+        subtitle: "copy address " + .value.device_address,
+        arg: .value.device_address
+      }
+    }
   };
 
 {

@@ -17,7 +17,12 @@ Feel free to create an issue or open a pull request.
 - [Warp](./warp/) - open any warp directory in your chosen application
 - [Workflow Manager](./workflow-manager/) - open alfred workflows in an IDE/terminal
 
+## Helpful references
+
+- [Alfred.applescript](https://gist.github.com/Boettner-eric/77baef8e2797577cc101ebc15a994b6d) gist for setting alfred config values inside a workflow
+
 ## External Repos
+
 I also use a few other alfred workflows that I have modified or downloaded from alfred's workflow gallery
 
 - [Alfred Theme Switcher (Fork)](https://github.com/Boettner-eric/alfred-theme-switcher)

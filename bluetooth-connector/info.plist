@@ -150,6 +150,16 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
+				<string>A2F04A6A-7268-471F-9C64-5280D6DC53B4</string>
+				<key>modifiers</key>
+				<integer>524288</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
 				<string>BD6DF48E-3996-43BD-A902-34DEB58846C8</string>
 				<key>modifiers</key>
 				<integer>1048576</integer>
@@ -428,23 +438,21 @@ fi</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>lastpathcomponent</key>
+				<key>autopaste</key>
 				<false/>
-				<key>onlyshowifquerypopulated</key>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
 				<false/>
-				<key>removeextension</key>
+				<key>transient</key>
 				<false/>
-				<key>text</key>
-				<string>{var:AIRPODS_NAME} marked as Airpods</string>
-				<key>title</key>
-				<string>Bluetooth Connector</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
+			<string>alfred.workflow.output.clipboard</string>
 			<key>uid</key>
-			<string>A2750A6C-29C0-4BB4-BF8B-DE0B2D9128EB</string>
+			<string>A2F04A6A-7268-471F-9C64-5280D6DC53B4</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -477,6 +485,27 @@ end run</string>
 			<string>BD6DF48E-3996-43BD-A902-34DEB58846C8</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{var:AIRPODS_NAME} marked as Airpods</string>
+				<key>title</key>
+				<string>Bluetooth Connector</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>A2750A6C-29C0-4BB4-BF8B-DE0B2D9128EB</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -579,6 +608,13 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<real>610</real>
 			<key>ypos</key>
 			<real>405</real>
+		</dict>
+		<key>A2F04A6A-7268-471F-9C64-5280D6DC53B4</key>
+		<dict>
+			<key>xpos</key>
+			<real>610</real>
+			<key>ypos</key>
+			<real>295</real>
 		</dict>
 		<key>BD6DF48E-3996-43BD-A902-34DEB58846C8</key>
 		<dict>
