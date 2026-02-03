@@ -41,6 +41,8 @@ debug_cal.json
 scratch.json
 merge.json
 
+url-schemes/urls.json
+
 # migrating old workflows into new format
 user.workflow.hmb-workflow
 user.workflow.calendar
