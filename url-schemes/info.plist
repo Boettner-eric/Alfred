@@ -8,11 +8,50 @@
 	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
+		<key>05257588-74EC-4263-9721-91A630A4968B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>0EBB1918-E422-41F8-B500-2A4469CF6EA7</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>0DFD2000-D79E-40A5-A9C7-79845A76FCEC</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>7B560801-74D4-4438-805A-A64D73E47B08</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>14D512E9-9D3F-4105-8FBB-CB4A69A4AA00</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>2C8D41AE-5E7B-4C38-8338-A356CB49B845</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>1ED8DD1F-B986-4852-8F47-6EA13D9F4366</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>0EBB1918-E422-41F8-B500-2A4469CF6EA7</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -47,11 +86,64 @@
 				<false/>
 			</dict>
 		</array>
+		<key>3781B7DE-81B5-4D45-9C80-13DC55DC8B99</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>8B42E873-6DE3-4333-AFD1-F01B58D3668A</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>_button1</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>47E20270-E6BD-4F29-BD0D-78D73C2566C9</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>B2AFC6AB-4FE7-498C-90F4-E9BA1B786ED8</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>50B335F4-210F-4311-B0B3-65FF0885957B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>60B655EB-8444-4315-9FDA-2AD39AA6233E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>60B655EB-8444-4315-9FDA-2AD39AA6233E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>80BE2E87-464D-4F1B-8298-E475EC41CA2C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>54471537-2067-4F08-A0C4-40CA894F6808</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>80BE2E87-464D-4F1B-8298-E475EC41CA2C</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -73,11 +165,60 @@
 				<false/>
 			</dict>
 		</array>
+		<key>7B560801-74D4-4438-805A-A64D73E47B08</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F2496CFC-544C-4D0C-9A05-E7C64E8B80D4</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>0FB550D9-7C5E-456C-A592-156D1687B2F5</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>80BE2E87-464D-4F1B-8298-E475EC41CA2C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>EA30DC96-E878-4B5C-B1B5-50E9E2790B57</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>81DE253E-B57E-480A-837D-D4872DD861AA</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>47E20270-E6BD-4F29-BD0D-78D73C2566C9</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>84550CF0-44ED-400B-BAB5-B3AA3B596320</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>0DFD2000-D79E-40A5-A9C7-79845A76FCEC</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -136,11 +277,73 @@
 				<false/>
 			</dict>
 		</array>
+		<key>D05F27E1-7529-4D2C-8F73-BB3EAE2A9E26</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>3781B7DE-81B5-4D45-9C80-13DC55DC8B99</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E8A4556D-FE1C-4EEB-BEEE-BB37C17E1732</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F8556231-81D6-45B1-9056-8DE5F28166D3</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>6213C6B4-7958-4BAA-869D-40AE16B7BD2B</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>copy "{query}"</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>EA30DC96-E878-4B5C-B1B5-50E9E2790B57</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>84550CF0-44ED-400B-BAB5-B3AA3B596320</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>F004A449-754A-4036-830E-0C6638FB18CF</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>7493E761-8E41-41E5-9824-93FE48E5A509</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>F8556231-81D6-45B1-9056-8DE5F28166D3</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>B894F41A-499F-4D8A-BB4B-3154C62591BA</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -174,7 +377,10 @@ if [[ $background == 1 ]]; then
 	open -g $url
 else
 	open $url
-fi</string>
+fi
+
+# pipe into history file here
+echo -n $url</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -212,6 +418,29 @@ fi</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
+				<string>content=$(jq --arg url "$1" -f history/add-entry.jq history/history.json) &amp;&amp; printf '%s' "$content" &gt; history/history.json</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>0EBB1918-E422-41F8-B500-2A4469CF6EA7</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
 				<string>url=$(echo $entry | jq -r ". | (.scheme + .path)")
 
 if [[ $background == 1 ]]; then
@@ -221,7 +450,7 @@ else
 fi
 
 # pipe into history file here
-echo "${url}?${tmp_params:1}"</string>
+echo -n "${url}?${tmp_params:1}"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -249,7 +478,7 @@ echo "${url}?${tmp_params:1}"</string>
 						<key>matchmode</key>
 						<integer>0</integer>
 						<key>matchstring</key>
-						<string>&lt;null&gt;</string>
+						<string>null</string>
 						<key>outputlabel</key>
 						<string>plain url</string>
 						<key>uid</key>
@@ -294,11 +523,11 @@ echo "${url}?${tmp_params:1}"</string>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>urls</string>
+				<string>{var:trigger_urls}</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -354,6 +583,25 @@ echo "${url}?${tmp_params:1}"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>externaltriggerid</key>
+				<string>params</string>
+				<key>passinputasargument</key>
+				<true/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>08ADD829-48A5-4C71-BC36-6028263953FF</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -402,45 +650,6 @@ echo $params</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>externaltriggerid</key>
-				<string>params</string>
-				<key>passinputasargument</key>
-				<true/>
-				<key>passvariables</key>
-				<true/>
-				<key>workflowbundleid</key>
-				<string>self</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.callexternaltrigger</string>
-			<key>uid</key>
-			<string>08ADD829-48A5-4C71-BC36-6028263953FF</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string></string>
-				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
-				<dict>
-					<key>params</key>
-					<string>{var:split3}</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>A61D31F6-2149-43EA-A377-5BBD2CFF03A8</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>delimiter</key>
 				<string>
 </string>
@@ -480,6 +689,559 @@ echo $params</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>params</key>
+					<string>{var:split3}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>A61D31F6-2149-43EA-A377-5BBD2CFF03A8</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>content=$(jq --arg url "$url" --arg icon "$iconPath" --arg bundleid "$bundleID" --arg background "$1" -f add-url.jq urls.json) &amp;&amp; printf '%s' "$content" &gt; urls.json</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>F2496CFC-544C-4D0C-9A05-E7C64E8B80D4</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>{var:trigger_url_register}</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>jq -n --arg q "$1" '{items:
+	[
+		{title: "Enter Url or Scheme",
+		subtitle: (if $q | endswith("://") then "scheme" else 
+			(if $q | contains("://") then (
+				if $q | contains("?") then "url with params" else "url" end) else "e.g. app:// or app://path?param=val" end)
+			end), arg: $q
+		}
+	]
+}'
+
+# detect url vs scheme</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>50B335F4-210F-4311-B0B3-65FF0885957B</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>4</integer>
+						<key>matchstring</key>
+						<string>://$</string>
+						<key>outputlabel</key>
+						<string>scheme</string>
+						<key>uid</key>
+						<string>7868D01E-760A-4C92-B555-158FC06ECA09</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>4</integer>
+						<key>matchstring</key>
+						<string>^[^?]*$</string>
+						<key>outputlabel</key>
+						<string>plain url</string>
+						<key>uid</key>
+						<string>54471537-2067-4F08-A0C4-40CA894F6808</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>url with params</string>
+				<key>hideelse</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>60B655EB-8444-4315-9FDA-2AD39AA6233E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>jq -n --arg bool "$1" '{items:
+	[
+		{title: "Open in background?",
+		subtitle: "Y or N",
+		arg: (if $bool == "Y" then "true" else false end)
+		}
+	]
+}'
+</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>7B560801-74D4-4438-805A-A64D73E47B08</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>if [[ $1 == "" ]]; then
+	jq -n --arg q "$1" --arg iconPath "$iconPath" --arg id "$bundleID" '{items:
+	[
+		{title: "Enter App Name",
+		subtitle: "App not found",
+		arg: ""
+		}
+	]
+}'
+else
+
+
+
+bundleID=$(osascript -e "id of app \"$1\"" 2&gt;/dev/null) || bundleID=""
+iconPath=$(osascript -e "tell application \"Finder\" to POSIX path of ((application file id \"$bundleID\") as alias)" 2&gt;/dev/null) || iconPath=""
+
+jq -n --arg q "$1" --arg iconPath "$iconPath" --arg id "$bundleID" '{items:
+	[
+		{title: "Enter App Name",
+		subtitle: (if $id == "" then "App not found" else "Bundle ID: " + $id end),
+		arg: (if $id == "" then "" else $q + "\n" + $id + "\n" + $iconPath end),
+		icon: {type: "fileicon", path: (if $iconPath == "" then "" else $iconPath end)} 
+		}
+	]
+}'
+
+fi</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>EA30DC96-E878-4B5C-B1B5-50E9E2790B57</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>delimiter</key>
+				<string>
+</string>
+				<key>discardemptyarguments</key>
+				<false/>
+				<key>outputas</key>
+				<integer>0</integer>
+				<key>trimarguments</key>
+				<true/>
+				<key>variableprefix</key>
+				<string>app</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.split</string>
+			<key>uid</key>
+			<string>84550CF0-44ED-400B-BAB5-B3AA3B596320</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>bundleID</key>
+					<string>{var:app2}</string>
+					<key>iconPath</key>
+					<string>{var:app3}</string>
+					<key>name</key>
+					<string>{var:app1}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>0DFD2000-D79E-40A5-A9C7-79845A76FCEC</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>url</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>80BE2E87-464D-4F1B-8298-E475EC41CA2C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>content=$(jq --arg url "$url" -f history/add-entry.jq history/history.json) &amp;&amp; printf '%s' "$content" &gt; history/history.json</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>0FB550D9-7C5E-456C-A592-156D1687B2F5</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>content=$(jq --arg url "$1" -f history/add-entry.jq history/history.json) &amp;&amp; printf '%s' "$content" &gt; history/history.json</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>B894F41A-499F-4D8A-BB4B-3154C62591BA</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>if [[ $background == 1 ]]; then
+	open -g $1
+else
+	open $1
+fi
+
+# pipe into history file here
+echo -n $1</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>F8556231-81D6-45B1-9056-8DE5F28166D3</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>{var:trigger_url_history}</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string># todo: rank the results
+jq --slurpfile urls urls.json -f history/get-history.jq history/history.json</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>E8A4556D-FE1C-4EEB-BEEE-BB37C17E1732</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>6213C6B4-7958-4BAA-869D-40AE16B7BD2B</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>echo "{}" &gt; history/history.json</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>8B42E873-6DE3-4333-AFD1-F01B58D3668A</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>keyword</key>
+				<string>clear urls</string>
+				<key>subtext</key>
+				<string>delete url schemes history</string>
+				<key>text</key>
+				<string>Clear URLS</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>D05F27E1-7529-4D2C-8F73-BB3EAE2A9E26</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>button1</key>
+				<string>Delete</string>
+				<key>button2</key>
+				<string>Cancel</string>
+				<key>button3</key>
+				<string></string>
+				<key>description</key>
+				<string>Delete history from url-schemes workflow</string>
+				<key>title</key>
+				<string>Confirm?</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.dialog</string>
+			<key>uid</key>
+			<string>3781B7DE-81B5-4D45-9C80-13DC55DC8B99</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>Browse and Activate custom url schemes
@@ -494,7 +1256,7 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<key>xpos</key>
 			<real>495</real>
 			<key>ypos</key>
-			<real>15</real>
+			<real>50</real>
 		</dict>
 		<key>08ADD829-48A5-4C71-BC36-6028263953FF</key>
 		<dict>
@@ -503,16 +1265,45 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<key>xpos</key>
 			<real>970</real>
 			<key>ypos</key>
-			<real>295</real>
+			<real>330</real>
+		</dict>
+		<key>0DFD2000-D79E-40A5-A9C7-79845A76FCEC</key>
+		<dict>
+			<key>xpos</key>
+			<real>645</real>
+			<key>ypos</key>
+			<real>590</real>
+		</dict>
+		<key>0EBB1918-E422-41F8-B500-2A4469CF6EA7</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>1</integer>
+			<key>note</key>
+			<string>Write to history</string>
+			<key>xpos</key>
+			<real>750</real>
+			<key>ypos</key>
+			<real>125</real>
+		</dict>
+		<key>0FB550D9-7C5E-456C-A592-156D1687B2F5</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>1</integer>
+			<key>note</key>
+			<string>Write to history</string>
+			<key>xpos</key>
+			<real>905</real>
+			<key>ypos</key>
+			<real>625</real>
 		</dict>
 		<key>14D512E9-9D3F-4105-8FBB-CB4A69A4AA00</key>
 		<dict>
 			<key>note</key>
-			<string>URL Param 1</string>
+			<string>Add url Param</string>
 			<key>xpos</key>
 			<real>750</real>
 			<key>ypos</key>
-			<real>295</real>
+			<real>330</real>
 		</dict>
 		<key>1ED8DD1F-B986-4852-8F47-6EA13D9F4366</key>
 		<dict>
@@ -521,35 +1312,81 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<key>xpos</key>
 			<real>495</real>
 			<key>ypos</key>
-			<real>155</real>
+			<real>190</real>
 		</dict>
 		<key>27385497-B986-4326-BD0B-7ABC8368C2CB</key>
 		<dict>
 			<key>xpos</key>
 			<real>105</real>
 			<key>ypos</key>
-			<real>60</real>
+			<real>95</real>
 		</dict>
 		<key>2C8D41AE-5E7B-4C38-8338-A356CB49B845</key>
 		<dict>
 			<key>xpos</key>
 			<real>905</real>
 			<key>ypos</key>
-			<real>325</real>
+			<real>360</real>
+		</dict>
+		<key>3781B7DE-81B5-4D45-9C80-13DC55DC8B99</key>
+		<dict>
+			<key>xpos</key>
+			<real>255</real>
+			<key>ypos</key>
+			<real>1055</real>
 		</dict>
 		<key>47E20270-E6BD-4F29-BD0D-78D73C2566C9</key>
 		<dict>
 			<key>xpos</key>
 			<real>245</real>
 			<key>ypos</key>
-			<real>210</real>
+			<real>245</real>
+		</dict>
+		<key>50B335F4-210F-4311-B0B3-65FF0885957B</key>
+		<dict>
+			<key>note</key>
+			<string>Register a new URL</string>
+			<key>xpos</key>
+			<real>85</real>
+			<key>ypos</key>
+			<real>550</real>
+		</dict>
+		<key>60B655EB-8444-4315-9FDA-2AD39AA6233E</key>
+		<dict>
+			<key>xpos</key>
+			<real>235</real>
+			<key>ypos</key>
+			<real>555</real>
+		</dict>
+		<key>6213C6B4-7958-4BAA-869D-40AE16B7BD2B</key>
+		<dict>
+			<key>xpos</key>
+			<real>275</real>
+			<key>ypos</key>
+			<real>860</real>
 		</dict>
 		<key>7493E761-8E41-41E5-9824-93FE48E5A509</key>
 		<dict>
 			<key>xpos</key>
 			<real>635</real>
 			<key>ypos</key>
-			<real>325</real>
+			<real>360</real>
+		</dict>
+		<key>7B560801-74D4-4438-805A-A64D73E47B08</key>
+		<dict>
+			<key>note</key>
+			<string>Background</string>
+			<key>xpos</key>
+			<real>715</real>
+			<key>ypos</key>
+			<real>560</real>
+		</dict>
+		<key>80BE2E87-464D-4F1B-8298-E475EC41CA2C</key>
+		<dict>
+			<key>xpos</key>
+			<real>370</real>
+			<key>ypos</key>
+			<real>595</real>
 		</dict>
 		<key>81DE253E-B57E-480A-837D-D4872DD861AA</key>
 		<dict>
@@ -558,21 +1395,77 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<key>xpos</key>
 			<real>105</real>
 			<key>ypos</key>
-			<real>185</real>
+			<real>220</real>
+		</dict>
+		<key>84550CF0-44ED-400B-BAB5-B3AA3B596320</key>
+		<dict>
+			<key>xpos</key>
+			<real>590</real>
+			<key>ypos</key>
+			<real>590</real>
+		</dict>
+		<key>8B42E873-6DE3-4333-AFD1-F01B58D3668A</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>1</integer>
+			<key>note</key>
+			<string>Clear history</string>
+			<key>xpos</key>
+			<real>340</real>
+			<key>ypos</key>
+			<real>1020</real>
 		</dict>
 		<key>A61D31F6-2149-43EA-A377-5BBD2CFF03A8</key>
 		<dict>
 			<key>xpos</key>
 			<real>685</real>
 			<key>ypos</key>
-			<real>325</real>
+			<real>360</real>
 		</dict>
 		<key>B2AFC6AB-4FE7-498C-90F4-E9BA1B786ED8</key>
 		<dict>
 			<key>xpos</key>
 			<real>325</real>
 			<key>ypos</key>
-			<real>160</real>
+			<real>195</real>
+		</dict>
+		<key>B894F41A-499F-4D8A-BB4B-3154C62591BA</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>1</integer>
+			<key>note</key>
+			<string>Write to history</string>
+			<key>xpos</key>
+			<real>450</real>
+			<key>ypos</key>
+			<real>725</real>
+		</dict>
+		<key>D05F27E1-7529-4D2C-8F73-BB3EAE2A9E26</key>
+		<dict>
+			<key>note</key>
+			<string>Clear history</string>
+			<key>xpos</key>
+			<real>95</real>
+			<key>ypos</key>
+			<real>1035</real>
+		</dict>
+		<key>E8A4556D-FE1C-4EEB-BEEE-BB37C17E1732</key>
+		<dict>
+			<key>note</key>
+			<string>Show URL history</string>
+			<key>xpos</key>
+			<real>90</real>
+			<key>ypos</key>
+			<real>725</real>
+		</dict>
+		<key>EA30DC96-E878-4B5C-B1B5-50E9E2790B57</key>
+		<dict>
+			<key>note</key>
+			<string>Enter Name</string>
+			<key>xpos</key>
+			<real>445</real>
+			<key>ypos</key>
+			<real>565</real>
 		</dict>
 		<key>F004A449-754A-4036-830E-0C6638FB18CF</key>
 		<dict>
@@ -581,11 +1474,93 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<key>xpos</key>
 			<real>495</real>
 			<key>ypos</key>
-			<real>295</real>
+			<real>330</real>
+		</dict>
+		<key>F2496CFC-544C-4D0C-9A05-E7C64E8B80D4</key>
+		<dict>
+			<key>note</key>
+			<string>Save URL</string>
+			<key>xpos</key>
+			<real>905</real>
+			<key>ypos</key>
+			<real>480</real>
+		</dict>
+		<key>F8556231-81D6-45B1-9056-8DE5F28166D3</key>
+		<dict>
+			<key>note</key>
+			<string>Open URL</string>
+			<key>xpos</key>
+			<real>275</real>
+			<key>ypos</key>
+			<real>725</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
-	<array/>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>urls</string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Trigger the list urls script filter</string>
+			<key>label</key>
+			<string>List all URLs</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>trigger_urls</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>urla</string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Trigger the add url flow</string>
+			<key>label</key>
+			<string>Register a URL</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>trigger_url_register</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>urlh</string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Show the URL history</string>
+			<key>label</key>
+			<string>URL history</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>trigger_url_history</string>
+		</dict>
+	</array>
 	<key>version</key>
 	<string></string>
 	<key>webaddress</key>

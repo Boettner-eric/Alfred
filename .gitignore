@@ -42,6 +42,7 @@ scratch.json
 merge.json
 
 url-schemes/urls.json
+url-schemes/history/history.json
 
 # migrating old workflows into new format
 user.workflow.hmb-workflow

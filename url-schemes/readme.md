@@ -8,26 +8,19 @@ _Browser/Jump to app specific urls_
 
 # Setup
 
--
+- NA
 
 # Features
 
 - Add any url with custom params
 - Fill out a URL template
 - Save history of urls
-- Favorite URLs
+- Favorite URLs (todo)
 
 # Mods
 
 - ` ` -> Go to URL
 - `⌘` -> Copy URL
-- `⌥` -> Favorite url
+- `⌥` -> ??
 - `⌃` -> ??
 - `⇧` -> ??
-
-# Scratchpad
-
-1. listing urls and allowing path filling
-2. allowing for new url
-3. history
-4. favorites

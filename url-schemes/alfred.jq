@@ -1,5 +1,3 @@
-# when adding we can use osascript -e 'tell application "Finder" to POSIX path of ((application file id "BUNDLE_ID") as alias)'
-
 {
   items: [
     .[] | . as $entry | .paths[]
