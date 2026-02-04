@@ -552,7 +552,7 @@ echo -n "${url}?${tmp_params:1}"</string>
 			<key>config</key>
 			<dict>
 				<key>alfredfiltersresults</key>
-				<false/>
+				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
 				<key>argumenttreatemptyqueryasnil</key>
@@ -1200,7 +1200,7 @@ echo -n $1</string>
 			<key>config</key>
 			<dict>
 				<key>alfredfiltersresults</key>
-				<false/>
+				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
 				<key>argumenttreatemptyqueryasnil</key>
@@ -1224,8 +1224,7 @@ echo -n $1</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string># todo: rank the results
-jq --slurpfile urls urls.json -f history/get-history.jq history/history.json</string>
+				<string>jq --slurpfile urls urls.json -f history/get-history.jq history/history.json</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
