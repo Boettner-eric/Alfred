@@ -24,7 +24,7 @@ def _params_from_pairs:
   | ($pairs[0][0]) as $k
   | ($pairs[0][1] | infer_type) as $ty
   | ($pairs[1:] | _params_from_pairs) as $rest
-  | $rest + {($k): $ty}
+  | $rest + {($k): $ty + " e.g. " + $pairs[0][1]}
   end;
 
 def query_to_param_types:

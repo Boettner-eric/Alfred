@@ -34,11 +34,13 @@
 				<false/>
 			</dict>
 		</array>
+		<key>0EBB1918-E422-41F8-B500-2A4469CF6EA7</key>
+		<array/>
 		<key>14D512E9-9D3F-4105-8FBB-CB4A69A4AA00</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>2C8D41AE-5E7B-4C38-8338-A356CB49B845</string>
+				<string>C35B17FE-99C5-46E6-B6F7-A2275FA16194</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -213,6 +215,16 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>3059C7D9-2D78-4308-87E8-CAC81503AF03</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>copy {var:copy}</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
 		</array>
 		<key>84550CF0-44ED-400B-BAB5-B3AA3B596320</key>
 		<array>
@@ -269,6 +281,31 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>F004A449-754A-4036-830E-0C6638FB18CF</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>C35B17FE-99C5-46E6-B6F7-A2275FA16194</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>08ADD829-48A5-4C71-BC36-6028263953FF</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>3A7A204E-5856-4BBF-83FC-B2D48293E9E6</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>2C8D41AE-5E7B-4C38-8338-A356CB49B845</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -650,6 +687,57 @@ echo $params</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{var:copy}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>3059C7D9-2D78-4308-87E8-CAC81503AF03</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string></string>
+						<key>outputlabel</key>
+						<string>skip empty params</string>
+						<key>uid</key>
+						<string>3A7A204E-5856-4BBF-83FC-B2D48293E9E6</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>add params</string>
+				<key>hideelse</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>C35B17FE-99C5-46E6-B6F7-A2275FA16194</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>delimiter</key>
 				<string>
 </string>
@@ -675,26 +763,6 @@ echo $params</string>
 				<key>argument</key>
 				<string></string>
 				<key>passthroughargument</key>
-				<true/>
-				<key>variables</key>
-				<dict>
-					<key>tmp_params</key>
-					<string>{var:tmp_params}&amp;{var:split1}={query}</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>2C8D41AE-5E7B-4C38-8338-A356CB49B845</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string></string>
-				<key>passthroughargument</key>
 				<false/>
 				<key>variables</key>
 				<dict>
@@ -706,6 +774,26 @@ echo $params</string>
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
 			<string>A61D31F6-2149-43EA-A377-5BBD2CFF03A8</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<true/>
+				<key>variables</key>
+				<dict>
+					<key>tmp_params</key>
+					<string>{var:tmp_params}&amp;{var:split1}={query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>2C8D41AE-5E7B-4C38-8338-A356CB49B845</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -1263,7 +1351,7 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<key>note</key>
 			<string>loop</string>
 			<key>xpos</key>
-			<real>970</real>
+			<real>1125</real>
 			<key>ypos</key>
 			<real>330</real>
 		</dict>
@@ -1324,9 +1412,16 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 		<key>2C8D41AE-5E7B-4C38-8338-A356CB49B845</key>
 		<dict>
 			<key>xpos</key>
-			<real>905</real>
+			<real>1045</real>
 			<key>ypos</key>
-			<real>360</real>
+			<real>395</real>
+		</dict>
+		<key>3059C7D9-2D78-4308-87E8-CAC81503AF03</key>
+		<dict>
+			<key>xpos</key>
+			<real>280</real>
+			<key>ypos</key>
+			<real>335</real>
 		</dict>
 		<key>3781B7DE-81B5-4D45-9C80-13DC55DC8B99</key>
 		<dict>
@@ -1338,9 +1433,9 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 		<key>47E20270-E6BD-4F29-BD0D-78D73C2566C9</key>
 		<dict>
 			<key>xpos</key>
-			<real>245</real>
+			<real>270</real>
 			<key>ypos</key>
-			<real>245</real>
+			<real>250</real>
 		</dict>
 		<key>50B335F4-210F-4311-B0B3-65FF0885957B</key>
 		<dict>
@@ -1425,7 +1520,7 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 		<key>B2AFC6AB-4FE7-498C-90F4-E9BA1B786ED8</key>
 		<dict>
 			<key>xpos</key>
-			<real>325</real>
+			<real>340</real>
 			<key>ypos</key>
 			<real>195</real>
 		</dict>
@@ -1439,6 +1534,13 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<real>450</real>
 			<key>ypos</key>
 			<real>725</real>
+		</dict>
+		<key>C35B17FE-99C5-46E6-B6F7-A2275FA16194</key>
+		<dict>
+			<key>xpos</key>
+			<real>900</real>
+			<key>ypos</key>
+			<real>350</real>
 		</dict>
 		<key>D05F27E1-7529-4D2C-8F73-BB3EAE2A9E26</key>
 		<dict>
