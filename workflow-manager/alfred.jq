@@ -3,7 +3,7 @@
     uid: .title,
     arg: .id,
     title: .title,
-    subtitle: .subtitle,
+    subtitle: .subtitle + " by " + .author,
     match: (.title + " " + .subtitle),
     icon: {path: (.path + "/icon.png")},
     mods: {

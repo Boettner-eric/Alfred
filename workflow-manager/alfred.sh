@@ -6,48 +6,6 @@
 
 ALFRED_WORKFLOWS_DIR="$HOME/Library/Application Support/Alfred/Alfred.alfredpreferences/workflows"
 
-extract_workflow_name() {
-    local plist_file="$1"
-    local workflow_dir="$2"
-    
-    local name=$(plutil -extract name raw "$plist_file" 2>/dev/null)
-    if [[ $? -eq 0 && -n "$name" && ! "$name" =~ "Could not extract value" ]]; then
-        echo "$name"
-        return 0
-    else
-        echo "Failed to extract name from $plist_file"
-        return 1
-    fi
-}
-
-extract_description() {
-    local plist_file="$1"
-    
-    local description=$(plutil -extract description raw "$plist_file" 2>/dev/null)
-    if [[ $? -eq 0 && -n "$description" && ! "$description" =~ "Could not extract value" ]]; then
-        echo "$description"
-        return 0
-    fi
-    
-    local category=$(plutil -extract category raw "$plist_file" 2>/dev/null)
-    if [[ $? -eq 0 && -n "$category" && ! "$category" =~ "Could not extract value" ]]; then
-        echo "$category"
-        return 0
-    fi
-    echo "No description or category"
-}
-
-extract_website_url() {
-    local plist_file="$1"
-    
-    local website_url=$(plutil -extract webaddress raw "$plist_file" 2>/dev/null)
-    if [[ $? -eq 0 && -n "$website_url" && ! "$website_url" =~ "Could not extract value" ]]; then
-        echo "$website_url"
-    else
-        echo "No website URL"
-    fi
-}
-
 list_workflows() {
     local workflows_dir="${1:-$ALFRED_WORKFLOWS_DIR}"
         
@@ -64,16 +22,19 @@ list_workflows() {
         fi
         
         local info_plist="$workflow_dir/info.plist"
-        
         local id="${workflow_dir##*/}"
 
-        if [[ -f "$info_plist" ]]; then            
-            local name=$(extract_workflow_name "$info_plist" "$workflow_dir" 2>/dev/null)
-            local description=$(extract_description "$info_plist" 2>/dev/null)
-            local website_url=$(extract_website_url "$info_plist" 2>/dev/null)
-        
-            local item="{\"id\": \"$id\", \"title\": \"$name\", \"subtitle\": \"$description\", \"path\": \"$workflow_dir\", \"website_url\": \"$website_url\"}"
-            
+        if [[ -f "$info_plist" ]]; then
+            local item=$(plutil -convert json -o - "$info_plist" 2>/dev/null |\
+                jq -c --arg id "$id" --arg path "$workflow_dir" '{
+                    id: $id,
+                    path: $path,
+                    title: (.name // "Failed to extract name"),
+                    subtitle: (.description // .category // "No description or category"),
+                    website_url: (.webaddress // "No website URL"),
+                    author: (.createdby // "Unknown")
+                }')
+
             if [[ -n "$json_items" ]]; then
                 json_items="$json_items,$item"
             else
