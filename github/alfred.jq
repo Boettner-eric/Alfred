@@ -19,8 +19,8 @@ def calculate_rerun($cache_time_seconds):
       mods: {
         cmd: {
           valid: true,
-          arg: .clone_url,
-          subtitle: ("copy repo clone \"" + .clone_url + "\""),
+          arg: .ssh_url,
+          subtitle: ("copy repo clone \"" + .ssh_url + "\""),
         },
          alt: {
           valid: true,

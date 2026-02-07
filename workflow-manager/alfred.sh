@@ -25,10 +25,15 @@ list_workflows() {
         local id="${workflow_dir##*/}"
 
         if [[ -f "$info_plist" ]]; then
+            local icon="icons/question.png"
+            if [ -f "$workflow_dir/icon.png" ]; then
+                icon="$workflow_dir/icon.png"
+            fi
             local item=$(plutil -convert json -o - "$info_plist" 2>/dev/null |\
-                jq -c --arg id "$id" --arg path "$workflow_dir" '{
+                jq -c --arg id "$id" --arg path "$workflow_dir" --arg icon $icon '{
                     id: $id,
                     path: $path,
+                    icon: $icon,
                     title: (.name // "Failed to extract name"),
                     subtitle: (.description // .category // "No description or category"),
                     website_url: (.webaddress // "No website URL"),

@@ -5,7 +5,7 @@
     title: .title,
     subtitle: .subtitle + " by " + .author,
     match: (.title + " " + .subtitle),
-    icon: {path: (.path + "/icon.png")},
+    icon: {path: .icon},
     mods: {
         cmd: {
             subtitle: ("open in " + ($editor | split("/") | last | rtrimstr(".app"))),
