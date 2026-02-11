@@ -34,10 +34,10 @@ list_workflows() {
                     id: $id,
                     path: $path,
                     icon: $icon,
-                    title: (.name // "Failed to extract name"),
-                    subtitle: (.description // .category // "No description or category"),
-                    website_url: (.webaddress // "No website URL"),
-                    author: (.createdby // "Unknown")
+                    title: (if (.name // "") == "" then "Unknown name" else .name end),
+                    subtitle: (if (.description // "") == "" then (.category // "No description or category") else .description end),
+                    website_url: (if (.webaddress // "") == "" then "No website URL" else .webaddress end),
+                    author: (.createdby // "")
                 }')
 
             if [[ -n "$json_items" ]]; then

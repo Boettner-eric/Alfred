@@ -3,7 +3,7 @@
     uid: .title,
     arg: .id,
     title: .title,
-    subtitle: .subtitle + " by " + .author,
+    subtitle: if (.author == "") then .subtitle else .subtitle + " - " + .author end,
     match: (.title + " " + .subtitle),
     icon: {path: .icon},
     mods: {
