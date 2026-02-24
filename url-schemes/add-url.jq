@@ -10,7 +10,7 @@ def infer_type:
   elif . == "true" or . == "false" then "boolean?"
   elif (tonumber? // false) != false then "float?"
   elif test(",") then
-    (split(",") | map(select(. != ""))) as $arr
+    (tostring | split(",") | map(select(. != ""))) as $arr
     | if ($arr | length) == 0 then "string"
       elif ($arr | map((tonumber? // "nan") != "nan") | all) then "array[float]"
       else "array[string]"
@@ -28,14 +28,14 @@ def _params_from_pairs:
   end;
 
 def query_to_param_types:
-  . as $query
+  (. | tostring) as $query
   | if $query == "" then {}
     else $query | split("&")
       | map(select(length > 0) | split("=") | [.[0], (.[1:] | join("=") // "")])
       | _params_from_pairs
     end;
 
-(($url | split("://")) as $parts
+(($url | tostring | split("://")) as $parts
  | if ($parts | length) >= 2 then { scheme: ($parts[0] + "://"), path_part: ($parts[1:] | join("://")) } else null end) as $parsed
 | if $parsed == null then error("invalid url: \($url)") else . end
 | ($parsed.path_part | split("?") | .[0]) as $path_only
@@ -48,7 +48,7 @@ def query_to_param_types:
     map(if .scheme == $parsed.scheme then .paths += [$new_path] else . end)
   else
     . + [{
-      name: ($icon | split("/") | map(select(. != "")) | last | split(".") | if length > 1 then .[0:-1] | join(".") else .[0] end),
+      name: $name,
       app: $bundleid,
       scheme: $parsed.scheme,
       icon: $icon,
