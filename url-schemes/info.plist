@@ -620,35 +620,6 @@ echo -n "${url}?${tmp_params:1}"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>key=$(echo "$params" | jq -r "to_entries[0] | .key")
-value=$(echo "$params" | jq -r "to_entries[0] | .value")
-params=$(echo "$params" | jq -r "del(.[keys_unsorted[0]]) | tostring")
-
-echo $key
-echo $value
-echo $params</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>11</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>F004A449-754A-4036-830E-0C6638FB18CF</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>externaltriggerid</key>
 				<string>params</string>
 				<key>passinputasargument</key>
@@ -664,6 +635,36 @@ echo $params</string>
 			<string>08ADD829-48A5-4C71-BC36-6028263953FF</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>key=$(echo "$params" | jq -r "to_entries[0] | .key")
+value=$(echo "$params" | jq -r "to_entries[0] | .value | .type")
+example=$(echo "$params" | jq -r "to_entries[0] | .value | .example")
+params=$(echo "$params" | jq -r "del(.[keys_unsorted[0]]) | tostring")
+
+echo $key
+echo "$value $example"
+echo $params</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>F004A449-754A-4036-830E-0C6638FB18CF</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -738,26 +739,6 @@ echo $params</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argument</key>
-				<string></string>
-				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
-				<dict>
-					<key>params</key>
-					<string>{var:split3}</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>A61D31F6-2149-43EA-A377-5BBD2CFF03A8</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>delimiter</key>
 				<string>
 </string>
@@ -774,6 +755,26 @@ echo $params</string>
 			<string>alfred.workflow.utility.split</string>
 			<key>uid</key>
 			<string>7493E761-8E41-41E5-9824-93FE48E5A509</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>params</key>
+					<string>{var:split3}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>A61D31F6-2149-43EA-A377-5BBD2CFF03A8</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
