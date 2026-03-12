@@ -42,7 +42,7 @@ def update_meeting_subtitle($meeting):
       elif $days_until == 0 then today($minutes_until; $time_range)
       elif $days_until == 1 then "Tomorrow from \($time_range)"
       elif $days_until < 7 then "in \($days_until) days | \(($meeting.time | split(" - ")[0] | strptime("%Y-%m-%dT%H:%M:%S")[6]) | get_day_name) from \($time_range)"
-      elif $days_until < 14 then "1 week from now"
+      elif $days_until < 14 then "in \($days_until) days | Next \(($meeting.time | split(" - ")[0] | strptime("%Y-%m-%dT%H:%M:%S")[6]) | get_day_name) from \($time_range)"
       elif $days_until < 31 then "\($days_until / 7 | floor) weeks from now"
       elif $days_until < 365 then "\($days_until / 30 | floor) months from now"
       else "\($days_until / 365 | floor) years from now" end

@@ -156,11 +156,11 @@ def get_mrs():
            
     for merge in res.json():
         if merge["state"] != "closed":
-            [org, rest] = merge["references"]["full"].split("/")
-            [repo_name, merge_id] = rest.split("!")
+            [org, merge_id] = merge["references"]["full"].split("!")
+            org = org.replace("/", " ")
             merge_requests.append(
                 {
-                    "match": f"mr {org} {repo_name} {merge_id} {merge['title']} {merge['author']['name']}",
+                    "match": f"mr {org} {merge_id} {merge['title']} {merge['author']['name']}",
                     "arg": merge["web_url"],
                     "subtitle": f"{merge['references']['full']} · created {time_ago(merge['created_at'])} by {merge['author']['name']}",
                     "icon": {
