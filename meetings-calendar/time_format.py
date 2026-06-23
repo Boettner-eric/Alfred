@@ -50,6 +50,21 @@ def time_ago(time=False):
     return str(day_diff//365) + " years ago"
 
 
+def format_duration_phrase(minutes):
+    if minutes == 1:
+        return "a minute"
+    if minutes < 60:
+        return f"{minutes} minutes"
+    hours = minutes // 60
+    mins = minutes % 60
+    hour_part = "1 hour" if hours == 1 else f"{hours} hours"
+    if mins == 0:
+        return hour_part
+    if mins == 1:
+        return f"{hour_part} 1 minute"
+    return f"{hour_part} {mins} minutes"
+
+
 def time_till(event_start, event_end):
     """
     Get a datetime object or a int() Epoch timestamp and return a
@@ -63,7 +78,6 @@ def time_till(event_start, event_end):
     now = datetime.now()
     diff = event_start - now
 
-    second_diff = round(diff.seconds, 0)
     day_diff = event_start.date() - now.date()
 
     if event_start < now < event_end:
@@ -73,18 +87,11 @@ def time_till(event_start, event_end):
         return ''
 
     if day_diff == timedelta(days=0):
-        if second_diff < 10:
+        minutes_until = int(diff.total_seconds() // 60)
+        if minutes_until < 1:
             return "right now"
-        if second_diff < 60:
-            return f"in {second_diff} seconds"
-        if second_diff < 120:
-            return "in a minute"
-        if second_diff < 3600:
-            return f"in {second_diff // 60} minutes | Today from {subtitle}"
-        if second_diff < 7200:
-            return f"in an hour | Today at {subtitle}"
-        if second_diff < 86400:  # 24 hours
-            return f"in {second_diff // 3600} hours | Today from {subtitle}"
+        if minutes_until < 1440:
+            return f"in {format_duration_phrase(minutes_until)} | Today from {subtitle}"
     if day_diff == timedelta(days=1):
         return f"Tomorrow from {subtitle}"
         # day of the week instead here

@@ -20,12 +20,21 @@ def calc_day_diff($time_str):
   (($time_str | split(" - ")[0] | strptime("%Y-%m-%dT%H:%M:%S") | mktime) - 
    (now | strflocaltime("%Y-%m-%d") | strptime("%Y-%m-%d") | mktime)) / 86400 | floor;
 
+def format_duration_phrase($mins):
+  if $mins == 1 then "a minute"
+  elif $mins < 60 then "\($mins) minutes"
+  else
+    ($mins / 60 | floor) as $h
+    | ($mins % 60) as $m
+    | (if $h == 1 then "1 hour" else "\($h) hours" end) as $hour_part
+    | if $m == 0 then $hour_part
+      elif $m == 1 then "\($hour_part) 1 minute"
+      else "\($hour_part) \($m) minutes" end
+  end;
+
 def today($minutes_until; $time_range):
   if $minutes_until < 1 then "right now"
-  elif $minutes_until == 1 then "in a minute | Today from \($time_range)"
-  elif $minutes_until < 60 then "in \($minutes_until) minutes | Today from \($time_range)"
-  elif $minutes_until < 120 then "in an hour | Today at \($time_range)"
-  elif $minutes_until < 1440 then "in \($minutes_until / 60 | floor) hours | Today from \($time_range)"
+  elif $minutes_until < 1440 then "in \(format_duration_phrase($minutes_until)) | Today from \($time_range)"
   else "Today from \($time_range)" end;
 
 def update_meeting_subtitle($meeting):
