@@ -4,11 +4,15 @@ Mac apps use URL schemes for scripting and automatons and this workflow serves t
 
 <img src="../screenshots/url-schemes.png" width="600">
 
-_Browser/Jump to app specific urls_
+_Fill in a url with params and launch it from alfred_
+
+<img src="../screenshots/url-schemes-history.png" width="600">
+
+_See history of urls and Browser/Jump to a specific url_
 
 # Setup
 
-- NA
+- call `urla` with your first url
 
 # Features
 
@@ -21,6 +25,6 @@ _Browser/Jump to app specific urls_
 
 - ` ` -> Go to URL
 - `⌘` -> Copy URL
-- `⌥` -> ??
-- `⌃` -> ??
-- `⇧` -> ??
+- `⌥` -> NA
+- `⌃` -> NA
+- `⇧` -> NA

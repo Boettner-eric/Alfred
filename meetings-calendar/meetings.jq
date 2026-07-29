@@ -1,8 +1,6 @@
-def calculate_rerun($cache_time_minutes):
-  if (now / 60 - $cache_time_minutes) < 5 then {} else {"rerun": 1} end;
-
-def parse_cache_time($cache_time_str):
-  ($cache_time_str | strptime("%d/%m/%Y, %H:%M:%S") | mktime) / 60;
+def calculate_rerun($cache_time_seconds):
+  (now - $cache_time_seconds) as $diff_seconds
+  | if $diff_seconds < 300 then {} else {"rerun": 1} end;
 
 def pad_zero: if . < 10 then "0\(.)" else "\(.)" end;
 
@@ -57,5 +55,7 @@ def update_meeting_subtitle($meeting):
       else "\($days_until / 365 | floor) years from now" end
     )});
 
-. + calculate_rerun(parse_cache_time(.variables.cache_time)) 
+. + (if (.variables.cache_time | type) == "number"
+      then calculate_rerun(.variables.cache_time)
+      else {"rerun": 1} end)
 | .items |= map(update_meeting_subtitle(.))

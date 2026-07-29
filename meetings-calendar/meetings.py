@@ -259,7 +259,7 @@ def write_to_json(meetings):
     with open("meetings.json", "w") as outfile:
         output_data = {
             "variables": {
-                "cache_time": dt.now(tz.utc).strftime('%d/%m/%Y, %H:%M:%S')
+                "cache_time": dt.now(tz.utc).timestamp()
             }, 
             "items": meetings
         }
