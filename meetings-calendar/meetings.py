@@ -227,6 +227,7 @@ def format_meetings(events):
 
             meetings.append(
                 {
+                    "uid": f"meeting-{event['id']}-{event['email']}",
                     "arg": url,
                     "time": f"{start} - {end}",
                     "subtitle": subtitle,
@@ -256,14 +257,16 @@ def write_to_json(meetings):
     """
     Write the meetings to a json file
     """
-    with open("meetings.json", "w") as outfile:
-        output_data = {
-            "variables": {
-                "cache_time": dt.now(tz.utc).timestamp()
-            }, 
-            "items": meetings
-        }
+    output_data = {
+        "variables": {
+            "cache_time": dt.now(tz.utc).timestamp()
+        },
+        "items": meetings
+    }
+    tmp_path = "meetings.json.tmp"
+    with open(tmp_path, "w") as outfile:
         dump(output_data, outfile, indent=4)
+    os.replace(tmp_path, "meetings.json")
 
 
 if __name__ == "__main__":

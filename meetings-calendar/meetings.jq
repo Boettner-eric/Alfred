@@ -55,7 +55,8 @@ def update_meeting_subtitle($meeting):
       else "\($days_until / 365 | floor) years from now" end
     )});
 
-. + (if (.variables.cache_time | type) == "number"
+. + {"skipknowledge": true}
+  + (if (.variables.cache_time | type) == "number"
       then calculate_rerun(.variables.cache_time)
       else {"rerun": 1} end)
 | .items |= map(update_meeting_subtitle(.))
