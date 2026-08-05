@@ -1,9 +1,12 @@
+def calculate_rerun($cache_time_seconds):
+  (now - $cache_time_seconds) as $diff_seconds
+  # 1s to match gitlab/meetings-calendar's cadence — polling at 0.1s caused
+  # the whole list to redraw every 100ms while the background refresh ran.
+  | if $diff_seconds < 300 then {} else {"rerun": 1} end;
+
 {
-  cache: {
-    seconds: 300,
-    loosereload: true
-  },
   items: [.items | sort_by(.pushed_at) | reverse | .[] | {
+      uid: .html_url,
       title: .name, 
       icon: (if .fork
           then {path: "icons/fork.png"}
@@ -37,4 +40,6 @@
       },
     }
   ]
-}
+} + (if (.cache_time | type) == "number"
+      then calculate_rerun(.cache_time)
+      else {"rerun": 1} end)
