@@ -3,9 +3,13 @@
 # $output: Name of current output device
 # $denylist: Array of device names to exclude
 {
-  items: [.[] | select(.name as $name | $denylist | index($name) | not) 
+  skipknowledge: true,
+  items: [.[] | select(.name as $name | $denylist | index($name) | not)]
+  | sort_by(if (.name == $input and .type == "input") or (.name == $output and .type == "output")
+      then 0 else 1 end)
+  | [.[]
   | {
-      uid: (.name + .type), 
+      uid: ("io-" + .name + .type),
       arg: (.type + "," + .name),
       title: (if .name | contains("AirPods") then "Airpods" else .name end), 
       subtitle: (if (.name == $input and .type == "input") or (.name == $output and .type == "output") 

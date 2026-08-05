@@ -561,7 +561,7 @@
 				<key>hotkey</key>
 				<integer>46</integer>
 				<key>hotmod</key>
-				<integer>1179648</integer>
+				<integer>1835008</integer>
 				<key>hotstring</key>
 				<string>M</string>
 				<key>leftcursor</key>
@@ -1656,8 +1656,10 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 		</dict>
 		<key>D94D7B78-68C9-47EF-92C3-B4D268DE06D9</key>
 		<dict>
+			<key>note</key>
+			<string>global mute</string>
 			<key>xpos</key>
-			<real>265</real>
+			<real>245</real>
 			<key>ypos</key>
 			<real>25</real>
 		</dict>
