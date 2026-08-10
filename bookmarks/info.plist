@@ -310,21 +310,21 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>removeextension</key>
-				<false/>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>bma</string>
+				<key>subtext</key>
+				<string>add website to bookmarks list</string>
 				<key>text</key>
-				<string>Bookmark added</string>
-				<key>title</key>
-				<string>Bookmark Workflow</string>
+				<string>Add Bookmark</string>
+				<key>withspace</key>
+				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
+			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
-			<string>642BCED2-539C-4F7D-BA24-55C89ECE573D</string>
+			<string>36594007-BF9B-47F7-9847-5C4640A5AFFA</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -354,21 +354,21 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>keyword</key>
-				<string>bma</string>
-				<key>subtext</key>
-				<string>add website to bookmarks list</string>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
 				<key>text</key>
-				<string>Add Bookmark</string>
-				<key>withspace</key>
-				<true/>
+				<string>Bookmark added</string>
+				<key>title</key>
+				<string>Bookmark Workflow</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
+			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
-			<string>36594007-BF9B-47F7-9847-5C4640A5AFFA</string>
+			<string>642BCED2-539C-4F7D-BA24-55C89ECE573D</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -524,6 +524,27 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>Bookmark added</string>
+				<key>title</key>
+				<string>Bookmark Workflow</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>5C448AD2-8058-4477-AC14-8D208B5DE54C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -547,23 +568,25 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>lastpathcomponent</key>
+				<key>concurrently</key>
 				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>Bookmark added</string>
-				<key>title</key>
-				<string>Bookmark Workflow</string>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>osascript -e 'tell application "Arc" to get URL of active tab of front window' | tr -d '\n'</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>5C448AD2-8058-4477-AC14-8D208B5DE54C</string>
+			<string>80FF8DD8-5CF5-409B-A799-79065F08EF99</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -585,29 +608,6 @@
 			<string>12886B7B-C90C-40D7-9C81-3F801AF8D012</string>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>osascript -e 'tell application "Arc" to get URL of active tab of front window' | tr -d '\n'</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>11</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>80FF8DD8-5CF5-409B-A799-79065F08EF99</string>
-			<key>version</key>
-			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
