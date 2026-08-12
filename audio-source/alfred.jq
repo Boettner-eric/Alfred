@@ -1,10 +1,15 @@
 # Required variables:
 # $input: Name of current input device
 # $output: Name of current output device
-# $denylist: Array of device names to exclude
+# $denylist: Array of device names to exclude, regardless of type
+# $input_denylist: Array of device names to exclude when type is input
+# $output_denylist: Array of device names to exclude when type is output
 {
   skipknowledge: true,
-  items: [.[] | select(.name as $name | $denylist | index($name) | not)]
+  items: [.[] | select(.name as $name | .type as $type
+      | ($denylist | index($name) | not)
+      and (if $type == "input" then ($input_denylist | index($name) | not) else true end)
+      and (if $type == "output" then ($output_denylist | index($name) | not) else true end))]
   | sort_by(if (.name == $input and .type == "input") or (.name == $output and .type == "output")
       then 0 else 1 end)
   | [.[]

@@ -632,7 +632,7 @@
 				<string>input=$(SwitchAudioSource -c -t input)
 output=$(SwitchAudioSource -c -t output)
 
-SwitchAudioSource -a -f json | jq -s --arg input "$input" --arg output "$output" --arg denylist "$denylist" -f alfred.jq</string>
+SwitchAudioSource -a -f json | jq -s --arg input "$input" --arg output "$output" --arg denylist "$denylist" --arg input_denylist "$input_denylist" --arg output_denylist "$output_denylist" -f alfred.jq</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1118,7 +1118,7 @@ output="${1#* | output: }"
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>SwitchAudioSource -a -t input -f json | jq -s --arg input "" --arg output "" --arg denylist "$denylist" -f alfred.jq</string>
+				<string>SwitchAudioSource -a -t input -f json | jq -s --arg input "" --arg output "" --arg denylist "$denylist" --arg input_denylist "$input_denylist" --arg output_denylist "$output_denylist" -f alfred.jq</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1249,7 +1249,7 @@ output="${1#* | output: }"
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>SwitchAudioSource -a -t output -f json | jq -s --arg input "" --arg output "" --arg denylist "$denylist" -f alfred.jq</string>
+				<string>SwitchAudioSource -a -t output -f json | jq -s --arg input "" --arg output "" --arg denylist "$denylist" --arg input_denylist "$input_denylist" --arg output_denylist "$output_denylist" -f alfred.jq</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1765,13 +1765,55 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 				<true/>
 			</dict>
 			<key>description</key>
-			<string>Ignore specific devices via a json list. Format like '["Device Name","Other Device Name"]'</string>
+			<string>Ignore specific devices, regardless of input/output, via a json list. Format like '["Device Name","Other Device Name"]'</string>
 			<key>label</key>
 			<string>Denylist</string>
 			<key>type</key>
 			<string>textfield</string>
 			<key>variable</key>
 			<string>denylist</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>'[]'</string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Ignore specific devices when used as an input via a json list. Format like '["Device Name","Other Device Name"]'</string>
+			<key>label</key>
+			<string>Input Denylist</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>input_denylist</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>'[]'</string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Ignore specific devices when used as an output via a json list. Format like '["Device Name","Other Device Name"]'</string>
+			<key>label</key>
+			<string>Output Denylist</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>output_denylist</string>
 		</dict>
 	</array>
 	<key>version</key>
