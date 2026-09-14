@@ -51,11 +51,11 @@ def format_device($device; $is_connected):
     arg: [(if $is_connected then "disconnect" else "connect" end), $device_address, .key],
     mods: {
       alt: {
-        subtitle: "copy address " + $device_address,
+        subtitle: ("copy address " + $device_address),
         arg: $device_address
       },
       ctrl: {
-        subtitle: "copy address " + .value.device_address,
+        subtitle: ("copy address " + .value.device_address),
         arg: .value.device_address
       }
     }
