@@ -551,7 +551,29 @@ See more at: https://github.com/Boettner-eric/Alfred/</string>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
-	<array/>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>[]</string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+				<key>verticalsize</key>
+				<integer>3</integer>
+			</dict>
+			<key>description</key>
+			<string>List</string>
+			<key>label</key>
+			<string>Excluded Events</string>
+			<key>type</key>
+			<string>textarea</string>
+			<key>variable</key>
+			<string>exclude</string>
+		</dict>
+	</array>
 	<key>version</key>
 	<string>0.0.1</string>
 	<key>webaddress</key>

@@ -1,3 +1,10 @@
+def excluded_events:
+  ($ARGS.named.excluded_events // []) | map(select(type == "string") | ascii_downcase);
+
+def is_excluded($meeting):
+  ($meeting.title // "" | ascii_downcase) as $title
+  | excluded_events | index($title) != null;
+
 def calculate_rerun($cache_time_seconds):
   (now - $cache_time_seconds) as $diff_seconds
   | if $diff_seconds < 300 then {} else {"rerun": 1} end;
@@ -59,4 +66,4 @@ def update_meeting_subtitle($meeting):
   + (if (.variables.cache_time | type) == "number"
       then calculate_rerun(.variables.cache_time)
       else {"rerun": 1} end)
-| .items |= map(update_meeting_subtitle(.))
+| .items |= (map(select(is_excluded(.) | not)) | map(update_meeting_subtitle(.)))
