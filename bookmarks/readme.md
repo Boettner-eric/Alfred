@@ -5,6 +5,7 @@ Use alfred to quickly jump to your bookmarks. Sync them across devices via a sim
 
 
 # Setup
+- `make install` to build `.venv/` and create the alfred symlink
 - modify the json file to include your most used websites
 - add icons to the `/icons` folder
 

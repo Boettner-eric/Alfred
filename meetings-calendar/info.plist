@@ -380,7 +380,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>/usr/bin/python3 meetings.py -r {query}</string>
+				<string>./.venv/bin/python3 meetings.py -r {query}</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>

@@ -18,6 +18,8 @@ releases/
 
 # Configuration
 __pycache__
+.venv/
+venv/
 .vscode
 node_modules/
 # package.json
@@ -53,7 +55,5 @@ bookmarks/icons/*
 bookmarks/common.json
 
 github/repos.json
-
-*/site-packages/*
 
 workflow-manager/workflows.json

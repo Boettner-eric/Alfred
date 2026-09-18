@@ -1,5 +1,3 @@
-export PYTHONPATH="$(pwd)/site-packages:$PYTHONPATH"
-
 # Alfred's "Excluded Events" config, e.g. ["event name"]. Fall back to an empty
 # list when it is unset or not valid JSON array so jq never fails on it.
 excluded_events="${exclude:-[]}"
@@ -17,10 +15,10 @@ if test -f "meetings.json"; then
 	if [ "$needs_refresh" = "true" ]; then
 		tmp="meetings.json.tmp.$$"
 		jq '.variables.refresh_started = now' meetings.json > "$tmp" && mv "$tmp" meetings.json
-		(python3 meetings.py) > /dev/null 2>&1 &
+		(./.venv/bin/python3 meetings.py) > /dev/null 2>&1 &
 		disown
 	fi
 else
-	python3 meetings.py
+	./.venv/bin/python3 meetings.py
 	jq --argjson excluded_events "$excluded_events" -f meetings.jq meetings.json
 fi

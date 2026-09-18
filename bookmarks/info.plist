@@ -336,7 +336,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>/usr/bin/python3 bookmarks.py add $1 $2</string>
+				<string>./.venv/bin/python3 bookmarks.py add $1 $2</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -422,7 +422,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>/usr/bin/python3 bookmarks.py edit $1 $2</string>
+				<string>./.venv/bin/python3 bookmarks.py edit $1 $2</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -550,7 +550,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>/usr/bin/python3 bookmarks.py add $title $1</string>
+				<string>./.venv/bin/python3 bookmarks.py add $title $1</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>

@@ -550,7 +550,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>/usr/bin/python3 gitlab.py -a</string>
+				<string>./.venv/bin/python3 gitlab.py -a</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
