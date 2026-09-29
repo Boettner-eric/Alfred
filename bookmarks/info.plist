@@ -47,7 +47,7 @@
 				<false/>
 			</dict>
 		</array>
-		<key>2C30B3B4-F6B1-41C2-B2FB-225835872BB3</key>
+		<key>36594007-BF9B-47F7-9847-5C4640A5AFFA</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
@@ -59,26 +59,13 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
-		</array>
-		<key>36594007-BF9B-47F7-9847-5C4640A5AFFA</key>
-		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>84FABB63-77DD-4C83-8E4C-CA1CD0DCD618</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>2C30B3B4-F6B1-41C2-B2FB-225835872BB3</string>
+				<string>20DA9DB2-538C-4605-8B9E-FFF9D382B829</string>
 				<key>modifiers</key>
 				<integer>1048576</integer>
 				<key>modifiersubtext</key>
-				<string>Usage: [name] [url]</string>
+				<string>Usage: [name] [url] [description]</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -88,19 +75,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>0A92CAFB-35F9-4C8E-BF07-BF37074EB832</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>84FABB63-77DD-4C83-8E4C-CA1CD0DCD618</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>20DA9DB2-538C-4605-8B9E-FFF9D382B829</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -123,35 +97,89 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>44F227E8-6C8E-4AC7-BB67-82276CA5D673</string>
+				<string>D3D5928B-2640-4935-9B24-69C9D9AF5F50</string>
 				<key>modifiers</key>
 				<integer>1048576</integer>
-				<key>modifiersubtext</key>
-				<string>Copy url</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>C013A87D-6553-4FCC-9441-60D97EEF04B9</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>FECC1B18-217C-4647-895F-5B2242963474</string>
-				<key>modifiers</key>
-				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
-		</array>
-		<key>D2484F39-1743-44F0-8587-D83329CE9E94</key>
-		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>FECC1B18-217C-4647-895F-5B2242963474</string>
+				<string>D3D5928B-2640-4935-9B24-69C9D9AF5F50</string>
 				<key>modifiers</key>
-				<integer>0</integer>
+				<integer>524288</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>D3D5928B-2640-4935-9B24-69C9D9AF5F50</string>
+				<key>modifiers</key>
+				<integer>262144</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>D3D5928B-2640-4935-9B24-69C9D9AF5F50</string>
+				<key>modifiers</key>
+				<integer>8388608</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>44F227E8-6C8E-4AC7-BB67-82276CA5D673</string>
+				<key>modifiers</key>
+				<integer>131072</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>44F227E8-6C8E-4AC7-BB67-82276CA5D673</string>
+				<key>modifiers</key>
+				<integer>1179648</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>44F227E8-6C8E-4AC7-BB67-82276CA5D673</string>
+				<key>modifiers</key>
+				<integer>655360</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>44F227E8-6C8E-4AC7-BB67-82276CA5D673</string>
+				<key>modifiers</key>
+				<integer>393216</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>44F227E8-6C8E-4AC7-BB67-82276CA5D673</string>
+				<key>modifiers</key>
+				<integer>8519680</integer>
 				<key>modifiersubtext</key>
 				<string></string>
 				<key>vitoclose</key>
@@ -162,7 +190,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>C013A87D-6553-4FCC-9441-60D97EEF04B9</string>
+				<string>FECC1B18-217C-4647-895F-5B2242963474</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -172,11 +200,11 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>D2484F39-1743-44F0-8587-D83329CE9E94</string>
+				<string>FECC1B18-217C-4647-895F-5B2242963474</string>
 				<key>modifiers</key>
 				<integer>1048576</integer>
 				<key>modifiersubtext</key>
-				<string>Usage: [name] [url]</string>
+				<string>Usage: [cmd|alt|ctrl|fn] [name] [url] [description]</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -246,7 +274,7 @@
 				<key>runningsubtext</key>
 				<string>Loading data…</string>
 				<key>script</key>
-				<string>cat common.json</string>
+				<string>./.venv/bin/python3 bookmarks.py list</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -336,7 +364,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>./.venv/bin/python3 bookmarks.py add $1 $2</string>
+				<string>./.venv/bin/python3 bookmarks.py add "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -361,7 +389,7 @@
 				<key>removeextension</key>
 				<false/>
 				<key>text</key>
-				<string>Bookmark added</string>
+				<string>{query}</string>
 				<key>title</key>
 				<string>Bookmark Workflow</string>
 			</dict>
@@ -375,54 +403,12 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>delimiter</key>
-				<string> </string>
-				<key>discardemptyarguments</key>
-				<false/>
-				<key>outputas</key>
-				<integer>1</integer>
-				<key>trimarguments</key>
-				<true/>
-				<key>variableprefix</key>
-				<string>split</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.split</string>
-			<key>uid</key>
-			<string>84FABB63-77DD-4C83-8E4C-CA1CD0DCD618</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>delimiter</key>
-				<string> </string>
-				<key>discardemptyarguments</key>
-				<false/>
-				<key>outputas</key>
-				<integer>1</integer>
-				<key>trimarguments</key>
-				<true/>
-				<key>variableprefix</key>
-				<string>split</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.split</string>
-			<key>uid</key>
-			<string>2C30B3B4-F6B1-41C2-B2FB-225835872BB3</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>./.venv/bin/python3 bookmarks.py edit $1 $2</string>
+				<string>./.venv/bin/python3 bookmarks.py edit "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -447,7 +433,7 @@
 				<key>removeextension</key>
 				<false/>
 				<key>text</key>
-				<string>Bookmark added</string>
+				<string>{query}</string>
 				<key>title</key>
 				<string>Bookmark Workflow</string>
 			</dict>
@@ -466,7 +452,7 @@
 				<key>keyword</key>
 				<string>bme</string>
 				<key>subtext</key>
-				<string>edit website in bookmarks list</string>
+				<string>edit a bookmark, or bind a modifier to a second url</string>
 				<key>text</key>
 				<string>Edit Bookmark</string>
 				<key>withspace</key>
@@ -482,48 +468,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>delimiter</key>
-				<string> </string>
-				<key>discardemptyarguments</key>
-				<false/>
-				<key>outputas</key>
-				<integer>1</integer>
-				<key>trimarguments</key>
-				<true/>
-				<key>variableprefix</key>
-				<string>split</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.split</string>
-			<key>uid</key>
-			<string>C013A87D-6553-4FCC-9441-60D97EEF04B9</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>delimiter</key>
-				<string> </string>
-				<key>discardemptyarguments</key>
-				<false/>
-				<key>outputas</key>
-				<integer>1</integer>
-				<key>trimarguments</key>
-				<true/>
-				<key>variableprefix</key>
-				<string>split</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.split</string>
-			<key>uid</key>
-			<string>D2484F39-1743-44F0-8587-D83329CE9E94</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
@@ -531,7 +475,7 @@
 				<key>removeextension</key>
 				<false/>
 				<key>text</key>
-				<string>Bookmark added</string>
+				<string>{query}</string>
 				<key>title</key>
 				<string>Bookmark Workflow</string>
 			</dict>
@@ -550,7 +494,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>./.venv/bin/python3 bookmarks.py add $title $1</string>
+				<string>./.venv/bin/python3 bookmarks.py add "$title" "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -659,13 +603,6 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<key>ypos</key>
 			<real>295</real>
 		</dict>
-		<key>2C30B3B4-F6B1-41C2-B2FB-225835872BB3</key>
-		<dict>
-			<key>xpos</key>
-			<real>255</real>
-			<key>ypos</key>
-			<real>390</real>
-		</dict>
 		<key>36594007-BF9B-47F7-9847-5C4640A5AFFA</key>
 		<dict>
 			<key>note</key>
@@ -710,13 +647,6 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<key>ypos</key>
 			<real>685</real>
 		</dict>
-		<key>84FABB63-77DD-4C83-8E4C-CA1CD0DCD618</key>
-		<dict>
-			<key>xpos</key>
-			<real>255</real>
-			<key>ypos</key>
-			<real>325</real>
-		</dict>
 		<key>BF1454E1-8782-4669-A3CA-2E77BA6E8DCC</key>
 		<dict>
 			<key>note</key>
@@ -725,20 +655,6 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<real>90</real>
 			<key>ypos</key>
 			<real>40</real>
-		</dict>
-		<key>C013A87D-6553-4FCC-9441-60D97EEF04B9</key>
-		<dict>
-			<key>xpos</key>
-			<real>255</real>
-			<key>ypos</key>
-			<real>520</real>
-		</dict>
-		<key>D2484F39-1743-44F0-8587-D83329CE9E94</key>
-		<dict>
-			<key>xpos</key>
-			<real>255</real>
-			<key>ypos</key>
-			<real>585</real>
 		</dict>
 		<key>D3D5928B-2640-4935-9B24-69C9D9AF5F50</key>
 		<dict>
