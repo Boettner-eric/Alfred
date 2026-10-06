@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BATTERY_DATA=$(pmset -g accps | sed 's/[^[:print:]	]/?/g' | LC_ALL=C awk '
+BATTERY_DATA=$(pmset -g accps | LC_ALL=C sed 's/[^[:print:]	]/?/g' | LC_ALL=C awk '
 BEGIN {
     print "{"
     first = 1

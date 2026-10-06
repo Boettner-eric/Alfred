@@ -14,23 +14,33 @@ def set_battery_level($battery_level):
     else $battery_level + " 􀛪" end
   end;
 
+# pmset prints non-ascii name characters as single bytes that alfred.sh turns into "?"
+def pmset_battery($key):
+  $battery_data[$key | gsub("[^ -~]"; "?")];
+
 def describe_device($key; $device; $is_connected):
   if $is_connected then
-    if $key | contains("AirPods Pro") then
+    if $key | contains("AirPods Max") then
+      "Airpods Max - " + set_battery_level(pmset_battery($key))
+    elif $key | contains("AirPods Pro") then
       "Airpods Pro - L: " + set_battery_level($device.device_batteryLevelLeft) + ", R: " + set_battery_level($device.device_batteryLevelRight)
-    elif $key | contains("Airpods") then
+    elif $key | contains("AirPods") then
       "Airpods - L: " + set_battery_level($device.device_batteryLevelLeft) + ", R: " + set_battery_level($device.device_batteryLevelRight)
-    else $device.device_minorType + " - " + set_battery_level($battery_data[$key]) end
+    else $device.device_minorType + " - " + set_battery_level(pmset_battery($key)) end
   else
-    if $key | contains("AirPods Pro") then
+    if $key | contains("AirPods Max") then
+      "Airpods Max (not connected)"
+    elif $key | contains("AirPods Pro") then
       "Airpods Pro (not connected)"
-    elif $key | contains("Airpods") then
+    elif $key | contains("AirPods") then
       "Airpods (not connected)"
     else $device.device_minorType + " (not connected)" end
   end;
 
-def choose_icon($device):
-  if $device.device_minorType == "Headphones" then
+def choose_icon($key; $device):
+  if $key | contains("AirPods Max") then
+    {path: "icons/airpods-max.png"}
+  elif $device.device_minorType == "Headphones" then
     {path: "icons/airpods.png"}
   elif $device.device_minorType == "Keyboard" then
     {path: "icons/keyboard.png"}
@@ -46,7 +56,7 @@ def format_device($device; $is_connected):
   {
     title: .key,
     uid: ("bluetooth_connector_" + .value.device_address),
-    icon: choose_icon(.value),
+    icon: choose_icon(.key; .value),
     subtitle: describe_device(.key; .value; $is_connected),
     arg: [(if $is_connected then "disconnect" else "connect" end), $device_address, .key],
     mods: {
