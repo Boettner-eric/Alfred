@@ -54,14 +54,26 @@
 				<key>destinationuid</key>
 				<string>BD1E3DFE-E81B-4B7C-AB37-3FDD2B84F20F</string>
 				<key>modifiers</key>
+				<integer>1572864</integer>
+				<key>modifiersubtext</key>
+				<string>Open in terminal and editor</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>A7C41D52-9F63-4E8B-B0A6-2C5D7E914338</string>
+				<key>modifiers</key>
 				<integer>131072</integer>
 				<key>modifiersubtext</key>
-				<string></string>
+				<string>Open repo in browser</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
 		</array>
 		<key>87F1DDA7-C6A2-448A-B604-4E8135B0DE52</key>
+		<array/>
+		<key>A7C41D52-9F63-4E8B-B0A6-2C5D7E914338</key>
 		<array/>
 	</dict>
 	<key>createdby</key>
@@ -117,7 +129,7 @@
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>jq --arg editor $editor --arg terminal $terminal -R -n -f alfred.jq ~/.warprc </string>
+				<string>./alfred.sh</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -221,6 +233,27 @@ open -a ${editor} {query}</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>skipqueryencode</key>
+				<false/>
+				<key>skipvarencode</key>
+				<false/>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>{query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>A7C41D52-9F63-4E8B-B0A6-2C5D7E914338</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>A simple workflow for jumping to warp directories with your favorite applications.
@@ -255,6 +288,13 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<real>355</real>
 			<key>ypos</key>
 			<real>435</real>
+		</dict>
+		<key>A7C41D52-9F63-4E8B-B0A6-2C5D7E914338</key>
+		<dict>
+			<key>xpos</key>
+			<real>355</real>
+			<key>ypos</key>
+			<real>770</real>
 		</dict>
 		<key>B416EE37-B8AE-40A5-9D25-5385F41B9782</key>
 		<dict>

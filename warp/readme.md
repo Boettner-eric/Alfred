@@ -10,10 +10,12 @@ An Alfred workflow that reads your `.warprc` file and provides quick access to y
 
 ## Usage
 
-- run `jq -R -f alfred.jq ~/.warprc` to see the parsed output
+- run `./alfred.sh` to see the parsed output
 - use `wd` in alfred to view warp points and typeahead to filter the results
 
 # Mods
-  - `⌘` -> open in Terminal
-  - `⌥` -> open in Editor
+  - `⌘` -> open in Editor
+  - `⌥` -> open in Terminal
   - `⌃` -> reveal in Finder
+  - `⇧` -> show the git remote url, enter opens it in your browser
+  - `⌘⌥` -> open in Terminal and Editor
