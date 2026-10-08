@@ -16,14 +16,18 @@
   | {
       uid: ("io-" + .name + .type),
       arg: (.type + "," + .name),
-      title: (if .name | contains("AirPods") then "Airpods" else .name end), 
+      title: (if .name | contains("AirPods Max") then "Airpods Max"
+          elif .name | contains("AirPods") then "Airpods"
+          else .name end),
       subtitle: (if (.name == $input and .type == "input") or (.name == $output and .type == "output") 
           then .type + " - current" 
           else .type 
         end),
       match: (.name + " " + .type),
-      icon: (if .name | contains("AirPods")
-          then {path: "icons/airpods.png"}
+      icon: (if .name | contains("AirPods Max")
+          then {path: "icons/airpods-max.png"}
+          elif .name | contains("AirPods")
+            then {path: "icons/airpods.png"}
           elif .name | contains("MacBook")
             then {path: "icons/macbook.png"}
           elif .type == "output" 
