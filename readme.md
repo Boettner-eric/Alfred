@@ -12,6 +12,7 @@ Feel free to create an issue or open a pull request.
 - [Calendar](./meetings-calendar/) - view upcoming events and join meetings from Alfred
 - [Gitlab](./gitlab/) - view MRs, user profiles and repos in your org's gitlab instance
 - [Github](./github/) - view repos and prs for a github user
+- [Obsidian](./obsidian/) - check off tasks in today's daily note and view reminders
 - [Spelling](./spelling/) - find the closest word to the selected text and replace it
 - [Slack Status](./slack/) - change your slack status
 - [Warp](./warp/) - open any warp directory in your chosen application

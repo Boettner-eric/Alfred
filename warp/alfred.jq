@@ -1,5 +1,6 @@
 #!/usr/bin/env jq
 # Input is tab separated rows of: name, path, git remote url (url may be empty).
+def app_name: split("/") | last // "" | rtrimstr(".app");
 [inputs | select(length > 0)] |
 map(split("\t")
 | {
@@ -11,11 +12,11 @@ map(split("\t")
     icon: {type: "fileicon", path: .[1]}, 
     mods: {
         cmd: {
-          subtitle: ("open in " + ($editor | split("/") | last | rtrimstr(".app"))),
+          subtitle: ("open in " + ($editor | app_name)),
           icon: {type: "fileicon", path: $editor},
         },
          alt: {
-          subtitle: ("open in " + ($terminal | split("/") | last | rtrimstr(".app"))),
+          subtitle: ("open in " + ($terminal | app_name)),
           icon: {type: "fileicon", path: $terminal},
         },
         ctrl: {
