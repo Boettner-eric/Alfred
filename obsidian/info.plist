@@ -51,13 +51,23 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
+				<string>55814C26-B6E7-40CB-AEF8-4E78AEFEC1EB</string>
+				<key>modifiers</key>
+				<integer>524288</integer>
+				<key>modifiersubtext</key>
+				<string>Move to Tomorrow</string>
+				<key>vitoclose</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
 				<string>51FAADC3-6D6E-4E90-A18F-953352E3DFEC</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
 				<key>vitoclose</key>
-				<false/>
+				<true/>
 			</dict>
 			<dict>
 				<key>destinationuid</key>
@@ -66,16 +76,6 @@
 				<integer>1048576</integer>
 				<key>modifiersubtext</key>
 				<string>Open in Obsidian</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>55814C26-B6E7-40CB-AEF8-4E78AEFEC1EB</string>
-				<key>modifiers</key>
-				<integer>524288</integer>
-				<key>modifiersubtext</key>
-				<string>Move to Tomorrow</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -90,7 +90,7 @@
 				<key>modifiersubtext</key>
 				<string></string>
 				<key>vitoclose</key>
-				<false/>
+				<true/>
 			</dict>
 			<dict>
 				<key>destinationuid</key>
@@ -114,55 +114,6 @@
 	<string>Obsidian</string>
 	<key>objects</key>
 	<array>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<true/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>keyword</key>
-				<string>dl</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string></string>
-				<key>script</key>
-				<string>./daily.py "$1"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>subtext</key>
-				<string>Tasks in today's daily note</string>
-				<key>title</key>
-				<string>Daily tasks</string>
-				<key>type</key>
-				<integer>11</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>7BD1A839-82BE-49E6-9AC9-38A969564D90</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -220,6 +171,29 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
+				<string>./daily.py --move "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>55814C26-B6E7-40CB-AEF8-4E78AEFEC1EB</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
 				<string>./daily.py --toggle "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
@@ -238,25 +212,51 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
+				<key>alfredfiltersresults</key>
 				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
 				<key>escaping</key>
 				<integer>102</integer>
+				<key>keyword</key>
+				<string>dl</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
 				<key>script</key>
-				<string>./daily.py --move "$1"</string>
+				<string>./daily.py "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
+				<key>subtext</key>
+				<string>Tasks in today's daily note</string>
+				<key>title</key>
+				<string>Daily tasks</string>
 				<key>type</key>
 				<integer>11</integer>
+				<key>withspace</key>
+				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.script</string>
+			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>55814C26-B6E7-40CB-AEF8-4E78AEFEC1EB</string>
+			<string>7BD1A839-82BE-49E6-9AC9-38A969564D90</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -276,6 +276,27 @@
 			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
 			<string>A543DF11-5968-4C16-A4AA-504056878077</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>skipqueryencode</key>
+				<true/>
+				<key>skipvarencode</key>
+				<false/>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>{query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>0513F80F-11DE-4DDB-B1D2-DEBEFEAB5ABF</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -328,27 +349,6 @@
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>skipqueryencode</key>
-				<true/>
-				<key>skipvarencode</key>
-				<false/>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>{query}</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>0513F80F-11DE-4DDB-B1D2-DEBEFEAB5ABF</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
 	</array>
 	<key>readme</key>
 	<string>Daily note tasks (dl), habits (hb) and Reminder plugin reminders (rm) from Obsidian.
@@ -359,51 +359,51 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 		<key>0513F80F-11DE-4DDB-B1D2-DEBEFEAB5ABF</key>
 		<dict>
 			<key>xpos</key>
-			<real>355.0</real>
+			<real>355</real>
 			<key>ypos</key>
-			<real>385.0</real>
+			<real>385</real>
 		</dict>
 		<key>1AD112E6-21BB-473F-8BD0-5F2A36EA8C8D</key>
 		<dict>
 			<key>xpos</key>
-			<real>95.0</real>
+			<real>95</real>
 			<key>ypos</key>
-			<real>385.0</real>
+			<real>385</real>
 		</dict>
 		<key>51FAADC3-6D6E-4E90-A18F-953352E3DFEC</key>
 		<dict>
 			<key>xpos</key>
-			<real>355.0</real>
+			<real>355</real>
 			<key>ypos</key>
-			<real>215.0</real>
+			<real>215</real>
 		</dict>
 		<key>55814C26-B6E7-40CB-AEF8-4E78AEFEC1EB</key>
 		<dict>
 			<key>xpos</key>
-			<real>355.0</real>
+			<real>355</real>
 			<key>ypos</key>
-			<real>45.0</real>
+			<real>45</real>
 		</dict>
 		<key>7BD1A839-82BE-49E6-9AC9-38A969564D90</key>
 		<dict>
 			<key>xpos</key>
-			<real>95.0</real>
+			<real>95</real>
 			<key>ypos</key>
-			<real>215.0</real>
+			<real>215</real>
 		</dict>
 		<key>93A97536-BD78-42A7-B339-B30C1F699805</key>
 		<dict>
 			<key>xpos</key>
-			<real>95.0</real>
+			<real>95</real>
 			<key>ypos</key>
-			<real>45.0</real>
+			<real>45</real>
 		</dict>
 		<key>A543DF11-5968-4C16-A4AA-504056878077</key>
 		<dict>
 			<key>xpos</key>
-			<real>615.0</real>
+			<real>615</real>
 			<key>ypos</key>
-			<real>215.0</real>
+			<real>215</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>

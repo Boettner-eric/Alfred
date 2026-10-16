@@ -155,9 +155,9 @@ def subtitle(list_name, task):
 
 def task_items(path, list_name, query):
     lines = path.read_text().splitlines()
-    # no uid, so Alfred keeps note order instead of ranking by usage
     return [
         {
+            "uid": f"{list_name}:{t.index}",
             "title": ANCHOR + TITLE_INDENT * t.depth + t.text,
             "icon": {"path": f"icons/{'checked' if t.done else 'unchecked'}.png"},
             "subtitle": ANCHOR + SUBTITLE_INDENT * t.depth + subtitle(list_name, t),
@@ -203,7 +203,9 @@ def main():
         return
 
     query = " ".join(sys.argv[1:]).strip().lower()
-    json.dump({"items": list_tasks(query)}, sys.stdout)
+    # rerun refreshes the list after a toggle that keeps Alfred open; uids keep the selection,
+    # skipknowledge keeps note order instead of ranking by usage
+    json.dump({"rerun": 0.1, "skipknowledge": True, "items": list_tasks(query)}, sys.stdout)
 
 
 if __name__ == "__main__":
