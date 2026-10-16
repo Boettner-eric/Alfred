@@ -34,6 +34,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>55814C26-B6E7-40CB-AEF8-4E78AEFEC1EB</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>A543DF11-5968-4C16-A4AA-504056878077</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>7BD1A839-82BE-49E6-9AC9-38A969564D90</key>
 		<array>
 			<dict>
@@ -46,12 +59,55 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>0513F80F-11DE-4DDB-B1D2-DEBEFEAB5ABF</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>Open in Obsidian</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>55814C26-B6E7-40CB-AEF8-4E78AEFEC1EB</string>
+				<key>modifiers</key>
+				<integer>524288</integer>
+				<key>modifiersubtext</key>
+				<string>Move to Tomorrow</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>93A97536-BD78-42A7-B339-B30C1F699805</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>51FAADC3-6D6E-4E90-A18F-953352E3DFEC</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>0513F80F-11DE-4DDB-B1D2-DEBEFEAB5ABF</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>Open in Obsidian</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
 		</array>
 	</dict>
 	<key>createdby</key>
 	<string>Eric Boettner</string>
 	<key>description</key>
-	<string>Daily note tasks and reminders from Obsidian</string>
+	<string>Daily note tasks, habits and reminders from Obsidian</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
@@ -110,6 +166,55 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>hb</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>list=habits ./daily.py "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Habits in today's daily note</string>
+				<key>title</key>
+				<string>Daily habits</string>
+				<key>type</key>
+				<integer>11</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>93A97536-BD78-42A7-B339-B30C1F699805</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -127,6 +232,29 @@
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
 			<string>51FAADC3-6D6E-4E90-A18F-953352E3DFEC</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>./daily.py --move "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>55814C26-B6E7-40CB-AEF8-4E78AEFEC1EB</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -223,7 +351,7 @@
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>Daily note tasks (dl) and Reminder plugin reminders (rm) from Obsidian.
+	<string>Daily note tasks (dl), habits (hb) and Reminder plugin reminders (rm) from Obsidian.
 
 See https://github.com/Boettner-eric/Alfred/ for more info</string>
 	<key>uidata</key>
@@ -249,12 +377,26 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<key>ypos</key>
 			<real>215.0</real>
 		</dict>
+		<key>55814C26-B6E7-40CB-AEF8-4E78AEFEC1EB</key>
+		<dict>
+			<key>xpos</key>
+			<real>355.0</real>
+			<key>ypos</key>
+			<real>45.0</real>
+		</dict>
 		<key>7BD1A839-82BE-49E6-9AC9-38A969564D90</key>
 		<dict>
 			<key>xpos</key>
 			<real>95.0</real>
 			<key>ypos</key>
 			<real>215.0</real>
+		</dict>
+		<key>93A97536-BD78-42A7-B339-B30C1F699805</key>
+		<dict>
+			<key>xpos</key>
+			<real>95.0</real>
+			<key>ypos</key>
+			<real>45.0</real>
 		</dict>
 		<key>A543DF11-5968-4C16-A4AA-504056878077</key>
 		<dict>
@@ -349,6 +491,48 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<string>textfield</string>
 			<key>variable</key>
 			<string>tasks_heading</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>Habits</string>
+				<key>placeholder</key>
+				<string>Habits</string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Heading in the daily note that holds the habits</string>
+			<key>label</key>
+			<string>Habits heading</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>habits_heading</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>Tomorrow</string>
+				<key>placeholder</key>
+				<string>Tomorrow</string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Heading in the daily note for tomorrow's tasks, which alt + enter moves tasks to and from; yesterday's are listed first</string>
+			<key>label</key>
+			<string>Tomorrow heading</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>tomorrow_heading</string>
 		</dict>
 	</array>
 	<key>version</key>
