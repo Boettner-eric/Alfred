@@ -22,6 +22,12 @@
             arg: .path,
             icon: {type: "fileicon", path: "/System/Library/CoreServices/Finder.app"}
         },
+        "cmd+alt": {
+            subtitle: "reload workflow",
+            arg: .id,
+            variables: {workflow_name: .title},
+            icon: {type: "fileicon", path: "/Applications/Alfred 5.app"}
+        },
         shift: {
             subtitle: .website_url,
             arg: .website_url,

@@ -12,3 +12,4 @@ A simple workflow for quickly viewing and editing workflows
 - `⌥` -> open in Terminal
 - `⌃` -> reveal in finder
 - `⇧` -> open workflow source in browser
+- `⌘⌥` -> reload workflow in Alfred

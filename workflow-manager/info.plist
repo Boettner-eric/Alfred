@@ -60,6 +60,29 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>6561C851-DD3B-4271-82E7-F91AB65A0A7B</string>
+				<key>modifiers</key>
+				<integer>1572864</integer>
+				<key>modifiersubtext</key>
+				<string>reload workflow</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>6561C851-DD3B-4271-82E7-F91AB65A0A7B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>98D66BBB-E504-4E87-9E85-1D7B22500EB3</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
 		</array>
 	</dict>
 	<key>createdby</key>
@@ -233,6 +256,50 @@ end run</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>osascript -e 'on run argv' -e 'tell application id "com.runningwithcrayons.Alfred" to reload workflow (item 1 of argv)' -e 'end run' "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>6561C851-DD3B-4271-82E7-F91AB65A0A7B</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{var:workflow_name}</string>
+				<key>title</key>
+				<string>Reloaded workflow</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>98D66BBB-E504-4E87-9E85-1D7B22500EB3</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>A workflow for editing other workflows
@@ -253,6 +320,20 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<real>305</real>
 			<key>ypos</key>
 			<real>55</real>
+		</dict>
+		<key>6561C851-DD3B-4271-82E7-F91AB65A0A7B</key>
+		<dict>
+			<key>xpos</key>
+			<real>305</real>
+			<key>ypos</key>
+			<real>615</real>
+		</dict>
+		<key>98D66BBB-E504-4E87-9E85-1D7B22500EB3</key>
+		<dict>
+			<key>xpos</key>
+			<real>505</real>
+			<key>ypos</key>
+			<real>615</real>
 		</dict>
 		<key>A2DBED96-BF9F-444B-85E0-57646331B042</key>
 		<dict>
