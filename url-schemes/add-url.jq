@@ -4,9 +4,11 @@
 #
 # Required: --arg url, --arg icon, --arg bundleid, --arg name (use "" to default to app name from icon path).
 # Optional: params come from URL query string (?key=val&...); types inferred: number→float?, true/false→boolean?, comma-separated→array[string]/array[float], else string.
+# Optional: --arg fixed '["key", ...]' marks query params as defaults: stored verbatim and always sent, never prompted.
+# Optional: --arg label "My URL" sets the description shown in the urls list (defaults to the path).
 #
 # Structure: urls.json is an object keyed by scheme id (e.g. "finetune"). Each value:
-#   { name: { app, scheme, icon }, paths: { "path-slug": { description, background, params: { "k": { type, example } } } } }
+#   { name: { app, scheme, icon }, paths: { "path-slug": { description, background, defaults: { "k": "raw value" }, params: { "k": { type, example } } } } }
 
 def infer_type:
   if type != "string" then "string"
@@ -31,12 +33,11 @@ def _params_from_pairs:
   | $rest + {($k): {"type": $ty, "example": ("e.g. " + $v)}}
   end;
 
-def query_to_param_types:
+def query_pairs:
   (. | tostring) as $query
-  | if $query == "" then {}
+  | if $query == "" then []
     else $query | split("&")
       | map(select(length > 0) | split("=") | [.[0], (.[1:] | join("=") // "")])
-      | _params_from_pairs
     end;
 
 # Normalize: ensure we're working on an object (empty or existing)
@@ -47,10 +48,15 @@ def query_to_param_types:
 | . as $parsed
 | ($parsed.path_part | split("?") | .[0]) as $path_only
 | ($parsed.path_part | split("?") | if length > 1 then .[1:] | join("?") else "" end) as $query_raw
-| ($query_raw | query_to_param_types) as $params
+| (($ARGS.named.fixed // "") | fromjson? // []) as $fixed_keys
+| ($query_raw | query_pairs) as $pairs
+| ($pairs | map(select(.[0] as $k | $fixed_keys | index($k) | not)) | _params_from_pairs) as $params
+| ($pairs | map(select(.[0] as $k | $fixed_keys | index($k))) | map({(.[0]): .[1]}) | add // {}) as $defaults
 | ($path_only | split("/")[0]) as $path_slug
-| ($path_only | gsub("^/"; "") | if . == "" then $path_slug else . end) as $description
-| (if $params | length > 0 then { description: $description, background: false, params: $params } else { description: $description, background: false } end) as $new_path
+| ($ARGS.named.label // "" | if . != "" then . else $path_only | gsub("^/"; "") | if . == "" then $path_slug else . end end) as $description
+| ({ description: $description, background: false }
+  + (if $defaults | length > 0 then { defaults: $defaults } else {} end)
+  + (if $params | length > 0 then { params: $params } else {} end)) as $new_path
 | ($parsed.scheme | rtrimstr("://")) as $scheme_id
 | $root
 | if .[$scheme_id] != null then

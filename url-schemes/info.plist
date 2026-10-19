@@ -75,6 +75,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>286EC843-6EC0-4445-A32A-535A1D696C39</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E9B05AC9-172B-4BA8-ACFC-37DF85362841</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>2C8D41AE-5E7B-4C38-8338-A356CB49B845</key>
 		<array>
 			<dict>
@@ -99,6 +112,19 @@
 				<string></string>
 				<key>sourceoutputuid</key>
 				<string>_button1</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>37926234-F93C-4BD2-9A3B-6215D916C328</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>08ADD829-48A5-4C71-BC36-6028263953FF</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -129,6 +155,44 @@
 				<false/>
 			</dict>
 		</array>
+		<key>51BFDDDC-F0E0-4908-BF41-D7156CEAE9BE</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>80BE2E87-464D-4F1B-8298-E475EC41CA2C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>CE7B90BC-582F-49CE-A5F2-0CB0C39F043B</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>AA38D527-D93F-4DDE-8F82-833D6BB09F99</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>567C614B-B90C-4075-817A-8ECF5F526D42</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D48300AD-7C44-49E5-B40B-0456E74780DF</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>60B655EB-8444-4315-9FDA-2AD39AA6233E</key>
 		<array>
 			<dict>
@@ -145,7 +209,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>80BE2E87-464D-4F1B-8298-E475EC41CA2C</string>
+				<string>F8703793-0F46-4ADE-9302-24B9E7C8B22F</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -171,7 +235,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>F2496CFC-544C-4D0C-9A05-E7C64E8B80D4</string>
+				<string>567C614B-B90C-4075-817A-8ECF5F526D42</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -305,6 +369,18 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
+				<string>37926234-F93C-4BD2-9A3B-6215D916C328</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>74DA0E3B-0778-47A3-AC3A-905155D164B9</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
 				<string>2C8D41AE-5E7B-4C38-8338-A356CB49B845</string>
 				<key>modifiers</key>
 				<integer>0</integer>
@@ -319,6 +395,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>3781B7DE-81B5-4D45-9C80-13DC55DC8B99</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>D48300AD-7C44-49E5-B40B-0456E74780DF</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F2496CFC-544C-4D0C-9A05-E7C64E8B80D4</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -346,6 +435,19 @@
 				<integer>1048576</integer>
 				<key>modifiersubtext</key>
 				<string>copy "{query}"</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E9B05AC9-172B-4BA8-ACFC-37DF85362841</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>51BFDDDC-F0E0-4908-BF41-D7156CEAE9BE</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -381,6 +483,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>B894F41A-499F-4D8A-BB4B-3154C62591BA</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>F8703793-0F46-4ADE-9302-24B9E7C8B22F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E9B05AC9-172B-4BA8-ACFC-37DF85362841</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -455,7 +570,8 @@ echo -n $url</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>content=$(jq --arg url "$1" -f history/add-entry.jq history/history.json) &amp;&amp; printf '%s' "$content" &gt; history/history.json</string>
+				<string>[[ -f history/history.json ]] || echo '{}' &gt; history/history.json
+content=$(jq --arg url "$1" -f history/add-entry.jq history/history.json) &amp;&amp; printf '%s' "$content" &gt; history/history.json</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -479,15 +595,18 @@ echo -n $url</string>
 				<integer>102</integer>
 				<key>script</key>
 				<string>url=$(echo $entry | jq -r ". | (.scheme + .path)")
+query="${defaults}${tmp_params}"
+query="${query#&amp;}"
+[[ -n $query ]] &amp;&amp; url="${url}?${query}"
 
 if [[ $background == 1 ]]; then
-	open -g "${url}?${tmp_params:1}"
+	open -g "$url"
 else
-	open "${url}?${tmp_params:1}"
+	open "$url"
 fi
 
 # pipe into history file here
-echo -n "${url}?${tmp_params:1}"</string>
+echo -n "$url"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -576,7 +695,8 @@ echo -n "${url}?${tmp_params:1}"</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>jq -f alfred.jq urls.json</string>
+				<string>[[ -f urls.json ]] || echo '{}' &gt; urls.json
+jq -f alfred.jq urls.json</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -620,6 +740,42 @@ echo -n "${url}?${tmp_params:1}"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>key=$(echo "$params" | jq -r "to_entries[0] | .key")
+value=$(echo "$params" | jq -r "to_entries[0] | .value | .type")
+example=$(echo "$params" | jq -r "to_entries[0] | .value | .example")
+default=$(echo "$params" | jq -r "to_entries[0] | .value | .example // \"\" | ltrimstr(\"e.g. \")")
+params=$(echo "$params" | jq -r "del(.[keys_unsorted[0]]) | tostring")
+
+echo $key
+if [[ -n $default ]]; then
+	echo "$value $example · empty ⏎ uses $default"
+else
+	echo "$value $example"
+fi
+echo $params
+echo "$default"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>F004A449-754A-4036-830E-0C6638FB18CF</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>externaltriggerid</key>
 				<string>params</string>
 				<key>passinputasargument</key>
@@ -635,36 +791,6 @@ echo -n "${url}?${tmp_params:1}"</string>
 			<string>08ADD829-48A5-4C71-BC36-6028263953FF</string>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>key=$(echo "$params" | jq -r "to_entries[0] | .key")
-value=$(echo "$params" | jq -r "to_entries[0] | .value | .type")
-example=$(echo "$params" | jq -r "to_entries[0] | .value | .example")
-params=$(echo "$params" | jq -r "del(.[keys_unsorted[0]]) | tostring")
-
-echo $key
-echo "$value $example"
-echo $params</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>11</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>F004A449-754A-4036-830E-0C6638FB18CF</string>
-			<key>version</key>
-			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -711,7 +837,7 @@ echo $params</string>
 				<array>
 					<dict>
 						<key>inputstring</key>
-						<string></string>
+						<string>{query}{var:split4}</string>
 						<key>matchcasesensitive</key>
 						<false/>
 						<key>matchmode</key>
@@ -723,6 +849,20 @@ echo $params</string>
 						<key>uid</key>
 						<string>3A7A204E-5856-4BBF-83FC-B2D48293E9E6</string>
 					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string></string>
+						<key>outputlabel</key>
+						<string>use default</string>
+						<key>uid</key>
+						<string>74DA0E3B-0778-47A3-AC3A-905155D164B9</string>
+					</dict>
 				</array>
 				<key>elselabel</key>
 				<string>add params</string>
@@ -733,6 +873,26 @@ echo $params</string>
 			<string>alfred.workflow.utility.conditional</string>
 			<key>uid</key>
 			<string>C35B17FE-99C5-46E6-B6F7-A2275FA16194</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>params</key>
+					<string>{var:split3}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>A61D31F6-2149-43EA-A377-5BBD2CFF03A8</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -764,26 +924,6 @@ echo $params</string>
 				<key>argument</key>
 				<string></string>
 				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
-				<dict>
-					<key>params</key>
-					<string>{var:split3}</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>A61D31F6-2149-43EA-A377-5BBD2CFF03A8</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string></string>
-				<key>passthroughargument</key>
 				<true/>
 				<key>variables</key>
 				<dict>
@@ -806,7 +946,8 @@ echo $params</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>content=$(jq --arg url "$url" --arg name "$name" --arg icon "$iconPath" --arg bundleid "$bundleID" --arg background "$1" -f add-url.jq urls.json) &amp;&amp; printf '%s' "$content" &gt; urls.json</string>
+				<string>[[ -f urls.json ]] || echo '{}' &gt; urls.json
+content=$(jq --arg url "$url" --arg name "$name" --arg icon "$iconPath" --arg bundleid "$bundleID" --arg background "$open_background" --arg label "$1" --arg fixed "$fixed" -f add-url.jq urls.json) &amp;&amp; printf '%s' "$content" &gt; urls.json</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1129,7 +1270,8 @@ fi</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>content=$(jq --arg url "$url" -f history/add-entry.jq history/history.json) &amp;&amp; printf '%s' "$content" &gt; history/history.json</string>
+				<string>[[ -f history/history.json ]] || echo '{}' &gt; history/history.json
+content=$(jq --arg url "$url" -f history/add-entry.jq history/history.json) &amp;&amp; printf '%s' "$content" &gt; history/history.json</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1152,7 +1294,8 @@ fi</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>content=$(jq --arg url "$1" -f history/add-entry.jq history/history.json) &amp;&amp; printf '%s' "$content" &gt; history/history.json</string>
+				<string>[[ -f history/history.json ]] || echo '{}' &gt; history/history.json
+content=$(jq --arg url "$1" -f history/add-entry.jq history/history.json) &amp;&amp; printf '%s' "$content" &gt; history/history.json</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1225,7 +1368,9 @@ echo -n $1</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>jq --slurpfile urls urls.json -f history/get-history.jq history/history.json</string>
+				<string>[[ -f urls.json ]] || echo '{}' &gt; urls.json
+[[ -f history/history.json ]] || echo '{}' &gt; history/history.json
+jq --slurpfile urls urls.json -f history/get-history.jq history/history.json</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1330,6 +1475,238 @@ echo -n $1</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>fixed</key>
+					<string>[]</string>
+					<key>param_index</key>
+					<string>0</string>
+					<key>url</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>F8703793-0F46-4ADE-9302-24B9E7C8B22F</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>jq -n --arg url "$url" --arg index "$param_index" --arg fixed "$fixed" -f classify-param.jq</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>E9B05AC9-172B-4BA8-ACFC-37DF85362841</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:classify_done}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>true</string>
+						<key>outputlabel</key>
+						<string>all params classified</string>
+						<key>uid</key>
+						<string>CE7B90BC-582F-49CE-A5F2-0CB0C39F043B</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>next param</string>
+				<key>hideelse</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>51BFDDDC-F0E0-4908-BF41-D7156CEAE9BE</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>classify</string>
+				<key>passinputasargument</key>
+				<false/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>AA38D527-D93F-4DDE-8F82-833D6BB09F99</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>availableviaurlhandler</key>
+				<false/>
+				<key>triggerid</key>
+				<string>classify</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>286EC843-6EC0-4445-A32A-535A1D696C39</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<true/>
+				<key>variables</key>
+				<dict>
+					<key>tmp_params</key>
+					<string>{var:tmp_params}&amp;{var:split1}={var:split4}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>37926234-F93C-4BD2-9A3B-6215D916C328</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>open_background</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>567C614B-B90C-4075-817A-8ECF5F526D42</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>jq -n --arg q "$1" --arg url "$url" '($url | split("://")[1:] | join("://") | split("?")[0] | ltrimstr("/")) as $path
+| {items:
+	[
+		{title: (if $q == "" then "Name this URL" else $q end),
+		subtitle: (if $q == "" then "empty ⏎ uses the path: " + $path else "show as \"" + $q + "\" in the urls list" end),
+		arg: (if $q == "" then $path else $q end)
+		}
+	]
+}'</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>D48300AD-7C44-49E5-B40B-0456E74780DF</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>Browse and Activate custom url schemes
@@ -1409,6 +1786,13 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<key>ypos</key>
 			<real>95</real>
 		</dict>
+		<key>286EC843-6EC0-4445-A32A-535A1D696C39</key>
+		<dict>
+			<key>xpos</key>
+			<real>1180</real>
+			<key>ypos</key>
+			<real>660</real>
+		</dict>
 		<key>2C8D41AE-5E7B-4C38-8338-A356CB49B845</key>
 		<dict>
 			<key>xpos</key>
@@ -1430,6 +1814,15 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<key>ypos</key>
 			<real>1055</real>
 		</dict>
+		<key>37926234-F93C-4BD2-9A3B-6215D916C328</key>
+		<dict>
+			<key>note</key>
+			<string>use default</string>
+			<key>xpos</key>
+			<real>1045</real>
+			<key>ypos</key>
+			<real>270</real>
+		</dict>
 		<key>47E20270-E6BD-4F29-BD0D-78D73C2566C9</key>
 		<dict>
 			<key>xpos</key>
@@ -1445,6 +1838,20 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<real>85</real>
 			<key>ypos</key>
 			<real>550</real>
+		</dict>
+		<key>51BFDDDC-F0E0-4908-BF41-D7156CEAE9BE</key>
+		<dict>
+			<key>xpos</key>
+			<real>1330</real>
+			<key>ypos</key>
+			<real>560</real>
+		</dict>
+		<key>567C614B-B90C-4075-817A-8ECF5F526D42</key>
+		<dict>
+			<key>xpos</key>
+			<real>790</real>
+			<key>ypos</key>
+			<real>470</real>
 		</dict>
 		<key>60B655EB-8444-4315-9FDA-2AD39AA6233E</key>
 		<dict>
@@ -1517,6 +1924,15 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<key>ypos</key>
 			<real>360</real>
 		</dict>
+		<key>AA38D527-D93F-4DDE-8F82-833D6BB09F99</key>
+		<dict>
+			<key>note</key>
+			<string>loop</string>
+			<key>xpos</key>
+			<real>1430</real>
+			<key>ypos</key>
+			<real>640</real>
+		</dict>
 		<key>B2AFC6AB-4FE7-498C-90F4-E9BA1B786ED8</key>
 		<dict>
 			<key>xpos</key>
@@ -1551,6 +1967,15 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<key>ypos</key>
 			<real>1035</real>
 		</dict>
+		<key>D48300AD-7C44-49E5-B40B-0456E74780DF</key>
+		<dict>
+			<key>note</key>
+			<string>Name URL</string>
+			<key>xpos</key>
+			<real>850</real>
+			<key>ypos</key>
+			<real>440</real>
+		</dict>
 		<key>E8A4556D-FE1C-4EEB-BEEE-BB37C17E1732</key>
 		<dict>
 			<key>note</key>
@@ -1559,6 +1984,15 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<real>90</real>
 			<key>ypos</key>
 			<real>725</real>
+		</dict>
+		<key>E9B05AC9-172B-4BA8-ACFC-37DF85362841</key>
+		<dict>
+			<key>note</key>
+			<string>Configurable or default?</string>
+			<key>xpos</key>
+			<real>1180</real>
+			<key>ypos</key>
+			<real>530</real>
 		</dict>
 		<key>EA30DC96-E878-4B5C-B1B5-50E9E2790B57</key>
 		<dict>
@@ -1583,9 +2017,9 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<key>note</key>
 			<string>Save URL</string>
 			<key>xpos</key>
-			<real>905</real>
+			<real>990</real>
 			<key>ypos</key>
-			<real>480</real>
+			<real>440</real>
 		</dict>
 		<key>F8556231-81D6-45B1-9056-8DE5F28166D3</key>
 		<dict>
@@ -1595,6 +2029,13 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<real>275</real>
 			<key>ypos</key>
 			<real>725</real>
+		</dict>
+		<key>F8703793-0F46-4ADE-9302-24B9E7C8B22F</key>
+		<dict>
+			<key>xpos</key>
+			<real>1060</real>
+			<key>ypos</key>
+			<real>560</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>

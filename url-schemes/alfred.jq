@@ -1,10 +1,12 @@
 # Consumes urls.json (object keyed by scheme id). Each value: { name: { app, scheme, icon }, paths: { "path-slug": { description, background, params } } }.
-# params: { "k": { type, example } }.
+# params: { "k": { type, example } }. defaults: { "k": "raw value" }, always sent verbatim.
 
-def flatten_params:
-  if . == null or length == 0 then ""
-  else "?" + (. | to_entries | map("\(.key)=\(.value.example // .value | if type == "string" then . else tostring end | @uri)") | join("&"))
-  end;
+def defaults_query: . // {} | to_entries | map("\(.key)=\(.value)") | join("&");
+
+def flatten_params($defaults):
+  ([($defaults | defaults_query)] + (. // {} | to_entries | map("\(.key)=\(.value.example // .value | if type == "string" then . else tostring end | @uri)")))
+  | map(select(. != "")) | join("&")
+  | if . == "" then "" else "?" + . end;
 
 # paths may live under .paths or .name.paths (legacy)
 def entry_paths: .paths // .name.paths;
@@ -25,8 +27,9 @@ def entry_meta: .name // .;
       arg: (($meta | del(.paths) | . + {"path": $path_slug}) | tostring),
       variables: {
         "params": ($path_obj.params // {} | tostring),
+        "defaults": ($path_obj.defaults | defaults_query),
         "background": ($path_obj.background // false),
-        "copy": ($meta.scheme + $path_slug + (($path_obj.params // {}) | flatten_params))
+        "copy": ($meta.scheme + $path_slug + ($path_obj.params | flatten_params($path_obj.defaults)))
       },
       icon: { type: "fileicon", path: $meta.icon }
     }
