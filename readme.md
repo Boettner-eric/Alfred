@@ -18,6 +18,14 @@ Feel free to create an issue or open a pull request.
 - [Warp](./warp/) - open any warp directory in your chosen application
 - [Workflow Manager](./workflow-manager/) - open alfred workflows in an IDE/terminal
 
+## Development
+
+Alfred reorders `info.plist` every time it saves. A git clean filter normalizes the order so only real changes show up in diffs; enable it once per clone:
+
+```sh
+git config filter.alfred-plist.clean "python3 scripts/normalize-plist.py"
+```
+
 ## Helpful references
 
 - [Alfred.applescript](https://gist.github.com/Boettner-eric/77baef8e2797577cc101ebc15a994b6d) gist for setting alfred config values inside a workflow

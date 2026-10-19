@@ -66,20 +66,41 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>./.venv/bin/python3 status.py -s $split3 -t $split2 -e $split1</string>
+				<string>./.venv/bin/python3 status.py -g</string>
 				<key>scriptargtype</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>type</key>
-				<integer>5</integer>
+				<integer>11</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>EC2323D2-65B0-4242-B362-4B8ACA4495DA</string>
+			<string>14AE877C-C43B-43E4-9305-59D111E0E87D</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>ste</string>
+				<key>subtext</key>
+				<string>fetch all emojis</string>
+				<key>text</key>
+				<string>Slack Status</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>26DC164C-2920-4C94-B8FE-FEC1E80307C3</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -154,44 +175,23 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>keyword</key>
-				<string>ste</string>
-				<key>subtext</key>
-				<string>fetch all emojis</string>
-				<key>text</key>
-				<string>Slack Status</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>26DC164C-2920-4C94-B8FE-FEC1E80307C3</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>./.venv/bin/python3 status.py -g</string>
+				<string>./.venv/bin/python3 status.py -s $split3 -t $split2 -e $split1</string>
 				<key>scriptargtype</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>type</key>
-				<integer>11</integer>
+				<integer>5</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>14AE877C-C43B-43E4-9305-59D111E0E87D</string>
+			<string>EC2323D2-65B0-4242-B362-4B8ACA4495DA</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>

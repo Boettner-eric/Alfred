@@ -22,11 +22,11 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>44F227E8-6C8E-4AC7-BB67-82276CA5D673</string>
+				<string>F8A98777-34B7-49F3-BDFA-52DF54CEC7F6</string>
 				<key>modifiers</key>
-				<integer>1048576</integer>
+				<integer>262144</integer>
 				<key>modifiersubtext</key>
-				<string>Copy url</string>
+				<string>Open in new window (in space {var:arc_space2})</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -42,11 +42,11 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>F8A98777-34B7-49F3-BDFA-52DF54CEC7F6</string>
+				<string>44F227E8-6C8E-4AC7-BB67-82276CA5D673</string>
 				<key>modifiers</key>
-				<integer>262144</integer>
+				<integer>1048576</integer>
 				<key>modifiersubtext</key>
-				<string>Open in new window (in space {var:arc_space2})</string>
+				<string>Copy url</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -62,6 +62,60 @@
 	<string>Arc Bookmarks</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>on run argv
+  set theUrl to item 1 of argv
+  set theSpace to (system attribute "arc_space1")
+  tell application "Arc"
+    make new window
+    tell front window
+	  tell space theSpace
+	    make new tab with properties {URL:theUrl}
+	  end tell
+	end tell
+ 	activate
+  end tell
+end run</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>1501056E-8C25-4B26-A432-2B4362552620</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>44F227E8-6C8E-4AC7-BB67-82276CA5D673</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -131,60 +185,6 @@
 			<string>D3D5928B-2640-4935-9B24-69C9D9AF5F50</string>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>autopaste</key>
-				<false/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>transient</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>44F227E8-6C8E-4AC7-BB67-82276CA5D673</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>68</integer>
-				<key>script</key>
-				<string>on run argv
-  set theUrl to item 1 of argv
-  set theSpace to (system attribute "arc_space1")
-  tell application "Arc"
-    make new window
-    tell front window
-	  tell space theSpace
-	    make new tab with properties {URL:theUrl}
-	  end tell
-	end tell
- 	activate
-  end tell
-end run</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>6</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>1501056E-8C25-4B26-A432-2B4362552620</string>
-			<key>version</key>
-			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>

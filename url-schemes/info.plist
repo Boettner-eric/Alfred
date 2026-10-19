@@ -159,6 +159,16 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
+				<string>AA38D527-D93F-4DDE-8F82-833D6BB09F99</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
 				<string>80BE2E87-464D-4F1B-8298-E475EC41CA2C</string>
 				<key>modifiers</key>
 				<integer>0</integer>
@@ -166,16 +176,6 @@
 				<string></string>
 				<key>sourceoutputuid</key>
 				<string>CE7B90BC-582F-49CE-A5F2-0CB0C39F043B</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>AA38D527-D93F-4DDE-8F82-833D6BB09F99</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -197,6 +197,16 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
+				<string>F8703793-0F46-4ADE-9302-24B9E7C8B22F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
 				<string>80BE2E87-464D-4F1B-8298-E475EC41CA2C</string>
 				<key>modifiers</key>
 				<integer>0</integer>
@@ -204,16 +214,6 @@
 				<string></string>
 				<key>sourceoutputuid</key>
 				<string>54471537-2067-4F08-A0C4-40CA894F6808</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>F8703793-0F46-4ADE-9302-24B9E7C8B22F</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -235,7 +235,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>567C614B-B90C-4075-817A-8ECF5F526D42</string>
+				<string>0FB550D9-7C5E-456C-A592-156D1687B2F5</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -245,7 +245,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>0FB550D9-7C5E-456C-A592-156D1687B2F5</string>
+				<string>567C614B-B90C-4075-817A-8ECF5F526D42</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -320,13 +320,11 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>05257588-74EC-4263-9721-91A630A4968B</string>
+				<string>F004A449-754A-4036-830E-0C6638FB18CF</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
-				<key>sourceoutputuid</key>
-				<string>7868D01E-760A-4C92-B555-158FC06ECA09</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -344,7 +342,22 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>F004A449-754A-4036-830E-0C6638FB18CF</string>
+				<string>05257588-74EC-4263-9721-91A630A4968B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>7868D01E-760A-4C92-B555-158FC06ECA09</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>C35B17FE-99C5-46E6-B6F7-A2275FA16194</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2C8D41AE-5E7B-4C38-8338-A356CB49B845</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -352,9 +365,6 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
-		</array>
-		<key>C35B17FE-99C5-46E6-B6F7-A2275FA16194</key>
-		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>08ADD829-48A5-4C71-BC36-6028263953FF</string>
@@ -376,16 +386,6 @@
 				<string></string>
 				<key>sourceoutputuid</key>
 				<string>74DA0E3B-0778-47A3-AC3A-905155D164B9</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>2C8D41AE-5E7B-4C38-8338-A356CB49B845</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -550,15 +550,43 @@ echo -n $url</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>availableviaurlhandler</key>
-				<false/>
-				<key>triggerid</key>
+				<key>externaltriggerid</key>
 				<string>params</string>
+				<key>passinputasargument</key>
+				<true/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.trigger.external</string>
+			<string>alfred.workflow.output.callexternaltrigger</string>
 			<key>uid</key>
-			<string>27385497-B986-4326-BD0B-7ABC8368C2CB</string>
+			<string>08ADD829-48A5-4C71-BC36-6028263953FF</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>bundleID</key>
+					<string>{var:app2}</string>
+					<key>iconPath</key>
+					<string>{var:app3}</string>
+					<key>name</key>
+					<string>{var:app1}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>0DFD2000-D79E-40A5-A9C7-79845A76FCEC</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -585,6 +613,49 @@ content=$(jq --arg url "$1" -f history/add-entry.jq history/history.json) &amp;&
 			<string>0EBB1918-E422-41F8-B500-2A4469CF6EA7</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>[[ -f history/history.json ]] || echo '{}' &gt; history/history.json
+content=$(jq --arg url "$url" -f history/add-entry.jq history/history.json) &amp;&amp; printf '%s' "$content" &gt; history/history.json</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>0FB550D9-7C5E-456C-A592-156D1687B2F5</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>subtext</key>
+				<string>{var:split2}</string>
+				<key>text</key>
+				<string>{var:split1}</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>14D512E9-9D3F-4105-8FBB-CB4A69A4AA00</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -624,297 +695,30 @@ echo -n "$url"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>conditions</key>
-				<array>
-					<dict>
-						<key>inputstring</key>
-						<string>{var:params}</string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>0</integer>
-						<key>matchstring</key>
-						<string>null</string>
-						<key>outputlabel</key>
-						<string>plain url</string>
-						<key>uid</key>
-						<string>7868D01E-760A-4C92-B555-158FC06ECA09</string>
-					</dict>
-					<dict>
-						<key>inputstring</key>
-						<string>{var:params}</string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>0</integer>
-						<key>matchstring</key>
-						<string>{}</string>
-						<key>outputlabel</key>
-						<string>url with params</string>
-						<key>uid</key>
-						<string>54471537-2067-4F08-A0C4-40CA894F6808</string>
-					</dict>
-				</array>
-				<key>elselabel</key>
-				<string>param builder</string>
-				<key>hideelse</key>
+				<key>availableviaurlhandler</key>
 				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.conditional</string>
-			<key>uid</key>
-			<string>B2AFC6AB-4FE7-498C-90F4-E9BA1B786ED8</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<true/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<true/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>keyword</key>
-				<string>{var:trigger_urls}</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string></string>
-				<key>script</key>
-				<string>[[ -f urls.json ]] || echo '{}' &gt; urls.json
-jq -f alfred.jq urls.json</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string></string>
-				<key>type</key>
-				<integer>11</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>81DE253E-B57E-480A-837D-D4872DD861AA</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string>{query}</string>
-				<key>passthroughargument</key>
-				<true/>
-				<key>variables</key>
-				<dict>
-					<key>entry</key>
-					<string>{query}</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>47E20270-E6BD-4F29-BD0D-78D73C2566C9</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>key=$(echo "$params" | jq -r "to_entries[0] | .key")
-value=$(echo "$params" | jq -r "to_entries[0] | .value | .type")
-example=$(echo "$params" | jq -r "to_entries[0] | .value | .example")
-default=$(echo "$params" | jq -r "to_entries[0] | .value | .example // \"\" | ltrimstr(\"e.g. \")")
-params=$(echo "$params" | jq -r "del(.[keys_unsorted[0]]) | tostring")
-
-echo $key
-if [[ -n $default ]]; then
-	echo "$value $example · empty ⏎ uses $default"
-else
-	echo "$value $example"
-fi
-echo $params
-echo "$default"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>11</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>F004A449-754A-4036-830E-0C6638FB18CF</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>externaltriggerid</key>
+				<key>triggerid</key>
 				<string>params</string>
-				<key>passinputasargument</key>
-				<true/>
-				<key>passvariables</key>
-				<true/>
-				<key>workflowbundleid</key>
-				<string>self</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.callexternaltrigger</string>
+			<string>alfred.workflow.trigger.external</string>
 			<key>uid</key>
-			<string>08ADD829-48A5-4C71-BC36-6028263953FF</string>
+			<string>27385497-B986-4326-BD0B-7ABC8368C2CB</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>subtext</key>
-				<string>{var:split2}</string>
-				<key>text</key>
-				<string>{var:split1}</string>
-				<key>withspace</key>
+				<key>availableviaurlhandler</key>
 				<false/>
+				<key>triggerid</key>
+				<string>classify</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
+			<string>alfred.workflow.trigger.external</string>
 			<key>uid</key>
-			<string>14D512E9-9D3F-4105-8FBB-CB4A69A4AA00</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>autopaste</key>
-				<false/>
-				<key>clipboardtext</key>
-				<string>{var:copy}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>transient</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>3059C7D9-2D78-4308-87E8-CAC81503AF03</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>conditions</key>
-				<array>
-					<dict>
-						<key>inputstring</key>
-						<string>{query}{var:split4}</string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>0</integer>
-						<key>matchstring</key>
-						<string></string>
-						<key>outputlabel</key>
-						<string>skip empty params</string>
-						<key>uid</key>
-						<string>3A7A204E-5856-4BBF-83FC-B2D48293E9E6</string>
-					</dict>
-					<dict>
-						<key>inputstring</key>
-						<string></string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>0</integer>
-						<key>matchstring</key>
-						<string></string>
-						<key>outputlabel</key>
-						<string>use default</string>
-						<key>uid</key>
-						<string>74DA0E3B-0778-47A3-AC3A-905155D164B9</string>
-					</dict>
-				</array>
-				<key>elselabel</key>
-				<string>add params</string>
-				<key>hideelse</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.conditional</string>
-			<key>uid</key>
-			<string>C35B17FE-99C5-46E6-B6F7-A2275FA16194</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string></string>
-				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
-				<dict>
-					<key>params</key>
-					<string>{var:split3}</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>A61D31F6-2149-43EA-A377-5BBD2CFF03A8</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>delimiter</key>
-				<string>
-</string>
-				<key>discardemptyarguments</key>
-				<false/>
-				<key>outputas</key>
-				<integer>0</integer>
-				<key>trimarguments</key>
-				<true/>
-				<key>variableprefix</key>
-				<string>split</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.split</string>
-			<key>uid</key>
-			<string>7493E761-8E41-41E5-9824-93FE48E5A509</string>
+			<string>286EC843-6EC0-4445-A32A-535A1D696C39</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -941,26 +745,82 @@ echo "$default"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
+				<key>autopaste</key>
 				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>[[ -f urls.json ]] || echo '{}' &gt; urls.json
-content=$(jq --arg url "$url" --arg name "$name" --arg icon "$iconPath" --arg bundleid "$bundleID" --arg background "$open_background" --arg label "$1" --arg fixed "$fixed" -f add-url.jq urls.json) &amp;&amp; printf '%s' "$content" &gt; urls.json</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>11</integer>
+				<key>clipboardtext</key>
+				<string>{var:copy}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.script</string>
+			<string>alfred.workflow.output.clipboard</string>
 			<key>uid</key>
-			<string>F2496CFC-544C-4D0C-9A05-E7C64E8B80D4</string>
+			<string>3059C7D9-2D78-4308-87E8-CAC81503AF03</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>button1</key>
+				<string>Delete</string>
+				<key>button2</key>
+				<string>Cancel</string>
+				<key>button3</key>
+				<string></string>
+				<key>description</key>
+				<string>Delete history from url-schemes workflow</string>
+				<key>title</key>
+				<string>Confirm?</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.dialog</string>
+			<key>uid</key>
+			<string>3781B7DE-81B5-4D45-9C80-13DC55DC8B99</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<true/>
+				<key>variables</key>
+				<dict>
+					<key>tmp_params</key>
+					<string>{var:tmp_params}&amp;{var:split1}={var:split4}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>37926234-F93C-4BD2-9A3B-6215D916C328</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>passthroughargument</key>
+				<true/>
+				<key>variables</key>
+				<dict>
+					<key>entry</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>47E20270-E6BD-4F29-BD0D-78D73C2566C9</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1029,6 +889,58 @@ content=$(jq --arg url "$url" --arg name "$name" --arg icon "$iconPath" --arg bu
 				<array>
 					<dict>
 						<key>inputstring</key>
+						<string>{var:classify_done}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>true</string>
+						<key>outputlabel</key>
+						<string>all params classified</string>
+						<key>uid</key>
+						<string>CE7B90BC-582F-49CE-A5F2-0CB0C39F043B</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>next param</string>
+				<key>hideelse</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>51BFDDDC-F0E0-4908-BF41-D7156CEAE9BE</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>open_background</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>567C614B-B90C-4075-817A-8ECF5F526D42</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
 						<string></string>
 						<key>matchcasesensitive</key>
 						<false/>
@@ -1065,6 +977,47 @@ content=$(jq --arg url "$url" --arg name "$name" --arg icon "$iconPath" --arg bu
 			<string>alfred.workflow.utility.conditional</string>
 			<key>uid</key>
 			<string>60B655EB-8444-4315-9FDA-2AD39AA6233E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>6213C6B4-7958-4BAA-869D-40AE16B7BD2B</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>delimiter</key>
+				<string>
+</string>
+				<key>discardemptyarguments</key>
+				<false/>
+				<key>outputas</key>
+				<integer>0</integer>
+				<key>trimarguments</key>
+				<true/>
+				<key>variableprefix</key>
+				<string>split</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.split</string>
+			<key>uid</key>
+			<string>7493E761-8E41-41E5-9824-93FE48E5A509</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -1120,6 +1073,450 @@ content=$(jq --arg url "$url" --arg name "$name" --arg icon "$iconPath" --arg bu
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>7B560801-74D4-4438-805A-A64D73E47B08</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>url</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>80BE2E87-464D-4F1B-8298-E475EC41CA2C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>{var:trigger_urls}</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>[[ -f urls.json ]] || echo '{}' &gt; urls.json
+jq -f alfred.jq urls.json</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>81DE253E-B57E-480A-837D-D4872DD861AA</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>delimiter</key>
+				<string>
+</string>
+				<key>discardemptyarguments</key>
+				<false/>
+				<key>outputas</key>
+				<integer>0</integer>
+				<key>trimarguments</key>
+				<true/>
+				<key>variableprefix</key>
+				<string>app</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.split</string>
+			<key>uid</key>
+			<string>84550CF0-44ED-400B-BAB5-B3AA3B596320</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>echo "{}" &gt; history/history.json</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>8B42E873-6DE3-4333-AFD1-F01B58D3668A</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>params</key>
+					<string>{var:split3}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>A61D31F6-2149-43EA-A377-5BBD2CFF03A8</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>classify</string>
+				<key>passinputasargument</key>
+				<false/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>AA38D527-D93F-4DDE-8F82-833D6BB09F99</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:params}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>null</string>
+						<key>outputlabel</key>
+						<string>plain url</string>
+						<key>uid</key>
+						<string>7868D01E-760A-4C92-B555-158FC06ECA09</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:params}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>{}</string>
+						<key>outputlabel</key>
+						<string>url with params</string>
+						<key>uid</key>
+						<string>54471537-2067-4F08-A0C4-40CA894F6808</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>param builder</string>
+				<key>hideelse</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>B2AFC6AB-4FE7-498C-90F4-E9BA1B786ED8</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>[[ -f history/history.json ]] || echo '{}' &gt; history/history.json
+content=$(jq --arg url "$1" -f history/add-entry.jq history/history.json) &amp;&amp; printf '%s' "$content" &gt; history/history.json</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>B894F41A-499F-4D8A-BB4B-3154C62591BA</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string>{query}{var:split4}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string></string>
+						<key>outputlabel</key>
+						<string>skip empty params</string>
+						<key>uid</key>
+						<string>3A7A204E-5856-4BBF-83FC-B2D48293E9E6</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string></string>
+						<key>outputlabel</key>
+						<string>use default</string>
+						<key>uid</key>
+						<string>74DA0E3B-0778-47A3-AC3A-905155D164B9</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>add params</string>
+				<key>hideelse</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>C35B17FE-99C5-46E6-B6F7-A2275FA16194</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>keyword</key>
+				<string>clear urls</string>
+				<key>subtext</key>
+				<string>delete url schemes history</string>
+				<key>text</key>
+				<string>Clear URLS</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>D05F27E1-7529-4D2C-8F73-BB3EAE2A9E26</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>jq -n --arg q "$1" --arg url "$url" '($url | split("://")[1:] | join("://") | split("?")[0] | ltrimstr("/")) as $path
+| {items:
+	[
+		{title: (if $q == "" then "Name this URL" else $q end),
+		subtitle: (if $q == "" then "empty ⏎ uses the path: " + $path else "show as \"" + $q + "\" in the urls list" end),
+		arg: (if $q == "" then $path else $q end)
+		}
+	]
+}'</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>D48300AD-7C44-49E5-B40B-0456E74780DF</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>{var:trigger_url_history}</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>[[ -f urls.json ]] || echo '{}' &gt; urls.json
+[[ -f history/history.json ]] || echo '{}' &gt; history/history.json
+jq --slurpfile urls urls.json -f history/get-history.jq history/history.json</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>E8A4556D-FE1C-4EEB-BEEE-BB37C17E1732</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>jq -n --arg url "$url" --arg index "$param_index" --arg fixed "$fixed" -f classify-param.jq</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>E9B05AC9-172B-4BA8-ACFC-37DF85362841</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
@@ -1199,79 +1596,25 @@ fi</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>delimiter</key>
-				<string>
-</string>
-				<key>discardemptyarguments</key>
-				<false/>
-				<key>outputas</key>
-				<integer>0</integer>
-				<key>trimarguments</key>
-				<true/>
-				<key>variableprefix</key>
-				<string>app</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.split</string>
-			<key>uid</key>
-			<string>84550CF0-44ED-400B-BAB5-B3AA3B596320</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string></string>
-				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
-				<dict>
-					<key>bundleID</key>
-					<string>{var:app2}</string>
-					<key>iconPath</key>
-					<string>{var:app3}</string>
-					<key>name</key>
-					<string>{var:app1}</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>0DFD2000-D79E-40A5-A9C7-79845A76FCEC</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string></string>
-				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
-				<dict>
-					<key>url</key>
-					<string>{query}</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>80BE2E87-464D-4F1B-8298-E475EC41CA2C</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>[[ -f history/history.json ]] || echo '{}' &gt; history/history.json
-content=$(jq --arg url "$url" -f history/add-entry.jq history/history.json) &amp;&amp; printf '%s' "$content" &gt; history/history.json</string>
+				<string>key=$(echo "$params" | jq -r "to_entries[0] | .key")
+value=$(echo "$params" | jq -r "to_entries[0] | .value | .type")
+example=$(echo "$params" | jq -r "to_entries[0] | .value | .example")
+default=$(echo "$params" | jq -r "to_entries[0] | .value | .example // \"\" | ltrimstr(\"e.g. \")")
+params=$(echo "$params" | jq -r "del(.[keys_unsorted[0]]) | tostring")
+
+echo $key
+if [[ -n $default ]]; then
+	echo "$value $example · empty ⏎ uses $default"
+else
+	echo "$value $example"
+fi
+echo $params
+echo "$default"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1282,7 +1625,7 @@ content=$(jq --arg url "$url" -f history/add-entry.jq history/history.json) &amp
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>0FB550D9-7C5E-456C-A592-156D1687B2F5</string>
+			<string>F004A449-754A-4036-830E-0C6638FB18CF</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -1294,8 +1637,8 @@ content=$(jq --arg url "$url" -f history/add-entry.jq history/history.json) &amp
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>[[ -f history/history.json ]] || echo '{}' &gt; history/history.json
-content=$(jq --arg url "$1" -f history/add-entry.jq history/history.json) &amp;&amp; printf '%s' "$content" &gt; history/history.json</string>
+				<string>[[ -f urls.json ]] || echo '{}' &gt; urls.json
+content=$(jq --arg url "$url" --arg name "$name" --arg icon "$iconPath" --arg bundleid "$bundleID" --arg background "$open_background" --arg label "$1" --arg fixed "$fixed" -f add-url.jq urls.json) &amp;&amp; printf '%s' "$content" &gt; urls.json</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1306,7 +1649,7 @@ content=$(jq --arg url "$1" -f history/add-entry.jq history/history.json) &amp;&
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>B894F41A-499F-4D8A-BB4B-3154C62591BA</string>
+			<string>F2496CFC-544C-4D0C-9A05-E7C64E8B80D4</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -1343,141 +1686,6 @@ echo -n $1</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>alfredfiltersresults</key>
-				<true/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<true/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>keyword</key>
-				<string>{var:trigger_url_history}</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string></string>
-				<key>script</key>
-				<string>[[ -f urls.json ]] || echo '{}' &gt; urls.json
-[[ -f history/history.json ]] || echo '{}' &gt; history/history.json
-jq --slurpfile urls urls.json -f history/get-history.jq history/history.json</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string></string>
-				<key>type</key>
-				<integer>11</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>E8A4556D-FE1C-4EEB-BEEE-BB37C17E1732</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>autopaste</key>
-				<false/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>transient</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>6213C6B4-7958-4BAA-869D-40AE16B7BD2B</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>echo "{}" &gt; history/history.json</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>11</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>8B42E873-6DE3-4333-AFD1-F01B58D3668A</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>keyword</key>
-				<string>clear urls</string>
-				<key>subtext</key>
-				<string>delete url schemes history</string>
-				<key>text</key>
-				<string>Clear URLS</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>D05F27E1-7529-4D2C-8F73-BB3EAE2A9E26</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>button1</key>
-				<string>Delete</string>
-				<key>button2</key>
-				<string>Cancel</string>
-				<key>button3</key>
-				<string></string>
-				<key>description</key>
-				<string>Delete history from url-schemes workflow</string>
-				<key>title</key>
-				<string>Confirm?</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.dialog</string>
-			<key>uid</key>
-			<string>3781B7DE-81B5-4D45-9C80-13DC55DC8B99</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argument</key>
 				<string></string>
 				<key>passthroughargument</key>
@@ -1498,214 +1706,6 @@ jq --slurpfile urls urls.json -f history/get-history.jq history/history.json</st
 			<string>F8703793-0F46-4ADE-9302-24B9E7C8B22F</string>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<true/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<false/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string></string>
-				<key>script</key>
-				<string>jq -n --arg url "$url" --arg index "$param_index" --arg fixed "$fixed" -f classify-param.jq</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string></string>
-				<key>type</key>
-				<integer>11</integer>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>E9B05AC9-172B-4BA8-ACFC-37DF85362841</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>conditions</key>
-				<array>
-					<dict>
-						<key>inputstring</key>
-						<string>{var:classify_done}</string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>0</integer>
-						<key>matchstring</key>
-						<string>true</string>
-						<key>outputlabel</key>
-						<string>all params classified</string>
-						<key>uid</key>
-						<string>CE7B90BC-582F-49CE-A5F2-0CB0C39F043B</string>
-					</dict>
-				</array>
-				<key>elselabel</key>
-				<string>next param</string>
-				<key>hideelse</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.conditional</string>
-			<key>uid</key>
-			<string>51BFDDDC-F0E0-4908-BF41-D7156CEAE9BE</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>externaltriggerid</key>
-				<string>classify</string>
-				<key>passinputasargument</key>
-				<false/>
-				<key>passvariables</key>
-				<true/>
-				<key>workflowbundleid</key>
-				<string>self</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.callexternaltrigger</string>
-			<key>uid</key>
-			<string>AA38D527-D93F-4DDE-8F82-833D6BB09F99</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>availableviaurlhandler</key>
-				<false/>
-				<key>triggerid</key>
-				<string>classify</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.external</string>
-			<key>uid</key>
-			<string>286EC843-6EC0-4445-A32A-535A1D696C39</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string></string>
-				<key>passthroughargument</key>
-				<true/>
-				<key>variables</key>
-				<dict>
-					<key>tmp_params</key>
-					<string>{var:tmp_params}&amp;{var:split1}={var:split4}</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>37926234-F93C-4BD2-9A3B-6215D916C328</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string></string>
-				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
-				<dict>
-					<key>open_background</key>
-					<string>{query}</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>567C614B-B90C-4075-817A-8ECF5F526D42</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<false/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string></string>
-				<key>script</key>
-				<string>jq -n --arg q "$1" --arg url "$url" '($url | split("://")[1:] | join("://") | split("?")[0] | ltrimstr("/")) as $path
-| {items:
-	[
-		{title: (if $q == "" then "Name this URL" else $q end),
-		subtitle: (if $q == "" then "empty ⏎ uses the path: " + $path else "show as \"" + $q + "\" in the urls list" end),
-		arg: (if $q == "" then $path else $q end)
-		}
-	]
-}'</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string></string>
-				<key>type</key>
-				<integer>11</integer>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>D48300AD-7C44-49E5-B40B-0456E74780DF</string>
-			<key>version</key>
-			<integer>3</integer>
 		</dict>
 	</array>
 	<key>readme</key>
