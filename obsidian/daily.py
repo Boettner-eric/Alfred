@@ -4,6 +4,7 @@
 Usage: daily.py [query]      list yesterday's tomorrow tasks, today's tasks, then tomorrow's tasks, as Alfred JSON
        daily.py --toggle N   check or uncheck task N (1-based, note order)
        daily.py --move N     move task N and its subtasks between the tasks and tomorrow headings, or from yesterday to today
+       daily.py --add TEXT   add an unchecked task to the end of the tasks heading
 Set list=habits, list=tomorrow or list=yesterday to use that list instead of today's tasks.
 """
 import json
@@ -122,24 +123,40 @@ def move_task(index):
     block = [line[len(prefix):] if line.startswith(prefix) else line.lstrip() for line in lines[start : end + 1]]
     rest = lines[:start] + lines[end + 1 :]
     dest = rest if target_path == path else target_path.read_text().splitlines()
-
-    found = next((i for i, line in enumerate(dest) if is_heading(line, target)), None)
-    if found is None:
-        while dest and not dest[-1].strip():
-            dest.pop()
-        dest += ["", f"# {heading(target)}"]
-        found = len(dest) - 1
-    insert = found + 1
-    for i in range(found + 1, len(dest)):
-        if HEADING_RE.match(dest[i]):
-            break
-        if dest[i].strip():
-            insert = i + 1
-    dest[insert:insert] = block
+    insert_block(dest, target, block)
     target_path.write_text("\n".join(dest) + "\n")
     if dest is not rest:
         path.write_text("\n".join(rest) + "\n")
     print(f"moved to {move_label(LIST).lower()}: {task.text}")
+
+
+def insert_block(lines, list_name, block):
+    """Insert block at the end of list_name's heading, adding the heading at the bottom if missing."""
+    found = next((i for i, line in enumerate(lines) if is_heading(line, list_name)), None)
+    if found is None:
+        while lines and not lines[-1].strip():
+            lines.pop()
+        lines += ["", f"# {heading(list_name)}"]
+        found = len(lines) - 1
+    insert = found + 1
+    for i in range(found + 1, len(lines)):
+        if HEADING_RE.match(lines[i]):
+            break
+        if lines[i].strip():
+            insert = i + 1
+    lines[insert:insert] = block
+
+
+def add_task(text):
+    if LIST == "yesterday":
+        sys.exit("Can't add to yesterday")
+    path = note_path(LIST)
+    if not path.exists():
+        sys.exit(f"No daily note {path.name}")
+    lines = path.read_text().splitlines()
+    insert_block(lines, LIST, [f"- [ ] {text}"])
+    path.write_text("\n".join(lines) + "\n")
+    print(f"added to {heading(LIST).lower()}: {text}")
 
 
 def move_label(list_name):
@@ -188,7 +205,7 @@ def list_tasks(query):
 
 
 def main():
-    actions = {"--toggle": toggle_task, "--move": move_task}
+    actions = {"--toggle": toggle_task, "--move": move_task, "--add": add_task}
     action = actions.get(sys.argv[1]) if len(sys.argv) > 1 else None
     if not VAULT:
         if action:
@@ -196,6 +213,12 @@ def main():
         json.dump({"items": [{"title": MISSING_VAULT, "valid": False}]}, sys.stdout)
         return
 
+    if action is add_task:
+        text = " ".join(sys.argv[2:]).strip()
+        if not text:
+            sys.exit("Usage: daily.py --add TEXT")
+        action(text)
+        return
     if action:
         if len(sys.argv) != 3 or not sys.argv[2].isdigit():
             sys.exit(f"Usage: daily.py {sys.argv[1]} N")

@@ -8,6 +8,19 @@
 	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
+		<key>0161FDC4-641E-4E8D-BC13-30BCCB9D4F42</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>A543DF11-5968-4C16-A4AA-504056878077</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>1AD112E6-21BB-473F-8BD0-5F2A36EA8C8D</key>
 		<array>
 			<dict>
@@ -47,6 +60,29 @@
 				<false/>
 			</dict>
 		</array>
+		<key>56D6CC30-7B04-4F8A-8B93-6CD688CC037B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>0161FDC4-641E-4E8D-BC13-30BCCB9D4F42</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>7DC82B59-F50A-479E-BBFE-C57A8F3A4F96</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>Add to Tomorrow</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>7BD1A839-82BE-49E6-9AC9-38A969564D90</key>
 		<array>
 			<dict>
@@ -76,6 +112,19 @@
 				<integer>1048576</integer>
 				<key>modifiersubtext</key>
 				<string>Open in Obsidian</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>7DC82B59-F50A-479E-BBFE-C57A8F3A4F96</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>A543DF11-5968-4C16-A4AA-504056878077</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -114,6 +163,29 @@
 	<string>Obsidian</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>./daily.py --add "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>0161FDC4-641E-4E8D-BC13-30BCCB9D4F42</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -233,6 +305,27 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>ta</string>
+				<key>subtext</key>
+				<string>Add to today's tasks</string>
+				<key>text</key>
+				<string>Add task</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>56D6CC30-7B04-4F8A-8B93-6CD688CC037B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -278,6 +371,29 @@
 			<string>7BD1A839-82BE-49E6-9AC9-38A969564D90</string>
 			<key>version</key>
 			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>list=tomorrow ./daily.py --add "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>7DC82B59-F50A-479E-BBFE-C57A8F3A4F96</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -351,11 +467,18 @@
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>Daily note tasks (dl), habits (hb) and Reminder plugin reminders (rm) from Obsidian.
+	<string>Daily note tasks (dl), habits (hb), adding tasks (ta) and Reminder plugin reminders (rm) from Obsidian.
 
 See https://github.com/Boettner-eric/Alfred/ for more info</string>
 	<key>uidata</key>
 	<dict>
+		<key>0161FDC4-641E-4E8D-BC13-30BCCB9D4F42</key>
+		<dict>
+			<key>xpos</key>
+			<real>355</real>
+			<key>ypos</key>
+			<real>555</real>
+		</dict>
 		<key>0513F80F-11DE-4DDB-B1D2-DEBEFEAB5ABF</key>
 		<dict>
 			<key>xpos</key>
@@ -384,12 +507,26 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<key>ypos</key>
 			<real>45</real>
 		</dict>
+		<key>56D6CC30-7B04-4F8A-8B93-6CD688CC037B</key>
+		<dict>
+			<key>xpos</key>
+			<real>95</real>
+			<key>ypos</key>
+			<real>555</real>
+		</dict>
 		<key>7BD1A839-82BE-49E6-9AC9-38A969564D90</key>
 		<dict>
 			<key>xpos</key>
 			<real>95</real>
 			<key>ypos</key>
 			<real>215</real>
+		</dict>
+		<key>7DC82B59-F50A-479E-BBFE-C57A8F3A4F96</key>
+		<dict>
+			<key>xpos</key>
+			<real>355</real>
+			<key>ypos</key>
+			<real>725</real>
 		</dict>
 		<key>93A97536-BD78-42A7-B339-B30C1F699805</key>
 		<dict>
