@@ -1217,7 +1217,7 @@ jq -f alfred.jq urls.json</string>
 				<key>externaltriggerid</key>
 				<string>classify</string>
 				<key>passinputasargument</key>
-				<false/>
+				<true/>
 				<key>passvariables</key>
 				<true/>
 				<key>workflowbundleid</key>
@@ -1477,7 +1477,7 @@ jq --slurpfile urls urls.json -f history/get-history.jq history/history.json</st
 			<key>config</key>
 			<dict>
 				<key>alfredfiltersresults</key>
-				<true/>
+				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
 				<key>argumenttreatemptyqueryasnil</key>

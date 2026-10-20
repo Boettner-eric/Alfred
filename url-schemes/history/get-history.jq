@@ -1,6 +1,7 @@
 # Usage: jq --slurpfile urls urls.json -f history/get-history.jq history/history.json
 # Merges history/history.json entries with their parent in urls.json (object keyed by scheme id).
 # History entries that don't match any urls.json scheme/path are shown as raw URL items.
+# When several saved entries share a path, the one with the most defaults present in the url wins.
 
 def path_and_query:
   (split("?") | .[0]) as $path_only
@@ -41,9 +42,13 @@ def entry_icon: .name.icon // .icon;
           | select($url | startswith($scheme))
           | .key as $scheme_id
           | ($url | ltrimstr($scheme) | path_and_query) as $parsed
-          | ($entry | entry_paths)[$parsed.path] as $path_obj
-          | select($path_obj != null)
           | ($parsed.query | query_to_params) as $actual_params
+          | ([($entry | entry_paths) | to_entries[]
+              | select((.value.path // .key) == $parsed.path)
+              | .value
+              | select(.defaults // {} | to_entries | all(. as $d | $actual_params[$d.key] == $d.value))]
+            | max_by(.defaults // {} | length)) as $path_obj
+          | select($path_obj != null)
           | ($scheme + $parsed.path + (if $actual_params | length > 0 then "?" + ($actual_params | to_entries | map("\(.key)=\(.value)") | join("&")) else "" end)) as $arg
           | {
               count: $count,

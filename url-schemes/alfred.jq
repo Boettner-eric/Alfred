@@ -1,4 +1,5 @@
-# Consumes urls.json (object keyed by scheme id). Each value: { name: { app, scheme, icon }, paths: { "path-slug": { description, background, params } } }.
+# Consumes urls.json (object keyed by scheme id). Each value: { name: { app, scheme, icon }, paths: { "key": { path, description, background, params } } }.
+# path falls back to the key for entries saved before keys were made unique.
 # params: { "k": { type, example } }. defaults: { "k": "raw value" }, always sent verbatim.
 
 def defaults_query: . // {} | to_entries | map("\(.key)=\(.value)") | join("&");
@@ -19,8 +20,8 @@ def entry_meta: .name // .;
   | ($entry | entry_meta) as $meta
   | ($entry | entry_paths)
   | to_entries[]
-  | .key as $path_slug
   | .value as $path_obj
+  | ($path_obj.path // .key) as $path_slug
   | {
       title: ($scheme_id + " - " + ($path_obj.description // $path_slug)),
       subtitle: ("open " + $meta.scheme + $path_slug),

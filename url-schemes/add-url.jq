@@ -8,7 +8,8 @@
 # Optional: --arg label "My URL" sets the description shown in the urls list (defaults to the path).
 #
 # Structure: urls.json is an object keyed by scheme id (e.g. "finetune"). Each value:
-#   { name: { app, scheme, icon }, paths: { "path-slug": { description, background, defaults: { "k": "raw value" }, params: { "k": { type, example } } } } }
+#   { name: { app, scheme, icon }, paths: { "key": { path, description, background, defaults: { "k": "raw value" }, params: { "k": { type, example } } } } }
+#   key is the path slug, suffixed (-2, -3, ...) when that path is already saved, so re-adding a path never overwrites.
 
 def infer_type:
   if type != "string" then "string"
@@ -54,14 +55,16 @@ def query_pairs:
 | ($pairs | map(select(.[0] as $k | $fixed_keys | index($k))) | map({(.[0]): .[1]}) | add // {}) as $defaults
 | ($path_only | split("/")[0]) as $path_slug
 | ($ARGS.named.label // "" | if . != "" then . else $path_only | gsub("^/"; "") | if . == "" then $path_slug else . end end) as $description
-| ({ description: $description, background: false }
+| ({ path: $path_slug, description: $description, background: false }
   + (if $defaults | length > 0 then { defaults: $defaults } else {} end)
   + (if $params | length > 0 then { params: $params } else {} end)) as $new_path
 | ($parsed.scheme | rtrimstr("://")) as $scheme_id
 | $root
 | if .[$scheme_id] != null then
     (.[$scheme_id].name // .[$scheme_id]) as $existing
-    | (($existing.name.paths // $existing.paths // {}) + {($path_slug): $new_path}) as $merged_paths
+    | ($existing.name.paths // $existing.paths // {}) as $existing_paths
+    | (first(range(1; infinite) | (if . == 1 then $path_slug else "\($path_slug)-\(.)" end) | select($existing_paths[.] == null))) as $key
+    | ($existing_paths + {($key): $new_path}) as $merged_paths
     | .[$scheme_id].name = (($existing.name // $existing) | .paths = $merged_paths)
   else
     . + {($scheme_id): {

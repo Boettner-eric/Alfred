@@ -19,6 +19,7 @@ _See history of urls and Browser/Jump to a specific url_
 - Add any url with custom params
   - `urla` steps through each query param: mark it **configurable** (prompted on each run) or **default** (always sent as-is)
   - The last step names the url; the name replaces the path in the `urls` list
+  - Saving another url with the same path adds a new entry instead of replacing the existing one
 - Fill out a URL template
 - Save history of urls
 - Favorite URLs (todo)
