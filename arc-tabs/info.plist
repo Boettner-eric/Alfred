@@ -144,7 +144,7 @@ end run</string>
 				<key>runningsubtext</key>
 				<string>Loading data…</string>
 				<key>script</key>
-				<string>jq -f alfred.jq "/Users/boettner/Library/Application Support/Arc/StorableSidebar.json"</string>
+				<string>jq -f alfred.jq "$HOME/Library/Application Support/Arc/StorableSidebar.json"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>

@@ -1,15 +1,22 @@
 # Required variables:
 # $input: Name of current input device
 # $output: Name of current output device
-# $denylist: Array of device names to exclude, regardless of type
-# $input_denylist: Array of device names to exclude when type is input
-# $output_denylist: Array of device names to exclude when type is output
-{
+# $denylist: JSON array of device names to exclude, regardless of type
+# $input_denylist: JSON array of device names to exclude when type is input
+# $output_denylist: JSON array of device names to exclude when type is output
+
+# Older configs wrap the array in single quotes ('["a"]'); anything that isn't a JSON array counts as empty.
+def device_list: ltrimstr("'") | rtrimstr("'") | (fromjson? // []) | if type == "array" then . else [] end;
+
+($denylist | device_list) as $deny
+| ($input_denylist | device_list) as $input_deny
+| ($output_denylist | device_list) as $output_deny
+| {
   skipknowledge: true,
   items: [.[] | select(.name as $name | .type as $type
-      | ($denylist | index($name) | not)
-      and (if $type == "input" then ($input_denylist | index($name) | not) else true end)
-      and (if $type == "output" then ($output_denylist | index($name) | not) else true end))]
+      | ($name | IN($deny[]) | not)
+      and (if $type == "input" then ($name | IN($input_deny[]) | not) else true end)
+      and (if $type == "output" then ($name | IN($output_deny[]) | not) else true end))]
   | sort_by(if (.name == $input and .type == "input") or (.name == $output and .type == "output")
       then 0 else 1 end)
   | [.[]

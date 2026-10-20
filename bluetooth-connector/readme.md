@@ -8,7 +8,9 @@
 # Setup
 
 - download [SF Pro](https://developer.apple.com/fonts/) font for battery icons
-- install blueutil `brew install blueutil`
+- install BluetoothConnector `brew install bluetoothconnector`
+- install SwitchAudioSource `brew install switchaudio-osx` (switches audio to the airpods on quick connect)
+- `make install` to create the alfred symlink
 - set your trigger commands
 - select a bluetooth device and use `⌘` + `⏎` to mark it as your airpods
 - bind the hotkey to quick connect

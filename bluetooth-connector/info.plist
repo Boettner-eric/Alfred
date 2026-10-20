@@ -317,17 +317,17 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>if [ $1 = "connect" ]; then
-	if [ $2 = $AIRPODS_MAC ]; then
-		/opt/homebrew/bin/BluetoothConnector --connect $2
+				<string>if [ "$1" = "connect" ]; then
+	if [ "$2" = "$AIRPODS_MAC" ]; then
+		/opt/homebrew/bin/BluetoothConnector --connect "$2"
 		sleep 5
-  		/opt/homebrew/bin/SwitchAudioSource -t input -s "$input"  
-	 	/opt/homebrew/bin/SwitchAudioSource -t output -s "$3"
+		/opt/homebrew/bin/SwitchAudioSource -t input -s "$input"
+		/opt/homebrew/bin/SwitchAudioSource -t output -s "$3"
 	else
-		/opt/homebrew/bin/BluetoothConnector --connect $2
+		/opt/homebrew/bin/BluetoothConnector --connect "$2"
 	fi
 else
-	/opt/homebrew/bin/BluetoothConnector --disconnect $2
+	/opt/homebrew/bin/BluetoothConnector --disconnect "$2"
 fi</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>

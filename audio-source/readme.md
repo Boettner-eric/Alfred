@@ -17,7 +17,7 @@ It has support for both input and output devices and can be easily configured wi
 - Use `make install` to create a symlink to alfred's workflow folder
 - Set your trigger keywords in the `Configure Workflow` menu
 - Set a hotkey for the input mute
-- Add devices to the denylist to hide them from alfred's options
+- Add devices to the denylist to hide them from alfred's options, as a json list of exact device names like `["Device Name","Other Device Name"]`
   - `Denylist` hides a device regardless of whether it's used as input or output
   - `Input Denylist` / `Output Denylist` hide a device only when used as that type
 

@@ -1,2 +1,2 @@
 install:
-	ln -sn $(PWD) ~/Library/Application\ Support/Alfred/Alfred.alfredpreferences/workflows/user.workflow.arc-bookmarks
+	ln -sn $(PWD) ~/Library/Application\ Support/Alfred/Alfred.alfredpreferences/workflows/user.workflow.arc-tabs

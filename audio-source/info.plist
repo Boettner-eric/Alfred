@@ -1271,7 +1271,8 @@ SwitchAudioSource -a -f json | jq -s --arg input "$input" --arg output "$output"
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>jq --arg id "$id" --arg title "$title" --arg icon "$icon" --arg input "$input" --arg output "$output" -f scenes/add-scene.jq scenes/scenes.json &gt; scenes/scenes.json.tmp &amp;&amp; mv scenes/scenes.json.tmp scenes/scenes.json</string>
+				<string>[[ -f scenes/scenes.json ]] || echo '[]' &gt; scenes/scenes.json
+jq --arg id "$id" --arg title "$title" --arg icon "$icon" --arg input "$input" --arg output "$output" -f scenes/add-scene.jq scenes/scenes.json &gt; scenes/scenes.json.tmp &amp;&amp; mv scenes/scenes.json.tmp scenes/scenes.json</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1345,7 +1346,8 @@ SwitchAudioSource -a -f json | jq -s --arg input "$input" --arg output "$output"
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>jq -f scenes/alfred.jq "scenes/scenes.json"</string>
+				<string>[[ -f scenes/scenes.json ]] || echo '[]' &gt; scenes/scenes.json
+jq -f scenes/alfred.jq "scenes/scenes.json"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1756,7 +1758,7 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<key>config</key>
 			<dict>
 				<key>default</key>
-				<string>'["ZoomAudioDevice"]'</string>
+				<string>["ZoomAudioDevice"]</string>
 				<key>placeholder</key>
 				<string></string>
 				<key>required</key>
@@ -1765,7 +1767,7 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 				<true/>
 			</dict>
 			<key>description</key>
-			<string>Ignore specific devices, regardless of input/output, via a json list. Format like '["Device Name","Other Device Name"]'</string>
+			<string>Ignore specific devices, regardless of input/output, via a json list. Format like ["Device Name","Other Device Name"]</string>
 			<key>label</key>
 			<string>Denylist</string>
 			<key>type</key>
@@ -1777,7 +1779,7 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<key>config</key>
 			<dict>
 				<key>default</key>
-				<string>'[]'</string>
+				<string>[]</string>
 				<key>placeholder</key>
 				<string></string>
 				<key>required</key>
@@ -1786,7 +1788,7 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 				<true/>
 			</dict>
 			<key>description</key>
-			<string>Ignore specific devices when used as an input via a json list. Format like '["Device Name","Other Device Name"]'</string>
+			<string>Ignore specific devices when used as an input via a json list. Format like ["Device Name","Other Device Name"]</string>
 			<key>label</key>
 			<string>Input Denylist</string>
 			<key>type</key>
@@ -1798,7 +1800,7 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<key>config</key>
 			<dict>
 				<key>default</key>
-				<string>'[]'</string>
+				<string>[]</string>
 				<key>placeholder</key>
 				<string></string>
 				<key>required</key>
@@ -1807,7 +1809,7 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 				<true/>
 			</dict>
 			<key>description</key>
-			<string>Ignore specific devices when used as an output via a json list. Format like '["Device Name","Other Device Name"]'</string>
+			<string>Ignore specific devices when used as an output via a json list. Format like ["Device Name","Other Device Name"]</string>
 			<key>label</key>
 			<string>Output Denylist</string>
 			<key>type</key>
