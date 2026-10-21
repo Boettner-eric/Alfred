@@ -36,6 +36,19 @@
 		</array>
 		<key>0EBB1918-E422-41F8-B500-2A4469CF6EA7</key>
 		<array/>
+		<key>13AF52C4-A7A9-4954-B237-BF0167B1443E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>0EBB1918-E422-41F8-B500-2A4469CF6EA7</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>14D512E9-9D3F-4105-8FBB-CB4A69A4AA00</key>
 		<array>
 			<dict>
@@ -281,7 +294,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>3059C7D9-2D78-4308-87E8-CAC81503AF03</string>
+				<string>13AF52C4-A7A9-4954-B237-BF0167B1443E</string>
 				<key>modifiers</key>
 				<integer>1048576</integer>
 				<key>modifiersubtext</key>
@@ -430,13 +443,13 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>6213C6B4-7958-4BAA-869D-40AE16B7BD2B</string>
+				<string>6372C541-9F3D-44CD-8E0C-0A0FA37F8FFE</string>
 				<key>modifiers</key>
 				<integer>1048576</integer>
 				<key>modifiersubtext</key>
 				<string>copy "{query}"</string>
 				<key>vitoclose</key>
-				<false/>
+				<true/>
 			</dict>
 		</array>
 		<key>E9B05AC9-172B-4BA8-ACFC-37DF85362841</key>
@@ -641,6 +654,36 @@ content=$(jq --arg url "$url" -f history/add-entry.jq history/history.json) &amp
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>if [[ $background == 1 || $background == true ]]; then
+	open -g "$1"
+else
+	open "$1"
+fi
+
+# pipe into history file here
+echo -n "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>13AF52C4-A7A9-4954-B237-BF0167B1443E</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>subtext</key>
@@ -741,25 +784,6 @@ echo -n "$url"</string>
 			<string>2C8D41AE-5E7B-4C38-8338-A356CB49B845</string>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>autopaste</key>
-				<false/>
-				<key>clipboardtext</key>
-				<string>{var:copy}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>transient</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>3059C7D9-2D78-4308-87E8-CAC81503AF03</string>
-			<key>version</key>
-			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -983,21 +1007,25 @@ echo -n "$url"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>autopaste</key>
+				<key>concurrently</key>
 				<false/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>transient</key>
-				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>content=$(jq --arg url "$1" 'del(.[$url])' history/history.json) &amp;&amp; printf '%s' "$content" &gt; history/history.json</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>6213C6B4-7958-4BAA-869D-40AE16B7BD2B</string>
+			<string>6372C541-9F3D-44CD-8E0C-0A0FA37F8FFE</string>
 			<key>version</key>
-			<integer>3</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1761,6 +1789,15 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<key>ypos</key>
 			<real>625</real>
 		</dict>
+		<key>13AF52C4-A7A9-4954-B237-BF0167B1443E</key>
+		<dict>
+			<key>note</key>
+			<string>Open with defaults</string>
+			<key>xpos</key>
+			<real>280</real>
+			<key>ypos</key>
+			<real>335</real>
+		</dict>
 		<key>14D512E9-9D3F-4105-8FBB-CB4A69A4AA00</key>
 		<dict>
 			<key>note</key>
@@ -1799,13 +1836,6 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<real>1045</real>
 			<key>ypos</key>
 			<real>395</real>
-		</dict>
-		<key>3059C7D9-2D78-4308-87E8-CAC81503AF03</key>
-		<dict>
-			<key>xpos</key>
-			<real>280</real>
-			<key>ypos</key>
-			<real>335</real>
 		</dict>
 		<key>3781B7DE-81B5-4D45-9C80-13DC55DC8B99</key>
 		<dict>
@@ -1860,8 +1890,10 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<key>ypos</key>
 			<real>555</real>
 		</dict>
-		<key>6213C6B4-7958-4BAA-869D-40AE16B7BD2B</key>
+		<key>6372C541-9F3D-44CD-8E0C-0A0FA37F8FFE</key>
 		<dict>
+			<key>note</key>
+			<string>Remove from history</string>
 			<key>xpos</key>
 			<real>275</real>
 			<key>ypos</key>

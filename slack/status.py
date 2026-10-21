@@ -97,6 +97,7 @@ def format_status(status):
             icon = f'{APPLE_EMOJI_PATH}/1F604.png'
     return {
         "arg": f'{emote} {minutes} {"/|/".join(status.split(" "))}',
+        "text": {"copy": status},
         "subtitle": format_time(minutes),
         "icon": {
             "path": icon

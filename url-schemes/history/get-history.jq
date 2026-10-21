@@ -65,8 +65,11 @@ def entry_icon: .name.icon // .icon;
             }
         ] as $matched
         | if ($matched | length) > 0 then $matched[] else fallback_item($url; $count) end
+        # the rebuilt arg can differ from the stored key, so removal targets the key itself
+        | .item += {uid: $url, mods: {cmd: {arg: $url, subtitle: "remove from history"}}}
     )
   ]
 | sort_by(-.count)
-| { items: [.[].item] }
+# rerun picks up removals while Alfred stays open; uids keep the selection in place
+| { items: [.[].item], rerun: 0.1, skipknowledge: true }
 | (if .items | length == 0 then { items: [{ title: "No History", subtitle: "Try the urls command" }] } else . end)

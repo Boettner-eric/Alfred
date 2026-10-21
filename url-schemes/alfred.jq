@@ -9,6 +9,16 @@ def flatten_params($defaults):
   | map(select(. != "")) | join("&")
   | if . == "" then "" else "?" + . end;
 
+# What the prompts would send if every one were skipped with an empty ⏎: an
+# example minus its "e.g. " prefix stands in as the value, and params left
+# with nothing are dropped.
+def quick_params($defaults):
+  ([($defaults | defaults_query)] + (. // {} | to_entries | map(
+      (.value.example // "" | if type == "string" then . else tostring end | ltrimstr("e.g. ")) as $value
+      | if $value == "" then "" else "\(.key)=\($value | @uri)" end)))
+  | map(select(. != "")) | join("&")
+  | if . == "" then "" else "?" + . end;
+
 # paths may live under .paths or .name.paths (legacy)
 def entry_paths: .paths // .name.paths;
 def entry_meta: .name // .;
@@ -22,15 +32,24 @@ def entry_meta: .name // .;
   | to_entries[]
   | .value as $path_obj
   | ($path_obj.path // .key) as $path_slug
+  | ($meta.scheme + $path_slug + ($path_obj.params | flatten_params($path_obj.defaults))) as $url
+  | ($path_obj.background // false) as $background
   | {
       title: ($scheme_id + " - " + ($path_obj.description // $path_slug)),
       subtitle: ("open " + $meta.scheme + $path_slug),
       arg: (($meta | del(.paths) | . + {"path": $path_slug}) | tostring),
+      text: {copy: $url},
       variables: {
         "params": ($path_obj.params // {} | tostring),
         "defaults": ($path_obj.defaults | defaults_query),
-        "background": ($path_obj.background // false),
-        "copy": ($meta.scheme + $path_slug + ($path_obj.params | flatten_params($path_obj.defaults)))
+        "background": $background
+      },
+      mods: {
+        cmd: {
+          arg: ($meta.scheme + $path_slug + ($path_obj.params | quick_params($path_obj.defaults))),
+          subtitle: "open now with default values",
+          variables: {"background": $background}
+        }
       },
       icon: { type: "fileicon", path: $meta.icon }
     }

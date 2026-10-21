@@ -42,11 +42,11 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>44F227E8-6C8E-4AC7-BB67-82276CA5D673</string>
+				<string>43360D5A-7E1B-4C49-8FB0-CA283538EBF9</string>
 				<key>modifiers</key>
 				<integer>1048576</integer>
 				<key>modifiersubtext</key>
-				<string>Copy url</string>
+				<string>Open in incognito window</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -100,21 +100,34 @@ end run</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>autopaste</key>
+				<key>concurrently</key>
 				<false/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>transient</key>
-				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>on run argv
+  set theUrl to item 1 of argv
+  tell application "Arc"
+    make new window with properties {incognito:true}
+    tell front window
+      make new tab with properties {URL:theUrl}
+    end tell
+    activate
+  end tell
+end run</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>6</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>44F227E8-6C8E-4AC7-BB67-82276CA5D673</string>
+			<string>43360D5A-7E1B-4C49-8FB0-CA283538EBF9</string>
 			<key>version</key>
-			<integer>3</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -235,7 +248,7 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<key>ypos</key>
 			<real>280</real>
 		</dict>
-		<key>44F227E8-6C8E-4AC7-BB67-82276CA5D673</key>
+		<key>43360D5A-7E1B-4C49-8FB0-CA283538EBF9</key>
 		<dict>
 			<key>xpos</key>
 			<real>415</real>

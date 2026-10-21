@@ -59,6 +59,7 @@ def format_device($device; $is_connected):
     icon: choose_icon(.key; .value),
     subtitle: describe_device(.key; .value; $is_connected),
     arg: [(if $is_connected then "disconnect" else "connect" end), $device_address, .key],
+    text: {copy: .key},
     mods: {
       alt: {
         subtitle: ("copy address " + $device_address),

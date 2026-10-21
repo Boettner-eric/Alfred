@@ -29,6 +29,7 @@ It has support for both input and output devices and can be easily configured wi
 
 # Mods
 - `⌘` -> set as output
-- `⌥` -> copy device name (useful for denylist)
-- `⌃` -> set as input
+- `⌥` -> set as input
+- `⌃` -> hide the device for its type (adds it to `Input Denylist` / `Output Denylist`)
 - `⇧` -> toggle input/output mute state
+- `⌘C` -> copy device name

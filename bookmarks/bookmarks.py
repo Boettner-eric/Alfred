@@ -208,6 +208,7 @@ def list_items():
             filled[key] = mod
             filled[f'{key}+shift'] = copy_mod(mod.get('arg', ''), mod.get('icon', icon))
         item['mods'] = {**filled, **mods}
+        item['text'] = {'copy': filled['cmd'].get('arg', '')}
     json.dump(data, sys.stdout)
 
 

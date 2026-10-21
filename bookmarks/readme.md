@@ -24,6 +24,7 @@ off and a bound url borrows the page's own `<title>` instead.
 # Mods
 - `⌘` / `⌥` / `⌃` / `fn` -> open the url bound to that key, or the main one if nothing is bound
 - `⇧` -> copy rather than open, so `⌘⇧` copies the url `⌘` would have opened
+- `⌘C` -> copy the `⌘` url, the same as `⌘⇧`
 
 Bindings live under each entry's `mods` object in `common.json` and can be
 hand-edited too. The `⇧` copy variants are generated on the fly, so they never

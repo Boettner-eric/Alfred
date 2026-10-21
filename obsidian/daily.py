@@ -179,6 +179,7 @@ def task_items(path, list_name, query):
             "icon": {"path": f"icons/{'checked' if t.done else 'unchecked'}.png"},
             "subtitle": ANCHOR + SUBTITLE_INDENT * t.depth + subtitle(list_name, t),
             "arg": str(t.index),
+            "text": {"copy": t.text},
             "variables": {"list": list_name},
             "mods": {
                 "cmd": {"arg": open_url(path, t.line_number), "subtitle": "Open in Obsidian"},

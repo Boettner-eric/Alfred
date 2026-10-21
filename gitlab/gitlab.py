@@ -43,6 +43,7 @@ def get_users():
             users.append(
                 {
                     "arg": f"author_username={user['username']}",
+                    "text": {"copy": user["username"]},
                     "subtitle": f"Get {first_name}'s active pull requests",
                     "icon": {"path": f"users/{user['username']}.png"},
                     "uid": f"pr {user['username']}",

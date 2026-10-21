@@ -31,6 +31,7 @@ def device_list: ltrimstr("'") | rtrimstr("'") | (fromjson? // []) | if type == 
           else .type 
         end),
       match: (.name + " " + .type),
+      text: {copy: .name},
       icon: (if .name | contains("AirPods Max")
           then {path: "icons/airpods-max.png"}
           elif .name | contains("AirPods")
@@ -54,8 +55,8 @@ def device_list: ltrimstr("'") | rtrimstr("'") | (fromjson? // []) | if type == 
         },
         ctrl: {
           valid: true,
-          arg: .name,
-          subtitle: ("copy \"" + .name + "\" to clipboard"),
+          arg: (.type + "," + .name),
+          subtitle: ("hide from " + .type + "s (add to " + .type + " denylist)"),
         },
         shift: {
           valid: true,

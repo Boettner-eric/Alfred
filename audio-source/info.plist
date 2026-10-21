@@ -189,6 +189,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>5C1D23F0-EDB5-4883-90F9-90135818F07E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>560CC857-A5C6-4353-9933-1A4F1F63E7CD</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>878FA2B7-D3E2-44ED-8D50-75F367231255</key>
 		<array>
 			<dict>
@@ -330,7 +343,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>A5D04EAC-7977-48AE-97DA-5F070E9E8B4F</string>
+				<string>5C1D23F0-EDB5-4883-90F9-90135818F07E</string>
 				<key>modifiers</key>
 				<integer>262144</integer>
 				<key>modifiersubtext</key>
@@ -849,6 +862,50 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Audio Source</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>560CC857-A5C6-4353-9933-1A4F1F63E7CD</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>./denylist.sh "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>5C1D23F0-EDB5-4883-90F9-90135818F07E</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>keyword</key>
@@ -1081,25 +1138,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>autopaste</key>
-				<false/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>transient</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>A5D04EAC-7977-48AE-97DA-5F070E9E8B4F</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>availableviaurlhandler</key>
 				<true/>
 				<key>triggerid</key>
@@ -1184,10 +1222,14 @@
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>input=$(SwitchAudioSource -c -t input)
-output=$(SwitchAudioSource -c -t output)
+				<string># Start all three lookups at once; each takes ~50ms on its own.
+exec 3&lt; &lt;(SwitchAudioSource -c -t input)
+exec 4&lt; &lt;(SwitchAudioSource -c -t output)
+devices=$(SwitchAudioSource -a -f json)
+input=$(cat &lt;&amp;3)
+output=$(cat &lt;&amp;4)
 
-SwitchAudioSource -a -f json | jq -s --arg input "$input" --arg output "$output" --arg denylist "$denylist" --arg input_denylist "$input_denylist" --arg output_denylist "$output_denylist" -f alfred.jq</string>
+printf '%s' "$devices" | jq -s --arg input "$input" --arg output "$output" --arg denylist "$denylist" --arg input_denylist "$input_denylist" --arg output_denylist "$output_denylist" -f alfred.jq</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1521,6 +1563,22 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<key>ypos</key>
 			<real>660</real>
 		</dict>
+		<key>560CC857-A5C6-4353-9933-1A4F1F63E7CD</key>
+		<dict>
+			<key>xpos</key>
+			<real>1230</real>
+			<key>ypos</key>
+			<real>15</real>
+		</dict>
+		<key>5C1D23F0-EDB5-4883-90F9-90135818F07E</key>
+		<dict>
+			<key>note</key>
+			<string>Add to denylist</string>
+			<key>xpos</key>
+			<real>990</real>
+			<key>ypos</key>
+			<real>15</real>
+		</dict>
 		<key>878FA2B7-D3E2-44ED-8D50-75F367231255</key>
 		<dict>
 			<key>xpos</key>
@@ -1584,13 +1642,6 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<real>720</real>
 			<key>ypos</key>
 			<real>295</real>
-		</dict>
-		<key>A5D04EAC-7977-48AE-97DA-5F070E9E8B4F</key>
-		<dict>
-			<key>xpos</key>
-			<real>990</real>
-			<key>ypos</key>
-			<real>15</real>
 		</dict>
 		<key>B725D3D0-1910-46EC-8BE7-08FED760AFD8</key>
 		<dict>
