@@ -37,10 +37,26 @@ def format_duration_phrase($mins):
       else "\($hour_part) \($m) minutes" end
   end;
 
-def today($minutes_until; $time_range):
+def today($minutes_until; $phrase):
   if $minutes_until < 1 then "right now"
-  elif $minutes_until < 1440 then "in \(format_duration_phrase($minutes_until)) | Today from \($time_range)"
-  else "Today from \($time_range)" end;
+  elif $minutes_until < 1440 then "in \(format_duration_phrase($minutes_until)) | \($phrase)"
+  else $phrase end;
+
+def days_from_today($t):
+  (($t | mktime) - (now | strflocaltime("%Y-%m-%d") | strptime("%Y-%m-%d") | mktime)) / 86400 | floor;
+
+def day_label($days; $t; $next):
+  if $days == 0 then "Today"
+  elif $days == 1 then "Tomorrow"
+  elif $next and $days >= 7 then "Next \($t[6] | get_day_name)"
+  else $t[6] | get_day_name end;
+
+# all-day events run midnight to midnight with an exclusive end, so their last day is the day before the end
+def event_span($time_str):
+  ($time_str | split(" - ") | map(strptime("%Y-%m-%dT%H:%M:%S"))) as [$s, $e]
+  | ($s[3:6] == [0, 0, 0] and $e[3:6] == [0, 0, 0]) as $all_day
+  | (if $all_day then $e | mktime - 86400 | gmtime else $e end) as $last
+  | {start: $s, last: $last, all_day: $all_day, multi_day: ($s[0:3] != $last[0:3])};
 
 def update_meeting_subtitle($meeting):
   ($meeting.time | split(" - ") | map(strptime("%Y-%m-%dT%H:%M:%S") | mktime / 60)) as [$start, $end]
@@ -48,15 +64,20 @@ def update_meeting_subtitle($meeting):
   | calc_minute_diff($end) as $minutes_left
   | calc_day_diff($meeting.time) as $days_until
   | format_time_range($meeting.time) as $time_range
-  | ($meeting + {"subtitle": (
-      if $minutes_until <= 0 and $minutes_left == 1 then "now (about to end)"   
+  | event_span($meeting.time) as $span
+  | day_label(days_from_today($span.last); $span.last; false) as $last_label
+  | (if $span.all_day then "all day" else "from \($time_range)" end) as $when
+  | def phrase($label): if $span.multi_day then "\($label) - \($last_label)" else "\($label) \($when)" end;
+  ($meeting + {"subtitle": (
+      if $minutes_until <= 0 and $minutes_left > 0 and $span.multi_day then "now | \(phrase(day_label($days_until; $span.start; false)))"
+      elif $minutes_until <= 0 and $minutes_left > 0 and $span.all_day then "Today all day"
+      elif $minutes_until <= 0 and $minutes_left == 1 then "now (about to end)"
       elif $minutes_until <= 0 and $minutes_left > 0 then "now (\($minutes_left) minutes left)"
       # skip meetings that are over
       elif $minutes_left <= 0 or $days_until < 0 then empty
-      elif $days_until == 0 then today($minutes_until; $time_range)
-      elif $days_until == 1 then "Tomorrow from \($time_range)"
-      elif $days_until < 7 then "in \($days_until) days | \(($meeting.time | split(" - ")[0] | strptime("%Y-%m-%dT%H:%M:%S")[6]) | get_day_name) from \($time_range)"
-      elif $days_until < 14 then "in \($days_until) days | Next \(($meeting.time | split(" - ")[0] | strptime("%Y-%m-%dT%H:%M:%S")[6]) | get_day_name) from \($time_range)"
+      elif $days_until == 0 then today($minutes_until; phrase("Today"))
+      elif $days_until == 1 then phrase("Tomorrow")
+      elif $days_until < 14 then "in \($days_until) days | \(phrase(day_label($days_until; $span.start; true)))"
       elif $days_until < 31 then "\($days_until / 7 | floor) weeks from now"
       elif $days_until < 365 then "\($days_until / 30 | floor) months from now"
       else "\($days_until / 365 | floor) years from now" end
