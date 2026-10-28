@@ -4,17 +4,25 @@ def calculate_rerun($cache_time_seconds):
   # the whole list to redraw every 100ms while the background refresh ran.
   | if $diff_seconds < 300 then {} else {"rerun": 1} end;
 
-{
-  items: [.items | sort_by(.pushed_at) | reverse | .[] | {
+.login as $login
+| ($avatars | split("\n")) as $avatars
+| {
+  # Repos you were recently active in first (null sorts lowest), then by last push
+  items: [.items | sort_by([.active_at, .pushed_at]) | reverse | .[] | {
       uid: .html_url,
       title: .name, 
-      icon: (if .fork
+      icon: (if .owner != $login and (.owner + ".png" | IN($avatars[]))
+          then {path: "avatars/\(.owner).png"}
+          elif .fork
           then {path: "icons/fork.png"}
           elif .private
           then {path: "icons/private.png"}
           else {path: "icons/repo.png"}
         end),
-      subtitle: (.description // "No description"),
+      subtitle: (
+        (if .owner != null and .owner != $login then "\(.owner) · " else "" end)
+        + (.description // "No description")
+      ),
       arg: .html_url,
       mods: {
         cmd: {

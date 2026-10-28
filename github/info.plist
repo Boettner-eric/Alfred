@@ -8,6 +8,19 @@
 	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
+		<key>0AD2C4F5-E4DE-4C95-A09A-20BE24883E40</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>6FC43D78-7327-476B-80C4-B0A67E2B1EF0</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>51461A20-B29E-4973-B0F0-DC1691FA2549</key>
 		<array>
 			<dict>
@@ -31,6 +44,32 @@
 				<false/>
 			</dict>
 		</array>
+		<key>6FC43D78-7327-476B-80C4-B0A67E2B1EF0</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>DE3F3FBB-9AA0-4CFA-B973-6317A3503E77</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>C4474995-5BB0-4862-B59E-A0015D1B062F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>31FA8A38-71E8-4121-AD4E-04E2AF759EDB</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 	</dict>
 	<key>createdby</key>
 	<string>Eric Boettner</string>
@@ -42,6 +81,27 @@
 	<string>Github</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>{var:avatars_trigger}</string>
+				<key>subtext</key>
+				<string>Download owner avatars for repos you don't own</string>
+				<key>text</key>
+				<string>Github Avatars</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>0AD2C4F5-E4DE-4C95-A09A-20BE24883E40</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -115,6 +175,29 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>./avatars.sh</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>5</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>6FC43D78-7327-476B-80C4-B0A67E2B1EF0</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>autopaste</key>
 				<false/>
 				<key>clipboardtext</key>
@@ -131,6 +214,76 @@
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>{var:contributions_trigger}</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Loading contributions…</string>
+				<key>script</key>
+				<string>./contributions.sh</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>contributions for the last few days</string>
+				<key>title</key>
+				<string>Github Contributions</string>
+				<key>type</key>
+				<integer>5</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>C4474995-5BB0-4862-B59E-A0015D1B062F</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Github</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>DE3F3FBB-9AA0-4CFA-B973-6317A3503E77</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>A simple workflow for viewing Github Repos.
@@ -138,6 +291,15 @@
 See https://github.com/Boettner-eric/Alfred/ for more info</string>
 	<key>uidata</key>
 	<dict>
+		<key>0AD2C4F5-E4DE-4C95-A09A-20BE24883E40</key>
+		<dict>
+			<key>note</key>
+			<string>Download avatars</string>
+			<key>xpos</key>
+			<real>115</real>
+			<key>ypos</key>
+			<real>455</real>
+		</dict>
 		<key>31FA8A38-71E8-4121-AD4E-04E2AF759EDB</key>
 		<dict>
 			<key>xpos</key>
@@ -154,12 +316,35 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<key>ypos</key>
 			<real>65</real>
 		</dict>
+		<key>6FC43D78-7327-476B-80C4-B0A67E2B1EF0</key>
+		<dict>
+			<key>xpos</key>
+			<real>300</real>
+			<key>ypos</key>
+			<real>455</real>
+		</dict>
 		<key>9CBC6EA3-C8AD-41DD-A61F-5276F4DD211E</key>
 		<dict>
 			<key>xpos</key>
 			<real>305</real>
 			<key>ypos</key>
 			<real>185</real>
+		</dict>
+		<key>C4474995-5BB0-4862-B59E-A0015D1B062F</key>
+		<dict>
+			<key>note</key>
+			<string>Contribution graph</string>
+			<key>xpos</key>
+			<real>115</real>
+			<key>ypos</key>
+			<real>305</real>
+		</dict>
+		<key>DE3F3FBB-9AA0-4CFA-B973-6317A3503E77</key>
+		<dict>
+			<key>xpos</key>
+			<real>485</real>
+			<key>ypos</key>
+			<real>455</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
@@ -189,28 +374,7 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<key>config</key>
 			<dict>
 				<key>default</key>
-				<string></string>
-				<key>placeholder</key>
-				<string></string>
-				<key>required</key>
-				<true/>
-				<key>trim</key>
-				<true/>
-			</dict>
-			<key>description</key>
-			<string>Github username</string>
-			<key>label</key>
-			<string>Username</string>
-			<key>type</key>
-			<string>textfield</string>
-			<key>variable</key>
-			<string>Username</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>default</key>
-				<string></string>
+				<string>cgh</string>
 				<key>placeholder</key>
 				<string></string>
 				<key>required</key>
@@ -219,13 +383,34 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 				<true/>
 			</dict>
 			<key>description</key>
-			<string>Github Access Token</string>
+			<string>Pick a term to show your recent contributions</string>
 			<key>label</key>
-			<string>Token</string>
+			<string>Contributions trigger</string>
 			<key>type</key>
 			<string>textfield</string>
 			<key>variable</key>
-			<string>Token</string>
+			<string>contributions_trigger</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>gh-icons</string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Pick a term to download avatars for repo owners</string>
+			<key>label</key>
+			<string>Avatars trigger</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>avatars_trigger</string>
 		</dict>
 	</array>
 	<key>version</key>
