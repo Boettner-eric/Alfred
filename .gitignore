@@ -57,6 +57,8 @@ bookmarks/common.json
 github/repos.json
 github/contributions.json
 github/tmp.contributions.json
+github/users.json
+github/tmp.users.json
 github/avatars/
 
 workflow-manager/workflows.json

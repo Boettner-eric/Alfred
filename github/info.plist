@@ -57,11 +57,50 @@
 				<false/>
 			</dict>
 		</array>
+		<key>7D1C2E44-3B8A-4F51-9C6E-2A0B5D8E91F3</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>31FA8A38-71E8-4121-AD4E-04E2AF759EDB</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>A3E5F7B2-6C14-4D8E-B09A-5F2C1E7D4A86</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E8B4D1C6-2F7A-4935-8E1B-C6A9D3F05B27</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>C4474995-5BB0-4862-B59E-A0015D1B062F</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>31FA8A38-71E8-4121-AD4E-04E2AF759EDB</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E8B4D1C6-2F7A-4935-8E1B-C6A9D3F05B27</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>DE3F3FBB-9AA0-4CFA-B973-6317A3503E77</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -198,6 +237,55 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>{var:prs_trigger}</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Loading data…</string>
+				<key>script</key>
+				<string>./users.sh</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>enter github username</string>
+				<key>title</key>
+				<string>Github Pull Requests</string>
+				<key>type</key>
+				<integer>5</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>7D1C2E44-3B8A-4F51-9C6E-2A0B5D8E91F3</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>autopaste</key>
 				<false/>
 				<key>clipboardtext</key>
@@ -213,6 +301,27 @@
 			<string>9CBC6EA3-C8AD-41DD-A61F-5276F4DD211E</string>
 			<key>version</key>
 			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>{var:users_trigger}</string>
+				<key>subtext</key>
+				<string>Load org members and their avatars</string>
+				<key>text</key>
+				<string>Github Users</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>A3E5F7B2-6C14-4D8E-B09A-5F2C1E7D4A86</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -284,6 +393,29 @@
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>./users.sh fetch</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>5</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>E8B4D1C6-2F7A-4935-8E1B-C6A9D3F05B27</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>A simple workflow for viewing Github Repos.
@@ -323,12 +455,30 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<key>ypos</key>
 			<real>455</real>
 		</dict>
+		<key>7D1C2E44-3B8A-4F51-9C6E-2A0B5D8E91F3</key>
+		<dict>
+			<key>note</key>
+			<string>View pull requests by user</string>
+			<key>xpos</key>
+			<real>115</real>
+			<key>ypos</key>
+			<real>605</real>
+		</dict>
 		<key>9CBC6EA3-C8AD-41DD-A61F-5276F4DD211E</key>
 		<dict>
 			<key>xpos</key>
 			<real>305</real>
 			<key>ypos</key>
 			<real>185</real>
+		</dict>
+		<key>A3E5F7B2-6C14-4D8E-B09A-5F2C1E7D4A86</key>
+		<dict>
+			<key>note</key>
+			<string>Load users</string>
+			<key>xpos</key>
+			<real>115</real>
+			<key>ypos</key>
+			<real>755</real>
 		</dict>
 		<key>C4474995-5BB0-4862-B59E-A0015D1B062F</key>
 		<dict>
@@ -345,6 +495,13 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<real>485</real>
 			<key>ypos</key>
 			<real>455</real>
+		</dict>
+		<key>E8B4D1C6-2F7A-4935-8E1B-C6A9D3F05B27</key>
+		<dict>
+			<key>xpos</key>
+			<real>300</real>
+			<key>ypos</key>
+			<real>755</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
@@ -411,6 +568,48 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<string>textfield</string>
 			<key>variable</key>
 			<string>avatars_trigger</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>prs</string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Pick a term to list org members and open their pull requests</string>
+			<key>label</key>
+			<string>Pull requests trigger</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>prs_trigger</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>gh-users</string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Pick a term to reload org members and their avatars</string>
+			<key>label</key>
+			<string>Users trigger</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>users_trigger</string>
 		</dict>
 	</array>
 	<key>version</key>
