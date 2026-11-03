@@ -21,7 +21,7 @@ fetch_avatars() {
 }
 
 render() {
-	jq --arg avatars "$(ls avatars 2> /dev/null)" -f users.jq users.json
+	jq --arg avatars "$(ls avatars 2> /dev/null)" --arg default_org "${default_org:-}" -f users.jq users.json
 }
 
 if [ "$1" = "fetch" ]; then

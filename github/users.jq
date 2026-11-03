@@ -1,9 +1,13 @@
 ($avatars | split("\n")) as $avatars
+# The pulls page ANDs repeated org: filters, so scope each user to one org:
+# the configured default org if they're in it, otherwise their largest
+| (reduce .items[].orgs[] as $org ({}; .[$org] += 1)) as $org_sizes
 | {
   items: [.items | sort_by(.name // .login | ascii_downcase) | .[] |
     (.name // .login) as $name
     | ($name | split(" ")[0]) as $first
-    | ("https://github.com/pulls?q=is%3Aopen+is%3Apr+" + (.orgs | map("org%3A" + .) | join("+")) + "+") as $search
+    | (if any(.orgs[]; . == $default_org) then $default_org else .orgs | max_by($org_sizes[.]) end) as $org
+    | "https://github.com/pulls?q=is%3Aopen+is%3Apr+org%3A\($org)+" as $search
     | {
       uid: "pr \(.login)",
       title: $name,

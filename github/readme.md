@@ -7,7 +7,7 @@ This is still in progress and might have breaking changes
 
 `gh-icons` downloads avatars for those owners so their repos show the owner's avatar. Already-downloaded avatars are skipped; delete `avatars/` to refresh them
 
-`prs` lists the members of every org you belong to with their avatars. Users are loaded on first run; run `gh-users` to reload them and download any new avatars. Pull request links are scoped to the orgs you share with that user
+`prs` lists the members of every org you belong to with their avatars. Users are loaded on first run; run `gh-users` to reload them and download any new avatars. Pull request links are scoped to one org: the `Default org` from the workflow configuration when the user is in it, otherwise the largest org you share with them
 
 - default -> open pull requests the user authored
 - `⌘` -> view the user's profile
