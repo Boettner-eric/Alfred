@@ -1,2 +1,2 @@
 install:
-	ln -sn $(PWD) ~/Library/Application\ Support/Alfred/Alfred.alfredpreferences/workflows/user.workflow.url-schemes
+	ln -sfn $(PWD) ~/Library/Application\ Support/Alfred/Alfred.alfredpreferences/workflows/user.workflow.url-schemes
