@@ -20,8 +20,10 @@ _See history of urls and Browser/Jump to a specific url_
   - `urla` steps through each query param: mark it **configurable** (prompted on each run) or **default** (always sent as-is)
   - The last step names the url; the name replaces the path in the `urls` list
   - Saving another url with the same path adds a new entry instead of replacing the existing one
+  - The full path is kept, so `app://x-callback-url/create` and `app://x-callback-url/open` are separate paths
 - Fill out a URL template
 - Save history of urls
+  - The same url written differently (param order, percent-encoding, trailing `/`) is one history entry; removing it removes every spelling
 - Favorite URLs (todo)
 
 # Mods

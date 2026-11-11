@@ -611,7 +611,7 @@ echo -n $url</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>[[ -f history/history.json ]] || echo '{}' &gt; history/history.json
+				<string>[[ -s history/history.json ]] || echo '{}' &gt; history/history.json
 content=$(jq --arg url "$1" -f history/add-entry.jq history/history.json) &amp;&amp; printf '%s' "$content" &gt; history/history.json</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
@@ -635,7 +635,7 @@ content=$(jq --arg url "$1" -f history/add-entry.jq history/history.json) &amp;&
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>[[ -f history/history.json ]] || echo '{}' &gt; history/history.json
+				<string>[[ -s history/history.json ]] || echo '{}' &gt; history/history.json
 content=$(jq --arg url "$url" -f history/add-entry.jq history/history.json) &amp;&amp; printf '%s' "$content" &gt; history/history.json</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
@@ -1012,7 +1012,8 @@ echo -n "$url"</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>content=$(jq --arg url "$1" 'del(.[$url])' history/history.json) &amp;&amp; printf '%s' "$content" &gt; history/history.json</string>
+				<string>[[ -s history/history.json ]] || echo '{}' &gt; history/history.json
+content=$(jq --arg url "$1" -f history/remove-entry.jq history/history.json) &amp;&amp; printf '%s' "$content" &gt; history/history.json</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1152,7 +1153,7 @@ echo -n "$url"</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>[[ -f urls.json ]] || echo '{}' &gt; urls.json
+				<string>[[ -s urls.json ]] || echo '{}' &gt; urls.json
 jq -f alfred.jq urls.json</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
@@ -1312,7 +1313,7 @@ jq -f alfred.jq urls.json</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>[[ -f history/history.json ]] || echo '{}' &gt; history/history.json
+				<string>[[ -s history/history.json ]] || echo '{}' &gt; history/history.json
 content=$(jq --arg url "$1" -f history/add-entry.jq history/history.json) &amp;&amp; printf '%s' "$content" &gt; history/history.json</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
@@ -1478,8 +1479,8 @@ content=$(jq --arg url "$1" -f history/add-entry.jq history/history.json) &amp;&
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>[[ -f urls.json ]] || echo '{}' &gt; urls.json
-[[ -f history/history.json ]] || echo '{}' &gt; history/history.json
+				<string>[[ -s urls.json ]] || echo '{}' &gt; urls.json
+[[ -s history/history.json ]] || echo '{}' &gt; history/history.json
 jq --slurpfile urls urls.json -f history/get-history.jq history/history.json</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
@@ -1665,7 +1666,7 @@ echo "$default"</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>[[ -f urls.json ]] || echo '{}' &gt; urls.json
+				<string>[[ -s urls.json ]] || echo '{}' &gt; urls.json
 content=$(jq --arg url "$url" --arg name "$name" --arg icon "$iconPath" --arg bundleid "$bundleID" --arg background "$open_background" --arg label "$1" --arg fixed "$fixed" -f add-url.jq urls.json) &amp;&amp; printf '%s' "$content" &gt; urls.json</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>

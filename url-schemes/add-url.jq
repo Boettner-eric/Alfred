@@ -5,11 +5,12 @@
 # Required: --arg url, --arg icon, --arg bundleid, --arg name (use "" to default to app name from icon path).
 # Optional: params come from URL query string (?key=val&...); types inferred: number→float?, true/false→boolean?, comma-separated→array[string]/array[float], else string.
 # Optional: --arg fixed '["key", ...]' marks query params as defaults: stored verbatim and always sent, never prompted.
+# Optional: --arg background "true" opens the url in the background.
 # Optional: --arg label "My URL" sets the description shown in the urls list (defaults to the path).
 #
 # Structure: urls.json is an object keyed by scheme id (e.g. "finetune"). Each value:
 #   { name: { app, scheme, icon }, paths: { "key": { path, description, background, defaults: { "k": "raw value" }, params: { "k": { type, example } } } } }
-#   key is the path slug, suffixed (-2, -3, ...) when that path is already saved, so re-adding a path never overwrites.
+#   key is the full path (subpaths included), suffixed (-2, -3, ...) when that path is already saved, so re-adding a path never overwrites.
 
 def infer_type:
   if type != "string" then "string"
@@ -53,9 +54,10 @@ def query_pairs:
 | ($query_raw | query_pairs) as $pairs
 | ($pairs | map(select(.[0] as $k | $fixed_keys | index($k) | not)) | _params_from_pairs) as $params
 | ($pairs | map(select(.[0] as $k | $fixed_keys | index($k))) | map({(.[0]): .[1]}) | add // {}) as $defaults
-| ($path_only | split("/")[0]) as $path_slug
+# the full path, subpaths included: x-callback-url/create and x-callback-url/open-note are different actions
+| $path_only as $path_slug
 | ($ARGS.named.label // "" | if . != "" then . else $path_only | gsub("^/"; "") | if . == "" then $path_slug else . end end) as $description
-| ({ path: $path_slug, description: $description, background: false }
+| ({ path: $path_slug, description: $description, background: (($ARGS.named.background // "") == "true") }
   + (if $defaults | length > 0 then { defaults: $defaults } else {} end)
   + (if $params | length > 0 then { params: $params } else {} end)) as $new_path
 | ($parsed.scheme | rtrimstr("://")) as $scheme_id
