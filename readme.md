@@ -23,7 +23,7 @@ Feel free to create an issue or open a pull request.
 Alfred reorders `info.plist` every time it saves. A git clean filter normalizes the order so only real changes show up in diffs; enable it once per clone:
 
 ```sh
-git config filter.alfred-plist.clean "python3 scripts/normalize-plist.py"
+git config filter.alfred-plist.clean 'python3 "$(git rev-parse --show-toplevel)/scripts/normalize-plist.py"'
 ```
 
 ## Helpful references
