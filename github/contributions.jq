@@ -26,19 +26,23 @@ if .data.viewer == null then
 else
   .data.viewer.login as $login
   | .data.viewer.contributionsCollection.contributionCalendar as $calendar
-  | (if now - .cache_time > 300 then {rerun: 1} else {} end)
+  # Stale means contributions.sh just started a ~1.1s fetch; poll fast so it lands promptly
+  | (if now - .cache_time > 300 then {rerun: 0.25} else {} end)
   + {
+      skipknowledge: true,
       items: (
         [$calendar.weeks[].contributionDays[]]
         | .[-6:]
         | reverse
         | map({
+            uid: "contrib \(.date)",
             title: plural(.contributionCount; "contribution"),
             subtitle: "\(.date | day_label) · \(.date | strptime("%Y-%m-%d") | mktime | strftime("%b %-d"))",
             icon: (.contributionLevel | icon),
             arg: "https://github.com/\($login)?tab=overview&from=\(.date)&to=\(.date)"
           })
       ) + [{
+        uid: "contrib total",
         title: "\(plural($calendar.totalContributions; "contribution")) in the last year",
         subtitle: "Open profile",
         icon: {path: "icon.png"},

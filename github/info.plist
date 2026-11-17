@@ -44,6 +44,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>5C8E1F3A-7B2D-4E96-A1C4-8D3F6B0E2A91</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>B6F2A9D4-1E3C-4C7B-9A85-3D0E6F1B2C47</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>6FC43D78-7327-476B-80C4-B0A67E2B1EF0</key>
 		<array>
 			<dict>
@@ -69,12 +82,35 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>5C8E1F3A-7B2D-4E96-A1C4-8D3F6B0E2A91</string>
+				<key>modifiers</key>
+				<integer>131072</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<true/>
+			</dict>
 		</array>
 		<key>A3E5F7B2-6C14-4D8E-B09A-5F2C1E7D4A86</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>E8B4D1C6-2F7A-4935-8E1B-C6A9D3F05B27</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>B6F2A9D4-1E3C-4C7B-9A85-3D0E6F1B2C47</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>31FA8A38-71E8-4121-AD4E-04E2AF759EDB</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -214,6 +250,23 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>5C8E1F3A-7B2D-4E96-A1C4-8D3F6B0E2A91</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -322,6 +375,53 @@
 			<string>A3E5F7B2-6C14-4D8E-B09A-5F2C1E7D4A86</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Loading pull requests…</string>
+				<key>script</key>
+				<string>./prs.sh</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>5</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>B6F2A9D4-1E3C-4C7B-9A85-3D0E6F1B2C47</string>
+			<key>version</key>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -448,6 +548,15 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<key>ypos</key>
 			<real>65</real>
 		</dict>
+		<key>5C8E1F3A-7B2D-4E96-A1C4-8D3F6B0E2A91</key>
+		<dict>
+			<key>note</key>
+			<string>Clear the login so the list opens with an empty query</string>
+			<key>xpos</key>
+			<real>300</real>
+			<key>ypos</key>
+			<real>605</real>
+		</dict>
 		<key>6FC43D78-7327-476B-80C4-B0A67E2B1EF0</key>
 		<dict>
 			<key>xpos</key>
@@ -479,6 +588,15 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<real>115</real>
 			<key>ypos</key>
 			<real>755</real>
+		</dict>
+		<key>B6F2A9D4-1E3C-4C7B-9A85-3D0E6F1B2C47</key>
+		<dict>
+			<key>note</key>
+			<string>Pull requests assigned to user</string>
+			<key>xpos</key>
+			<real>420</real>
+			<key>ypos</key>
+			<real>605</real>
 		</dict>
 		<key>C4474995-5BB0-4862-B59E-A0015D1B062F</key>
 		<dict>

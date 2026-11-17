@@ -31,6 +31,12 @@
           valid: true,
           arg: "\($search)review-requested%3A\(.login)",
           subtitle: "Get pull requests that \($first) is reviewing",
+        },
+        shift: {
+          valid: true,
+          arg: .login,
+          subtitle: "List pull requests that \($first) is assigned to",
+          variables: {pr_login: .login, pr_name: $name, pr_org: $org}
         }
       }
     }

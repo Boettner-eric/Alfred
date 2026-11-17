@@ -13,6 +13,7 @@ This is still in progress and might have breaking changes
 - `⌘` -> view the user's profile
 - `⌃` -> open pull requests the user is assigned to
 - `⌥` -> open pull requests awaiting the user's review
+- `⇧` -> list the open pull requests the user is assigned to in Alfred, then open the selected one
 
 `cgh` shows your contributions for today and the previous 5 days, colored like your profile's contribution graph, plus your total for the last year
 
