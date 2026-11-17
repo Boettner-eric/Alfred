@@ -287,10 +287,15 @@ def delete_bookmark(title):
 
 
 def split_query(parts):
-    """Title words, then the url, then an optional description of it."""
+    """Title words, then the url, then an optional description of it.
+
+    A url typed first is followed by the title instead, with no description.
+    """
     for i, part in enumerate(parts):
         if URL_RE.match(part):
             url = part if re.match(r'https?://', part) else 'https://' + part
+            if i == 0:
+                return ' '.join(parts[1:]), url, ''
             return ' '.join(parts[:i]), url, ' '.join(parts[i + 1:])
     return ' '.join(parts), None, ''
 

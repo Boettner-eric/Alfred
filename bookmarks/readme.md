@@ -19,7 +19,8 @@ Use alfred to quickly jump to your bookmarks. Sync them across devices via a sim
 
 Names match case insensitively and may contain spaces - the url is whatever
 looks like one, and anything after it is the description. Leave the description
-off and a bound url borrows the page's own `<title>` instead.
+off and a bound url borrows the page's own `<title>` instead. The url can also
+go first (`bma [url] [name]`), in which case everything after it is the name.
 
 # Mods
 - `⌘` / `⌥` / `⌃` / `fn` -> open the url bound to that key, or the main one if nothing is bound
