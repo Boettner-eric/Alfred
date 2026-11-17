@@ -294,6 +294,16 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
+				<string>32651644-6231-4344-BE6F-E09A811322A8</string>
+				<key>modifiers</key>
+				<integer>131072</integer>
+				<key>modifiersubtext</key>
+				<string>remove from urls</string>
+				<key>vitoclose</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
 				<string>13AF52C4-A7A9-4954-B237-BF0167B1443E</string>
 				<key>modifiers</key>
 				<integer>1048576</integer>
@@ -784,6 +794,30 @@ echo -n "$url"</string>
 			<string>2C8D41AE-5E7B-4C38-8338-A356CB49B845</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>[[ -s urls.json ]] || echo '{}' &gt; urls.json
+content=$(jq --argjson target "$1" -f remove-url.jq urls.json) &amp;&amp; printf '%s' "$content" &gt; urls.json</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>32651644-6231-4344-BE6F-E09A811322A8</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1837,6 +1871,15 @@ See https://github.com/Boettner-eric/Alfred/ for more info</string>
 			<real>1045</real>
 			<key>ypos</key>
 			<real>395</real>
+		</dict>
+		<key>32651644-6231-4344-BE6F-E09A811322A8</key>
+		<dict>
+			<key>note</key>
+			<string>Remove from urls</string>
+			<key>xpos</key>
+			<integer>280</integer>
+			<key>ypos</key>
+			<integer>460</integer>
 		</dict>
 		<key>3781B7DE-81B5-4D45-9C80-13DC55DC8B99</key>
 		<dict>

@@ -30,11 +30,13 @@ def entry_meta: .name // .;
   | ($entry | entry_meta) as $meta
   | ($entry | entry_paths)
   | to_entries[]
+  | .key as $path_key
   | .value as $path_obj
   | ($path_obj.path // .key) as $path_slug
   | ($meta.scheme + $path_slug + ($path_obj.params | flatten_params($path_obj.defaults))) as $url
   | ($path_obj.background // false) as $background
   | {
+      uid: ($scheme_id + "/" + $path_key),
       title: ($scheme_id + " - " + ($path_obj.description // $path_slug)),
       subtitle: ("open " + $meta.scheme + $path_slug),
       arg: (($meta | del(.paths) | . + {"path": $path_slug}) | tostring),
@@ -49,8 +51,15 @@ def entry_meta: .name // .;
           arg: ($meta.scheme + $path_slug + ($path_obj.params | quick_params($path_obj.defaults))),
           subtitle: "open now with default values",
           variables: {"background": $background}
+        },
+        # remove-url.jq takes the paths key, since several entries can share a path
+        shift: {
+          arg: ({scheme: $scheme_id, key: $path_key} | tostring),
+          subtitle: "remove from urls"
         }
       },
       icon: { type: "fileicon", path: $meta.icon }
     }
-] | { items: . }
+]
+# rerun picks up removals while Alfred stays open; uids keep the selection in place
+| { items: ., rerun: 0.1, skipknowledge: true }

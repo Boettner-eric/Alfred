@@ -32,4 +32,4 @@ _See history of urls and Browser/Jump to a specific url_
 - `⌘` -> Copy URL
 - `⌥` -> NA
 - `⌃` -> NA
-- `⇧` -> NA
+- `⇧` -> Remove from the `urls` list (Alfred stays open)
