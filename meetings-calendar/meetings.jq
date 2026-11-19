@@ -5,6 +5,17 @@ def is_excluded($meeting):
   ($meeting.title // "" | ascii_downcase) as $title
   | excluded_events | index($title) != null;
 
+# hidden.json maps uids hidden with shift to their end time, see hide-meeting.jq
+def is_hidden($meeting):
+  ($ARGS.named.hidden // {}) | has($meeting.uid // "");
+
+def add_hide_mod:
+  .mods.shift = {
+    "valid": true,
+    "arg": ({uid: .uid, end: (.time | split(" - ")[1])} | tostring),
+    "subtitle": "hide this meeting"
+  };
+
 def calculate_rerun($cache_time_seconds):
   (now - $cache_time_seconds) as $diff_seconds
   | if $diff_seconds < 300 then {} else {"rerun": 1} end;
@@ -87,4 +98,4 @@ def update_meeting_subtitle($meeting):
   + (if (.variables.cache_time | type) == "number"
       then calculate_rerun(.variables.cache_time)
       else {"rerun": 1} end)
-| .items |= (map(select(is_excluded(.) | not)) | map(update_meeting_subtitle(.)))
+| .items |= (map(select((is_excluded(.) or is_hidden(.)) | not)) | map(update_meeting_subtitle(.) | add_hide_mod))

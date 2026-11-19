@@ -5,8 +5,14 @@ if ! printf '%s' "$excluded_events" | jq -e 'type == "array"' > /dev/null 2>&1; 
 	excluded_events="[]"
 fi
 
+# Meetings hidden with shift, see hide-meeting.jq.
+hidden="{}"
+if test -s "hidden.json" && jq -e 'type == "object"' hidden.json > /dev/null 2>&1; then
+	hidden="$(cat hidden.json)"
+fi
+
 if test -f "meetings.json"; then
-	jq --argjson excluded_events "$excluded_events" -f meetings.jq meetings.json
+	jq --argjson excluded_events "$excluded_events" --argjson hidden "$hidden" -f meetings.jq meetings.json
 	needs_refresh="$(jq -r '
 	  ((.variables.cache_time | type) as $t | if $t == "number" then (now - .variables.cache_time > 300) else true end) as $stale
 	  | ((.variables.refresh_started | type) as $t | if $t == "number" then (now - .variables.refresh_started < 60) else false end) as $claimed
@@ -20,5 +26,5 @@ if test -f "meetings.json"; then
 	fi
 else
 	./.venv/bin/python3 meetings.py
-	jq --argjson excluded_events "$excluded_events" -f meetings.jq meetings.json
+	jq --argjson excluded_events "$excluded_events" --argjson hidden "$hidden" -f meetings.jq meetings.json
 fi

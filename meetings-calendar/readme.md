@@ -16,6 +16,7 @@ Jump to slack huddles, zoom rooms and google meets directly from alfred.
 - `⌘` -> show meeting url
 - `⌥` -> open event in calendar
 - `⌃` -> show start and end times
+- `⇧` -> hide this meeting (only this occurrence of a recurring one; delete `hidden.json` to unhide)
 
 
 # Run

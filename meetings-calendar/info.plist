@@ -35,6 +35,16 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
+				<string>93515AC2-F8CB-4389-A745-EA5B6D1FDBA3</string>
+				<key>modifiers</key>
+				<integer>131072</integer>
+				<key>modifiersubtext</key>
+				<string>hide this meeting</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
 				<string>EBE007D2-D341-452B-9CA0-8DCA0716F5B1</string>
 				<key>modifiers</key>
 				<integer>524288</integer>
@@ -385,6 +395,30 @@ disown</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>[[ -s hidden.json ]] || echo '{}' &gt; hidden.json
+content=$(jq --argjson target "$1" -f hide-meeting.jq hidden.json) &amp;&amp; printf '%s' "$content" &gt; hidden.json</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>93515AC2-F8CB-4389-A745-EA5B6D1FDBA3</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>conditions</key>
 				<array>
 					<dict>
@@ -594,6 +628,15 @@ See more at: https://github.com/Boettner-eric/Alfred/</string>
 			<string>register new google user</string>
 			<key>xpos</key>
 			<real>85</real>
+			<key>ypos</key>
+			<real>440</real>
+		</dict>
+		<key>93515AC2-F8CB-4389-A745-EA5B6D1FDBA3</key>
+		<dict>
+			<key>note</key>
+			<string>hide meeting</string>
+			<key>xpos</key>
+			<real>470</real>
 			<key>ypos</key>
 			<real>440</real>
 		</dict>

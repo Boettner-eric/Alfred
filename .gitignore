@@ -39,6 +39,7 @@ audio-source/scenes/scenes.json
 slack/emotes/*
 !slack/emotes/.gitkeep
 meetings.json
+meetings-calendar/hidden.json
 debug_cal.json
 scratch.json
 merge.json
