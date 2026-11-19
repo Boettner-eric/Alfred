@@ -1,11 +1,12 @@
 # Consumes urls.json (object keyed by scheme id). Each value: { name: { app, scheme, icon }, paths: { "key": { path, description, background, params } } }.
 # path falls back to the key for entries saved before keys were made unique.
-# params: { "k": { type, example } }. defaults: { "k": "raw value" }, always sent verbatim.
+# params: { "k": { type, example } }. defaults: { "k": "raw value" }, always sent as saved (spaces encoded).
+include "encode" {search: "./"};
 
-def defaults_query: . // {} | to_entries | map("\(.key)=\(.value)") | join("&");
+def defaults_query: . // {} | to_entries | map("\(.key)=\(.value | tostring | fix_url)") | join("&");
 
 def flatten_params($defaults):
-  ([($defaults | defaults_query)] + (. // {} | to_entries | map("\(.key)=\(.value.example // .value | if type == "string" then . else tostring end | @uri)")))
+  ([($defaults | defaults_query)] + (. // {} | to_entries | map("\(.key)=\(.value.example // .value | if type == "string" then . else tostring end | fix_url)")))
   | map(select(. != "")) | join("&")
   | if . == "" then "" else "?" + . end;
 
@@ -15,7 +16,7 @@ def flatten_params($defaults):
 def quick_params($defaults):
   ([($defaults | defaults_query)] + (. // {} | to_entries | map(
       (.value.example // "" | if type == "string" then . else tostring end | ltrimstr("e.g. ")) as $value
-      | if $value == "" then "" else "\(.key)=\($value | @uri)" end)))
+      | if $value == "" then "" else "\(.key)=\($value | fix_url)" end)))
   | map(select(. != "")) | join("&")
   | if . == "" then "" else "?" + . end;
 

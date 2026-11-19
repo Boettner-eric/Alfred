@@ -22,6 +22,7 @@ _See history of urls and Browser/Jump to a specific url_
   - Saving another url with the same path adds a new entry instead of replacing the existing one
   - The full path is kept, so `app://x-callback-url/create` and `app://x-callback-url/open` are separate paths
 - Fill out a URL template
+  - Typed values are percent-encoded, so spaces, `&` and `=` are sent as text; saved defaults and history urls only get spaces (and other characters a url can't hold) encoded
 - Save history of urls
   - The same url written differently (param order, percent-encoding, trailing `/`) is one history entry; removing it removes every spelling
 - Favorite URLs (todo)

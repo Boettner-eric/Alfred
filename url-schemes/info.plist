@@ -547,6 +547,7 @@
 				<integer>102</integer>
 				<key>script</key>
 				<string>url=$(echo $entry | jq -r ". | (.scheme + .path)")
+url=$(jq -rn --arg url "$url" -f open-url.jq)
 
 if [[ $background == 1 ]]; then
 	open -g $url
@@ -719,9 +720,7 @@ echo -n "$1"</string>
 				<integer>102</integer>
 				<key>script</key>
 				<string>url=$(echo $entry | jq -r ". | (.scheme + .path)")
-query="${defaults}${tmp_params}"
-query="${query#&amp;}"
-[[ -n $query ]] &amp;&amp; url="${url}?${query}"
+url=$(jq -rn --arg url "$url" --arg defaults "$defaults" --arg prompted "$tmp_params" -f open-url.jq)
 
 if [[ $background == 1 ]]; then
 	open -g "$url"
@@ -785,7 +784,8 @@ echo -n "$url"</string>
 				<key>variables</key>
 				<dict>
 					<key>tmp_params</key>
-					<string>{var:tmp_params}&amp;{var:split1}={query}</string>
+					<string>{var:tmp_params}
+{var:split1}={query}</string>
 				</dict>
 			</dict>
 			<key>type</key>
@@ -849,8 +849,8 @@ content=$(jq --argjson target "$1" -f remove-url.jq urls.json) &amp;&amp; printf
 				<true/>
 				<key>variables</key>
 				<dict>
-					<key>tmp_params</key>
-					<string>{var:tmp_params}&amp;{var:split1}={var:split4}</string>
+					<key>defaults</key>
+					<string>{var:defaults}&amp;{var:split1}={var:split4}</string>
 				</dict>
 			</dict>
 			<key>type</key>
@@ -1724,14 +1724,16 @@ content=$(jq --arg url "$url" --arg name "$name" --arg icon "$iconPath" --arg bu
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>if [[ $background == 1 ]]; then
-	open -g $1
+				<string>url=$(jq -rn --arg url "$1" -f open-url.jq)
+
+if [[ $background == 1 ]]; then
+	open -g $url
 else
-	open $1
+	open $url
 fi
 
 # pipe into history file here
-echo -n $1</string>
+echo -n $url</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
