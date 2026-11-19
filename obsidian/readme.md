@@ -17,13 +17,15 @@ An Alfred workflow for today's daily note tasks and habits, and the Reminder plu
 
 ## Usage
 
-- `dl` lists the tasks in today's daily note, enter checks or unchecks the selected task, cmd + enter opens the note at that line, alt + enter moves the task and its subtasks to the end of the tomorrow heading (added at the bottom of the note if missing)
-- the tasks under the tomorrow heading in yesterday's daily note are listed first, alt + enter moves them to the end of today's tasks heading
+- `dl` lists the tasks in today's daily note, enter checks or unchecks the selected task, cmd + enter opens the note at that line, ctrl + enter strikes the task through to cancel it (again to restore it), alt + enter moves the task and its subtasks after the last task under the tomorrow heading (added at the bottom of the note if missing)
+- the tasks under the tomorrow heading in yesterday's daily note are listed first, alt + enter moves them after the last of today's tasks
 - tomorrow's tasks are listed after today's, alt + enter moves them back to the tasks heading
 - `hb` does the same for the habits in today's daily note, without yesterday's or tomorrow's tasks or alt + enter
-- `ta <text>` adds an unchecked task to the end of today's tasks heading, cmd + enter adds it to the tomorrow heading instead
+- `ta <text>` adds an unchecked task after the last of today's tasks, cmd + enter adds it to the tomorrow heading instead
 - `rm` lists open reminders across the vault, soonest first with how far away each one is, enter opens the note in Obsidian
 - typing after any keyword filters the results
-- run `./daily.py`, `./daily.py --toggle N`, `./daily.py --move N`, `./daily.py --add TEXT` or `./reminders.py` to see the raw output, with the configuration passed as environment variables, e.g. `vault=~/Notes daily_folder=Daily ./daily.py`, adding `list=habits` for habits, `list=tomorrow` for tomorrow's tasks or `list=yesterday` for yesterday's
+- run `./daily.py`, `./daily.py --toggle N`, `./daily.py --cancel N`, `./daily.py --move N`, `./daily.py --add TEXT` or `./reminders.py` to see the raw output, with the configuration passed as environment variables, e.g. `vault=~/Notes daily_folder=Daily ./daily.py`, adding `list=habits` for habits, `list=tomorrow` for tomorrow's tasks or `list=yesterday` for yesterday's
+
+Only the checklist under each heading is changed: notes, other lists and code blocks there stay put, and `#` or `- [ ]` inside a code block isn't read as a heading or task.
 
 Reminders are read from the plugin's `data.json`, which it only updates while Obsidian is running.
