@@ -26,6 +26,8 @@ An Alfred workflow for today's daily note tasks and habits, and the Reminder plu
 - typing after any keyword filters the results
 - run `./daily.py`, `./daily.py --toggle N`, `./daily.py --cancel N`, `./daily.py --move N`, `./daily.py --add TEXT` or `./reminders.py` to see the raw output, with the configuration passed as environment variables, e.g. `vault=~/Notes daily_folder=Daily ./daily.py`, adding `list=habits` for habits, `list=tomorrow` for tomorrow's tasks or `list=yesterday` for yesterday's
 
+An empty `- [ ]` (e.g. from a daily note template) isn't listed as a task. When a heading has no tasks yet, the first task added or moved there replaces its first empty `- [ ]`.
+
 Only the checklist under each heading is changed: notes, other lists and code blocks there stay put, and `#` or `- [ ]` inside a code block isn't read as a heading or task.
 
 Reminders are read from the plugin's `data.json`, which it only updates while Obsidian is running.

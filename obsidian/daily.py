@@ -31,7 +31,9 @@ MISSING_VAULT = "Set the vault in the workflow configuration"
 # leading zero-width space stops Alfred trimming; two 18pt spaces match two 12pt spaces plus a thin space
 TITLE_INDENT, SUBTITLE_INDENT = "  ", "   "
 ANCHOR = "​"
-TASK_RE = re.compile(r"^(\s*)[-*] \[(.)\] (.+)$")
+# a task needs text: an empty "- [ ]" is a placeholder, ignored and replaced by the first task added
+TASK_RE = re.compile(r"^(\s*)[-*] \[(.)\] +(\S.*)$")
+EMPTY_TASK_RE = re.compile(r"^\s*[-*] \[.\]\s*$")
 HEADING_RE = re.compile(r"^#+\s+(.*)$")
 FENCE_RE = re.compile(r"^\s*(```|~~~)")
 STRIKE_RE = re.compile(r"^~~(.+)~~$")
@@ -183,6 +185,7 @@ def move_task(index):
 def insert_block(lines, list_name, block):
     """Insert block after the last task under list_name's heading, adding the heading at the bottom if missing.
 
+    With no tasks yet, the block replaces the first empty "- [ ]" placeholder under the heading.
     Only the checklist is touched: notes, other lists and code under the heading stay where they are.
     """
     found = sections(lines, list_name)
@@ -193,8 +196,13 @@ def insert_block(lines, list_name, block):
         found = [(len(lines) - 1, len(lines))]
     start, end = found[0]
     tasks = [t for t in read_tasks(lines, list_name) if start < t.line_number < end]
+    code = code_lines(lines)
+    empty = next((i for i in range(start + 1, end) if i not in code and EMPTY_TASK_RE.match(lines[i])), None)
     if tasks:
         insert = max(block_end(lines, t.line_number) for t in tasks) + 1
+    elif empty is not None:
+        lines[empty : empty + 1] = block
+        return
     else:
         # no checklist yet: start one under the heading, kept apart from whatever follows
         insert = start + 1
