@@ -9,7 +9,8 @@ Jump to slack huddles, zoom rooms and google meets directly from alfred.
 - setup your google calendar api access via this [guide](https://developers.google.com/workspace/calendar/api/quickstart/python#set-up-environment)
 - save your generated `credentials.json` to this folder
 - `make install` to build `.venv/` and create the alfred symlink
-- `mcr NAME` in alfred to register each google account
+- `mcu` in alfred lists your google accounts: pick **Add user** to sign in another one, or pick an account to reauthorize it when its token stops working
+- `mcr` reloads the calendar
 
 
 # Mods

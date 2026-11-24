@@ -40,6 +40,7 @@ slack/emotes/*
 !slack/emotes/.gitkeep
 meetings.json
 meetings-calendar/hidden.json
+meetings-calendar/auth.pid
 debug_cal.json
 scratch.json
 merge.json

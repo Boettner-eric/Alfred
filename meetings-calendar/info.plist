@@ -226,13 +226,13 @@
 			<key>config</key>
 			<dict>
 				<key>concurrently</key>
-				<false/>
+				<true/>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>./.venv/bin/python3 meetings.py -r {query}</string>
+				<string>./.venv/bin/python3 meetings.py --auth "$1" &amp;&amp; ./.venv/bin/python3 meetings.py</string>
 				<key>scriptargtype</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>type</key>
@@ -374,23 +374,51 @@ disown</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
 				<key>keyword</key>
 				<string>mcu</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Loading users…</string>
+				<key>script</key>
+				<string>./users.sh</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
 				<key>subtext</key>
-				<string>add a new google user</string>
-				<key>text</key>
-				<string>Register Calendar User</string>
+				<string>add or reauthorize a google account</string>
+				<key>title</key>
+				<string>Calendar Users</string>
+				<key>type</key>
+				<integer>5</integer>
 				<key>withspace</key>
-				<true/>
+				<false/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
+			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>895C0F8A-29CE-4518-9C6A-8FD325D9E3AD</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -559,7 +587,7 @@ See more at: https://github.com/Boettner-eric/Alfred/</string>
 		<key>01410326-5750-4289-B108-277AFB95CE94</key>
 		<dict>
 			<key>note</key>
-			<string>register new google user</string>
+			<string>reload calendar</string>
 			<key>xpos</key>
 			<real>85</real>
 			<key>ypos</key>
@@ -625,7 +653,7 @@ See more at: https://github.com/Boettner-eric/Alfred/</string>
 		<key>895C0F8A-29CE-4518-9C6A-8FD325D9E3AD</key>
 		<dict>
 			<key>note</key>
-			<string>register new google user</string>
+			<string>list google users to add or reauthorize</string>
 			<key>xpos</key>
 			<real>85</real>
 			<key>ypos</key>
